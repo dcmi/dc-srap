@@ -1,0 +1,429 @@
+shapes:
+  - shapeID: SRAP
+    shapeLabel: ''
+    statement_constraints:
+      - propertyID: dct:metadataSource
+        propertyLabel: Metadata source
+        mandatory: false
+        repeatable: true
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Name of the organization
+  - shapeID: document
+    shapeLabel: Document
+    statement_constraints:
+      - propertyID: dct:abstract
+        propertyLabel: Abstract
+        mandatory: false
+        repeatable: true
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Free text
+      - propertyID: dct:accessRights
+        propertyLabel: Access rights
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: http://vocabularies.coar-repositories.org/documentation/access_rights/
+        valueConstraintType: IRIstem
+        valueShape: ''
+        note: A term from COAR vocabulary (http://vocabularies.coar-repositories.org/documentation/access_rights/
+      - propertyID: dct:date
+        propertyLabel: Date
+        mandatory: true
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Date according to ISO 8601-1
+      - propertyID: dct:description
+        propertyLabel: Description
+        mandatory: true
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Free text; different languages shall be provided separately (as different
+          Description elements)
+      - propertyID: dct:embargoDate
+        propertyLabel: Embargo date
+        mandatory: false
+        repeatable: true
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Date according to ISO 8601-1
+      - propertyID: dct:format
+        propertyLabel: Format
+        mandatory: true
+        repeatable: false
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: MIME type registered by IANA
+      - propertyID: dct:grantNumber
+        propertyLabel: Grant number
+        mandatory: false
+        repeatable: true
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Free text
+      - propertyID: dct:hasPart
+        propertyLabel: Has Part
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: URI or other identifier of the related resource
+      - propertyID: dct:identifier
+        propertyLabel: Identifier
+        mandatory: true
+        repeatable: true
+        valueNodeType: iri literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: URI, one for each identifier the resource has, provided separately
+      - propertyID: dct:isPartOf
+        propertyLabel: Is Part Of
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: URI or other identifier of the related resource
+      - propertyID: dct:language
+        propertyLabel: Language
+        mandatory: true
+        repeatable: true
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: A code from ISO 639-2, one for each language used in the resource, provided
+          separately
+      - propertyID: http://id.loc.gov/vocabulary/relators/opn
+        propertyLabel: Opponent
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Person
+        note: Name and identifier of the person
+      - propertyID: bibo:presentedAt
+        propertyLabel: Presented at
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Conference
+        note: Free text or URI
+      - propertyID: dct:relatedDataset
+        propertyLabel: Related dataset
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: URI
+      - propertyID: dct:relation
+        propertyLabel: Relation
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: URI
+      - propertyID: dct:rights
+        propertyLabel: Rights
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Free text or URI of the appropriate license
+      - propertyID: dct:status
+        propertyLabel: Status
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: info:eu-repo/semantics/
+        valueConstraintType: IRIstem
+        valueShape: ''
+        note: OpenAire publication status code from https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html
+      - propertyID: dct:subject
+        propertyLabel: Subject
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Subject
+        note: A concept from a controlled vocabulary such as LCSH or MeSH
+      - propertyID: dct:title
+        propertyLabel: Title
+        mandatory: true
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: Free text, titles in different languages provided separately
+      - propertyID: dct:type
+        propertyLabel: Type
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: http://purl.org/coar/resource_type
+        valueConstraintType: IRIstem
+        valueShape: ''
+        note: A term from COAR resource type vocabulary, http://purl.org/coar/resource_type
+      - propertyID: http://id.loc.gov/vocabulary/relators/dgs
+        propertyLabel: Degree supervisor
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Person
+        note: Person
+      - propertyID: https://id.loc.gov/vocabulary/relators/edt
+        propertyLabel: Editor
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Person Organization
+        note: Name and identifier of persons
+      - propertyID: https://id.loc.gov/vocabulary/relators/fnd
+        propertyLabel: Funder
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Person Organization
+        note: Name and identifier of persons and/or organizations
+      - propertyID: dct:contributor
+        propertyLabel: Contributor
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Person
+        note: Name and identifier of persons and/or organizations
+      - propertyID: dct:creator
+        propertyLabel: Creator
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Person
+        note: Name and identifier of persons and/or organizations
+      - propertyID: dct:publisher
+        propertyLabel: Publisher
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Organization
+        note: Name and URI of the organization
+      - propertyID: rdf:type
+        propertyLabel: Class
+        mandatory: false
+        repeatable: false
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: foaf:Person
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: rdf:type
+        propertyLabel: Class
+        mandatory: false
+        repeatable: false
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: dct:Agent
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: dct:affiliation
+        propertyLabel: Affiliation
+        mandatory: false
+        repeatable: true
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: Organization
+        note: Name and identifier of the organization or organizations
+      - propertyID: foaf:Name
+        propertyLabel: Name
+        mandatory: false
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: dct:Identifier
+        propertyLabel: Identifier
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: rdf:type
+        propertyLabel: Class
+        mandatory: false
+        repeatable: false
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: dct:Agent
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: rdf:type
+        propertyLabel: Class
+        mandatory: false
+        repeatable: false
+        valueNodeType: ''
+        valueDataType: ''
+        valueConstraint: foaf:Organization
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: dct:identifier
+        propertyLabel: Identifier
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: foaf:name
+        propertyLabel: Name
+        mandatory: false
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: dct:identifier
+        propertyLabel: Identifier
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: rdf:label
+        propertyLabel: Display label
+        mandatory: false
+        repeatable: true
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: dct:identifier
+        propertyLabel: Identifier
+        mandatory: false
+        repeatable: true
+        valueNodeType: iri
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: foaf:name
+        propertyLabel: Name
+        mandatory: false
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: dct:date
+        propertyLabel: Date
+        mandatory: false
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''
+      - propertyID: https://schema.org/location
+        propertyLabel: Location
+        mandatory: false
+        repeatable: false
+        valueNodeType: literal
+        valueDataType: ''
+        valueConstraint: ''
+        valueConstraintType: ''
+        valueShape: ''
+        note: ''

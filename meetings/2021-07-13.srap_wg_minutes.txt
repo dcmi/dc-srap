@@ -1,4 +1,4 @@
-DC SRAP Working Group 3rd Meeting 13 July 2021
+﻿DC SRAP Working Group 3rd Meeting 13 July 2021
 
 Attendees: Juha Hakala (Chair); Jan Ashton; Tom Baker;
 Karen Coyle; Alasdair MacDonald; Sam Oh; Stephanie
@@ -15,17 +15,17 @@ the DCMI Usage Board.
 The two DCMI boards have different roles. The DCMI
 Governing Board is responsible for political decisions:
 approving the development of the suggested profile within
-DCMI and, at the end of the process, accepting it for
-publication. Between these milestones, DCMI Usage Board
+DCMI and, at the end of the process, conferring DCMI
+endorsement. Between these milestones, DCMI Usage Board
 will process the new and altered properties in the
 profile, especially from the semantics point of view. 
 
 ----------------------------------------------------------
-2. Issues - elements on Github
+2. Issues – elements on Github
 
 a. Embargo details
 
-Discussion around the fact that "embargo" also affects
+Discussion around the fact that ‘embargo’ also affects
 rights and access conditions.
 
 Stephanie noted that she and colleagues in a Licensing
@@ -33,7 +33,7 @@ Working Group were looking at use cases and examples of
 possible solutions.
 
 Decision: The COAR Access Rights vocabulary term
-"embargoed access" is the recommended solution for
+‘embargoed access’ is the recommended solution for
 providing information on the existence of embargo. The
 COAR definition of embargoed access is "Embargoed access
 refers to a resource that is metadata only access until

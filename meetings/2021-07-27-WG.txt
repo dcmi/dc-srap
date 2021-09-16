@@ -1,0 +1,72 @@
+﻿DC SRAP Working Group 4th Meeting 27 July 2021 – Meeting notes
+
+Attendees: Juha Hakala (Chair); Jan Ashton; Tom Baker; Karen Coyle; Alasdair MacDonald; Stephanie Rühle
+
+1. Opening of the meeting 
+2. Appointment of the minutes taker (Juha will act as the chair)
+
+AM to take minutes
+
+3. Approval of the agenda 
+
+Approved
+
+4. Minutes of the previous meeting 
+
+Approved
+
+5. Element-specific comments 
+
+Embargo
+
+Current proposal to use dct:accessRights for the existence of an embargo, with values from the COAR vocabulary
+
+Further desire to record date of embargo end and length of embargo period 
+
+Proposal of new DCMI Term: dct:embargoDate as a sub-property of dct:dateAvaiable
+
+KC: dct:dateAvailable can cover embrgo end date
+
+JH: embargo date is narrower
+
+AM/SR: use of qualified DC is common institutional practice and varies between institutions
+
+Action: AM to supply Edinburgh University metadata elements used in institutional repository; JH to supply standards used in Finland (National Library?)
+
+Discussion around need for and use cases of embargo date and period, including the suitability of FaBiO’s terms fabio:hasEmbargoDate and fabio:hasEmbargoDuration
+
+SR: is duration useful?
+
+JA: embargo duration used in Onix metadata and by EthOS
+
+JH: suggest allowing a specific date or range of dates
+
+TB: ISO 8601 allows for description of date ranges
+
+KC/SR: embargo dates may be very complex, e.g. archives where end of embargo is time period from death of all persons mentioned in the material – and these people may be alive
+
+Any new DC Term must be developed for broader community use, not just this use case
+
+JH: Record dates as open ended, start/finish for duration (if known) or end date only
+
+Decision: 
+
+dct:accessRights to record presence of embargo, populated by COAR vocabulary
+
+FaBiO terms fabio:hasEmbargoDate and fabio:hasEmbargoDuration are not suitable; need for specifying start and end dates and to cover use cases where only one date may be known
+
+Proposal for a new DCMI Term dct:embargoDate for recording dates and period of embargo in one element
+
+Dates will always be a range and may include conjectural dates, approximates dates, months or days
+
+Dates will be recorded using the ISO 8601 standard
+
+An individual date only is not to be used as this is unclear as to what the date refers to
+
+Embargoes with unknown end dates are recorded as open ended ranges, e.g. 2021-07-21/
+
+Embargo end dates alone are recorded as ‘to date’ ranges, e.g. /2021-07-27
+
+6. Date of next meeting
+
+Tuesday 10th Aug, if sufficient group members are available, or 24th Aug if not

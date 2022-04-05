@@ -60,20 +60,28 @@
 - Definition: Date when a draft has been made available on the web or in an open repository such as ArXiv. 
 - Type: Property
 - Subproperty Of: dcterms:date
-- Usage: Provide this information if known. Example: a date when an Internet draft (I-D) is made available in the Web by IETF.  
+- Usage: Provide this information if known. Example: a date when an Internet draft (I-D) is made available in the Web by IETF. 
+
+### dateReceivedAsManuscript
+
+- Label: "Date Received As Manuscript"
+- Definition: Date when the resource is first received by the publisher. May be indicated in the published version as Received: 
+- Type: Property
+- Subproperty of: dcterms:date
+- Usage: Provide this information if available in the publication. 
 
 ### dateSubmittedAsPreprint
 
 - Label: "Date submitted as preprint"
-- Definition: Date when a preprint is submitted for peer review 
+- Definition: Date when the author submits the resource to an institutional repository. 
 - Type: Property
 - Subproperty Of: dcterms:date
-- Usage: This date may be provided if indicated in a resource or otherwise known, independently of the publication status of the described resource (e.g. Date received in a publication https://doi.org/10.1371/journal.pone.0115253).
+- Usage: This date may not be indicated in the resource, but it is known by the author and may be available in the repository.
 
 ### dateSubmittedAsPostprint
 
 - Label: "Date submitted as postprint"
-- Definition: Date when a postprint is submitted to the publisher 
+- Definition: Date when a postprint is submitted to the publisher. 
 - Type: Property
 - Subproperty Of: dcterms:date
 - Usage: Provide this date if indicated in a resource or otherwise known, independently of the publication status of the described resource.  

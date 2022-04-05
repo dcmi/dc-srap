@@ -48,19 +48,19 @@
 
 ### dateLost
 
-- Label: "Date XXX"
+- Label: "Date Lost"
 - Definition: Date when a decision is made that the publication has been lost. 
 - Type: Property
 - Subproperty Of: dcterms:date
 - Usage: Provide this date if there is no reasonable doubt that the publication has been lost. Criteria for this may be developed locally. 
 
-### dateAvailableAsDraft
+### dateAvailableAsPublicDraft
 
-- Label: "Date available as draft"
-- Definition: Date(s) when a resource has been made available in the Web or for a limited number of reviewers as a draft. 
+- Label: "Date Available As Public Draft"
+- Definition: Date when a draft has been made available on the web or in an open repository such as ArXiv. 
 - Type: Property
 - Subproperty Of: dcterms:date
-- Usage: Provide this information if known. Example: a date when a specific version of an Internet draft (I-D) was made available in the Web by IETF.  
+- Usage: Provide this information if known. Example: a date when an Internet draft (I-D) is made available in the Web by IETF.  
 
 ### dateSubmittedAsPreprint
 

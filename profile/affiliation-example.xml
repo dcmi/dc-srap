@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!-- Example on how to express rich affiliation information in XML -->
+<!-- Loosely based on qualified DC example in https://www.dublincore.org/specifications/dublin-core/dc-xml-guidelines/2003-04-02/ -->
+<!-- Uses attributes for expressing PIDs in DC, in the spirit of https://github.com/dcmi/pids_in_dc/blob/master/report/Report_DC2018_PID_Session_20180911.md -->
+<!-- The actual attribute is called "pid" and not "id" due to clash with XML element "id", see https://github.com/dcmi/pids_in_dc/issues/17 -->
+
+<record xmlns:dcterms="http://purl.org/dc/terms/">
+  <dcterms:title>Dublin Core: Process and Principles</dcterms:title>
+  <dcterms:creator>
+    <dcterms:agent pid="http://example.org/shigeo">Shigeo Sugimoto</dcterms:agent>
+    <dcterms:affiliation pid="http://example.org/ilis">Institute of Library and Information Science, University of Tsukuba, Japan</dcterms:affiliation>
+  </dcterms:creator>
+  <dcterms:creator>
+    <dcterms:agent pid="http://example.org/tom">Thomas Baker</dcterms:agent>
+    <dcterms:affiliation pid="http://example.org/isb">Institutszentrum Schloss Birlinghoven, Fraunhofer-Gesellschaft, Germany</dcterms:affiliation>
+  </dcterms:creator>
+  <dcterms:creator>
+    <dcterms:agent pid="http://example.org/stuart">Stuart L. Weibel</dcterms:agent>
+    <dcterms:affiliation pid="http://example.org/dcmi">Dublin Core Metadata Initiative</dcterms:affiliation>
+    <dcterms:affiliation pid="http://example.org/oclc">OCLC Office of Research</dcterms:affiliation>
+  </dcterms:creator>
+</record>

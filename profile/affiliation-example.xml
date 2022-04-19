@@ -8,16 +8,22 @@
 <record xmlns:dcterms="http://purl.org/dc/terms/">
   <dcterms:title>Dublin Core: Process and Principles</dcterms:title>
   <dcterms:creator>
-    <dcterms:agent pid="http://example.org/shigeo">Shigeo Sugimoto</dcterms:agent>
-    <dcterms:affiliation pid="http://example.org/ilis">Institute of Library and Information Science, University of Tsukuba, Japan</dcterms:affiliation>
+    <dcterms:AffiliatedAgent>
+      <dcterms:agent pid="http://example.org/shigeo">Shigeo Sugimoto</dcterms:agent>
+      <dcterms:affiliation pid="http://example.org/ilis">Institute of Library and Information Science, University of Tsukuba, Japan</dcterms:affiliation>
+    </dcterms:AffiliatedAgent>
   </dcterms:creator>
   <dcterms:creator>
-    <dcterms:agent pid="http://example.org/tom">Thomas Baker</dcterms:agent>
-    <dcterms:affiliation pid="http://example.org/isb">Institutszentrum Schloss Birlinghoven, Fraunhofer-Gesellschaft, Germany</dcterms:affiliation>
+    <dcterms:AffiliatedAgent>
+      <dcterms:agent pid="http://example.org/tom">Thomas Baker</dcterms:agent>
+      <dcterms:affiliation pid="http://example.org/isb">Institutszentrum Schloss Birlinghoven, Fraunhofer-Gesellschaft, Germany</dcterms:affiliation>
+    </dcterms:AffiliatedAgent>
   </dcterms:creator>
   <dcterms:creator>
-    <dcterms:agent pid="http://example.org/stuart">Stuart L. Weibel</dcterms:agent>
-    <dcterms:affiliation pid="http://example.org/dcmi">Dublin Core Metadata Initiative</dcterms:affiliation>
-    <dcterms:affiliation pid="http://example.org/oclc">OCLC Office of Research</dcterms:affiliation>
+    <dcterms:AffiliatedAgent>
+      <dcterms:agent pid="http://example.org/stuart">Stuart L. Weibel</dcterms:agent>
+      <dcterms:affiliation pid="http://example.org/dcmi">Dublin Core Metadata Initiative</dcterms:affiliation>
+      <dcterms:affiliation pid="http://example.org/oclc">OCLC Office of Research</dcterms:affiliation>
+    </dcterms:AffiliatedAgent>
   </dcterms:creator>
 </record>

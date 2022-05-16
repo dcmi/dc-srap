@@ -9,21 +9,21 @@
   <dcterms:title>Dublin Core: Process and Principles</dcterms:title>
   <dcterms:creator>
     <dcterms:AffiliatedAgent>
-      <dcterms:agent pid="http://example.org/shigeo">Shigeo Sugimoto</dcterms:agent>
-      <dcterms:affiliation pid="http://example.org/ilis">Institute of Library and Information Science, University of Tsukuba, Japan</dcterms:affiliation>
+      <dcterms:agent pid="https://orcid.org/0000-0002-5341-7016 http://www.wikidata.org/entity/Q67207546 https://isni.org/isni/0000000373878458">Shigeo Sugimoto</dcterms:agent>
+      <dcterms:affiliation pid="https://isni.org/isni/0000000123694728">Institute of Library and Information Science, University of Tsukuba, Japan</dcterms:affiliation>
     </dcterms:AffiliatedAgent>
   </dcterms:creator>
   <dcterms:creator>
     <dcterms:AffiliatedAgent>
-      <dcterms:agent pid="http://example.org/tom">Thomas Baker</dcterms:agent>
+      <dcterms:agent pid="https://orcid.org/0000-0003-3741-6977 http://www.wikidata.org/entity/Q46914185 https://isni.org/isni/0000000084265997">Thomas Baker</dcterms:agent>
       <dcterms:affiliation pid="http://example.org/isb">Institutszentrum Schloss Birlinghoven, Fraunhofer-Gesellschaft, Germany</dcterms:affiliation>
     </dcterms:AffiliatedAgent>
   </dcterms:creator>
   <dcterms:creator>
     <dcterms:AffiliatedAgent>
-      <dcterms:agent pid="http://example.org/stuart">Stuart L. Weibel</dcterms:agent>
-      <dcterms:affiliation pid="http://example.org/dcmi">Dublin Core Metadata Initiative</dcterms:affiliation>
-      <dcterms:affiliation pid="http://example.org/oclc">OCLC Office of Research</dcterms:affiliation>
+      <dcterms:agent pid="http://viaf.org/viaf/73638839">Stuart L. Weibel</dcterms:agent>
+      <dcterms:affiliation pid="https://isni.org/isni/0000000093987123">Dublin Core Metadata Initiative</dcterms:affiliation>
+      <dcterms:affiliation pid="https://isni.org/isni/0000000114821326">OCLC Office of Research</dcterms:affiliation>
     </dcterms:AffiliatedAgent>
   </dcterms:creator>
 </record>

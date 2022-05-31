@@ -1,0 +1,4 @@
+vim 2022-05-17.srap_meeting_15.md
+git add 2022-05-17.srap_meeting_15.md
+git commit -m 2022-05-17.srap_meeting_15.md
+git push

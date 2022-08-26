@@ -1,19 +1,10 @@
-﻿## Dublin Core Metadata Initiative Scholarly Resources Application Profile (SRAP) 
+## Dublin Core Metadata Initiative Scholarly Resources Application Profile (SRAP) 
 
-Version 0.76         
-2021-07-19 
+*list of authors*
 
-Juha Hakala                                                
-Senior advisor 
-The National Library of Finland
+The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations näitä tietojaor scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
-Osma Suominen 
-Information Systems Specialist 
-The National Library of Finland 
-
-The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[1][2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[3] (available only in Finnish). 
-
-There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[4]. This is not surprising since they share the same purpose, description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by different institutions of higher education. 
+There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[^4]. This is not surprising since they share the same purpose, description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by different institutions of higher education. 
 
 The SRAP application profile proposal was prepared by a Finnish working group, but it is intended to be globally applicable. The proposal does not specify a FRBR-based or other data model, but all suggested properties are “battle-proven”, in use. The only exception is the embargo date, which was adopted from ETHOS after the working group decided it is relevant for SRAP profile. However, several properties, such as affiliation, have been used in Finland only to describe scholarly resources such as doctoral dissertations. In this proposal these properties have a broader scope appropriate for DCMI Metadata Terms properties, in addition to the more limited semantics within the SRAP context.  
 
@@ -25,16 +16,15 @@ Many properties originating from SWAP have more generic semantics in SRAP in ord
 
 When UKOLN created the 2006 version of SWAP, no standard identifiers for researchers existed. Therefore the profile could not rely on ISNI or ORCID, and advocated the use of email addresses and homepage URLs as “identifiers”. However, email addresses or homepage URIs are not very good identifiers since they are not persistent and do not identify a person in the long (or even short) term. Due to this, properties from the “Description of an agent” section of the 2006 SWAP proposal are not included herein. Instead, the SRAP proposal relies on standard identifiers, such as ISNI and ORCID, since they are persistent and facilitate access to additional metadata about the agent.  
 
-We do not propose any new properties for agent-specific identifiers, but rely on DCMI’s draft proposal[5] of using the XML id attribute[a] to match identifiers with the agent names. For instance: 
+We do not propose any new properties for agent-specific identifiers, but rely on DCMI’s draft proposal[^5] of using the XML id attribute to match identifiers with the agent names. For instance: 
 
-    <dcterms:affiliation id="http://isni.org/isni/0000000404102071">University of Helsinki</ dcterms:affiliation>    
-
+    <dcterms:affiliation id="http://isni.org/isni/0000000404102071">University of Helsinki</dcterms:affiliation>    
 
 This approach is sufficient for e.g. ISNI and ORCID (which share the same syntax) since their HTTP URIs reveal the identifier system used:
 
     <dcterms:editor id=https://orcid.org/0000-0002-1825-0097>Carberry, Josiah</dcterms:editor>
 
-Roles of contributors are based on Library of Congress Relator terms and their associated codes[6] when applicable. Contributor codes used in SWAP are provided for reference purposes.  
+Roles of contributors are based on Library of Congress Relator terms and their associated codes[^6] when applicable. Contributor codes used in SWAP are provided for reference purposes.  
 
 Note 1: All DCMI Metadata Terms URIs are suggestions. 
 
@@ -52,7 +42,7 @@ NOTE Metadata elements needed for description of research data sets are not incl
 
 Creator is a person or group which produces a scholarly resource. 
 
-Affiliation[b] is an organization to which the creator of the scholarly resource is affiliated or was affiliated when the resource was created. 
+Affiliation is an organization to which the creator of the scholarly resource is affiliated or was affiliated when the resource was created. 
 
 Editor is a person or group who prepares a scholarly resource for publication that is not primarily their own, such as by clarifying text, adding introductory or other critical matter, or technically leading an editorial staff.
 
@@ -63,7 +53,7 @@ Degree supervisor is a person under whose supervision a degree candidate develop
 Opponent is a person responsible for opposing a thesis or dissertation. 
 
 Figure 1. SRAP domain model.
-Alphabetic table of elements[c]
+Alphabetic table of elements
 
 This table contains all the proposed new or changed element, and DC Terms elements which are essential for description of scholarly resources. In addition to the listed elements, any existing DC Terms element may also be used if and when necessary.
 
@@ -190,7 +180,6 @@ Name
 	A term from COAR resource type vocabulary, http://purl.org/coar/resource_type
 	
 
-[j]
 Generic elements 
 Affiliation
 Proposed Schema.org property: https://schema.org/affiliation 
@@ -229,7 +218,7 @@ Recommended practice is to identify the funder with a URI. If this is not possib
 If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.  
 
 
-Grant number  [k][l]
+Grant number
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/grantNumber
 Label: Grant Number
 An alpha-numeric string identifying the funding grant under which the scholarly resource was written. 
@@ -239,7 +228,7 @@ Subproperty of: Identifier
 Metadata source  
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/metadataSource
 Label: Metadata Source  
-Source (database or system) of the metadata record. [m]
+Source (database or system) of the metadata record.
 Recommended practice is to specify the metadata source by means of its name or URI. It is also possible to give both the name and the URI.
 
 
@@ -352,8 +341,8 @@ Note: There are no practical examples in DCMI Terms or DC User Guide on how to u
 Type 
 DCMI Metadata Term: http://purl.org/dc/terms/type
 Label: Type 
-The Dublin Core DCMI Type Vocabulary[7] is general and as such not ideally suited for scholarly resources. 
-A better choice for these publications is the COAR Controlled Vocabulary for Resource Type Genres[8]. The use of this vocabulary with scholarly resources should be recommended either in DCMI Metadata Terms or in the DC User Guide. For instance: 
+The Dublin Core DCMI Type Vocabulary[^7] is general and as such not ideally suited for scholarly resources. 
+A better choice for these publications is the COAR Controlled Vocabulary for Resource Type Genres[^8]. The use of this vocabulary with scholarly resources should be recommended either in DCMI Metadata Terms or in the DC User Guide. For instance: 
 Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary or the COAR Controlled Vocabulary for Resource Type Genres.  
 Examples
 These examples are all non-normative and included for information purposes only. 
@@ -429,42 +418,20 @@ Example 2        <dcterms:type id="http://purl.org/coar/resource_type/c_0640">jo
 
 
 
-
-
 ________________
-[1]         http://www.ukoln.ac.uk/repositories/digirep/index/Scholarly_Works_Application_Profile
-[2]         http://www.ariadne.ac.uk/issue/50/allinson-et-al/
-[3]         https://www.kiwi.fi/display/Julkaisuarkistopalvelut/Metadatasuositus+julkaisuarkistojen+tekstiaineistolle
-[4]         http://ethostoolkit.cranfield.ac.uk/tiki-index.php?page=The+EThOS+UKETD_DC+application+profile
-[5] https://github.com/dcmi/pids_in_dc 
-[6]         http://id.loc.gov/vocabulary/relators.html
-[7]         https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/
-[8]         http://purl.org/coar/resource_type
-[a]I think the use of "id" as an attribute name is problematic in the draft proposal, and should be changed to something else such as "pid" or "pids". This is out of scope for the SRAP proposal, but affects the examples. I've opened an issue about this in the GitHub repository: https://github.com/dcmi/pids_in_dc/issues/17
-[b]I informally consulted the librarian who is responsible for the acquisitions of theses and dissertations at Library and Archives Canada. Here is her comment: 
-This is really interesting – we are currently using the ETD-MS schema for theses and dissertations, which is based on Dublin Core, with an extension for thesis information, specifically the following four elements: degree name, degree level, degree discipline, and degree grantor.
 
+[^1]: http://www.ukoln.ac.uk/repositories/digirep/index/Scholarly_Works_Application_Profile
 
-If this new profile for Dublin Core is developed and implemented, perhaps in the future we would consider using it instead of ETD-MS, if the universities adopt it as well. But in the document, I don’t see any fields for degree name (e.g. Master of Arts), degree level, degree discipline, and degree grantor.
-[c]KC: highlight new proposals for example with a new color
-[d]In LoC, I believe that edt is an addition to a personal name. I don't know if edt can be used as a property in the place of dct:creator, but that would be best, IMO. The same is true for the other relators here, like "fnd" and "dgs"
-[e]http://purl.org/spar/fabio/hasEmbargoDate
-http://purl.org/spar/fabio/hasEmbargoDuration
+[^2]: http://www.ariadne.ac.uk/issue/50/allinson-et-al/
 
+[^3]: https://www.kiwi.fi/display/Julkaisuarkistopalvelut/Metadatasuositus+julkaisuarkistojen+tekstiaineistolle
 
-The embargo duration may also be useful. At times you know the duration that WILL be used even before a document is published.
-[f]http://purl.org/ontology/bibo/presentedAt
+[^4]: http://ethostoolkit.cranfield.ac.uk/tiki-index.php?page=The+EThOS+UKETD_DC+application+profile
 
+[^5]: https://github.com/dcmi/pids_in_dc 
 
-This may need to take a shape as a value so that one could include conference name, conference date
-[g]_Marked as resolved_
-[h]_Re-opened_
-[i]FaBiO vocab has a number of status properties: date received, date accepted, date preprint disseminated, date retracted (very important!). But this brings up another issue about status:
-There is the status of the document being described, but there are disciplines that record in the metadata for a published document the dates of the various "steps", such as submission and acceptance. These are used to establish who published research first. So there's "status of this" and "date of status markers". I think these would need to be separate properties.
+[^6]: http://id.loc.gov/vocabulary/relators.html
 
+[^7]: https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/
 
-See: https://sparontologies.github.io/fabio/current/fabio.html#dataproperties
-[j]Is possible add, source or URL source for code repositories like github. The intention is that some works have a github repository to describe the source.
-[k]SR comment: I've got no alternative. But somehow I think that for the Dublin Core Terms this is something very specific.
-[l]In Finland, grant number is regarded as an important metadata element.
-[m]This is meta-metadata, about the "record" itself rather than the resource it describes. I wonder if there should be a domain statement that reflects this - and if so, what that domain should be.
+[^8]: http://purl.org/coar/resource_type

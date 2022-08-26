@@ -183,133 +183,169 @@ Name
 
 ## Generic elements 
 
-Affiliation
+### Affiliation
+
 Proposed Schema.org property: https://schema.org/affiliation 
+
 Label: Affiliation
+
 An organization to which an agent is or was affiliated.
+
 Domain includes: dcterms:Agent
+
 Recommended practice is to identify the affiliation with a URI. If this is not possible or feasible, a literal value that identifies the affiliated organization may be provided. It is also possible to give both the name and the URI.
+
 If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. 
 
+### Editor 
 
-Editor 
 Proposed MARC Relator: https://id.loc.gov/vocabulary/relators/edt
 
-
 Label: Editor
+
 A person, family, or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution..
+
 Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
 
+### Embargo date 
 
-Embargo date 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/embargoDate
+
 Label: Embargo Date
+
 The date when the academic publication will be made available for all users.  
+
 Recommended practice is to describe the date, or date/time as recommended for the property Date, of which this is a subproperty.
+
 Subproperty of: Date available (http://purl.org/dc/terms/available) 
 
-
 NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met
-Funder
-Proposed DCMI Metadata Term: https://id.loc.gov/vocabulary/relators/fnd
-Label: Funder
-A person or organization that furnished financial support for the production of the resource. 
-Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
 
+### Funder
+
+Proposed DCMI Metadata Term: https://id.loc.gov/vocabulary/relators/fnd
+
+Label: Funder
+
+A person or organization that furnished financial support for the production of the resource. 
+
+Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
 
 If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.  
 
+### Grant number
 
-Grant number
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/grantNumber
+
 Label: Grant Number
+
 An alpha-numeric string identifying the funding grant under which the scholarly resource was written. 
+
 Subproperty of: Identifier
 
+### Metadata source  
 
-Metadata source  
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/metadataSource
-Label: Metadata Source  
-Source (database or system) of the metadata record.
-Recommended practice is to specify the metadata source by means of its name or URI. It is also possible to give both the name and the URI.
 
+Label: Metadata Source  
+
+Source (database or system) of the metadata record.
+
+Recommended practice is to specify the metadata source by means of its name or URI. It is also possible to give both the name and the URI.
 
 SRAP: source (database or system) of the metadata record describing a scholarly resource. 
  
 For metadata on scholarly resources, common sources include 
+
 * ISI Web of Science
 * Scopus
 * PubMed Central
 * ArXiv
 * Cab Abstracts 
+
 Since names may change over time, a URI should be used, especially when there is one based on a standard identifier. 
+
 Note: Institutional repositories may harvest metadata from external sources. Since the source may have an impact on how the metadata can be reused, it is important to keep track of where the metadata came from. 
-Presented at
+
+### Presented at
+
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/presentedAt
+
 Label: Presented at 
+
 The conference, workshop, shareholder meeting etc. where the resource was presented. 
+
 SRAP: Conference, workshop or other scientific event where the scholarly resource was presented. 
+
 Recommended practice is to identify formal meetings such as conferences with a URI. If this is not possible or feasible, a literal value that identifies the meeting may be provided. It is also possible to give both the name and the URI.
-Related Dataset  
+
+### Related Dataset  
+
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedDataset
+
 Label: Related Dataset
+
 Dataset referenced in the described resource. 
+
 SRAP: Dataset referenced in the described scholarly resource.
+
 Recommended practice is to identify the dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
+
 Subproperty of: References         (http://purl.org/dc/terms/references)
 
+### Status 
 
-Status 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/status
-Label: Status 
-The condition or state of the described resource.
 
+Label: Status 
+
+The condition or state of the described resource.
 
 Note: Typically used with a controlled vocabulary of statuses.
 
-
 SRAP: The publication state of the described scholarly resource. 
+
 In SRAP, the recommended best practice is to use a status from the OpenAIRE vocabulary for publication versions (https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html): 
+
 * info:eu-repo/semantics/draft
 * info:eu-repo/semantics/submittedVersion 
 * info:eu-repo/semantics/acceptedVersion 
 * info:eu-repo/semantics/publishedVersion 
 * info:eu-repo/semantics/updatedVersion
+
 Subproperty of: Type        (http://purl.org/dc/elements/1.1/type)
                 (http://purl.org/dc/terms/type)
 
-
 Note 1 OpenAIRE uses Type property for these codes. Since they are all related to the publication status of a publication, we considered that there is a need for a Type subproperty. 
-Note 2 Info URIs assigned for these codes are not actionable and there is no additional information about the codes available at http://www.lse.ac.uk/library/versions (the URL produces 404 error). However, these info URIs have been used in this proposal instead of plain text terms (draft, submittedVersion, etc). 
 
+Note 2 Info URIs assigned for these codes are not actionable and there is no additional information about the codes available at http://www.lse.ac.uk/library/versions (the URL produces 404 error). However, these info URIs have been used in this proposal instead of plain text terms (draft, submittedVersion, etc). 
 
 ## SRAP elements 
 
-
 SRAP elements are elements which are applicable only for scholarly resources; especially academic dissertations. 
 
+### Degree supervisor 
 
-Degree supervisor 
 Proposed DCMI Metadata Term: http://id.loc.gov/vocabulary/relators/dgs
 
-
 Label: Supervisor
-A person overseeing a higher level academic degree.
-Recommended practice is to identify the supervisor with a URI. If this is not possible or feasible, a literal value that identifies the supervisor may be provided. It is also possible to give both the name and the URI.
 
+A person overseeing a higher level academic degree.
+
+Recommended practice is to identify the supervisor with a URI. If this is not possible or feasible, a literal value that identifies the supervisor may be provided. It is also possible to give both the name and the URI.
 
 Subproperty of: Contributor (http://purl.org/dc/elements/1.1/contributor)
                 (http://purl.org/dc/terms/contributor)
 
+### Opponent
 
-
-
-Opponent
 Proposed DCMI Metadata Terms: http://id.loc.gov/vocabulary/relators/opn 
-Label: Opponent 
-A person or organization responsible for opposing a thesis or dissertation
-Recommended practice is to identify the opponent with a URI. If this is not possible or feasible, a literal value that identifies the opponent may be provided. It is also possible to give both the name and the URI.
 
+Label: Opponent 
+
+A person or organization responsible for opposing a thesis or dissertation
+
+Recommended practice is to identify the opponent with a URI. If this is not possible or feasible, a literal value that identifies the opponent may be provided. It is also possible to give both the name and the URI.
 
 ## Refinements to existing DCMIMT elements
 

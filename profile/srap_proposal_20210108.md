@@ -313,40 +313,55 @@ Recommended practice is to identify the opponent with a URI. If this is not poss
 
 ## Refinements to existing DCMIMT elements
 
+### Access rights  
 
-Access rights  
 DCMI Metadata Term: http://purl.org/dc/terms/accessRights 
+
 Label: Access Rights 
+
 Current definition of this property in the DCMI Terms namespace is: 
-“Information about who can access the resource or an indication of its security status.”
+
+> “Information about who can access the resource or an indication of its security status.”
+
 This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, there is no recommendation to use a controlled vocabulary. 
+
 The following note could be added to the DCMI Terms or, alternatively, to the user guide: 
-For scholarly resources, using the COAR (Confederation of Open Access Repositories) vocabulary of access rights (http://vocabularies.coar-repositories.org/documentation/access_rights/) is recommended. 
+
+For scholarly resources, using the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/) is recommended.
+
 Version 1.0 of the vocabulary contains the following terms: 
+
 * open access
 * embargoed access
 * restricted access
 * metadata only access 
-The following recommendation could be added to DCMI Metadata Terms: 
 
+The following recommendation could be added to DCMI Metadata Terms: 
 
 Recommended practice is to specify the access right by means of a term or its URI from a controlled vocabulary. It is also possible to give both the term and its URI.
  
-Is Part Of
-DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
-In SRAP context, this property can be used to specify host document, a related resource in which the described scholarly resource is physically or logically included. For instance, a scientific periodical in which the described article has been published.  
-Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system or a name may be provided. It is also possible to give both the name and the URI.
+### Is Part Of
 
+DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
+
+In SRAP context, this property can be used to specify host document, a related resource in which the described scholarly resource is physically or logically included. For instance, a scientific periodical in which the described article has been published.
+
+Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system or a name may be provided. It is also possible to give both the name and the URI.
 
 “Is Part Of” in DCMI Terms shall be used to provide a link (URI) from the described component part (“child”) to the host resource (“parent”). 
 Note: There are no practical examples in DCMI Terms or DC User Guide on how to use this property in cases that are common for scientific publications, such as linking from an article to conference proceedings or periodicals.  User guide and/or DCMI Terms should be revised to accommodate relevant use cases. 
-Type 
-DCMI Metadata Term: http://purl.org/dc/terms/type
-Label: Type 
-The Dublin Core DCMI Type Vocabulary[^7] is general and as such not ideally suited for scholarly resources. 
-A better choice for these publications is the COAR Controlled Vocabulary for Resource Type Genres[^8]. The use of this vocabulary with scholarly resources should be recommended either in DCMI Metadata Terms or in the DC User Guide. For instance: 
-Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary or the COAR Controlled Vocabulary for Resource Type Genres.  
 
+### Type 
+
+DCMI Metadata Term: http://purl.org/dc/terms/type
+
+Label: Type 
+
+The Dublin Core DCMI Type Vocabulary[^7] is general and as such not ideally suited for scholarly resources. 
+
+A better choice for these publications is the COAR Controlled Vocabulary for Resource Type Genres[^8]. The use of this vocabulary with scholarly resources should be recommended either in DCMI Metadata Terms or in the DC User Guide. For instance: 
+
+Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary or the COAR Controlled Vocabulary for Resource Type Genres.  
 
 ## Examples
 

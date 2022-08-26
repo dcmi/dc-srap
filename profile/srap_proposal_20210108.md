@@ -1,4 +1,4 @@
-## Dublin Core Metadata Initiative Scholarly Resources Application Profile (SRAP) 
+# Dublin Core Metadata Initiative Scholarly Resources Application Profile (SRAP) 
 
 *list of authors*
 
@@ -30,7 +30,7 @@ Note 1: All DCMI Metadata Terms URIs are suggestions.
 
 Note 2: Examples are not normative and do not need to be reviewed.  
 
-#### Domain model 
+## Domain model 
 
 SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
 
@@ -53,7 +53,8 @@ Degree supervisor is a person under whose supervision a degree candidate develop
 Opponent is a person responsible for opposing a thesis or dissertation. 
 
 Figure 1. SRAP domain model.
-Alphabetic table of elements
+
+## Alphabetic table of elements
 
 This table contains all the proposed new or changed element, and DC Terms elements which are essential for description of scholarly resources. In addition to the listed elements, any existing DC Terms element may also be used if and when necessary.
 
@@ -180,7 +181,8 @@ Name
 	A term from COAR resource type vocabulary, http://purl.org/coar/resource_type
 	
 
-Generic elements 
+## Generic elements 
+
 Affiliation
 Proposed Schema.org property: https://schema.org/affiliation 
 Label: Affiliation
@@ -281,7 +283,7 @@ Note 1 OpenAIRE uses Type property for these codes. Since they are all related t
 Note 2 Info URIs assigned for these codes are not actionable and there is no additional information about the codes available at http://www.lse.ac.uk/library/versions (the URL produces 404 error). However, these info URIs have been used in this proposal instead of plain text terms (draft, submittedVersion, etc). 
 
 
-SRAP elements 
+## SRAP elements 
 
 
 SRAP elements are elements which are applicable only for scholarly resources; especially academic dissertations. 
@@ -309,7 +311,7 @@ A person or organization responsible for opposing a thesis or dissertation
 Recommended practice is to identify the opponent with a URI. If this is not possible or feasible, a literal value that identifies the opponent may be provided. It is also possible to give both the name and the URI.
 
 
-Refinements to existing DCMIMT elements
+## Refinements to existing DCMIMT elements
 
 
 Access rights  
@@ -344,79 +346,147 @@ Label: Type
 The Dublin Core DCMI Type Vocabulary[^7] is general and as such not ideally suited for scholarly resources. 
 A better choice for these publications is the COAR Controlled Vocabulary for Resource Type Genres[^8]. The use of this vocabulary with scholarly resources should be recommended either in DCMI Metadata Terms or in the DC User Guide. For instance: 
 Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary or the COAR Controlled Vocabulary for Resource Type Genres.  
-Examples
+
+
+## Examples
+
 These examples are all non-normative and included for information purposes only. 
-Affiliation 
-Example 1: <dcterms:affiliation>University of Helsinki. Faculty of Theology</dcterms:affiliation>    
 
+### Affiliation 
 
-Example 2: <dcterms:affiliation id="http://isni.org/isni/0000000406246810">University of Helsinki. Faculty of Theology</dcterms:affiliation>   
+Example 1:
 
+    <dcterms:affiliation>University of Helsinki. Faculty of Theology</dcterms:affiliation>    
+
+Example 2:
+
+    <dcterms:affiliation id="http://isni.org/isni/0000000406246810">University of Helsinki. Faculty of Theology</dcterms:affiliation>   
 
 Note 1: ISNI should be provided as a URI, not as a literal, since the literal form (0000 0004 0624 6810) is not actionable and does not indicate explicitly whether the string is ISNI, ORCID or even some other identifier that just happens to have the same syntax. 
-Editor 
 
+### Editor 
 
-Example 1         <dcterms:editor>Carberry, Josiah</dcterms:editor>
+Example 1:
 
+    <dcterms:editor>Carberry, Josiah</dcterms:editor>
 
-Example 2         <dcterms:editor id="https://orcid.org/0000-0002-1825-0097">Carberry, Josiah</dcterms:editor>
-Embargo date 
-Example        <dcterms:embargoDate>2020-12-31</dcterms:embargoDate>
-Funder 
-Example 1         <dcterms:funder>Wellcome Trust</dcterms:funder>
-Example 2          <dcterms:funder id="http://isni.org/isni/0000000404277672">Wellcome Trust</dcterms:funder>   
+Example 2:
 
+    <dcterms:editor id="https://orcid.org/0000-0002-1825-0097">Carberry, Josiah</dcterms:editor>
 
-Metadata source 
-Example 1        <dcterms:metadataSource>PubMed Central</dcterms:metadataSource> 
-Example 2        <dcterms:metadataSource id="http://isni.org/isni/0000000405077840">Pubmed Central</dcterms:metadataSource>  
+### Embargo date 
 
+Example:
 
-Presented at 
-Example 1        <dcterms:presentedAt>The Web Conference 2020</dcterms:presentedAt> 
-Example 2        <dcterms:presentedAt id="https://www2020.thewebconf.org">The Web Conference 2020</dcterms:presentedAt>
+    <dcterms:embargoDate>2020-12-31</dcterms:embargoDate>
 
+### Funder
 
-Note: The URI and the name may identify either a single conference or a conference series, but both the name and the URI shall identify the same thing. Example 4 is incorrect: 
-Example 3        <dcterms:presentedAt id="https://www.iw3c2.org/">The Web Conference 2020</dcterms:presentedAt > 
-Related dataset
-Example        <dcterms:relatedDataset>http://dx.doi.org/10.17605/OSF.IO/B6KJZ</dcterms:relatedDataset>
+Example 1:
 
+    <dcterms:funder>Wellcome Trust</dcterms:funder>
 
-Status
-Example          <dcterms:status>info:eu-repo/semantics/acceptedVersion</dcterms:status>
+Example 2:
 
+    <dcterms:funder id="http://isni.org/isni/0000000404277672">Wellcome Trust</dcterms:funder>   
 
-Degree supervisor 
+### Metadata source 
 
+Example 1:
 
-Example 1        <dcterms:supervisor>Carberrry, Josiah</dcterms:supervisor>
+    <dcterms:metadataSource>PubMed Central</dcterms:metadataSource> 
 
+Example 2:
 
-Example 2        <dcterms:supervisor id="https://orcid.org/0000-0002-1825-0097">Carberry, Josiah</dcterms:supervisor>
+    <dcterms:metadataSource id="http://isni.org/isni/0000000405077840">Pubmed Central</dcterms:metadataSource>  
 
+### Presented at 
 
-Grant number 
-Example        <dcterms:grantNumber>R01GM98765401</dcterms:grantNumber>
-Opponent 
+Example 1:
 
+    <dcterms:presentedAt>The Web Conference 2020</dcterms:presentedAt> 
 
-Example 1         <dcterms:opponent>Ainsyut'ain, Alberŭt'ŭ</dcterms:opponent>
-Example 2         <dcterms:opponent id="http://isni.org/isni/000000012281955X">Ainsyut'ain, Alberŭt'ŭ </dcterms:opponent>
-Access rights 
-Example 1        <dcterms:accessRight>open access</dcterms:accessRight>
-Example 2         <dcterms:accessRight id="http://purl.org/coar/access_right/c_abf2">open access</dcterms:accessRight>
-Is Part Of 
-Example 1        <dcterms:isPartOf>https://www.thelancet.com/coronavirus<dcterms:isPartOf>
-Example 2        <dcterms:isPartOf id="https://www.thelancet.com/coronavirus">COVID-19 Resource Center<dcterms:isPartOf>
-Example 3        <dcterms:isPartOf id="1474-547X">Lancet (online)<dcterms:isPartOf>
-Type
-Example 1        <dcterms:type>journal</dcterms:type>
-Example 2        <dcterms:type id="http://purl.org/coar/resource_type/c_0640">journal</dcterms:type> 
+Example 2:
 
+    <dcterms:presentedAt id="https://www2020.thewebconf.org">The Web Conference 2020</dcterms:presentedAt>
 
+Note: The URI and the name may identify either a single conference or a conference series, but both the name and the URI shall identify the same thing. Example 3 is incorrect: 
 
+Example 3:
+
+    <dcterms:presentedAt id="https://www.iw3c2.org/">The Web Conference 2020</dcterms:presentedAt > 
+
+### Related dataset
+
+Example:
+
+    <dcterms:relatedDataset>http://dx.doi.org/10.17605/OSF.IO/B6KJZ</dcterms:relatedDataset>
+
+### Status
+
+Example:
+
+    <dcterms:status>info:eu-repo/semantics/acceptedVersion</dcterms:status>
+
+### Degree supervisor 
+
+Example 1:
+
+    <dcterms:supervisor>Carberrry, Josiah</dcterms:supervisor>
+
+Example 2:
+
+    <dcterms:supervisor id="https://orcid.org/0000-0002-1825-0097">Carberry, Josiah</dcterms:supervisor>
+
+### Grant number 
+
+Example:
+
+    <dcterms:grantNumber>R01GM98765401</dcterms:grantNumber>
+
+### Opponent 
+
+Example 1:
+
+    <dcterms:opponent>Ainsyut'ain, Alberŭt'ŭ</dcterms:opponent>
+
+Example 2:
+
+    <dcterms:opponent id="http://isni.org/isni/000000012281955X">Ainsyut'ain, Alberŭt'ŭ </dcterms:opponent>
+
+### Access rights 
+
+Example 1:
+
+    <dcterms:accessRight>open access</dcterms:accessRight>
+
+Example 2:
+
+    <dcterms:accessRight id="http://purl.org/coar/access_right/c_abf2">open access</dcterms:accessRight>
+
+### Is Part Of 
+
+Example 1:
+
+    <dcterms:isPartOf>https://www.thelancet.com/coronavirus<dcterms:isPartOf>
+
+Example 2:
+
+    <dcterms:isPartOf id="https://www.thelancet.com/coronavirus">COVID-19 Resource Center<dcterms:isPartOf>
+
+Example 3:
+
+    <dcterms:isPartOf id="1474-547X">Lancet (online)<dcterms:isPartOf>
+
+### Type
+
+Example 1:
+
+    <dcterms:type>journal</dcterms:type>
+
+Example 2:
+
+    <dcterms:type id="http://purl.org/coar/resource_type/c_0640">journal</dcterms:type> 
 
 ________________
 

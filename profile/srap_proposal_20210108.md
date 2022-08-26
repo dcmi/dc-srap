@@ -58,128 +58,38 @@ Figure 1. SRAP domain model.
 
 This table contains all the proposed new or changed element, and DC Terms elements which are essential for description of scholarly resources. In addition to the listed elements, any existing DC Terms element may also be used if and when necessary.
 
-Name
-
-	Identifier
-	Mandatory / Repeatable
-	Value
-	Abstract
-	http://purl.org/dc/terms/abstract
-	0...1
-	Free text
-	Access rights
-	http://purl.org/dc/terms/accessRights
-	0...1
-	A term from COAR vocabulary (http://vocabularies.coar-repositories.org/documentation/access_rights/). If embargo is indicated, end date or duration of embargo should be provided in Embargo date / Embargo duration. 
-	Affiliation
-	http://purl.org/dc/terms/affiliation
-	0...1
-	Name and identifier of the organization or organizations
-	Contributor
-	http://purl.org/dc/terms/contributor
-	0...1
-	Name and identifier of persons and/or organizations
-	Creator 
-	http://purl.org/dc/terms/creator 
-	0...1
-	Name and identifier of persons and/or organizations
-	Date
-	http://purl.org/dc/terms/date
-	1
-	Date according to ISO 8601-1
-	Degree supervisor
-	http://id.loc.gov/vocabulary/relators/dgs
-	0...1
-	Person
-	Description
-	http://purl.org/dc/terms/description 
-	1
-	Free text; different languages shall be provided separately (as different Description elements)
-	Editor[d]
-	https://id.loc.gov/vocabulary/relators/edt 
-	0...1
-	Name and identifier of persons 
-	Embargo date[e]
-	http://purl.org/spar/fabio/hasEmbargoDate
-	0...1
-	Date the embargo period ends, encoded in ISO 8601-1 format (YYYY-MM-DD).
-	Embargo duration
-	http://purl.org/spar/fabio/hasEmbargoDuration
-	0...1
-	A period expressed in years, months and/or days, with no end/beginning date included. 
-	Format
-	http://purl.org/dc/terms/format 
-	1
-	MIME type registered by IANA
-	Funder 
-	https://id.loc.gov/vocabulary/relators/fnd 
-	0...1
-	Name and identifier of persons and/or organizations
-	Grant number
-	 http://purl.org/dc/terms/grantNumber 
-	0...1
-	Free text
-	Has Part
-	http://purl.org/dc/terms/hasPart 
-	0...1
-	URI or other identifier of the related resource
-	Identifier 
-	http://purl.org/dc/terms/identifier 
-	1
-	URI, one for each identifier the resource has, provided separately
-	Is Part Of
-	http://purl.org/dc/terms/isPartOf
-	0...1
-	URI or other identifier of the related resource
-	Language
-	http://purl.org/dc/terms/language 
-	1
-	A code from ISO 639-2, one for each language used in the resource, provided separately
-	Metadata source 
-	http://purl.org/dc/terms/metadataSource
-	0...1
-	Name of the organization
-	Opponent
-	http://id.loc.gov/vocabulary/relators/opn
-	0...1
-	Name and identifier of the person
-	Presented at[f][g][h]
-	http://purl.org/dc/terms/presentedAt
-	0…1
-	Free text or URI
-	Publisher 
-	http://purl.org/dc/terms/publisher
-	0...1
-	Name and URI of the organization
-	Related dataset 
-	http://purl.org/dc/terms/relatedDataset
-	0...1
-	URI
-	Relation 
-	http://purl.org/dc/terms/relation
-	0...1
-	URI
-	Rights 
-	http://purl.org/dc/terms/rights 
-	0...1
-	Free text or URI of the appropriate license
-	Status[i]
-	http://purl.org/dc/terms/status
-	0...1
-	OpenAire publication status code from https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html 
-	Subject 
-	http://purl.org/dc/terms/subject 
-	0...1
-	A concept from a controlled vocabulary such as LCSH or MeSH
-	Title
-	http://purl.org/dc/terms/title 
-	1
-	Free text, titles in different languages provided separately
-	Type
-	http://purl.org/dc/terms/type
-	0...1
-	A term from COAR resource type vocabulary, http://purl.org/coar/resource_type
-	
+| Name              | Identifier                                    | Mandatory / Repeatable | Value |
+| ----------------- | ----------------------------------------------| ----- | ----- |
+| Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
+| Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/)). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date / Embargo duration. |
+| Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of the organization or organizations |
+| Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of persons and/or organizations |
+| Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of persons and/or organizations |
+| Date              | http://purl.org/dc/terms/date                 | 1     | Date and time according to ISO 8601-1 (YYYY-MM-DDTmm:hh:ss±hh:mm)  |
+| Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 0...1 | Date and time according to ISO 8601-1 |
+| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Person |
+| Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
+| Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of persons |
+| Embargo date      | http://purl.org/spar/fabio/hasEmbargoDate     | 0...1 | Date the embargo period ends, encoded in ISO 8601-1 format (YYYY-MM-DD).  |
+| Embargo duration  | http://purl.org/spar/fabio/hasEmbargoDuration | 0...1 | A period expressed in years, months and/or days, with no end/beginning date included. |
+| Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
+| Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of persons and/or organizations  |
+| Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
+| Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of the related resource |
+| Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
+| Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of the related resource  |
+| Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided  |
+| Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of the organization  |
+| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of the person |
+| Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
+| Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of the organization |
+| Related dataset   | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
+| Relation          | http://purl.org/dc/terms/relation             | 0...1 | URI |
+| Rights            | http://purl.org/dc/terms/rights               | 0...1 | Free text or URI of the appropriate license |
+| Status            | http://purl.org/dc/terms/status               | 0...1 | OpenAire publication status code from [OpenAIRE vocabulary Publication Version](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html) |
+| Subject           | http://purl.org/dc/terms/subject              | 0...1 | A concept from a controlled vocabulary such as LCSH or MeSH |
+| Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
+| Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://vocabularies.coar-repositories.org/pubby/resource_type) |
 
 ## Generic elements 
 

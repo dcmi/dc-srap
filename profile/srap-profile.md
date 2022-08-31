@@ -70,8 +70,7 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Person |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
 | Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of persons |
-| Embargo date      | http://purl.org/spar/fabio/hasEmbargoDate     | 0...1 | Date the embargo period ends, encoded in ISO 8601-1 format (YYYY-MM-DD).  |
-| Embargo duration  | http://purl.org/spar/fabio/hasEmbargoDuration | 0...1 | A period expressed in years, months and/or days, with no end/beginning date included. |
+| Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
 | Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
 | Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of persons and/or organizations  |
 | Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |

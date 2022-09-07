@@ -82,12 +82,12 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of a database or a system  |
 | Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
 | Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
+| Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
 | Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
 | Related dataset   | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
 | Relation          | http://purl.org/dc/terms/relation             | 0...1 | URI |
 | Rights            | http://purl.org/dc/terms/rights               | 0...1 | Information about rights held in and over the resource |
 | Rights Holder     | http://purl.org/dc/terms/rightsHolder         | 0...1 | A person or organization owning or managing rights over the resource |
-| Status            | http://purl.org/dc/terms/status               | 0...1 | OpenAire publication status code from [OpenAIRE vocabulary Publication Version](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html) |
 | Subject           | http://purl.org/dc/terms/subject              | 0...1 | A concept from a controlled vocabulary such as LCSH or MeSH |
 | Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
 | Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://vocabularies.coar-repositories.org/pubby/resource_type) |
@@ -180,6 +180,39 @@ Since names may change over time, a URI should be used, especially when there is
 
 Note: Institutional repositories may harvest metadata from external sources. Since the source may have an impact on how the metadata can be reused, it is important to keep track of where the metadata came from. 
 
+### Publication status 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/publicationStatus
+
+Label: Publication status 
+
+The stage of the resource in the publishing workflow.
+
+Recommended practice is to use a publication status value from the following list: 
+
+public draft
+submitted manuscript
+preprint
+postprint
+publication
+updated publication
+
+Publication status may be provided with following dates:
+
+The following Date subproperties may be used in combination with these statuses:
+
+dateAvailableAsPublicDraft
+dateReceivedAsManuscript
+dateSubmittedAsPreprint
+dateSubmittedAsPostprint
+dateAccepted
+dateAheadOfPrint
+datePublished
+dateUpdated
+dateRetracted
+dateMissing
+dateLost
+
 ### Presented at
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/presentedAt
@@ -206,32 +239,6 @@ Recommended practice is to identify the dataset with a URI identifying either th
 
 Subproperty of: References         (http://purl.org/dc/terms/references)
 
-### Status 
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/status
-
-Label: Status 
-
-The condition or state of the described resource.
-
-Note: Typically used with a controlled vocabulary of statuses.
-
-SRAP: The publication state of the described scholarly resource. 
-
-In SRAP, the recommended best practice is to use a status from the OpenAIRE vocabulary for publication versions (https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html): 
-
-* info:eu-repo/semantics/draft
-* info:eu-repo/semantics/submittedVersion 
-* info:eu-repo/semantics/acceptedVersion 
-* info:eu-repo/semantics/publishedVersion 
-* info:eu-repo/semantics/updatedVersion
-
-Subproperty of: Type        (http://purl.org/dc/elements/1.1/type)
-                (http://purl.org/dc/terms/type)
-
-Note 1 OpenAIRE uses Type property for these codes. Since they are all related to the publication status of a publication, we considered that there is a need for a Type subproperty. 
-
-Note 2 Info URIs assigned for these codes are not actionable and there is no additional information about the codes available at http://www.lse.ac.uk/library/versions (the URL produces 404 error). However, these info URIs have been used in this proposal instead of plain text terms (draft, submittedVersion, etc). 
 
 ## SRAP elements 
 
@@ -373,6 +380,12 @@ Example 1:
 Example 2:
 
     <dcterms:metadataSource id="http://isni.org/isni/0000000405077840">Pubmed Central</dcterms:metadataSource>  
+    
+### Publication status
+
+Example:
+
+    <dcterms:publicationStatus>Updated</dcterms:publicationStatus>
 
 ### Presented at 
 
@@ -395,12 +408,6 @@ Example 3:
 Example:
 
     <dcterms:relatedDataset>http://dx.doi.org/10.17605/OSF.IO/B6KJZ</dcterms:relatedDataset>
-
-### Status
-
-Example:
-
-    <dcterms:status>info:eu-repo/semantics/acceptedVersion</dcterms:status>
 
 ### Degree supervisor 
 

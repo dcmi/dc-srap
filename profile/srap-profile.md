@@ -65,7 +65,7 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
 | Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
-| Date              | http://purl.org/dc/terms/date                 | 1     | Date and time according to ISO 8601-1 (YYYY-MM-DDTmm:hh:ss±hh:mm)  |
+| Date              | http://purl.org/dc/terms/date                 | 1     | Date and time according to ISO 8601-1 (YYYY-MM-DD)  |
 | Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 0...1 | Date and time according to ISO 8601-1 |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
@@ -92,7 +92,7 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
 | Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://vocabularies.coar-repositories.org/pubby/resource_type) |
 
-## Generic SRAP elements 
+## Generic elements 
 
 ### Affiliation
 
@@ -235,7 +235,17 @@ Note 2 Info URIs assigned for these codes are not actionable and there is no add
 
 ## SRAP elements 
 
-SRAP elements are elements which are applicable only for scholarly resources; especially academic dissertations. 
+SRAP elements are elements which are applicable primarily for scholarly resources such as academic dissertations. 
+
+### Date retracted
+
+Proposed DCMI Metadata Term: http://purl.org/spar/fabio/hasRetractionDate
+
+Label: Date retracted 
+
+The date on which the resource was retracted or withdrawn.
+
+The reason for retraction or withdrawal should be provided in the Description.  
 
 ### Degree supervisor 
 

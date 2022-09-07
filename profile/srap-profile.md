@@ -199,7 +199,7 @@ updated publication
 
 Publication status may be provided with following dates:
 
-The following Date subproperties may be used in combination with these statuses:
+The following Date subproperties may be used in combination with these publication statuses:
 
 dateAvailableAsPublicDraft
 dateReceivedAsManuscript
@@ -212,6 +212,8 @@ dateUpdated
 dateRetracted
 dateMissing
 dateLost
+
+See https://github.com/dcmi/dc-srap/blob/main/terms/date_subproperties.md for definitions and usage guidelines for these date subproperties.
 
 ### Presented at
 

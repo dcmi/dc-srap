@@ -42,11 +42,11 @@ NOTE Metadata elements needed for description of research data sets are not incl
 
 Creator is a person or group which produces a scholarly resource. 
 
-Affiliation is an organization to which the creator of the scholarly resource is affiliated or was affiliated when the resource was created. 
+Affiliation is an organization to which the creator of the scholarly resource was affiliated when the resource was created. 
 
 Editor is a person or group who prepares a scholarly resource for publication that is not primarily their own, such as by clarifying text, adding introductory or other critical matter, or technically leading an editorial staff.
 
-Funder is a person or organization that furnished financial support for the production of the scholarly resource. 
+Funder is a person or organization that furnished financial support for the production of the resource. 
 
 Degree supervisor is a person under whose supervision a degree candidate develops and presents a document required to achieve an academic degree.
 
@@ -62,35 +62,37 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
 | Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/)). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date / Embargo duration. |
-| Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of the organization or organizations |
-| Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of persons and/or organizations |
-| Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of persons and/or organizations |
+| Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
+| Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
+| Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
 | Date              | http://purl.org/dc/terms/date                 | 1     | Date and time according to ISO 8601-1 (YYYY-MM-DDTmm:hh:ss±hh:mm)  |
 | Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 0...1 | Date and time according to ISO 8601-1 |
-| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Person |
+| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
-| Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of persons |
+| Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
 | Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
 | Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
-| Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of persons and/or organizations  |
+| Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of a person and/or organizations  |
 | Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
-| Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of the related resource |
+| Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of a related resource |
 | Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
-| Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of the related resource  |
-| Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided  |
-| Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of the organization  |
-| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of the person |
+| Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of a related resource  |
+| Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
+| License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
+| Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of a database or a system  |
+| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
 | Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
-| Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of the organization |
+| Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
 | Related dataset   | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
 | Relation          | http://purl.org/dc/terms/relation             | 0...1 | URI |
-| Rights            | http://purl.org/dc/terms/rights               | 0...1 | Free text or URI of the appropriate license |
+| Rights            | http://purl.org/dc/terms/rights               | 0...1 | Information about rights held in and over the resource |
+| Rights Holder     | http://purl.org/dc/terms/rightsHolder         | 0...1 | A person or organization owning or managing rights over the resource |
 | Status            | http://purl.org/dc/terms/status               | 0...1 | OpenAire publication status code from [OpenAIRE vocabulary Publication Version](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html) |
 | Subject           | http://purl.org/dc/terms/subject              | 0...1 | A concept from a controlled vocabulary such as LCSH or MeSH |
 | Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
 | Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://vocabularies.coar-repositories.org/pubby/resource_type) |
 
-## Generic elements 
+## Generic SRAP elements 
 
 ### Affiliation
 
@@ -98,7 +100,7 @@ Proposed Schema.org property: https://schema.org/affiliation
 
 Label: Affiliation
 
-An organization to which an agent is or was affiliated.
+An organization to which an agent was affiliated when the resource was created.
 
 Domain includes: dcterms:Agent
 
@@ -106,29 +108,31 @@ Recommended practice is to identify the affiliation with a URI. If this is not p
 
 If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. 
 
+NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.   
+
 ### Editor 
 
 Proposed MARC Relator: https://id.loc.gov/vocabulary/relators/edt
 
 Label: Editor
 
-A person, family, or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution..
+A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution..
 
 Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
 
-### Embargo date 
+### Embargo date range
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/embargoDate
 
-Label: Embargo Date
+Label: Embargo Date Range
 
-The date when the academic publication will be made available for all users.  
+A period of time during which the resource is under embargo.  
 
-Recommended practice is to describe the date, or date/time as recommended for the property Date, of which this is a subproperty.
+Recommended practice is to describe the date range as recommended for the property Date, of which this is a subproperty.
 
 Subproperty of: Date available (http://purl.org/dc/terms/available) 
 
-NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met
+NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met.
 
 ### Funder
 
@@ -334,11 +338,11 @@ Example 2:
 
     <dcterms:editor id="https://orcid.org/0000-0002-1825-0097">Carberry, Josiah</dcterms:editor>
 
-### Embargo date 
+### Embargo date range 
 
 Example:
 
-    <dcterms:embargoDate>2020-12-31</dcterms:embargoDate>
+    <dcterms:embargoDateRange>2022-01-01/2022-12-31</dcterms:embargoDateRange>
 
 ### Funder
 

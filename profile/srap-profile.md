@@ -190,28 +190,28 @@ The stage of the resource in the publishing workflow.
 
 Recommended practice is to use a publication status value from the following list: 
 
-public draft
-submitted manuscript
-preprint
-postprint
-publication
-updated publication
+* public draft
+* submitted manuscript
+* preprint
+* postprint
+* publication
+* updated publication
 
 Publication status may be provided with following dates:
 
 The following Date subproperties may be used in combination with these publication statuses:
 
-dateAvailableAsPublicDraft
-dateReceivedAsManuscript
-dateSubmittedAsPreprint
-dateSubmittedAsPostprint
-dateAccepted
-dateAheadOfPrint
-datePublished
-dateUpdated
-dateRetracted
-dateMissing
-dateLost
+* dateAvailableAsPublicDraft
+* dateReceivedAsManuscript
+* dateSubmittedAsPreprint
+* dateSubmittedAsPostprint
+* dateAccepted
+* dateAheadOfPrint
+* datePublished
+* dateUpdated
+* dateRetracted
+* dateMissing
+* dateLost
 
 See https://github.com/dcmi/dc-srap/blob/main/terms/date_subproperties.md for definitions and usage guidelines for these date subproperties.
 

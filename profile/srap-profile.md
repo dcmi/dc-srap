@@ -66,11 +66,18 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
 | Date              | http://purl.org/dc/terms/date                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date accepted     | http://purl.org/dc/terms/dateAccepted         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date ahead of print               | http://purl.org/dc/terms/dateAheadOfPrint                     | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Date available as public draft    | http://purl.org/dc/terms/dateAvailableAsPublicDraft           | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date missing      | http://purl.org/dc/terms/dateMissing         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date lost     | http://purl.org/dc/terms/dateLost         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date published     | http://purl.org/dc/terms/datePublished         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Date received as manuscript       | http://purl.org/dc/terms/dateReceivedAsManuscript             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date submitted as preprint             | http://purl.org/dc/terms/dateSubmittedAsPreprint                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
- | Date submitted as postprint             | http://purl.org/dc/terms/dateSubmittedAsPostprint                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 0...1 | Date and time according to ISO 8601-1 (YYYY-MM-DD) |
+| Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 1 | Date according to ISO 8601-1 (YYYY-MM-DD) |
+| Date submitted        | http://purl.org/dc/terms/dateSubmitted              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date submitted as preprint        | http://purl.org/dc/terms/dateSubmittedAsPreprint              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date submitted as postprint       | http://purl.org/dc/terms/dateSubmittedAsPostprint             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date updated     | http://purl.org/dc/terms/dateUpdated         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
 | Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
@@ -112,7 +119,43 @@ Recommended practice is to identify the affiliation with a URI. If this is not p
 
 If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. 
 
-NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.   
+NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.  
+
+### Date accepted
+
+DCMI Metadata Term: http://purl.org/dc/terms/dateAccepted
+
+Label: Date accepted
+
+Date of acceptance of the resource.
+
+Subproperty Of: dcterms:date
+
+Recommended practice is to provide this date when it is specified in the resource. Examples of scholarly resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or a scientific article (accepted by a journal).
+
+### Date lost
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateLost
+
+Label: Date lost
+
+Date when the resource was lost. 
+
+Subproperty Of: dcterms:date
+
+Recommended practice is to provide this date only if there is no reasonable doubt that the resource has been lost; that is, there is not a single copy of it left. Criteria for making the decision that the resource has been lost may be developed locally. A SRAP record with date lost should have sufficient metadata to serve as a permanent tombstone of the resource. 
+
+### Date missing
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateMissing
+
+Label: Date missing
+
+Date when the resource went missing. 
+
+Subproperty Of: dcterms:date
+
+Recommended practice is to provide this date only if there is no reasonable doubt that the resource is missing; that is, there may be one or more copies left but they cannot be found. Criteria for making the decision that the resource is missing may be developed locally. A SRAP record with date missing should have sufficient metadata to serve as a temporary tombstone of the resource. 
 
 ### Editor 
 
@@ -201,23 +244,7 @@ Recommended practice is to use a publication status value from the following lis
 * publication
 * updated publication
 
-Recommended practice is to provide the publication status with the date specification. 
-
-
-
-* dateAvailableAsPublicDraft
-* dateReceivedAsManuscript
-* dateSubmittedAsPreprint
-* dateSubmittedAsPostprint
-* dateAccepted
-* dateAheadOfPrint
-* datePublished
-* dateUpdated
-* dateRetracted
-* dateMissing
-* dateLost
-
-See https://github.com/dcmi/dc-srap/blob/main/terms/date_subproperties.md for definitions and usage guidelines for these date subproperties.
+Recommended practice is to provide the publication status with the appropriate date specification. 
 
 ### Presented at
 

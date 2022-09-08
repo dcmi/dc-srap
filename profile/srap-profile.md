@@ -65,8 +65,12 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
 | Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
-| Date              | http://purl.org/dc/terms/date                 | 1     | Date and time according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 0...1 | Date and time according to ISO 8601-1 |
+| Date              | http://purl.org/dc/terms/date                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date available as public draft    | http://purl.org/dc/terms/dateAvailableAsPublicDraft           | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date received as manuscript       | http://purl.org/dc/terms/dateReceivedAsManuscript             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date submitted as preprint             | http://purl.org/dc/terms/dateSubmittedAsPreprint                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+ | Date submitted as postprint             | http://purl.org/dc/terms/dateSubmittedAsPostprint                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 0...1 | Date and time according to ISO 8601-1 (YYYY-MM-DD) |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
 | Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
@@ -197,9 +201,9 @@ Recommended practice is to use a publication status value from the following lis
 * publication
 * updated publication
 
-Publication status may be provided with following dates:
+Recommended practice is to provide the publication status with the date specification. 
 
-The following Date subproperties may be used in combination with these publication statuses:
+
 
 * dateAvailableAsPublicDraft
 * dateReceivedAsManuscript

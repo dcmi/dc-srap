@@ -61,7 +61,7 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
-| Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/)). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date / Embargo duration. |
+| Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/)). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date range. |
 | Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
 | Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
@@ -175,7 +175,7 @@ Recommended practice is to identify the editor with a URI. If this is not possib
 
 ### Embargo date range
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/embargoDate
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/embargoDateRange
 
 Label: Embargo Date Range
 
@@ -517,7 +517,7 @@ Example:
 
 Example 1:
 
-    <dcterms:supervisor>Carberrry, Josiah</dcterms:supervisor>
+    <dcterms:supervisor>Carberry, Josiah</dcterms:supervisor>
 
 Example 2:
 
@@ -537,7 +537,7 @@ Example 1:
 
 Example 2:
 
-    <dcterms:opponent id="http://isni.org/isni/000000012281955X">Ainsyut'ain, Alberŭt'ŭ </dcterms:opponent>
+    <dcterms:opponent id="http://isni.org/isni/000000012281955X">Ainsyut'ain, Alberŭt'ŭ</dcterms:opponent>
 
 ### Access rights 
 

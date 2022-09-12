@@ -145,6 +145,10 @@ Subproperty of: Date http://purl.org/dc/terms/date
 
 Recommended practice is to provide this date only if there is no reasonable doubt that the resource has been lost; that is, there is not a single (readable) copy of it left. Criteria for making the decision that the resource has been lost may be developed locally, but can include for instance digital documents that can no longer be rendered. A SRAP record with date lost should contain sufficient metadata to serve as a permanent tombstone of the resource. 
 
+Date lost should be used when e.g. the only known copy of a digital or printed resource has been destroyed or otherwise rendered unusable. 
+
+Date lost should not be used when a publisher fails but its resources (e.g. serials) are still preserved in a legal deposit collection. Rights metadata should be updated to reflect changes in restrictions on access and use of such archived resources. For serials and other continuing publications, the most convenient solution is to provide this metadata in the host record, from which it may be copied to all component part (article) records.     
+
 ### Date missing
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateMissing
@@ -156,6 +160,8 @@ Date when the resource went missing.
 Subproperty of: Date http://purl.org/dc/terms/date
 
 Recommended practice is to provide this date only if there is no reasonable doubt that the resource is missing; that is, there may be one or more copies left but they cannot be found. Criteria for making the decision that the resource is missing may be developed locally. A SRAP record with date missing should have sufficient metadata to serve as a temporary tombstone of the resource. 
+
+Date missing may be used when e.g. a printed copy (item) of a resource has disappeared and its current location is unknown for the time being. 
 
 ### Editor 
 

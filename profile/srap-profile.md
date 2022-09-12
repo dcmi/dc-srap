@@ -519,8 +519,14 @@ Note: The URI and the name may identify either a single conference or a conferen
 
 Example 3:
 
-    <dcterms:presentedAt id="https://www.iw3c2.org/">The Web Conference 2020</dcterms:presentedAt > 
+    <dcterms:presentedAt id="https://www.iw3c2.org/">The Web Conference 2020</dcterms:presentedAt>
+    
+### Related code set
 
+Example:
+
+    <dcterms:relatedCodeSet>https://support.mozilla.org/fi/products/firefox/install-and-update-firefox</dcterms:relatedCodeSet>
+    
 ### Related dataset
 
 Example:

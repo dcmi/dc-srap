@@ -4,17 +4,9 @@
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
-There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[^4]. This is not surprising since they all support description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
+There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[^4]. This is not surprising since they share the same aim, support for description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
 
-The SRAP application profile proposal was prepared by a Finnish working group, but it is intended to be globally applicable. The proposal does not specify a FRBR-based or other data model, but all suggested properties are “battle-proven”, in use. The only exception is the embargo date, which was adopted from ETHOS after the working group decided it is relevant for SRAP profile. However, several properties, such as affiliation, have been used in Finland only to describe scholarly resources such as doctoral dissertations. In this proposal these properties have a broader scope appropriate for DCMI Metadata Terms properties, in addition to the more limited semantics within the SRAP context.  
-
-This proposal also contains recommendations for SRAP-related semantic refinements to three existing Dublin Core Terms properties to make them more suitable for use in the description of scholarly resources.  
-
-There are significant differences between this proposal and the UKOLN SWAP. Most importantly, the FRBR structure of the UKOLN SWAP profile has been removed, meaning that no FRBR dependent properties from that profile are included. Since the FRBR model is not used in DC based resource description, including FRBR properties in the proposal would have provided little added value.
-
-Many properties originating from SWAP have more generic semantics in SRAP in order to maximize their usability and usefulness in Dublin Core. 
-
-When UKOLN created the 2006 version of SWAP, no standard identifiers for researchers existed. Therefore the profile could not rely on ISNI or ORCID, and advocated the use of email addresses and homepage URLs as “identifiers”. However, email addresses or homepage URIs are not very good identifiers since they are not persistent and do not identify a person in the long (or even short) term. Due to this, properties from the “Description of an agent” section of the 2006 SWAP proposal are not included herein. Instead, the SRAP proposal relies on standard identifiers, such as ISNI and ORCID, since they are persistent and facilitate access to additional metadata about the agent.  
+The SRAP application profile proposal is intended to be globally applicable. All suggested properties were “battle-proven”, in use. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
 
 We do not propose any new properties for agent-specific identifiers, but rely on DCMI’s draft proposal[^5] of using the XML id attribute to match identifiers with the agent names. For instance: 
 
@@ -52,7 +44,7 @@ Degree supervisor is a person under whose supervision a degree candidate develop
 
 Opponent is a person responsible for opposing a thesis or dissertation. 
 
-Figure 1. SRAP domain model.
+Figure 1. SRAP domain model (to be added).
 
 ## Alphabetic table of elements
 

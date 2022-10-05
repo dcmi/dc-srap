@@ -50,6 +50,8 @@ Figure 1. SRAP domain model (to be added).
 
 This table contains all the proposed new or changed element, and DC Terms elements which are essential for description of scholarly resources. In addition to the listed elements, any existing DC Terms element may also be used if and when necessary.
 
+NOTE: Roles are presented in a separate table. 
+
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
@@ -70,12 +72,9 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Date submitted as preprint        | http://purl.org/dc/terms/dateSubmittedAsPreprint              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Date submitted as postprint       | http://purl.org/dc/terms/dateSubmittedAsPostprint             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Date updated     | http://purl.org/dc/terms/dateUpdated         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
-| Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
 | Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
 | Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
-| Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of a person and/or organizations  |
 | Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
 | Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of a related resource |
 | Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
@@ -83,7 +82,6 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
 | License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
 | Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of a database or a system  |
-| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
 | Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
 | Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
 | Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
@@ -95,6 +93,17 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 | Subject           | http://purl.org/dc/terms/subject              | 0...1 | A concept from a controlled vocabulary such as LCSH or MeSH |
 | Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
 | Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://vocabularies.coar-repositories.org/pubby/resource_type) |
+
+## Roles 
+
+Creators and contributors may have different roles. SRAP uses the Library of Congress relators to express roles a person or organization may have (editor, funder, etc.). If there is a need to describe an additional role or roles are needed, a request to register a new code will be sent to LC.    
+
+| Name              | Identifier                                    | Mandatory / Repeatable | Value |
+| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
+| Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
+| Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of a person and/or organization  |
+| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
+| Praeses           | http://id.loc.gov/vocabulary/relators/pra     | 0...1 | Name and identifier of a person |
 
 ## Generic elements 
 
@@ -162,7 +171,9 @@ MARC relator: https://id.loc.gov/vocabulary/relators/edt
 
 Label: Editor
 
-A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution..
+A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution.
+
+Subproperty of: http://purl.org/dc/elements/1.1/contributor 
 
 Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
 
@@ -394,6 +405,17 @@ Label: Opponent
 A person or organization responsible for opposing a thesis or dissertation
 
 Recommended practice is to identify the opponent with a URI. If this is not possible or feasible, a literal value that identifies the opponent may be provided. It is also possible to give both the name and the URI.
+
+### Praeses
+
+MARC relator: http://id.loc.gov/vocabulary/relators/pra 
+
+Label: Praeses 
+
+A person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation
+
+Recommended practice is to identify the praeses with a URI. If this is not possible or feasible, a literal value that identifies the praeses may be provided. It is also possible to give both the name and the URI.
+
 
 ## Refinements to existing DCMIMT elements
 

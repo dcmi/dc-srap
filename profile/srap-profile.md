@@ -74,12 +74,12 @@ NOTE If the name is preceded by an asterisk, identifier has not been implemented
 | * Date submitted as preprint        | http://purl.org/dc/terms/dateSubmittedAsPreprint              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | * Date submitted as postprint       | http://purl.org/dc/terms/dateSubmittedAsPostprint             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | * Date updated     | http://purl.org/dc/terms/dateUpdated         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
+| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
-| * Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
+| Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
 | * Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
 | Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
-| * Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of a person and/or organizations  |
+| Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of a person and/or organizations  |
 | * Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
 | Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of a related resource |
 | Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
@@ -87,7 +87,7 @@ NOTE If the name is preceded by an asterisk, identifier has not been implemented
 | Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
 | License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
 | * Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of a database or a system  |
-| * Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
+| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
 | * Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
 | * Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
 | Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |

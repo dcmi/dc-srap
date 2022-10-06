@@ -2,7 +2,7 @@
 
 https://github.com/dcmi/dc-srap/blob/main/meetings/2022-09-27.srap_meeting_17.md
 
-* Time: 2022-09-27, 14:00-16:00 UTC, 16.00-18.00 CEST
+* Time: 2022-09-27, 14:00-16:00 UTC, 17.00-19.00 CEST
 * Place: Zoom, https://helsinki.zoom.us/j/66651804340?pwd=ZnpWNzBOYlIraTE3SnNzeEd4ZjYyUT09 
 * Present: Juha, Osma, Tom, Alasdair, Karen, Freddy
 
@@ -77,7 +77,7 @@ Juha: If we decide that some additional roles are required, we can just request 
 
 Karen: Could you say "take the roles from the LOC vocabulary and here are the 10 or 20 roles that we think are most relevant"?
 
-Juha: That would be the easiest way for treating roles in the profile. Whichever selection we make, somebody might miss a code that is relevat. Specifying a subset becomes counterproductive. Better to embrace all and provide examples of common codes. That will make the profile more compact.
+Juha: That would be the easiest way for treating roles in the profile. Whichever selection we make, somebody might miss a code that is relevant. Specifying a subset becomes counterproductive. Better to embrace all and provide examples of common codes. That will make the profile more compact.
 
 Tom: Make sure the roles we list as examples are subproperties of dc:contributor.
 

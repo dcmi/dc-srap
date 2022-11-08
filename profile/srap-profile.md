@@ -104,8 +104,8 @@ Creators and contributors may have different roles. SRAP uses the Library of Con
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
-| Editor            | https://id.loc.gov/vocabulary/relators/edt    | 0...1 | Name and identifier of a person |
-| Funder            | https://id.loc.gov/vocabulary/relators/fnd    | 0...1 | Name and identifier of a person and/or organization  |
+| Editor            | http://id.loc.gov/vocabulary/relators/edt     | 0...1 | Name and identifier of a person |
+| Funder            | http://id.loc.gov/vocabulary/relators/fnd     | 0...1 | Name and identifier of a person and/or organization  |
 | Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
 | Praeses           | http://id.loc.gov/vocabulary/relators/pra     | 0...1 | Name and identifier of a person |
 

@@ -2,6 +2,8 @@
 
 *list of authors*
 
+Draft 2022-10-06
+
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
 There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[^4]. This is not surprising since they share the same aim, support for description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
@@ -52,6 +54,8 @@ This table contains all the proposed new or changed element, and DC Terms elemen
 
 NOTE: Roles are presented in a separate table. 
 
+NOTE: If the name is preceded by an asterisk, identifier has not been implemented yet. 
+
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
@@ -61,32 +65,32 @@ NOTE: Roles are presented in a separate table.
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
 | Date              | http://purl.org/dc/terms/date                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Date accepted     | http://purl.org/dc/terms/dateAccepted         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date ahead of print               | http://purl.org/dc/terms/dateAheadOfPrint                     | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date available as public draft    | http://purl.org/dc/terms/dateAvailableAsPublicDraft           | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date missing      | http://purl.org/dc/terms/dateMissing         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date lost     | http://purl.org/dc/terms/dateLost         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date ahead of print               | http://purl.org/dc/terms/dateAheadOfPrint                     | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date available as public draft    | http://purl.org/dc/terms/dateAvailableAsPublicDraft           | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date missing      | http://purl.org/dc/terms/dateMissing         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date lost     | http://purl.org/dc/terms/dateLost         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Date published     | http://purl.org/dc/terms/datePublished         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date received as manuscript       | http://purl.org/dc/terms/dateReceivedAsManuscript             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 1 | Date according to ISO 8601-1 (YYYY-MM-DD) |
-| Date submitted        | http://purl.org/dc/terms/dateSubmitted              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date submitted as preprint        | http://purl.org/dc/terms/dateSubmittedAsPreprint              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date submitted as postprint       | http://purl.org/dc/terms/dateSubmittedAsPostprint             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date updated     | http://purl.org/dc/terms/dateUpdated         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date received as manuscript       | http://purl.org/dc/terms/dateReceivedAsManuscript             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 1 | Date according to ISO 8601-1 (YYYY-MM-DD) |
+| * Date submitted        | http://purl.org/dc/terms/dateSubmitted              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date submitted as preprint        | http://purl.org/dc/terms/dateSubmittedAsPreprint              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date submitted as postprint       | http://purl.org/dc/terms/dateSubmittedAsPostprint             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date updated     | http://purl.org/dc/terms/dateUpdated         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
-| Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
+| * Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
 | Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
-| Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
+| * Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
 | Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of a related resource |
 | Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
 | Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of a related resource  |
 | Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
 | License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
-| Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of a database or a system  |
-| Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
-| Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
+| * Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of a database or a system  |
+| * Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
+| * Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
 | Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
-| Related code set  | http://purl.org/dc/terms/relatedCodeSet       | 0...1 | URI |
-| Related dataset   | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
+| * Related code set  | http://purl.org/dc/terms/relatedCodeSet       | 0...1 | URI |
+| * Related dataset   | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
 | Relation          | http://purl.org/dc/terms/relation             | 0...1 | URI |
 | Rights            | http://purl.org/dc/terms/rights               | 0...1 | Information about rights held in and over the resource |
 | Rights Holder     | http://purl.org/dc/terms/rightsHolder         | 0...1 | A person or organization owning or managing rights over the resource |

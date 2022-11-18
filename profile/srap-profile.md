@@ -91,7 +91,7 @@ NOTE If the name is preceded by an asterisk, identifier has not been implemented
 | * Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
 | * Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
 | Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
-| * Related code set  | http://purl.org/dc/terms/relatedCodeSet       | 0...1 | URI |
+| * Related code  | http://purl.org/dc/terms/relatedCode       | 0...1 | URI |
 | * Related dataset   | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
 | Relation          | http://purl.org/dc/terms/relation             | 0...1 | URI |
 | Rights            | http://purl.org/dc/terms/rights               | 0...1 | Information about rights held in and over the resource |
@@ -261,17 +261,17 @@ SRAP: Conference, workshop or other scientific event where the scholarly resourc
 
 Recommended practice is to identify formal meetings such as conferences with a URI. If this is not possible or feasible, a literal value that identifies the meeting may be provided. It is also possible to give both the name and the URI.
 
-### Related Code Set  
+### Related Code  
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedCodeSet
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedCode
 
-Label: Related Code Set
+Label: Related Code
 
-Code set (software applications) referenced in the resource. 
+Code (software applications) referenced in the resource. 
 
-SRAP: Code set referenced in the scholarly resource.
+SRAP: Code referenced in the scholarly resource.
 
-Recommended practice is to identify the code set with a URI identifying either the code set or a landing page through which the code set is accessed.  
+Recommended practice is to identify the code with a URI identifying either the code or a landing page through which the application or applications are accessed.  
 
 Subproperty of: References         http://purl.org/dc/terms/references
 
@@ -281,11 +281,11 @@ Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedDataset
 
 Label: Related Dataset
 
-Dataset referenced in the described resource. 
+Dataset or datasets referenced in the described resource. 
 
-SRAP: Dataset referenced in the described scholarly resource.
+SRAP: Dataset or datasets referenced in the described scholarly resource.
 
-Recommended practice is to identify the dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
+Recommended practice is to identify a dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
 
 Subproperty of: References         http://purl.org/dc/terms/references
 

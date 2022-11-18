@@ -30,9 +30,9 @@ SRAP has a simple domain model which enumerates the key entities and describes i
 
 Note that the definitions of properties are more restrictive in the domain model than below, because in the Dublin Core context for instance affiliation should be interpreted more broadly. 
 
-Scholarly resource is a) a peer-reviewed (usually) document, written by an authority on the subject at hand, produced by a reputable association, or b) dissertation, thesis, mémoire, or any other document written in order to achieve an academic degree, or c) a research data set. 
+Scholarly resource is a) a peer-reviewed (usually) document, written by an authority on the subject at hand, produced by a reputable association, or b) dissertation, thesis, mémoire, or any other document written in order to achieve an academic degree, or c) a research dataset. 
 
-NOTE Metadata elements needed for description of research data sets are not included in this version of the SRAP profile. Research data sets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science data sets). A future version of SRAP may be extended to cover also some or all domains of research data. 
+NOTE Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
 
 Creator is a person or group which produces a scholarly resource. 
 

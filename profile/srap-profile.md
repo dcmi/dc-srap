@@ -177,7 +177,7 @@ Label: Editor
 
 A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution.
 
-Subproperty of: http://purl.org/dc/elements/1.1/contributor 
+NOTE: This is a subproperty of: http://purl.org/dc/elements/1.1/contributor 
 
 Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
 

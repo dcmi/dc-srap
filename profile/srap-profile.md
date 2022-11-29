@@ -103,6 +103,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 Creators and contributors may have different roles. SRAP recommends the use of a controlled list of roles such as the Library of Congress relators to express roles a person or organization may have (editor, funder, etc.). If there is a need to describe an additional role or roles are needed, a request to register a new code will be sent to LC.
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
+|----|----|----|----|
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Editor            | http://id.loc.gov/vocabulary/relators/edt     | 0...1 | Name and identifier of a person |
 | Funder            | http://id.loc.gov/vocabulary/relators/fnd     | 0...1 | Name and identifier of a person and/or organization  |

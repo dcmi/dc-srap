@@ -2,7 +2,7 @@
 
 *list of authors*
 
-Draft 2022-10-06
+Draft 2022-12-13
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
@@ -186,7 +186,7 @@ MARC relator: https://id.loc.gov/vocabulary/relators/edt
 
 Label: Editor
 
-A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution.
+MARC relator definition: A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see creator.
 
 NOTE: This is a subproperty of: http://purl.org/dc/elements/1.1/contributor 
 
@@ -212,7 +212,7 @@ MARC relator: https://id.loc.gov/vocabulary/relators/fnd
 
 Label: Funder
 
-A person or organization that furnished financial support for the production of the resource. 
+MARC relator definition: A person or organization that furnished financial support for the production of the resource. 
 
 Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
 

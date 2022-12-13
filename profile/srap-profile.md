@@ -59,7 +59,8 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
-| Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/)). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date range. |
+| Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date range. |
+| * Accessibility   | http://purl.org/dc/terms/accessibility             | 0...1 | Free text |
 | Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
 | Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
@@ -110,6 +111,16 @@ Creators and contributors may have different roles. SRAP recommends the use of a
 | Praeses           | http://id.loc.gov/vocabulary/relators/pra     | 0...1 | Name and identifier of a person |
 
 ## Generic elements 
+
+### Accessibility
+
+DCMI Metadata Term: http://purl.org/dc/terms/accessibility
+
+Label: Accessibility
+
+Textual information describing the accessibility features of a resource, including technical details.
+
+Recommended practice is to describe for instance software requirements for using the document or technical features such as open or closed captioning. 
 
 ### Affiliation
 
@@ -213,7 +224,7 @@ Proposed DCMI Metadata Term: http://purl.org/dc/terms/grantNumber
 
 Label: Grant Number
 
-An alpha-numeric string identifying the funding grant under which the scholarly resource was written. 
+An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created. 
 
 Subproperty of: Identifier
 

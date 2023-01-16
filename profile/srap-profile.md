@@ -101,7 +101,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 
 ## Roles 
 
-Creators and contributors may have different roles. SRAP recommends the use of a controlled list of roles such as the Library of Congress relators to express roles a person or organization may have (editor, funder, etc.). If there is a need to describe an additional role or roles are needed, a request to register a new code will be sent to LC.
+Creators and contributors may have different roles. SRAP recommends the use of Library of Congress MARC Relator codes to express roles a person or organization may have (editor, funder, etc.). If there is a need to add a new role, DCMI will send a request to register a new Relator code for such role to the Library of Congress. SRAP WG will not create a SRAP-specific controlled list of contributor roles. 
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |

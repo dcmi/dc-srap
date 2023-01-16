@@ -121,7 +121,7 @@ Label: Accessibility
 
 Textual information describing the accessibility features of a resource, including technical details.
 
-Recommended practice is to describe for instance software requirements for using the document or technical features such as open or closed captioning. 
+Recommended practice is to define the accessibility options, such as software requirements for using the document or technical features such as open or closed captioning. 
 
 ### Affiliation
 

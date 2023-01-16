@@ -2,7 +2,7 @@
 
 *list of authors*
 
-Draft 2022-12-13
+Draft 2023-01-16
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
@@ -104,6 +104,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 Creators and contributors may have different roles. SRAP recommends the use of a controlled list of roles such as the Library of Congress relators to express roles a person or organization may have (editor, funder, etc.). If there is a need to describe an additional role or roles are needed, a request to register a new code will be sent to LC.
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
+| ----------------- | ----------------------------------------------| ----- | ----- |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Editor            | http://id.loc.gov/vocabulary/relators/edt     | 0...1 | Name and identifier of a person |
 | Funder            | http://id.loc.gov/vocabulary/relators/fnd     | 0...1 | Name and identifier of a person and/or organization  |

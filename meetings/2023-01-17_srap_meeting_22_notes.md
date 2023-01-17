@@ -1,5 +1,6 @@
 2023-01-17 SRAP meeting 22 - notes
-- https://github.com/dcmi/dc-srap/blob/main/meetings/2023-01-17_srap_meeting_22.md
+- https://github.com/dcmi/dc-srap/blob/main/meetings/2023-01-17_srap_meeting_22_agenda.md
+- https://github.com/dcmi/dc-srap/blob/main/meetings/2023-01-17_srap_meeting_22_notes.md
 
 Present: Juha (chair), Osma, Tom (scribe), Karen, Alasdair
 

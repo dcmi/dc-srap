@@ -60,7 +60,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
 | Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date range. |
-| * Accessibility   | http://purl.org/dc/terms/accessibility             | 0...1 | Free text |
+| * Accessibility statement   | http://purl.org/dc/terms/accessibility             | 0...1 | Free text |
 | Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
 | Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
@@ -100,11 +100,13 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 
 ## Roles 
 
-Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. If there is a need to add a role, DCMI will send a request to register a new Relator code for the role to the Library of Congress.
+Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used. 
+
+If there is a need to add a role, DCMI will send a request to register a new Relator code for the role to the Library of Congress.
 
 Uncontrolled (local) contributor roles should not be used, since they limit semantic interoperability. 
 
-## Examples of thesis roles 
+### Examples of thesis roles 
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
@@ -116,7 +118,7 @@ Uncontrolled (local) contributor roles should not be used, since they limit sema
 | Respondent        | http://id.loc.gov/vocabulary/relators/rsp     | 0...1 | Name and identifier of a person |
 | Thesis advisor    | http://id.loc.gov/vocabulary/relators/ths     | 0...1 | Name and identifier of a person |
 
-## Examples of journal article roles 
+### Examples of journal article roles 
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
@@ -126,11 +128,12 @@ Uncontrolled (local) contributor roles should not be used, since they limit sema
 | Honoree           | http://id.loc.gov/vocabulary/relators/hnr     | 0...1 | Name and identifier of a person |
 | Host institution  | http://id.loc.gov/vocabulary/relators/his     | 0...1 | Name and identifier of an organization |
 | Reviewer          | http://id.loc.gov/vocabulary/relators/rev     | 0...1 | Name and identifier of a person |
-| Sponsor           | http://id.loc.gov/vocabulary/relators/spn     | 0...1 | Name and identifier of a person |
+| Sponsor           | http://id.loc.gov/vocabulary/relators/spn     | 0...1 | Name and identifier of a person or an organization |
+| Translator        | http://id.loc.gov/vocabulary/relators/trl     | 0...1 | Name and identifier of a person |
 
 ## Generic elements 
 
-### Accessibility
+### Accessibility statement
 
 DCMI Metadata Term: http://purl.org/dc/terms/accessibility
 
@@ -160,7 +163,7 @@ NOTE This element should not be used to provide the current (at the time the met
 
 DCMI Metadata Term: http://purl.org/dc/terms/dateAccepted
 
-Label: Date accepted
+Label: Date Accepted
 
 Date of acceptance of the resource.
 
@@ -172,7 +175,7 @@ Recommended practice is to provide this date if it is specified in the resource.
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateLost
 
-Label: Date lost
+Label: Date Lost
 
 Date when the resource was lost. 
 
@@ -188,7 +191,7 @@ Date lost should not be used when a publisher fails but its resources (e.g. seri
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateMissing
 
-Label: Date missing
+Label: Date Missing
 
 Date when the resource went missing. 
 
@@ -250,7 +253,7 @@ Subproperty of: Identifier
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/publicationStatus
 
-Label: Publication status 
+Label: Publication Status 
 
 The stage of the resource in the publishing workflow.
 
@@ -269,7 +272,7 @@ Recommended practice is use publication status when there are several versions o
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/presentedAt
 
-Label: Presented at 
+Label: Presented At 
 
 The conference, workshop, shareholder meeting etc. where the resource was presented. 
 
@@ -313,7 +316,7 @@ SRAP elements are elements which are applicable primarily for scholarly resource
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateAheadOfPrint
 
-Label: Date ahead of print
+Label: Date Ahead Of Print
 
 Subproperty of: Date (http://purl.org/dc/terms/date)
 
@@ -325,7 +328,7 @@ NOTE Many scientific journals operate article-level publishing, whereby articles
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateAvailableAsPublicDraft
 
-Label: Date available as public draft
+Label: Date Available As Public Draft
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
@@ -335,7 +338,7 @@ Date when an early draft of the resource (predating even preprint) has been made
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateReceivedAsManuscript
 
-Label: Date received as manuscript
+Label: Date Received As Manuscript
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
@@ -347,7 +350,7 @@ Recommended practice is to provide this data when it is indicated in the resourc
 
 Fabio Metadata Term: http://purl.org/spar/fabio/hasRetractionDate
 
-Label: Date retracted 
+Label: Date Retracted 
 
 Date when the resource was retracted or withdrawn.
 
@@ -361,7 +364,7 @@ NOTE: Do not use Date lost or Date missing for retracted resources.
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateSubmittedAsPreprint
 
-Label: Date submitted as preprint
+Label: Date Submitted As Preprint
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
@@ -373,7 +376,7 @@ Recommended practice is to provide this information when it is included in the r
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateSubmittedAsPostprint
 
-Label: Date submitted as postprint
+Label: Date Submitted As Postprint
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
@@ -385,7 +388,7 @@ Recommended practice is to provide this information if it is included in the res
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateUpdated
 
-Label: Date updated
+Label: Date Updated
 
 Date(s) when the publication was republished with additional or revised content.
 
@@ -397,7 +400,7 @@ Recommended practice is to provide this date if it is specified in the publicati
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dgg
 
-Label: Degree granting institution
+Label: Degree Granting Institution
 
 An organization granting an academic degree. 
 
@@ -409,11 +412,11 @@ Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dgs
 
-Label: Supervisor
+Label: Degree Supervisor
 
 A person overseeing a higher level academic degree.
 
-Recommended practice is to identify the supervisor with a URI. If this is not possible or feasible, a literal value that identifies the supervisor may be provided. It is also possible to give both the name and the URI.
+Recommended practice is to identify the degree supervisor with a URI. If this is not possible or feasible, a literal value that identifies the degree supervisor may be provided. It is also possible to give both the name and the URI.
 
 Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
@@ -461,11 +464,21 @@ Recommended practice is to identify the respondent with a URI. If this is not po
 
 MARC relator: http://id.loc.gov/vocabulary/relators/ths
 
-Label: Thesis advisor 
+Label: Thesis Advisor 
 
 A person under whose supervision a degree candidate develops and presents a thesis, mémoire, or text of a dissertation.
 
 Recommended practice is to identify the thesis advisor with a URI. If this is not possible or feasible, a literal value that identifies the thesis advisor may be provided. It is also possible to give both the name and the URI.
+
+### Translator
+
+MARC relator: http://id.loc.gov/vocabulary/relators/trl
+
+Label: Translator 
+
+A person or organization who renders a text from one language into another, or from an older form of a language into the modern form.
+
+Recommended practice is to identify the translator with a URI. If this is not possible or feasible, a literal value that identifies the translator may be provided. It is also possible to give both the name and the URI.
 
 ## Refinements to existing DCMIMT elements
 
@@ -477,7 +490,7 @@ Label: Access Rights
 
 Current definition of this property in the DCMI Terms namespace is: 
 
-> “Information about who can access the resource or an indication of its security status.”
+“Information about who can access the resource or an indication of its security status.”
 
 This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.  
 
@@ -490,9 +503,11 @@ Version 1.0 of the vocabulary contains the following terms:
 * restricted access
 * metadata only access 
  
-### Is Part Of
+### Is part of
 
 DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
+
+Label: Is Part Of
 
 In SRAP context, this property can be used to specify host document, a related resource in which the described scholarly resource is physically or logically included. For instance, a scientific periodical in which the described article has been published.
 

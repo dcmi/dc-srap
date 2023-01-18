@@ -2,7 +2,7 @@
 
 *list of authors*
 
-Draft 2023-01-16
+Draft 2023-01-18
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
@@ -52,7 +52,7 @@ Figure 1. SRAP domain model (to be added).
 
 This table contains all the proposed new or changed element, and DC Terms elements which are essential for description of scholarly resources. In addition to the listed elements, any existing DC Terms element may also be used if and when necessary.
 
-NOTE: Roles are presented in a separate table. 
+NOTE: Roles are presented in separate tables. 
 
 NOTE: If the name is preceded by an asterisk, identifier has not been implemented yet. 
 
@@ -101,15 +101,31 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 
 ## Roles 
 
-Creators and contributors may have different roles. SRAP recommends the use of Library of Congress MARC Relator codes to express roles a person or organization may have (editor, funder, etc.). If there is a need to add a new role, DCMI will send a request to register a new Relator code for such role to the Library of Congress. SRAP WG will not create a SRAP-specific controlled list of contributor roles. 
+Creators and contributors may have a wide variety of roles. SRAP does not provide a role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles a person or organization may have (editor, funder, etc.). If there is a need to add a new role, DCMI will send a request to register a new Relator code for such role to the Library of Congress. 
+
+## Examples of thesis roles 
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
-| Editor            | http://id.loc.gov/vocabulary/relators/edt     | 0...1 | Name and identifier of a person |
-| Funder            | http://id.loc.gov/vocabulary/relators/fnd     | 0...1 | Name and identifier of a person and/or organization  |
+| Degree granting institution            | http://id.loc.gov/vocabulary/relators/dgg     | 0...1 | Name and identifier of an organization |
+| Dissertant        | http://id.loc.gov/vocabulary/relators/dis     | 0...1 | Name and identifier of a person |
 | Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
 | Praeses           | http://id.loc.gov/vocabulary/relators/pra     | 0...1 | Name and identifier of a person |
+| Respondent        | http://id.loc.gov/vocabulary/relators/rsp     | 0...1 | Name and identifier of a person |
+| Thesis advisor    | http://id.loc.gov/vocabulary/relators/ths     | 0...1 | Name and identifier of a person |
+
+## Examples of journal article roles 
+
+| Name              | Identifier                                    | Mandatory / Repeatable | Value |
+| ----------------- | ----------------------------------------------| ----- | ----- |
+| Compiler          | http://id.loc.gov/vocabulary/relators/com     | 0...1 | Name and identifier of a person |
+| Editor            | http://id.loc.gov/vocabulary/relators/edt     | 0...1 | Name and identifier of a person |
+| Editor of compilation           | http://id.loc.gov/vocabulary/relators/edc     | 0...1 | Name and identifier of a person |
+| Honoree           | http://id.loc.gov/vocabulary/relators/hnr     | 0...1 | Name and identifier of a person |
+| Host institution  | http://id.loc.gov/vocabulary/relators/his     | 0...1 | Name and identifier of an organization |
+| Reviewer          | http://id.loc.gov/vocabulary/relators/rev     | 0...1 | Name and identifier of a person |
+| Sponsor           | http://id.loc.gov/vocabulary/relators/spn     | 0...1 | Name and identifier of a person |
 
 ## Generic elements 
 

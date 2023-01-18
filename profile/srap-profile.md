@@ -86,7 +86,6 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of a related resource  |
 | Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
 | License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
-| * Metadata source   | http://purl.org/dc/terms/metadataSource       | 0...1 | Name of a database or a system  |
 | * Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
 | * Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
 | Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
@@ -101,14 +100,16 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 
 ## Roles 
 
-Creators and contributors may have a wide variety of roles. SRAP does not provide a role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles a person or organization may have (editor, funder, etc.). If there is a need to add a new role, DCMI will send a request to register a new Relator code for such role to the Library of Congress. 
+Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. If there is a need to add a role, DCMI will send a request to register a new Relator code for the role to the Library of Congress.
+
+Uncontrolled (local) contributor roles should not be used, since they limit semantic interoperability. 
 
 ## Examples of thesis roles 
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
-| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Degree granting institution            | http://id.loc.gov/vocabulary/relators/dgg     | 0...1 | Name and identifier of an organization |
+| Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Dissertant        | http://id.loc.gov/vocabulary/relators/dis     | 0...1 | Name and identifier of a person |
 | Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
 | Praeses           | http://id.loc.gov/vocabulary/relators/pra     | 0...1 | Name and identifier of a person |
@@ -244,30 +245,6 @@ Label: Grant Number
 An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created. 
 
 Subproperty of: Identifier
-
-### Metadata source  
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/metadataSource
-
-Label: Metadata Source  
-
-Source (database or system) of the metadata record.
-
-Recommended practice is to specify the metadata source by means of its name and/or URI.
-
-SRAP: source (database or system) of the metadata record describing a scholarly resource. 
- 
-For metadata on scholarly resources, common sources include 
-
-* Web of Science (https://clarivate.com/scientific-and-academic-research/research-discovery/web-of-science/)
-* Scopus (https://www.scopus.com/)
-* PubMed Central (https://www.ncbi.nlm.nih.gov/pmc/)
-* ArXiv (https://arxiv.org/)
-* Cab Abstracts (https://www.cabi.org/publishing-products/cab-abstracts/)
-
-Since names may change over time, a URI should be used, especially when there is one based on a standard identifier. 
-
-Note: Institutional repositories may harvest metadata from external sources. Since the source may have an impact on how the metadata can be reused, it is important to keep track of where the metadata came from. 
 
 ### Publication status 
 
@@ -416,6 +393,18 @@ Subproperty of: Date http://purl.org/dc/terms/date
 
 Recommended practice is to provide this date if it is specified in the publication.
 
+### Degree granting institution
+
+MARC relator: http://id.loc.gov/vocabulary/relators/dgg
+
+Label: Degree granting institution
+
+An organization granting an academic degree. 
+
+Recommended practice is to identify the organization with a URI. If this is not possible or feasible, a literal value that identifies the organization may be provided. It is also possible to give both the name and the URI.
+
+Subproperty of: Contributor               http://purl.org/dc/terms/contributor
+
 ### Degree supervisor 
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dgs
@@ -428,13 +417,23 @@ Recommended practice is to identify the supervisor with a URI. If this is not po
 
 Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
+### Dissertant
+
+MARC relator: http://id.loc.gov/vocabulary/relators/dis 
+
+Label: Dissertant 
+
+A person who presents a thesis for a university or higher-level educational degree.
+
+Recommended practice is to identify the dissertant with a URI. If this is not possible or feasible, a literal value that identifies the dissertant may be provided. It is also possible to give both the name and the URI.
+
 ### Opponent
 
 MARC relator: http://id.loc.gov/vocabulary/relators/opn 
 
 Label: Opponent 
 
-A person or organization responsible for opposing a thesis or dissertation
+A person or organization responsible for opposing a thesis or dissertation.
 
 Recommended practice is to identify the opponent with a URI. If this is not possible or feasible, a literal value that identifies the opponent may be provided. It is also possible to give both the name and the URI.
 
@@ -448,6 +447,25 @@ A person who is the faculty moderator of an academic disputation, normally propo
 
 Recommended practice is to identify the praeses with a URI. If this is not possible or feasible, a literal value that identifies the praeses may be provided. It is also possible to give both the name and the URI.
 
+### Respondent
+
+MARC relator: http://id.loc.gov/vocabulary/relators/rsp
+
+Label: Respondent 
+
+A candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.
+
+Recommended practice is to identify the respondent with a URI. If this is not possible or feasible, a literal value that identifies the respondent may be provided. It is also possible to give both the name and the URI.
+
+### Thesis advisor
+
+MARC relator: http://id.loc.gov/vocabulary/relators/ths
+
+Label: Thesis advisor 
+
+A person under whose supervision a degree candidate develops and presents a thesis, mémoire, or text of a dissertation.
+
+Recommended practice is to identify the thesis advisor with a URI. If this is not possible or feasible, a literal value that identifies the thesis advisor may be provided. It is also possible to give both the name and the URI.
 
 ## Refinements to existing DCMIMT elements
 

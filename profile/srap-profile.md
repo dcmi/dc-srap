@@ -62,6 +62,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date range. |
 | * Accessibility statement   | http://purl.org/dc/terms/accessibility             | 0...1 | Free text |
 | Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
+| Bibliographic citation       | http://purl.org/dc/terms/bibliographicCitation| 0...1 | Free text |
 | Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
 | Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
 | Date              | http://purl.org/dc/terms/date                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
@@ -158,6 +159,16 @@ Recommended practice is to identify the affiliation with a URI. If this is not p
 If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. 
 
 NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.  
+
+### Bibliographic citation 
+
+DCMI Metadata Term: http://purl.org/dc/terms/bibliographicCitation
+
+Label: Bibliographic Citation 
+
+A bibliographic reference for the resource.
+
+Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.
 
 ### Date accepted
 
@@ -429,6 +440,18 @@ Label: Dissertant
 A person who presents a thesis for a university or higher-level educational degree.
 
 Recommended practice is to identify the dissertant with a URI. If this is not possible or feasible, a literal value that identifies the dissertant may be provided. It is also possible to give both the name and the URI.
+
+### Host institution
+
+MARC relator: http://id.loc.gov/vocabulary/relators/his
+
+Label: Host Institution
+
+An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource. 
+
+Recommended practice is to identify the host institution with a URI. If this is not possible or feasible, a literal value that identifies the host institution may be provided. It is also possible to give both the name and the URI.
+
+Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
 ### Opponent
 

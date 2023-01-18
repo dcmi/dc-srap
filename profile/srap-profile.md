@@ -101,11 +101,11 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 
 ## Roles 
 
-Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used. 
+Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used with thesis or with scientific articles. 
 
 If there is a need to add a role, DCMI will send a request to register a new Relator code for the role to the Library of Congress.
 
-Uncontrolled (local) contributor roles should not be used, since they limit semantic interoperability. 
+Using uncontrolled (local) contributor roles reduces semantic interoperability and should be avoided. 
 
 ### Examples of thesis roles 
 
@@ -218,9 +218,7 @@ MARC relator: https://id.loc.gov/vocabulary/relators/edt
 
 Label: Editor
 
-MARC relator definition: A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see creator.
-
-NOTE: This is a subproperty of: http://purl.org/dc/elements/1.1/contributor 
+A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see creator.
 
 Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
 

@@ -10,17 +10,17 @@ There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, a
 
 The SRAP application profile proposal is intended to be globally applicable. All suggested properties were “battle-proven”, in use. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
 
-We do not propose any new properties for agent-specific identifiers, but rely on DCMI’s draft proposal[^5] of using the XML id attribute to match identifiers with the agent names. For instance: 
+We do not propose any new properties for agent-specific identifiers, but rely on DCMI’s draft proposal[^5] of using the XML id attribute to match identifiers with the agent names. However, we use attribute "pid" instead of "id", since W3C xml:id proposal allows just one identifier per each element. In SRAP context, the same person or organization may have multiple unique identifiers.  For instance: 
 
-    <dcterms:affiliation id="http://isni.org/isni/0000000404102071">University of Helsinki</dcterms:affiliation>    
+    <dcterms:affiliation pid="http://isni.org/isni/0000000404102071 0313471-7">University of Helsinki</dcterms:affiliation>    
 
-This approach is sufficient for e.g. ISNI and ORCID (which share the same syntax) since their HTTP URIs reveal the identifier system used:
+    <dcterms:editor pid=https://orcid.org/0000-0003-1067-5020 https://isni.org/isni/0000000416625064>Hakala, Juha</dcterms:editor>
 
-    <dcterms:editor id=https://orcid.org/0000-0002-1825-0097>Carberry, Josiah</dcterms:editor>
+Using attribute "id" would therefore produce xml:id errors which, although not fatal, would in this case be incorrect. 
 
-Roles of contributors are based on Library of Congress Relator terms and their associated codes[^6] when applicable. Contributor codes used in SWAP are provided for reference purposes.  
+Roles of contributors are based on Library of Congress Relator terms and their associated codes[^6] or other controlled contributor lists. Contributor roles presented below are examples of ones that can be used.  
 
-Note 1: All DCMI Metadata Terms URIs are suggestions. 
+Note 1: All new DCMI Metadata Terms URIs are just suggestions until this profile has been approved, and marked with asterisk (*). 
 
 Note 2: Examples are not normative and do not need to be reviewed.  
 
@@ -101,7 +101,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 
 ## Roles 
 
-Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used with thesis or with scientific articles. 
+Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used with thesis or with scientific articles.Lists are not mutually exclusive; for instance, a thesis may have a translator. 
 
 If there is a need to add a role, DCMI will send a request to register a new Relator code for the role to the Library of Congress.
 

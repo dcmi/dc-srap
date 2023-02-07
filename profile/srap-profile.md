@@ -16,7 +16,7 @@ We do not propose any new properties for agent-specific identifiers, but rely on
 
     <dcterms:editor pid=https://orcid.org/0000-0003-1067-5020 https://isni.org/isni/0000000416625064>Hakala, Juha</dcterms:editor>
 
-Using attribute "id" would therefore produce xml:id errors which, although not fatal, would in this case be incorrect. 
+Using attribute "id" would produce xml:id errors which, although not fatal, would in this case be incorrect. 
 
 Roles of contributors are based on Library of Congress Relator terms and their associated codes[^6] or other controlled contributor lists. Contributor roles presented below are examples of ones that can be used.  
 
@@ -559,7 +559,7 @@ Example 1:
 
 Example 2:
 
-    <dcterms:affiliation id="http://isni.org/isni/0000000406246810">University of Helsinki. Faculty of Theology</dcterms:affiliation>   
+    <dcterms:affiliation pid="http://isni.org/isni/0000000406246810">University of Helsinki. Faculty of Theology</dcterms:affiliation>   
 
 Note 1: ISNI should be provided as a URI, not as a literal, since the literal form (0000 0004 0624 6810) is not actionable and does not indicate explicitly whether the string is ISNI, ORCID or even some other identifier that just happens to have the same syntax. 
 
@@ -567,11 +567,11 @@ Note 1: ISNI should be provided as a URI, not as a literal, since the literal fo
 
 Example 1:
 
-    <dcterms:editor>Carberry, Josiah</dcterms:editor>
+    <dcterms:editor>Hakala, Juha</dcterms:editor>
 
 Example 2:
 
-    <dcterms:editor id="https://orcid.org/0000-0002-1825-0097">Carberry, Josiah</dcterms:editor>
+    <dcterms:editor pid=https://orcid.org/0000-0003-1067-5020 https://isni.org/isni/0000000416625064>Hakala, Juha</dcterms:editor>
 
 ### Embargo date range 
 
@@ -587,17 +587,7 @@ Example 1:
 
 Example 2:
 
-    <dcterms:funder id="http://isni.org/isni/0000000404277672">Wellcome Trust</dcterms:funder>   
-
-### Metadata source 
-
-Example 1:
-
-    <dcterms:metadataSource>PubMed Central</dcterms:metadataSource> 
-
-Example 2:
-
-    <dcterms:metadataSource id="http://isni.org/isni/0000000405077840">Pubmed Central</dcterms:metadataSource>  
+    <dcterms:funder pid="http://isni.org/isni/0000000404277672">Wellcome Trust</dcterms:funder>   
     
 ### Publication status
 
@@ -613,19 +603,19 @@ Example 1:
 
 Example 2:
 
-    <dcterms:presentedAt id="https://www2020.thewebconf.org">The Web Conference 2020</dcterms:presentedAt>
+    <dcterms:presentedAt pid="https://www2020.thewebconf.org">The Web Conference 2020</dcterms:presentedAt>
 
 Note: The URI and the name may identify either a single conference or a conference series, but both the name and the URI shall identify the same thing. Example 3 is incorrect: 
 
 Example 3:
 
-    <dcterms:presentedAt id="https://www.iw3c2.org/">The Web Conference 2020</dcterms:presentedAt>
+    <dcterms:presentedAt pid="https://www.iw3c2.org/">The Web Conference 2020</dcterms:presentedAt>
     
-### Related code set
+### Related code
 
 Example:
 
-    <dcterms:relatedCodeSet>https://support.mozilla.org/fi/products/firefox/install-and-update-firefox</dcterms:relatedCodeSet>
+    <dcterms:relatedCode>https://support.mozilla.org/fi/products/firefox/install-and-update-firefox</dcterms:relatedCode>
     
 ### Related dataset
 
@@ -637,11 +627,11 @@ Example:
 
 Example 1:
 
-    <dcterms:supervisor>Carberry, Josiah</dcterms:supervisor>
+    <dcterms:supervisor>Watson, James D.</dcterms:supervisor>
 
 Example 2:
 
-    <dcterms:supervisor id="https://orcid.org/0000-0002-1825-0097">Carberry, Josiah</dcterms:supervisor>
+    <dcterms:supervisor pid="https://isni.org/isni/0000000114514801">Watson, James D.</dcterms:supervisor>
 
 ### Grant number 
 
@@ -657,7 +647,7 @@ Example 1:
 
 Example 2:
 
-    <dcterms:opponent id="http://isni.org/isni/000000012281955X">Ainsyut'ain, Alberŭt'ŭ</dcterms:opponent>
+    <dcterms:opponent pid="http://isni.org/isni/000000012281955X">Ainsyut'ain, Alberŭt'ŭ</dcterms:opponent>
 
 ### Access rights 
 
@@ -667,7 +657,7 @@ Example 1:
 
 Example 2:
 
-    <dcterms:accessRight id="http://purl.org/coar/access_right/c_abf2">open access</dcterms:accessRight>
+    <dcterms:accessRight pid="http://purl.org/coar/access_right/c_abf2">open access</dcterms:accessRight>
 
 ### Is Part Of 
 
@@ -677,11 +667,11 @@ Example 1:
 
 Example 2:
 
-    <dcterms:isPartOf id="https://www.thelancet.com/coronavirus">COVID-19 Resource Center<dcterms:isPartOf>
+    <dcterms:isPartOf pid="https://www.thelancet.com/coronavirus">COVID-19 Resource Center<dcterms:isPartOf>
 
 Example 3:
 
-    <dcterms:isPartOf id="1474-547X">Lancet (online)<dcterms:isPartOf>
+    <dcterms:isPartOf pid="1474-547X">Lancet (online)<dcterms:isPartOf>
 
 ### Type
 
@@ -691,7 +681,7 @@ Example 1:
 
 Example 2:
 
-    <dcterms:type id="http://purl.org/coar/resource_type/c_0640">journal</dcterms:type> 
+    <dcterms:type pid="http://purl.org/coar/resource_type/c_0640">journal</dcterms:type> 
 
 ________________
 

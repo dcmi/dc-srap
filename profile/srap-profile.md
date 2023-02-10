@@ -111,7 +111,9 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
-| Degree granting institution            | http://id.loc.gov/vocabulary/relators/dgg     | 0...1 | Name and identifier of an organization |
+| Dedicatee        | http://id.loc.gov/vocabulary/relators/dte     | 0...1 | Name and identifier of a person |
+| Degree committee member            | http://id.loc.gov/vocabulary/relators/dgc     | 0...1 | Name and identifier of a person |
+| Degree granting institution        | http://id.loc.gov/vocabulary/relators/dgg     | 0...1 | Name and identifier of an organization |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
 | Dissertant        | http://id.loc.gov/vocabulary/relators/dis     | 0...1 | Name and identifier of a person |
 | Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
@@ -123,12 +125,16 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
+| Abridger          | http://id.loc.gov/vocabulary/relators/abr     | 0...1 | Name and identifier of a person |
 | Compiler          | http://id.loc.gov/vocabulary/relators/com     | 0...1 | Name and identifier of a person |
 | Editor            | http://id.loc.gov/vocabulary/relators/edt     | 0...1 | Name and identifier of a person |
 | Editor of compilation           | http://id.loc.gov/vocabulary/relators/edc     | 0...1 | Name and identifier of a person |
+| Funder            | http://id.loc.gov/vocabulary/relators/fnd     | 0...1 | Name and identifier of a person or an organization |
 | Honoree           | http://id.loc.gov/vocabulary/relators/hnr     | 0...1 | Name and identifier of a person |
 | Host institution  | http://id.loc.gov/vocabulary/relators/his     | 0...1 | Name and identifier of an organization |
+| Organizer         | http://id.loc.gov/vocabulary/relators/orm     | 0...1 | Name and identifier of a person or an organization |
 | Reviewer          | http://id.loc.gov/vocabulary/relators/rev     | 0...1 | Name and identifier of a person |
+| Reviser           |                                               | 0...1 | Name and identifier of a person |
 | Sponsor           | http://id.loc.gov/vocabulary/relators/spn     | 0...1 | Name and identifier of a person or an organization |
 | Translator        | http://id.loc.gov/vocabulary/relators/trl     | 0...1 | Name and identifier of a person |
 

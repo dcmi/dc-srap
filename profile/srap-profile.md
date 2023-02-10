@@ -2,7 +2,7 @@
 
 *list of authors*
 
-Draft 2023-01-18
+Draft 2023-02-10
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
@@ -391,17 +391,41 @@ Recommended practice is to provide this date if it is specified in the publicati
 
 ## Examples of roles
 
+### Abridger 
+
+MARC relator: http://id.loc.gov/vocabulary/relators/abr
+
+Label: Abridger 
+
+MARC relator definition: A person, family, or organization contributing to a resource by shortening or condensing the original work but leaving the nature and content of the original work substantially unchanged
+
+Recommended practice is to identify the person, family or organization with a URI. If this is not possible or feasible, a literal value that identifies the abridger may be provided. It is also possible to give both the name and the URI.
+
+The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
+
+### Compiler 
+
+MARC relator: http://id.loc.gov/vocabulary/relators/com
+
+Label: Compiler 
+
+MARC relator definition: A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc 
+
+Recommended practice is to identify the person, family or organization with a URI. If this is not possible or feasible, a literal value that identifies the compiler may be provided. It is also possible to give both the name and the URI.
+
+The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
+
 ### Degree granting institution
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dgg
 
 Label: Degree Granting Institution
 
-An organization granting an academic degree. 
+MARC relator definition: An organization granting an academic degree. 
 
-MARC relator definition: Recommended practice is to identify the organization with a URI. If this is not possible or feasible, a literal value that identifies the organization may be provided. It is also possible to give both the name and the URI.
+Recommended practice is to identify the organization with a URI. If this is not possible or feasible, a literal value that identifies the organization may be provided. It is also possible to give both the name and the URI.
 
-The name should be provided in full and in hierarchical order, starting from the largest organizational unit.
+The name of an institution should be provided in full and in hierarchical order, starting from the largest organizational unit.
 
 Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
@@ -437,15 +461,19 @@ MARC relator definition: A person or organization contributing to a resource by 
 
 Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
 
+The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
+
 ### Editor of compilation 
 
 MARC relator: http://id.loc.gov/vocabulary/relators/edt 
 
-Label: Editor of compilation 
+Label: Editor of Compilation 
 
 MARC relator definition: A person, family, or organization contributing to a collective or aggregate work by selecting and putting together works, or parts of works, by one or more creators.
 
 Recommended practice is to identify the editor of compilation with a URI. If this is not possible or feasible, a literal value that identifies the editor of compilation may be provided. It is also possible to give both the name and the URI.
+
+The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
 
 ### Funder 
 

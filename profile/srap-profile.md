@@ -218,16 +218,6 @@ Recommended practice is to provide this date only if there is no reasonable doub
 
 Date missing may be used when e.g. a printed copy (item) of a resource has disappeared and its current location is unknown for the time being. 
 
-### Editor 
-
-MARC relator: https://id.loc.gov/vocabulary/relators/edt
-
-Label: Editor
-
-A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see creator.
-
-Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
-
 ### Embargo date range
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/embargoDateRange
@@ -241,18 +231,6 @@ Subproperty of: Date http://purl.org/dc/terms/date
 Recommended practice is to describe the date range as recommended for the property Date.
 
 NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met.
-
-### Funder
-
-MARC relator: https://id.loc.gov/vocabulary/relators/fnd
-
-Label: Funder
-
-MARC relator definition: A person or organization that furnished financial support for the production of the resource. 
-
-Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
-
-If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.  
 
 ### Grant number
 
@@ -411,6 +389,8 @@ Subproperty of: Date http://purl.org/dc/terms/date
 
 Recommended practice is to provide this date if it is specified in the publication.
 
+## Examples of roles
+
 ### Degree granting institution
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dgg
@@ -419,7 +399,9 @@ Label: Degree Granting Institution
 
 An organization granting an academic degree. 
 
-Recommended practice is to identify the organization with a URI. If this is not possible or feasible, a literal value that identifies the organization may be provided. It is also possible to give both the name and the URI.
+MARC relator definition: Recommended practice is to identify the organization with a URI. If this is not possible or feasible, a literal value that identifies the organization may be provided. It is also possible to give both the name and the URI.
+
+The name should be provided in full and in hierarchical order, starting from the largest organizational unit.
 
 Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
@@ -429,7 +411,7 @@ MARC relator: http://id.loc.gov/vocabulary/relators/dgs
 
 Label: Degree Supervisor
 
-A person overseeing a higher level academic degree.
+MARC relator definition: A person overseeing a higher level academic degree.
 
 Recommended practice is to identify the degree supervisor with a URI. If this is not possible or feasible, a literal value that identifies the degree supervisor may be provided. It is also possible to give both the name and the URI.
 
@@ -441,9 +423,49 @@ MARC relator: http://id.loc.gov/vocabulary/relators/dis
 
 Label: Dissertant 
 
-A person who presents a thesis for a university or higher-level educational degree.
+MARC relator definition: A person who presents a thesis for a university or higher-level educational degree.
 
 Recommended practice is to identify the dissertant with a URI. If this is not possible or feasible, a literal value that identifies the dissertant may be provided. It is also possible to give both the name and the URI.
+
+### Editor 
+
+MARC relator: https://id.loc.gov/vocabulary/relators/edt
+
+Label: Editor
+
+MARC relator definition: A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see creator.
+
+Recommended practice is to identify the editor with a URI. If this is not possible or feasible, a literal value that identifies the editor may be provided. It is also possible to give both the name and the URI.
+
+### Editor of compilation 
+
+MARC relator: http://id.loc.gov/vocabulary/relators/edt 
+
+Label: Editor of compilation 
+
+MARC relator definition: A person, family, or organization contributing to a collective or aggregate work by selecting and putting together works, or parts of works, by one or more creators.
+
+Recommended practice is to identify the editor of compilation with a URI. If this is not possible or feasible, a literal value that identifies the editor of compilation may be provided. It is also possible to give both the name and the URI.
+
+### Funder 
+
+MARC relator: https://id.loc.gov/vocabulary/relators/fnd
+
+Label: Funder
+
+MARC relator definition: A person or organization that furnished financial support for the production of the resource. 
+
+Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
+
+If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.  
+
+### Honoree 
+
+MAARC relator: http://id.loc.gov/vocabulary/relators/hnr
+
+Label: Honoree 
+
+MARC relator definition: A person, family, or organization honored by a work or item (e.g., the honoree of a festschrift, a person to whom a copy is presented) 
 
 ### Host institution
 
@@ -451,9 +473,11 @@ MARC relator: http://id.loc.gov/vocabulary/relators/his
 
 Label: Host Institution
 
-An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource. 
+MARC relator definition: An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource. 
 
 Recommended practice is to identify the host institution with a URI. If this is not possible or feasible, a literal value that identifies the host institution may be provided. It is also possible to give both the name and the URI.
+
+The name should be provided in full and in hierarchical order, starting from the largest organizational unit.
 
 Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
@@ -466,6 +490,18 @@ Label: Opponent
 A person or organization responsible for opposing a thesis or dissertation.
 
 Recommended practice is to identify the opponent with a URI. If this is not possible or feasible, a literal value that identifies the opponent may be provided. It is also possible to give both the name and the URI.
+
+### Organizer 
+
+MARC relator: http://id.loc.gov/vocabulary/relators/orm 
+
+Label: Organizer 
+
+MARC relator definition: A person, family, or organization organizing the exhibit, event, conference, etc., which gave rise to a resource.
+
+Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
+
+If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.
 
 ### Praeses
 
@@ -486,6 +522,38 @@ Label: Respondent
 A candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.
 
 Recommended practice is to identify the respondent with a URI. If this is not possible or feasible, a literal value that identifies the respondent may be provided. It is also possible to give both the name and the URI.
+
+### Reviewer 
+
+MARC relator: http://id.loc.gov/vocabulary/relators/rev
+
+Label: Reviewer
+
+MARC relator definition: A person or organization responsible for the review of a book, motion picture, performance, etc. 
+
+Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
+
+If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.
+
+### Reviser 
+
+Label: Reviser 
+
+A person or organization responsible for the revision of a book, article, etc. 
+
+Recommended practice is to identify the reviser with a URI. If this is not possible or feasible, a literal value that identifies the reviser may be provided. It is also possible to give both the name and the URI.
+
+### Sponsor 
+
+MARC relator: http://id.loc.gov/vocabulary/relators/spn 
+
+Label: Sponsor 
+
+MARC relator definition: A person, family, or organization sponsoring some aspect of a resource, e.g., funding research, sponsoring an event 
+
+Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
+
+If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.
 
 ### Thesis advisor
 

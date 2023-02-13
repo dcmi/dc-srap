@@ -9,3 +9,6 @@ The original [draft](https://docs.google.com/document/d/1t8y_3fNrf1rATlYohB6LhPP
 
 Issue tracker is used for discussing individual elements and other aspects of the AP.
 
+* [Email list](https://lists.dublincore.org/mailman/listinfo/dc-srap) for this group
+* [Email archives](https://lists.dublincore.org/pipermail/dc-srap/)
+

@@ -1,5 +1,13 @@
+DC SRAP meeting 24 - 2023-02-14
 
-Scribe: Tom
+Agenda: https://github.com/dcmi/dc-srap/blob/main/meetings/2023-02-14_srap_meeting_24_agenda.md
+
+These notes: https://github.com/dcmi/dc-srap/blob/main/meetings/2023-02-14_srap_meeting_24_notes.md
+
+Attended: Juha (chair), Osma, Tom (scribe), Karen, Jan.
+
+---------------------------------------------------------
+Scope of the SRAP work
 
 Karen: Are we intending to make it possible to describe 
 journal articles in Dublin Core. It will eventually get to 
@@ -15,7 +23,10 @@ for agendas. Not sure whether that is something we should
 try to do, or get more detailed. We should be able to 
 model chapters, journals.
 
-Tom: SWAT...
+Tom: There are precedents in DC community for multi-entity 
+profiles: Collection Description AP [1] and SWAP (Scholarly 
+Works). SWAP failed, as I understand it, because its target 
+audience of repository maintainers wanted a flatter model.
 
 Karen: In DCTAP discussions: vocabulary can be flat and model 
 can have more structure. Simple to have structure reside in 
@@ -46,38 +57,41 @@ have to be in the vocabulary.
 
 Juha: How do you suggest we proceed?
 
-Karen: Awhile ago I put a DCTAP in Github. [Karen 
-shares screen.] Tom, do you agree?
+Karen: Awhile ago I put a DCTAP in Github. Tom, do 
+you agree?
 
-Tom: @@@@
+Tom: We put alot of good thought and discussion into 
+naming and defining the elements of the DCTAP model, so 
+I agree we should definitely use the model. But to me, 
+that is separate from whether we should put SRAP into a 
+horizontal spreadsheet format instead of the more 
+traditional vertical document format. The DCTAP model 
+defines profiles in terms of "data shapes" as defined 
+also in ShEx and SHACL.
 
-Karen: DCTAP lets you define "shapes". Separate 
+Karen: DCTAP supports having separate 
 structures for everything that you need to say 
 something about in your metadata. Knowing that you 
 can go this way - to truly describe your application 
 profile in a way you can apply - gets us around 
-problem of "person and affiliation".
+problem of needing to describe a person's affiliation.
 
-Tom: @@@@
-
-Osma: Best if we can define to be as useful as 
+Osma: Best if we can define SRAP to be as useful as 
 possible, avoid redundant information, which means 
 defining entities. I think using DCTAP approach makes 
 alot of sense. 
 
-Tom: @@@@
-
 Juha: Karen, can you do this?
 
-Karen: I can redo this from scratch. Will simplify 
-as much as possible. But at some point we need to define 
-entities.
+Karen: We need to redo from scratch. Will simplify 
+as much as possible. At some point we need to define 
+the entities.
 
-Juha: Worried about adding things like Journals. So many 
-potential entities. 
+Juha: Worried about putting entities like Journals into 
+scope. So many potential entities. 
 
 Karen: We have dct:isPartOf. Whether we want to describe 
-journals themselves separately is a different question.
+journals themselves, on their own, is a different question.
 Also, in future: what is a scholarly resource?
 
 Juha: When we updated ISO 690:21, citations, had such 
@@ -85,7 +99,7 @@ discussions. With SRAP, good understanding of "typical"
 scholarly resources.
 
 Karen: Conference proceedings? Cannot exclude because 
-very much cited.
+very much cited in the scholarly record.
 
 Juha: Yes.
 
@@ -97,30 +111,38 @@ Karen: I'm thinking Bibtex, CiteSeer, CrossRef.
 
 Juha: SRAP tries to cover those elements that are 
 typical when citing scientific articles. We do not need 
-to [model] everything or will never finish.
+to model everything or will never finish.
 
-Karen: Those examples are question simple: ten to 
+Karen: The examples above are all simple: ten to 
 twenty data elements each. What are we doing that is 
 different?
 
 Juha: We wanted to provide tool for describing 
-masters theses. Would like to summarize: Karen will 
-update.
+masters theses. To summarize: Karen will update the 
+representation of SRAP.
 
 Osma: How does this relate to what we have?
 
-Tom: @@@ Model independently of CSV.
+Tom: Other reasons to put SRAP into DCTAP: Nishad 
+would like to adopt for DCMI website, in which case 
+might be expressed in YAML headers of Markdown documents.
+In other words, use DCTAP, but not necessarily in the form 
+of a CSV. Note that everything in DCTAP is optional 
+except for the property. We could err on the side of 
+lightly specifying SRAP by omitting, for example, 
+cardinality, which could be at the discretion of 
+application implementers.
 
-Juha: Agree we are doing application profiles, but when 
-it comes to XML version, could be separated. NLF could 
-work on this.
+Juha: Agree we are doing an application profile. When 
+it comes to XML version, could be done separately. NLF 
+could work on this.
 
 Karen: DCTAP that generates XML?
 
-Osma: We will soon update from DSpace 5 to 7, which 
+Osma: We will soon update from DSpace version 5 to 7 which 
 has a more modern metadata model.
 
-Juha: Will be relevant to many other parties but 
+Juha: Will be relevant to many other parties as well, but 
 for our group would be relevant only if there are things 
 not easily implementable in XML.
 
@@ -130,7 +152,7 @@ Use of unconstrainted RDA properties
 Juha: Have added properties. Role selection. Suggest 
 we leave it at that. 
 
-Tom: What is the namespace?
+Tom: What is the status of the namespace?
 
 Osma: https://www.rdaregistry.info/Elements/u/ .
 I think this is officially part of RDA.
@@ -143,9 +165,12 @@ says it is maintained by RDA.
 Juha: Trivial to add new code lists if necessary.
 
 ---------------------------------------------------------
+Host item information
 
-Juha: Osma wanted to see use cases, so here are two (see 
-agenda). Metadata provided in SRAP record has to provide 
+GitHub issue: https://github.com/dcmi/dc-srap/issues/28
+
+Juha: Osma wanted to see use cases, so here are two.
+Metadata provided in SRAP record has to provide 
 component parts.
 
 Karen: What about automatic linking? 

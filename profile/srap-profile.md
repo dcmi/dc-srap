@@ -111,6 +111,7 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
+| Academic supervisor        |       | 0...1 | Name and identifier of a person |
 | Dedicatee        | http://id.loc.gov/vocabulary/relators/dte     | 0...1 | Name and identifier of a person |
 | Degree committee member            | http://id.loc.gov/vocabulary/relators/dgc     | 0...1 | Name and identifier of a person |
 | Degree granting institution        | http://id.loc.gov/vocabulary/relators/dgg     | 0...1 | Name and identifier of an organization |
@@ -402,6 +403,14 @@ MARC relator definition: A person, family, or organization contributing to a res
 Recommended practice is to identify the person, family or organization with a URI. If this is not possible or feasible, a literal value that identifies the abridger may be provided. It is also possible to give both the name and the URI.
 
 The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
+
+### Academic supervisor
+
+Label: Academic supervisor
+
+RDA definition: An agent who is responsible for overseeing academic activity of any kind that results in a resource, including theses, research, and projects.
+
+Recommended practice is to identify the person, family or organization with a URI. If this is not possible or feasible, a literal value that identifies the compiler may be provided. It is also possible to give both the name and the URI.
 
 ### Compiler 
 

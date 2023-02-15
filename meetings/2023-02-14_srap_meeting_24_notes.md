@@ -19,7 +19,7 @@ it is up to them, but it is an RDF environment.
 Osma: This started with need to use flat DC metadata in 
 DSpace. One thing unclear to me: How flat shoudl we try to 
 make this? Historically, has been pretty much flat except 
-for agendas. Not sure whether that is something we should 
+for affiliations. Not sure whether that is something we should 
 try to do, or get more detailed. We should be able to 
 model chapters, journals.
 

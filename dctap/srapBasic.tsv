@@ -1,4 +1,4 @@
-propertyLabel         propertyID	propertyID                             	min/max	valueDataType	note	valueConstraint	valueConstraintType
+propertyLabel	propertyID                             	min/max	valueDataType	note	valueConstraint	valueConstraintType
  Abstract          	 http://purl.org/dc/terms/abstract             	 0...1 	xsd:literal	 Free text 		
  Access rights     	 http://purl.org/dc/terms/accessRights         	 0...1 	xsd:anyURI	" A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date range. "	http://vocabularies.coar-repositories.org/documentation/access_rights/	uriStem
  * Accessibility statement   	 http://purl.org/dc/terms/accessibility             	 0...1 	xsd:literal	 Free text 		

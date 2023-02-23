@@ -1,0 +1,76 @@
+shapeID,shapeLabel,propertyLabel,propertyID,mandatory,repeatable,valueDatatype,valueShape,valueConstraint,valueConstraintType,note
+,,,,,,,,,,
+document,Document,Abstract,dct:abstract,FALSE,FALSE,xsd:string,,,,Free text
+,,Access rights,dct:accessRights,FALSE,FALSE,xsd:anyURI,,http://vocabularies.coar-repositories.org/documentation/access_rights/,IRIstem,A term from COAR vocabulary (http://vocabularies.coar-repositories.org/documentation/access_rights/
+,,*Accessibility statement,,FALSE,FALSE,xsd:string,,,,
+,,*Affiliation,,FALSE,FALSE,xsd:anyURI xsd:string,,,,
+,,Contributor,dct:contributor,FALSE,FALSE,,Person,,,Name and identifier of persons and/or organizations
+,,Creator,dct:creator,FALSE,FALSE,,Person,,,Name and identifier of persons and/or organizations
+,,Date,dct:date,TRUE,FALSE,xsd:date,,,,Date according to ISO 8601-1
+,,Date accepted,dct:dateAccepted,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-2
+,,*Date ahead of print,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-3
+,,*Date available as public draft,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-4
+,,*Date missing,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-5
+,,*Date lost,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-6
+,,Date published,dct:date,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-7
+,,*Date received as manuscript,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-8
+,,*Date retracted,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-9
+,,Date submitted,dct:dateSubmitted,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-10
+,,*Date submitted as preprint,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-11
+,,*Date updated,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-12
+,,Description,dct:description,TRUE,FALSE,xsd:string,,,,Free text; different languages shall be provided separately (as different Description elements)
+,,*Embargo date range,,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-10
+,,Format,dct:format,TRUE,FALSE,xsd:string,,,,MIME type registered by IANA
+,,*Grant number,,FALSE,FALSE,xsd:string,,,,Free text
+,,Has Part,dct:hasPart,FALSE,FALSE,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
+,,Identifier,dct:identifier,TRUE,FALSE,xsd:anyURI xsd:string,,,,"URI, one for each identifier the resource has, provided separately"
+,,Is Part Of,dct:isPartOf,FALSE,FALSE,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
+,,Language,dct:language,TRUE,FALSE,xsd:string,,,,"A code from ISO 639-2, one for each language used in the resource, provided separately"
+,,Presented at,bibo:presentedAt,FALSE,FALSE,,Conference,,,Free text or URI
+,,*Publication status,,FALSE,FALSE,xsd:anyURI,,info:eu-repo/semantics/,IRIstem,OpenAire publication status code from https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html
+,,Publisher,dct:publisher,FALSE,FALSE,,Organization,,,Name and URI of the organization
+,,Related dataset,dct:relatedDataset,FALSE,FALSE,xsd:anyURI,,,,URI
+,,Relation,dct:relation,FALSE,FALSE,xsd:anyURI,,,,URI
+,,Rights,dct:rights,FALSE,FALSE,xsd:anyURI xsd:string,,,,Free text or URI of the appropriate license
+,,Subject,dct:subject,FALSE,FALSE,,Subject,,,A concept from a controlled vocabulary such as LCSH or MeSH
+,,Title,dct:title,TRUE,FALSE,xsd:string,,,,"Free text, titles in different languages provided separately"
+,,Type,dct:type,FALSE,FALSE,xsd:anyURI,,http://purl.org/coar/resource_type,IRIstem,"A term from COAR resource type vocabulary, http://purl.org/coar/resource_type"
+,,Academic supervisor,,FALSE,FALSE,,,,,
+,,Dedicatee ,http://id.loc.gov/vocabulary/relators/dte,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Degree committee member ,http://id.loc.gov/vocabulary/relators/dgc,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Degree granting institution ,http://id.loc.gov/vocabulary/relators/dgg,FALSE,FALSE,,Organization,,,Name and identifier of an organization
+,,Degree supervisor ,http://id.loc.gov/vocabulary/relators/dgs,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,"Dissertant 	",http://id.loc.gov/vocabulary/relators/dis,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Opponent ,http://id.loc.gov/vocabulary/relators/opn,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Praeses ,http://id.loc.gov/vocabulary/relators/pra,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Respondent ,http://id.loc.gov/vocabulary/relators/rsp,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Thesis advisor ,http://id.loc.gov/vocabulary/relators/ths,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Editor,https://id.loc.gov/vocabulary/relators/edt,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Abridger ,http://id.loc.gov/vocabulary/relators/abr,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Compiler ,http://id.loc.gov/vocabulary/relators/com,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Editor of compilation ,http://id.loc.gov/vocabulary/relators/edc,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Honoree ,http://id.loc.gov/vocabulary/relators/hnr,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Host institution ,http://id.loc.gov/vocabulary/relators/his,FALSE,FALSE,,Organization,,,Name and identifier of an organization
+,,Organizer ,http://id.loc.gov/vocabulary/relators/orm,FALSE,FALSE,,Person Organization,,,
+,,Reviewer ,http://id.loc.gov/vocabulary/relators/rev,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Reviser,,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Sponsor ,http://id.loc.gov/vocabulary/relators/spn,FALSE,FALSE,,Person Organization,,,Name and identifier of a person or organizaton
+,,Translator ,http://id.loc.gov/vocabulary/relators/trl,FALSE,FALSE,,Person,,,Name and identifier of a person
+,,Funder,http://id.loc.gov/vocabulary/relators/fnd,FALSE,FALSE,,Person Organization,,,Name and identifier of person or organization
+,,,,,,,,,,
+,Person,Affiliation,dct:affiliation,FALSE,FALSE,,Organization,,,Name and identifier of an organization
+,,Name,foaf:Name,FALSE,FALSE,xsd:string,,,,
+,,Identifier,dct:Identifier,FALSE,TRUE,xsd:anyURI xsd:string,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Organization,Identifier,dct:identifier,FALSE,TRUE,xsd:anyURI xsd:string,,,,
+,,Name,foaf:name,FALSE,FALSE,xsd:string,,,,
+,,,,,,,,,,
+,Subject,Identifier,dct:identifier,FALSE,FALSE,xsd:anyURI xsd:string,,,,
+,,Display label,rdf:label,FALSE,FALSE,xsd:string,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Conference,Identifier,dct:identifier,FALSE,FALSE,xsd:anyURI xsd:string,,,,
+,,Name,foaf:name,FALSE,FALSE,xsd:string,,,,
+,,Date,dct:date,FALSE,FALSE,xsd:date,,,,Date according to ISO 8601-10
+,,Location,https://schema.org/location,FALSE,FALSE,xsd:string,,,,

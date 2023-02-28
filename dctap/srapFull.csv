@@ -1,6 +1,6 @@
 shapeID,shapeLabel,propertyLabel,propertyID,mandatory,repeatable,valueDatatype,valueShape,valueConstraint,valueConstraintType,note
 ,,,,,,,,,,
-document,Document,Abstract,dct:abstract,FALSE,FALSE,xsd:string,,,,Free text
+srap,Scholarly resource,Abstract,dct:abstract,FALSE,FALSE,xsd:string,,,,Free text
 ,,Access rights,dct:accessRights,FALSE,FALSE,xsd:anyURI,,http://vocabularies.coar-repositories.org/documentation/access_rights/,IRIstem,A term from COAR vocabulary (http://vocabularies.coar-repositories.org/documentation/access_rights/
 ,,*Accessibility statement,,FALSE,FALSE,xsd:string,,,,
 ,,*Affiliation,,FALSE,FALSE,xsd:anyURI xsd:string,,,,

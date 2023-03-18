@@ -36,32 +36,10 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Subject,dct:subject,,Subject,,,A concept from a controlled vocabulary such as LCSH or MeSH
 ,Title,dct:title,xsd:string,,,,"Free text, titles in different languages provided separately"
 ,Type,dct:type,xsd:anyURI,,http://purl.org/coar/resource_type,IRIstem,"A term from COAR resource type vocabulary, http://purl.org/coar/resource_type"
-,Academic supervisor,,,,,,
-,Dedicatee ,http://id.loc.gov/vocabulary/relators/dte,,Person,,,Name and identifier of a person
-,Degree committee member ,http://id.loc.gov/vocabulary/relators/dgc,,Person,,,Name and identifier of a person
-,Degree granting institution ,http://id.loc.gov/vocabulary/relators/dgg,,Organization,,,Name and identifier of an organization
-,Degree supervisor ,http://id.loc.gov/vocabulary/relators/dgs,,Person,,,Name and identifier of a person
-,"Dissertant 	",http://id.loc.gov/vocabulary/relators/dis,,Person,,,Name and identifier of a person
-,Opponent ,http://id.loc.gov/vocabulary/relators/opn,,Person,,,Name and identifier of a person
-,Praeses ,http://id.loc.gov/vocabulary/relators/pra,,Person,,,Name and identifier of a person
-,Respondent ,http://id.loc.gov/vocabulary/relators/rsp,,Person,,,Name and identifier of a person
-,Thesis advisor ,http://id.loc.gov/vocabulary/relators/ths,,Person,,,Name and identifier of a person
-,Editor,https://id.loc.gov/vocabulary/relators/edt,,Person,,,Name and identifier of a person
-,Abridger ,http://id.loc.gov/vocabulary/relators/abr,,Person,,,Name and identifier of a person
-,Compiler ,http://id.loc.gov/vocabulary/relators/com,,Person,,,Name and identifier of a person
-,Editor of compilation ,http://id.loc.gov/vocabulary/relators/edc,,Person,,,Name and identifier of a person
-,Honoree ,http://id.loc.gov/vocabulary/relators/hnr,,Person,,,Name and identifier of a person
-,Host institution ,http://id.loc.gov/vocabulary/relators/his,,Organization,,,Name and identifier of an organization
-,Organizer ,http://id.loc.gov/vocabulary/relators/orm,,Person Organization,,,
-,Reviewer ,http://id.loc.gov/vocabulary/relators/rev,,Person,,,Name and identifier of a person
-,Reviser,,,Person,,,Name and identifier of a person
-,Sponsor ,http://id.loc.gov/vocabulary/relators/spn,,Person Organization,,,Name and identifier of a person or organizaton
-,Translator ,http://id.loc.gov/vocabulary/relators/trl,,Person,,,Name and identifier of a person
-,Funder,http://id.loc.gov/vocabulary/relators/fnd,,Person Organization,,,Name and identifier of person or organization
 ,,,,,,,
 Person,Affiliation,dct:affiliation,,Organization,,,Name and identifier of an organization
 ,Name,foaf:Name,xsd:string,,,,Name of person
-,Identifier,dct:Identifier,xsd:anyURI xsd:string,,,,"Identifier for the person, such as ORCID"
+,Identifier,dct:identifier,xsd:anyURI xsd:string,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,
 ,,,,,,,
 Organization,Identifier,dct:identifier,xsd:anyURI xsd:string,,,,Identifier for the organization

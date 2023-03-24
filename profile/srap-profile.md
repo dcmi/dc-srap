@@ -2,7 +2,7 @@
 
 *list of authors*
 
-Draft 2023-02-10
+Draft 2023-03-24 (several DCMIMT elements from between Grant number and Language were missing from the previous version. Some have been added, but fixing the specification is still work in progress - JH)
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
@@ -81,10 +81,13 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
 | * Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
 | Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
-| * Grant number      | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
+| * Grant number    | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
+| Has Format        | http://purl.org/dc/terms/hasFormat            | 1     | MIME type registered by IANA   |
 | Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of a related resource |
+| Has Version       | http://purl.org/dc/terms/hasVersion           | 0...1 | A related resource that is a version, edition, or adaptation of the described resource |
 | Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
 | Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of a related resource  |
+| Is Version Of     | http://purl.org/dc/terms/isVersionOf          | 0...1 | A related resource of which the described resource is a version, edition, or adaptation |
 | Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
 | License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
 | * Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
@@ -242,6 +245,111 @@ Label: Grant Number
 An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created. 
 
 Subproperty of: Identifier
+
+### Has Format 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/hasFormat
+
+Label: Has Format 
+
+A related resource that is substantially the same as the pre-existing described resource, but in another format.
+
+Subproperty of: Relation
+
+NOTE: This property is an inverse property of Is Format Of.
+
+### Has Part 
+
+Proposed DCMI Metadata Term:  	http://purl.org/dc/terms/hasPart
+
+Label: Has Part 
+
+A related resource that is included either physically or logically in the described resource.
+
+Subproperty of: Relation. 
+
+Recommended practice is to provide URI or other identifier of the related resource.
+
+NOTE: This property is an inverse property of Is Part Of.
+
+### Has Version 
+
+Proposed DCMI Metadata Term: 
+
+Label: Has Version 
+
+A related resource that is a version, edition, or adaptation of the described resource.
+
+Recommended practice is to provide URI or other identifier of the related resource.
+
+NOTE: Changes in version imply substantive changes in content rather than differences in format. 
+
+NOTE: This property is an inverse property of Is Version Of.
+
+### Identifier
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/identifier
+
+Label: Identifier 
+
+An unambiguous reference to the resource within a given context.
+
+Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs.
+
+### Is Format Of 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/isFormatOf
+
+Label: Is Format Of
+
+A pre-existing related resource that is substantially the same as the described resource, but in another format.
+
+NOTE: This property is an inverse property of Has Format.
+
+### Is Part Of
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
+
+Label: Is Part Of 
+
+A related resource in which the described resource is physically or logically included.
+
+Subproperty of: Relation
+
+NOTE: This property is an inverse property of Has Part.
+
+### Is Version Of 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/isVersionOf
+
+Label: Is Version Of 
+
+A related resource of which the described resource is a version, edition, or adaptation.
+
+NOTE: Changes in version imply substantive changes in content rather than differences in format.
+NOTE: This property is an inverse property of Has Version.
+
+### Language 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/language
+
+Label: Language 
+
+A language of the resource.
+
+Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47] language tag.
+
+### License 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/license
+
+Label: License
+
+A legal document giving official permission to do something with the resource.
+
+Subproperty of: Rights 
+
+Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.
 
 ### Publication status 
 

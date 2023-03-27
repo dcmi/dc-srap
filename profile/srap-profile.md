@@ -87,6 +87,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | Has Version       | http://purl.org/dc/terms/hasVersion           | 0...1 | A related resource that is a version, edition, or adaptation of the described resource |
 | Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
 | Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of a related resource  |
+| Is Referenced By  | http://purl.org/dc/terms/isReferencedBy             | 0...1 | URI or other identifier of a related resource  |
 | Is Version Of     | http://purl.org/dc/terms/isVersionOf          | 0...1 | A related resource of which the described resource is a version, edition, or adaptation |
 | Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
 | License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |

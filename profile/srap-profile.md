@@ -894,7 +894,7 @@ Note 1: ISNI should be provided as a URI, not as a literal, since the literal fo
 
 Example: 
 
-<dcterms:bibliographicCitation>Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K, et al. (2014) Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot. PLoS ONE 9(12): e115253. https://doi.org/10.1371/journal.pone.0115253</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation>Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K, et al. (2014) Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot. PLoS ONE 9(12): e115253. https://doi.org/10.1371/journal.pone.0115253</dcterms:bibliographicCitation>
 
 ### Editor 
 

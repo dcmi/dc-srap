@@ -2,7 +2,7 @@
 
 *list of authors*
 
-Draft 2023-03-24 (several DCMIMT elements from between Grant number and Language were missing from the previous version. Some have been added, but fixing the specification is still work in progress - JH)
+Draft 2023-03-27 (Definitions of some listed DCMIMT elements were missing, and some relevant terms were not included at all. Several terms have been added to fix this problem. SRAP versions of Access Rights and Type have been included in the main table, and reasons for modifying DCMI definitions are provided later. Date published has been replaced by DCMIMT term Issued, and DCMIMT term Modified has been added. Date Updated is specified as its Subproperty)
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
@@ -70,8 +70,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | * Date ahead of print               | http://purl.org/dc/terms/dateAheadOfPrint                     | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | * Date available as public draft    | http://purl.org/dc/terms/dateAvailableAsPublicDraft           | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | * Date missing      | http://purl.org/dc/terms/dateMissing         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date lost     | http://purl.org/dc/terms/dateLost         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date published     | http://purl.org/dc/terms/datePublished         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Date lost     | http://purl.org/dc/terms/dateLost                | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | * Date received as manuscript       | http://purl.org/dc/terms/dateReceivedAsManuscript             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | * Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 1 | Date according to ISO 8601-1 (YYYY-MM-DD) |
 | * Date submitted        | http://purl.org/dc/terms/dateSubmitted              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
@@ -87,19 +86,22 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | Has Version       | http://purl.org/dc/terms/hasVersion           | 0...1 | A related resource that is a version, edition, or adaptation of the described resource |
 | Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
 | Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of a related resource  |
-| Is Referenced By  | http://purl.org/dc/terms/isReferencedBy             | 0...1 | URI or other identifier of a related resource  |
+| Is Referenced By  | http://purl.org/dc/terms/isReferencedBy       | 0...1 | URI or other identifier of a related resource  |
 | Is Version Of     | http://purl.org/dc/terms/isVersionOf          | 0...1 | A related resource of which the described resource is a version, edition, or adaptation |
+| Issued            | http://purl.org/dc/terms/issued               | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
 | Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
 | License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
-| * Presented at      | http://purl.org/ontology/bibo/presentedAt     | 0...1 | Free text or URI |
+| Modified          | http://purl.org/dc/terms/modified             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
+| * Presented at      | http://purl.org/ontology/bibo/presentedAt   | 0...1 | Free text or URI |
 | * Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
 | Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
-| * Related code  | http://purl.org/dc/terms/relatedCode       | 0...1 | URI |
-| * Related dataset   | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
+| * Related code    | http://purl.org/dc/terms/relatedCode          | 0...1 | URI |
+| * Related dataset | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
 | Relation          | http://purl.org/dc/terms/relation             | 0...1 | URI |
 | Rights            | http://purl.org/dc/terms/rights               | 0...1 | Information about rights held in and over the resource |
 | Rights Holder     | http://purl.org/dc/terms/rightsHolder         | 0...1 | A person or organization owning or managing rights over the resource |
 | Subject           | http://purl.org/dc/terms/subject              | 0...1 | A concept from a controlled vocabulary such as LCSH or MeSH |
+| Table of Contents | http://purl.org/dc/terms/tableOfContents      |     1 | A list of subunits of the resource |
 | Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
 | Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://vocabularies.coar-repositories.org/pubby/resource_type) |
 
@@ -116,13 +118,13 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 | Name              | Identifier                                    | Mandatory / Repeatable | Value |
 | ----------------- | ----------------------------------------------| ----- | ----- |
 | Academic supervisor        |       | 0...1 | Name and identifier of a person |
-| Dedicatee        | http://id.loc.gov/vocabulary/relators/dte     | 0...1 | Name and identifier of a person |
+| Dedicatee         | http://id.loc.gov/vocabulary/relators/dte     | 0...1 | Name and identifier of a person |
 | Degree committee member            | http://id.loc.gov/vocabulary/relators/dgc     | 0...1 | Name and identifier of a person |
-| Degree granting institution        | http://id.loc.gov/vocabulary/relators/dgg     | 0...1 | Name and identifier of an organization |
+| Degree granting institution        | http://id.loc.gov/vocabulary/relators/dgg     | 1 | Name and identifier of an organization |
 | Degree supervisor | http://id.loc.gov/vocabulary/relators/dgs     | 0...1 | Name and identifier of a person |
-| Dissertant        | http://id.loc.gov/vocabulary/relators/dis     | 0...1 | Name and identifier of a person |
-| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 0...1 | Name and identifier of a person |
-| Praeses           | http://id.loc.gov/vocabulary/relators/pra     | 0...1 | Name and identifier of a person |
+| Dissertant        | http://id.loc.gov/vocabulary/relators/dis     | 1 | Name and identifier of a person |
+| Opponent          | http://id.loc.gov/vocabulary/relators/opn     | 1 | Name and identifier of a person |
+| Praeses           | http://id.loc.gov/vocabulary/relators/pra     | 1 | Name and identifier of a person |
 | Respondent        | http://id.loc.gov/vocabulary/relators/rsp     | 0...1 | Name and identifier of a person |
 | Thesis advisor    | http://id.loc.gov/vocabulary/relators/ths     | 0...1 | Name and identifier of a person |
 
@@ -144,6 +146,25 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 | Translator        | http://id.loc.gov/vocabulary/relators/trl     | 0...1 | Name and identifier of a person |
 
 ## Generic elements 
+
+### Access rights  
+
+DCMI Metadata Term: http://purl.org/dc/terms/accessRights 
+
+Label: Access Rights 
+
+Recommended practice is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
+
+Version 1.0 of the vocabulary contains the following terms: 
+
+* open access
+* embargoed access
+* restricted access
+* metadata only access 
+
+NOTE: Current definition of this property in the DCMI Terms namespace is “Information about who can access the resource or an indication of its security status.”
+
+This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.  
 
 ### Accessibility statement
 
@@ -269,9 +290,13 @@ A related resource that is included either physically or logically in the descri
 
 Subproperty of: Relation. 
 
-Recommended practice is to provide URI or other identifier of the related resource.
+Recommended practice is to provide URI of the related resource.
+
+EXAMPLE: In SRAP, this property may be used to specify presentations published in the conference proceedings described.
 
 NOTE: This property is an inverse property of Is Part Of.
+
+NOTE: If parts are not independently accessible with URI, Table of Contents should be used.  
 
 ### Has Version 
 
@@ -309,15 +334,27 @@ NOTE: This property is an inverse property of Has Format.
 
 ### Is Part Of
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
+DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
 
-Label: Is Part Of 
+Label: Is Part Of
 
 A related resource in which the described resource is physically or logically included.
 
-Subproperty of: Relation
+Recommended practice in SRAP is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system or a name may be provided. It is also possible to give both the name and the URI.
+
+EXAMPLE: In SRAP, this property may be used to specify a scientific periodical in which the described article has been published.
 
 NOTE: This property is an inverse property of Has Part.
+
+### Is Referenced By 
+
+Proposed DCMI Metadata Term:  http://purl.org/dc/terms/isReferencedBy
+
+Label: Is Referenced By 
+
+A related resource that references, cites, or otherwise points to the described resource.
+
+NOTE: This property is an inverse property of References.
 
 ### Is Version Of 
 
@@ -329,6 +366,18 @@ A related resource of which the described resource is a version, edition, or ada
 
 NOTE: Changes in version imply substantive changes in content rather than differences in format.
 NOTE: This property is an inverse property of Has Version.
+
+### Issued 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/issued 
+
+Label: Date Issued 
+
+Date of formal issuance of the resource.
+
+Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date.
+
+Subproperty of: Date http://purl.org/dc/terms/date
 
 ### Language 
 
@@ -348,9 +397,19 @@ Label: License
 
 A legal document giving official permission to do something with the resource.
 
-Subproperty of: Rights 
+Subproperty of: Rights http://purl.org/dc/terms/rights
 
 Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.
+
+### Modified
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/modified
+
+Date on which the resource was changed.
+
+Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date.
+
+Subproperty of: Date http://purl.org/dc/terms/date
 
 ### Publication status 
 
@@ -383,6 +442,16 @@ SRAP: Conference, workshop or other scientific event where the scholarly resourc
 
 Recommended practice is to identify formal meetings such as conferences with a URI. If this is not possible or feasible, a literal value that identifies the meeting may be provided. It is also possible to give both the name and the URI.
 
+### References 
+
+Proposed DCMI Metadata Term:  http://purl.org/dc/terms/References
+
+Label: References
+
+A related resource that is referenced, cited, or otherwise pointed to by the described resource.
+
+NOTE: This property is an inverse property of Is Referenced By.
+
 ### Related Code  
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedCode
@@ -409,7 +478,65 @@ SRAP: Dataset or datasets referenced in the described scholarly resource.
 
 Recommended practice is to identify a dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
 
-Subproperty of: References         http://purl.org/dc/terms/references
+Subproperty of: References http://purl.org/dc/terms/references
+
+### Rights 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/rights
+
+Label: Rights 
+
+Information about rights held in and over the resource.
+
+Recommended practice is to refer to a rights statement with a URI. If this is not possible or feasible, a literal value (name, label, or short text) may be provided.
+
+NOTE: Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.
+
+### RightsHolder 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/rightsHolder
+
+Label: Rights Holder 
+
+A person or organization owning or managing rights over the resource.
+
+Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided.
+
+### Subject 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/subject 
+
+Label: Subject 
+
+A topic of the resource.
+
+Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.
+
+### Table Of Contents
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/tableOfContents
+
+Label: Table Of Contents
+
+A list of subunits of the resource.
+
+Subproperty of: Description  http://purl.org/dc/terms/description
+
+### Title
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/title
+
+Label: Title 
+
+A name given to the resource.
+
+### Type 
+
+DCMI Metadata Term: http://purl.org/dc/terms/type
+
+Label: Type 
+
+Recommended practice in SRAP AP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8]. 
 
 ## SRAP elements 
 
@@ -496,6 +623,8 @@ Label: Date Updated
 Date(s) when the publication was republished with additional or revised content.
 
 Subproperty of: Date http://purl.org/dc/terms/date
+
+Subproperty of: Modified http://purl.org/dc/terms/modified
 
 Recommended practice is to provide this date if it is specified in the publication.
 
@@ -723,49 +852,21 @@ Recommended practice is to identify the translator with a URI. If this is not po
 
 ## Refinements to existing DCMIMT elements
 
+Definitions of Access rights and Type have been modified. Reasons for changes are explained below. 
+
 ### Access rights  
 
-DCMI Metadata Term: http://purl.org/dc/terms/accessRights 
+Definition of this property in the DCMI Terms namespace is: “Information about who can access the resource or an indication of its security status.”
 
-Label: Access Rights 
+This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, there is no recommendation to use a controlled vocabulary to describe access status. 
 
-Current definition of this property in the DCMI Terms namespace is: 
-
-“Information about who can access the resource or an indication of its security status.”
-
-This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.  
-
-In SRAP AP, recommended practice is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
-
-Version 1.0 of the vocabulary contains the following terms: 
-
-* open access
-* embargoed access
-* restricted access
-* metadata only access 
- 
-### Is part of
-
-DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
-
-Label: Is Part Of
-
-In SRAP context, this property can be used to specify host document, a related resource in which the described scholarly resource is physically or logically included. For instance, a scientific periodical in which the described article has been published.
-
-Recommended practice in SRAP AP is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system or a name may be provided. It is also possible to give both the name and the URI.
-
-“Is Part Of” in DCMI Terms shall be used to provide a link (URI) from the described component part (“child”) to the host resource (“parent”). 
-Note: There are no practical examples in DCMI Terms or DC User Guide on how to use this property in cases that are common for scientific publications, such as linking from an article to conference proceedings or periodicals.  User guide and/or DCMI Terms should be revised to accommodate relevant use cases. 
+In SRAP AP, the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/) should be used, because it is applicable to scholarly resources 
 
 ### Type 
 
-DCMI Metadata Term: http://purl.org/dc/terms/type
+The Dublin Core DCMI Type Vocabulary[^7] contains the following terms: Collection, Dataset, Event, Image, Interactive resource, Moving Image, Physical object, Service, Software, Sound, Still image, Text. These types are generic and as such not ideal for scholarly resources. COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like bachelor, doctoral and master thesis, is more suitable for SRAP. 
 
-Label: Type 
-
-The Dublin Core DCMI Type Vocabulary[^7] is general and as such not suitable for scholarly resources. 
-
-Recommended practice in SRAP AP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8]. T
+It is possible to use DCMI Type Vocabulary to provide generic description, and complement it with a precise COAR term. 
 
 ## Examples
 

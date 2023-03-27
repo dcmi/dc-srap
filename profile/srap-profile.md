@@ -200,7 +200,13 @@ Label: Bibliographic Citation
 
 A bibliographic reference for the resource.
 
-Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.
+Subproperty of: Identifier http://purl.org/dc/terms/identifier
+
+Recommended practice is to include sufficient bibliographic detail to identify the described resource as unambiguously as possible.
+
+NOTE: Authors may use this element to give an example of how the resource should be cited. It may be necessary to adjust these examples to meet the preference of the publisher or serial. Some elements of the citation (e.g. information of the host resource) may or may not be available elsewhere in the SRAP record.  
+
+EXAMPLE: Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K, et al. (2014) Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot. PLoS ONE 9(12): e115253. https://doi.org/10.1371/journal.pone.0115253
 
 ### Date accepted
 
@@ -883,6 +889,12 @@ Example 2:
     <dcterms:affiliation pid="http://isni.org/isni/0000000406246810">University of Helsinki. Faculty of Theology</dcterms:affiliation>   
 
 Note 1: ISNI should be provided as a URI, not as a literal, since the literal form (0000 0004 0624 6810) is not actionable and does not indicate explicitly whether the string is ISNI, ORCID or even some other identifier that just happens to have the same syntax. 
+
+### Bibliographic citation 
+
+Example: 
+
+<dcterms:bibliographicCitation>Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K, et al. (2014) Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot. PLoS ONE 9(12): e115253. https://doi.org/10.1371/journal.pone.0115253</dcterms:bibliographicCitation>
 
 ### Editor 
 

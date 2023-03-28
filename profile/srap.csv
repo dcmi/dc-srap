@@ -3,7 +3,6 @@ shapeID,propertyLabel,propertyID,valueDatatype,valueShape,valueConstraint,valueC
 Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Access rights,dct:accessRights,xsd:anyURI,,http://vocabularies.coar-repositories.org/documentation/access_rights/,IRIstem,A term from COAR vocabulary (http://vocabularies.coar-repositories.org/documentation/access_rights/
 ,*Accessibility statement,,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details. Recommended practice is to define the accessibility options, such as software requirements for using the document or technical features such as open or closed captioning."
-,*Affiliation,,xsd:anyURI xsd:string,,,,"An organization to which an agent was affiliated when the resource was created. Recommended practice is to identify the affiliation with a URI. If this is not possible or feasible, a literal value that identifies the affiliated organization may be provided. It is also possible to give both the name and the URI. If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time. Domain includes: dcterms:Agent"
 ,Bibliographic citation,dct:bibliographicCitation,xsd:string,,,,A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.
 ,Contributor,dct:contributor,,Person,,,
 ,Creator,dct:creator,,Person,,,Name and identifier of persons and/or organizations
@@ -37,7 +36,7 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Title,dct:title,xsd:string,,,,"Free text, titles in different languages provided separately"
 ,Type,dct:type,xsd:anyURI,,http://purl.org/coar/resource_type,IRIstem,"A term from COAR resource type vocabulary, http://purl.org/coar/resource_type"
 ,,,,,,,
-Person,Affiliation,dct:affiliation,,Organization,,,Name and identifier of an organization
+Person,Affiliation,dct:affiliation,,Organization,,,An organization to which an agent was affiliated when the resource was created. Recommended practice is to identify the affiliation with a URI. If this is not possible or feasible, a literal value that identifies the affiliated organization may be provided. It is also possible to give both the name and the URI. If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.
 ,Name,foaf:Name,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,xsd:anyURI xsd:string,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,

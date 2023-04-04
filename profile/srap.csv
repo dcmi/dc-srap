@@ -37,7 +37,7 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,*Related dataset,,xsd:anyURI,,,,"Dataset or datasets referenced in the described scholarly resource. Recommended practice is to identify a dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed."
 ,Relation,dct:relation,xsd:anyURI xsd:string,,,,"A related resorce. Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided."
 ,Rights,dct:rights,xsd:anyURI xsd:string,,,,"Information about rights held in and over the resource. Recommended practice is to refer to a rights statement with a URI. If this is not possible or feasible, a literal value (name, label, or short text) may be provided."
-,Rights Holder,dct:rightsHolder,xsd:anyURI xsd:string,,,,"A person or organization owning or managing rights over the resource. Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided." 
+,Rights Holder,dct:rightsHolder,xsd:anyURI xsd:string,,,,"A person or organization owning or managing rights over the resource. Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided."
 ,Subject,dct:subject,,Subject,,,A concept from a controlled vocabulary such as LCSH or MeSH
 ,Table of Contents,dct:tableOfContents,xsd:string,,,,"A list of subunits of the resource."
 ,Title,dct:title,xsd:string,,,,"A name given to the resource. Titles in different languages provided separately"

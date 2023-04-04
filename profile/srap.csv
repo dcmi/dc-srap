@@ -25,7 +25,7 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Identifier,dct:identifier,xsd:anyURI xsd:string,,,,"URI, one for each identifier the resource has, provided separately"
 ,Is Part Of,dct:isPartOf,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
 ,Is Referenced By,dct:isReferencedBy,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
-,Is Version Of,dct:isVersionOf,,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
+,Is Version Of,dct:isVersionOf,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
 ,Issued,dct:issued,xsd:date,,,,Date according to ISO 8601-1
 ,Language,dct:language,xsd:string,,,,"A code from ISO 639-2, one for each language used in the resource, provided separately"
 ,License,dct:license,xsd:anyURI xsd:string,,,,"A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."

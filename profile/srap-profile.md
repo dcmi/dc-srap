@@ -2,7 +2,7 @@
 
 *list of authors*
 
-Draft 2023-03-27 (Definitions of some listed DCMIMT elements were missing, and some relevant terms were not included at all. Several terms have been added to fix this problem. SRAP versions of Access Rights and Type have been included in the main table, and reasons for modifying DCMI definitions are provided later. Date published has been replaced by DCMIMT term Issued, and DCMIMT term Modified has been added. Date Updated is specified as its Subproperty)
+Draft 2023-04-04 
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 

@@ -434,7 +434,7 @@ Recommended practice is to use a publication status value from the following lis
 * publication
 * updated publication
 
-Recommended practice is use publication status when there are several versions of the same resource, and publication status can be used for telling them apart. Status information should be accompanied with an appropriate date specification whenever such date can be obtained from the resource itself or metadata linked to it. 
+NOTE: Publication status should be used when there are several versions of the same resource, and publication status can be used for telling them apart. Status information should be accompanied with an appropriate date specification whenever such date can be obtained from the resource itself or metadata linked to it. 
 
 ### Presented at
 

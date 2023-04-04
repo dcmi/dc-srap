@@ -466,8 +466,6 @@ Label: Related Code
 
 Code (software applications) referenced in the resource. 
 
-SRAP: Code referenced in the scholarly resource.
-
 Recommended practice is to identify the code with a URI identifying either the code or a landing page through which the application or applications are accessed.  
 
 Subproperty of: References         http://purl.org/dc/terms/references
@@ -480,11 +478,19 @@ Label: Related Dataset
 
 Dataset or datasets referenced in the described resource. 
 
-SRAP: Dataset or datasets referenced in the described scholarly resource.
-
 Recommended practice is to identify a dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
 
 Subproperty of: References http://purl.org/dc/terms/references
+
+### Relation 
+
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/relation
+
+Label: Relation 
+
+A related resorce. 
+
+Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided.
 
 ### Rights 
 

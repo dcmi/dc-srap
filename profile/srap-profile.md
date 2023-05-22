@@ -103,7 +103,7 @@ NOTE: If the name is preceded by an asterisk, identifier has not been implemente
 | Subject           | http://purl.org/dc/terms/subject              | 0...1 | A concept from a controlled vocabulary such as LCSH or MeSH |
 | Table of Contents | http://purl.org/dc/terms/tableOfContents      |     1 | A list of subunits of the resource |
 | Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
-| Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://vocabularies.coar-repositories.org/pubby/resource_type) |
+| Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://purl.org/coar/resource_type) |
 
 ## Roles 
 

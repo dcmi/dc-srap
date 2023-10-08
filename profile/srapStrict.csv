@@ -4,8 +4,8 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Access rights,dct:accessRights,xsd:anyURI,,http://vocabularies.coar-repositories.org/documentation/access_rights/,IRIstem,A term from COAR vocabulary (http://vocabularies.coar-repositories.org/documentation/access_rights/
 ,*Accessibility statement,,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details. Recommended practice is to define the accessibility options, such as software requirements for using the document or technical features such as open or closed captioning."
 ,Bibliographic citation,dct:bibliographicCitation,xsd:string,,,,A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.
-,Contributor,dct:contributor,,Person,,,
-,Creator,dct:creator,,Person,,,Name and identifier of persons and/or organizations
+,Contributor,dct:contributor,,Person Organization,,,
+,Creator,dct:creator,,Person Organization,,,Name and identifier of persons and/or organizations
 ,Date,dct:date,xsd:date,,,,Date according to ISO 8601-1
 ,Date accepted,dct:dateAccepted,xsd:date,,,,Date of acceptance of the resource. Recommended practice is to provide this date if it is specified in the resource. Examples of scholarly resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or a scientific article (accepted by a journal).
 ,*Date ahead of print,,xsd:date,,,,"Date when the final version of the resource was made available in the Web or in print format before publication in a journal issue. NOTE Many scientific journals operate article-level publishing, whereby articles are processed for publication immediately following acceptance. Such articles are later compiled into the next journal issue to be published. Recommended practice is to use Date ahead of print to record the date when the article was published, and Date published to record the date when the journal issue was published."

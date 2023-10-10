@@ -53,14 +53,15 @@ classDiagram
 direction LR
 class SR["Scholarly Resource"]
 class Dataset
-class AA["Affiliated Agent"]
-Agent <|-- AA
-class Agent
+class AP["Affiliated Person"]
+Person <|-- AP
+class Person
 class Organization
 SR --> Dataset : related dataset
-SR --> Agent : creator\neditor\nfunder\ndegree supervisor\nopponent
-AA --> Organization : affiliation
-AA --> Agent : agent
+SR --> Person : creator\neditor\ndegree supervisor\nopponent
+SR --> Organization : creator\nfunder
+AP --> Organization : affiliation
+AP --> Person : person
 ```
 
 ## Alphabetic table of elements

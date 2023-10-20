@@ -1,0 +1,75 @@
+DC SRAP meeting 36
+
+Time: 2023-10-10, 15:00-16:00 UTC
+Place: Zoom, https://helsinki.zoom.us/j/62368569596?pwd=UGQxenZFbjZQUlluRzdQQUM1UFhaUT09 
+
+NB! New Zoom link!
+
+1. Opening of the meeting
+
+2. Appointment of the minutes taker - Karen
+
+3. Approval of the agenda ­
+
+4. Minutes of previous meetings
+
+Minutes of the 2023-09-26 meeting, number 35 (although the filename includes 36?) sent to the DC-SRAP mailing list by Jan on Monday 2nd October.
+
+Minutes for meetings 32, 33, 34 and 35 have not yet been added to the GitHub repository. Can we fix that?
+
+Alasdair uploaded these.
+
+5. Review of current SRAP status and suggestions for next steps (Osma)
+
+Osma’s thoughts: 
+I have reviewed the current state of the DC-SRAP draft and thought about what still needs to be done to the specification in order to consider it ready for review by the DC Usage Board and others outside of the current WG. In the last few meetings, we have mainly discussed individual thorny issues, such as enumeration, but the SRAP document has not changed much. We have also made decisions in the meetings that are not reflected in the current document. I would like to refocus on the document as a whole, adjust its structure to make it easier to edit, and try to refocus the discussions in our meetings so that they lead to concrete changes in the SRAP draft. To this end, I suggest a few changes in our working practices, some of which have already been discussed in earlier meetings:
+
+1. Make use of the DCTAP CSV table as a representation for the properties/elements as much as possible. This means that the text of the SRAP document should be minimal and the main table with properties should be removed. (However, some information such as cardinality may first need to be moved over to the CSV so it doesn’t get lost)
+1. kc: remember that the dctap doesn't show class relationships
+2. osma: recommendations need to stay in the document
+3. tables should be incorporated into dctap
+4. kc: will do this
+2. Decide that the main representation / data model of SRAP is based on RDF style linked entities; this aligns well with DCTAP shapes. Legacy representations such as how to use SRAP in a system that only supports a flat set of metadata properties, or how to represent PIDs in an XML, should go into an appendix.
+1. dspace flat vs. DC entity model
+2. alasdair: may need to revisit some discussion in the past
+3. osma: field + subfield is not easy to do in RDF
+4. kc: need to use a bnode
+5. osma: examples in document are in xml. Those need to change. maybe put the old xml in an appendix for folks who need that. Or write a cookbook with other examples
+6. jan: are shapes = classes? kc: can be, but not required
+3. Try to use GitHub pull requests for suggesting and formulating changes to the specification.  Ideally, there should be a PR to discuss a suggested change, that we can then refine and eventually accept in a meeting. (I have created a PR that adds a domain model diagram; see below)
+
+If we can agree on these, I can suggest concrete (possibly quite drastic) changes to the current document.
+
+6. Domain model diagram (Osma)
+
+The SRAP specification includes a placeholder for a domain model diagram, and the original Google Docs draft had one. I created a new diagram using Mermaid, a diagram tool where the diagram is defined by a relatively simple text representation that is easy to edit within the document, without the use of external drawing tools. In the diagram I included a representation for Affiliated Agents that were discussed in SRAP meetings in April and May 2022.
+
+Pull request with the change: https://github.com/dcmi/dc-srap/pull/32 
+How it looks in the document: https://github.com/dcmi/dc-srap/blob/612820936505993ea5cd329fa2d4d16f2835b9dc/profile/srap-profile.md 
+
+affiliated person is a shape / linked from contributor and creator, along with person and organization
+need some examples and use cases
+
+diagram: kc: need person, and some are either person or organization
+
+7. Enumeration (Karen)
+
+GitHub issue: https://github.com/dcmi/dc-srap/issues/28
+
+Karen has previously produced mock-ups of how to represent journal articles. In the previous meetings, we decided on a two-level representation. Do we have new mock-ups for other document types?
+
+How can we start adding these to the SRAP specification and DCTAP profile?
+
+kc: lc relators are object properties. cannot use them with strings. Will need to use bnode
+osma: best not to use bibframe; 
+alasdair: RDA unconstrained are more high level; might have most of them
+osma: cleaner to restrict to object property. 
+alasdair: should we recommend a subject thesaurus? e.g. FAST
+kc: who is going to decide what the data is? or will this be used with a variety of cataloging practices?
+kc: we don't have a property for the institution conferring the degree
+
+8. Any other business
+
+In the previous meeting (35), Alasdair offered to present  SRAP at the Community Updates Forum at  DCMI 2023 in Daegu. Everything OK so far?
+
+9. Closure of the meeting

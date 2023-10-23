@@ -2,21 +2,13 @@
 
 *list of authors*
 
-Draft 2023-04-04 
+*draft date*
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
 There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[^4]. This is not surprising since they share the same aim, support for description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
 
 The SRAP application profile proposal is intended to be globally applicable. All suggested properties were “battle-proven”, in use. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
-
-We do not propose any new properties for agent-specific identifiers, but rely on DCMI’s draft proposal[^5] of using the XML id attribute to match identifiers with the agent names. However, we use attribute "pid" instead of "id", since W3C xml:id proposal allows just one identifier per each element. In SRAP context, the same person or organization may have multiple unique identifiers.  For instance: 
-
-    <dcterms:affiliation pid="http://isni.org/isni/0000000404102071 0313471-7">University of Helsinki</dcterms:affiliation>    
-
-    <dcterms:editor pid=https://orcid.org/0000-0003-1067-5020 https://isni.org/isni/0000000416625064>Hakala, Juha</dcterms:editor>
-
-Using attribute "id" would produce xml:id errors which, although not fatal, would in this case be incorrect. 
 
 Roles of contributors are based on Library of Congress Relator terms and their associated codes[^6] or other controlled contributor lists. Contributor roles presented below are examples of ones that can be used.  
 
@@ -50,64 +42,17 @@ Figure 1. SRAP domain model (to be added).
 
 ## Alphabetic table of elements
 
-This table contains all the proposed new or changed element, and DC Terms elements which are essential for description of scholarly resources. In addition to the listed elements, any existing DC Terms element may also be used if and when necessary.
+This table contains all the proposed new or changed elements, and DC Terms elements which are essential for description of scholarly resources. In addition to the listed elements, any existing DC Terms element may also be used if and when necessary.
 
 NOTE: Roles are presented in separate tables. 
 
 NOTE: If the name is preceded by an asterisk, identifier has not been implemented yet. 
 
-| Name              | Identifier                                    | Mandatory / Repeatable | Value |
-| ----------------- | ----------------------------------------------| ----- | ----- |
-| Abstract          | http://purl.org/dc/terms/abstract             | 0...1 | Free text |
-| Access rights     | http://purl.org/dc/terms/accessRights         | 0...1 | A term from the [COAR vocabulary](http://vocabularies.coar-repositories.org/documentation/access_rights/). If term embargoed access is used is indicated, end date or duration of embargo should be provided in Embargo date range. |
-| * Accessibility statement   | http://purl.org/dc/terms/accessibility             | 0...1 | Free text |
-| Affiliation       | http://purl.org/dc/terms/affiliation          | 0...1 | Name and identifier of an organization or organizations |
-| Bibliographic citation       | http://purl.org/dc/terms/bibliographicCitation| 0...1 | Free text |
-| Contributor       | http://purl.org/dc/terms/contributor          | 0...1 | Name and identifier of a person and/or organization |
-| Creator           | http://purl.org/dc/terms/creator              | 0...1 | Name and identifier of a person and/or organization |
-| Date              | http://purl.org/dc/terms/date                 | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Date accepted     | http://purl.org/dc/terms/dateAccepted         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date ahead of print               | http://purl.org/dc/terms/dateAheadOfPrint                     | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date available as public draft    | http://purl.org/dc/terms/dateAvailableAsPublicDraft           | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date missing      | http://purl.org/dc/terms/dateMissing         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date lost     | http://purl.org/dc/terms/dateLost                | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date received as manuscript       | http://purl.org/dc/terms/dateReceivedAsManuscript             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date retracted    | http://purl.org/spar/fabio/hasRetractionDate  | 1 | Date according to ISO 8601-1 (YYYY-MM-DD) |
-| * Date submitted        | http://purl.org/dc/terms/dateSubmitted              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date submitted as preprint        | http://purl.org/dc/terms/dateSubmittedAsPreprint              | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date submitted as postprint       | http://purl.org/dc/terms/dateSubmittedAsPostprint             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Date updated     | http://purl.org/dc/terms/dateUpdated         | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Description       | http://purl.org/dc/terms/description          | 1     | Free text; different languages shall be provided separately (as different Description elements) |
-| * Embargo date range     | http://purl.org/dc/terms/embargoDateRange     | 0...1 | A period of time during which the resource is under embargo, according to ISO 8601-1 (YYYY-MM-DD/YYYY-MM-DD) | 
-| Format            | http://purl.org/dc/terms/format               | 1     | MIME type registered by IANA   |
-| * Grant number    | http://purl.org/dc/terms/grantNumber          | 0...1 | Free text  |
-| Has Format        | http://purl.org/dc/terms/hasFormat            | 1     | MIME type registered by IANA   |
-| Has Part          | http://purl.org/dc/terms/hasPart              | 0...1 | URI or other identifier of a related resource |
-| Has Version       | http://purl.org/dc/terms/hasVersion           | 0...1 | A related resource that is a version, edition, or adaptation of the described resource |
-| Identifier        | http://purl.org/dc/terms/identifier           | 1     | URI, one for each identifier the resource has, provided separately |
-| Is Part Of        | http://purl.org/dc/terms/isPartOf             | 0...1 | URI or other identifier of a related resource  |
-| Is Referenced By  | http://purl.org/dc/terms/isReferencedBy       | 0...1 | URI or other identifier of a related resource  |
-| Is Version Of     | http://purl.org/dc/terms/isVersionOf          | 0...1 | A related resource of which the described resource is a version, edition, or adaptation |
-| Issued            | http://purl.org/dc/terms/issued               | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| Language          | http://purl.org/dc/terms/language             | 1     | A code from ISO 639-2, one for each language used in the resource, provided separately |
-| License           | http://purl.org/dc/terms/license              | 0...1 | A legal document giving official permission to do something with the resource |
-| Modified          | http://purl.org/dc/terms/modified             | 1     | Date according to ISO 8601-1 (YYYY-MM-DD)  |
-| * Presented at      | http://purl.org/ontology/bibo/presentedAt   | 0...1 | Free text or URI |
-| * Publication status       | http://purl.org/dc/terms/publicationStatus         | 0...1 |  Publication status value from a predefined list |
-| Publisher         | http://purl.org/dc/terms/publisher            | 0...1 | Name and URI of an organization |
-| * Related code    | http://purl.org/dc/terms/relatedCode          | 0...1 | URI |
-| * Related dataset | http://purl.org/dc/terms/relatedDataset       | 0...1 | URI |
-| Relation          | http://purl.org/dc/terms/relation             | 0...1 | URI |
-| Rights            | http://purl.org/dc/terms/rights               | 0...1 | Information about rights held in and over the resource |
-| Rights Holder     | http://purl.org/dc/terms/rightsHolder         | 0...1 | A person or organization owning or managing rights over the resource |
-| Subject           | http://purl.org/dc/terms/subject              | 0...1 | A concept from a controlled vocabulary such as LCSH or MeSH |
-| Table of Contents | http://purl.org/dc/terms/tableOfContents      |     1 | A list of subunits of the resource |
-| Title             | http://purl.org/dc/terms/title                | 1     | Free text, titles in different languages provided separately |
-| Type              | http://purl.org/dc/terms/type                 | 0...1 | A term from the DCMI Type vocabulary or from the the [COAR resource type vocabulary](http://purl.org/coar/resource_type) |
+The table has been moved to a separate [DCTAP table](srap.csv).
 
 ## Roles 
 
-Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used with thesis or with scientific articles.Lists are not mutually exclusive; for instance, a thesis may have a translator. 
+Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used with thesis or with scientific articles. Lists are not mutually exclusive; for instance, a thesis may have a translator. 
 
 If there is a need to add a role, DCMI will send a request to register a new Relator code for the role to the Library of Congress.
 
@@ -902,7 +847,25 @@ Example 1:
 
 Example 2:
 
-    <dcterms:type pid="http://purl.org/coar/resource_type/c_0640">journal</dcterms:type> 
+    <dcterms:type pid="http://purl.org/coar/resource_type/c_0640">journal</dcterms:type>
+
+## Appendix 1. Legacy representations for SRAP data
+
+SRAP itself is defined using DCTAP tables, which express the SRAP data model. The tables define several shapes, corresponding to different types of entities, as well as their properties (data elements such as title and publication date). The underlying assumption is that the metadata for each entity can be represented in a structured format such as RDF, JSON or XML and the different entities can be represented independently of each other. This is not always possible when dealing with legacy systems that only provide a flat representation of document metadata fields and values. This appendix provides guidance on how to apply SRAP in such a legacy setting.
+
+### Flat key-value representation of SRAP
+
+*To Be Written*
+
+### Identifiers along with names in XML
+
+DCMI’s "PIDs in DC" draft proposal[^5] allows using the XML `id` attribute to match identifiers with the agent names. However, we use attribute `pid` instead of `id`, since W3C xml:id proposal allows just one identifier per each element. In SRAP context, the same person or organization may have multiple unique identifiers.  For instance: 
+
+    <dcterms:affiliation pid="http://isni.org/isni/0000000404102071 0313471-7">University of Helsinki</dcterms:affiliation>    
+
+    <dcterms:editor pid=https://orcid.org/0000-0003-1067-5020 https://isni.org/isni/0000000416625064>Hakala, Juha</dcterms:editor>
+
+Using attribute `id` would produce xml:id errors which, although not fatal, would in this case be incorrect. 
 
 ________________
 

@@ -38,7 +38,23 @@ Degree supervisor is a person under whose supervision a degree candidate develop
 
 Opponent is a person responsible for opposing a thesis or dissertation. 
 
-Figure 1. SRAP domain model (to be added).
+Figure 1. SRAP domain model.
+
+```mermaid
+classDiagram
+direction LR
+class SR["Scholarly Resource"]
+class Dataset
+class AP["Affiliated Person"]
+Person <|-- AP
+class Person
+class Organization
+SR --> Dataset : related dataset
+SR --> Person : creator\neditor\ndegree supervisor\nopponent
+SR --> Organization : creator\nfunder
+AP --> Organization : affiliation
+AP --> Person : person
+```
 
 ## Alphabetic table of elements
 

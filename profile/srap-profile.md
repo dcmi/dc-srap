@@ -147,11 +147,9 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 
 ## Generic elements 
 
-### Access rights  
+### Access Rights  
 
 DCMI Metadata Term: http://purl.org/dc/terms/accessRights 
-
-Label: Access Rights 
 
 Recommended practice is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
 
@@ -166,11 +164,9 @@ NOTE: Current definition of this property in the DCMI Terms namespace is “Info
 
 This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.  
 
-### Accessibility statement
+### Accessibility Statement
 
 DCMI Metadata Term: http://purl.org/dc/terms/accessibility
-
-Label: Accessibility
 
 Textual information describing the accessibility features of a resource, including technical details.
 
@@ -179,8 +175,6 @@ Recommended practice is to define the accessibility options, such as software re
 ### Affiliation
 
 Schema.org property: https://schema.org/affiliation 
-
-Label: Affiliation
 
 An organization to which an agent was affiliated when the resource was created.
 
@@ -192,11 +186,9 @@ If a name is given, it should be provided in full and in hierarchical order, sta
 
 NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.  
 
-### Bibliographic citation 
+### Bibliographic Citation 
 
 DCMI Metadata Term: http://purl.org/dc/terms/bibliographicCitation
-
-Label: Bibliographic Citation 
 
 A bibliographic reference for the resource.
 
@@ -208,11 +200,9 @@ NOTE: Authors may use this element to give an example of how the resource should
 
 EXAMPLE: Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K, et al. (2014) Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot. PLoS ONE 9(12): e115253. https://doi.org/10.1371/journal.pone.0115253
 
-### Date accepted
+### Date Accepted
 
 DCMI Metadata Term: http://purl.org/dc/terms/dateAccepted
-
-Label: Date Accepted
 
 Date of acceptance of the resource.
 
@@ -220,11 +210,9 @@ Subproperty of: Date http://purl.org/dc/terms/date
 
 Recommended practice is to provide this date if it is specified in the resource. Examples of scholarly resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or a scientific article (accepted by a journal).
 
-### Date lost
+### Date Lost
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateLost
-
-Label: Date Lost
 
 Date when the resource was lost. 
 
@@ -236,11 +224,9 @@ Date lost should be used when e.g. the only known copy of a digital or printed r
 
 Date lost should not be used when a publisher fails but its resources (e.g. serials) are still preserved in a legal deposit collection. Rights metadata should be updated to reflect changes in restrictions on access and use of such archived resources. For serials and other continuing publications, the most convenient solution is to provide this metadata in the host record, from which it may be copied to all component part (article) records.     
 
-### Date missing
+### Date Missing
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateMissing
-
-Label: Date Missing
 
 Date when the resource went missing. 
 
@@ -250,11 +236,9 @@ Recommended practice is to provide this date only if there is no reasonable doub
 
 Date missing may be used when e.g. a printed copy (item) of a resource has disappeared and its current location is unknown for the time being. 
 
-### Embargo date range
+### Embargo Date Range
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/embargoDateRange
-
-Label: Embargo Date Range
 
 A period of time during which the resource is under embargo.  
 
@@ -264,11 +248,9 @@ Recommended practice is to describe the date range as recommended for the proper
 
 NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met.
 
-### Grant number
+### Grant Number
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/grantNumber
-
-Label: Grant Number
 
 An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created. 
 
@@ -277,8 +259,6 @@ Subproperty of: Identifier
 ### Has Format 
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/hasFormat
-
-Label: Has Format 
 
 A related resource that is substantially the same as the pre-existing described resource, but in another format.
 
@@ -289,8 +269,6 @@ NOTE: This property is an inverse property of Is Format Of.
 ### Has Part 
 
 Proposed DCMI Metadata Term:  	http://purl.org/dc/terms/hasPart
-
-Label: Has Part 
 
 A related resource that is included either physically or logically in the described resource.
 
@@ -308,8 +286,6 @@ NOTE: If parts are not independently accessible with URI, Table of Contents shou
 
 Proposed DCMI Metadata Term: 
 
-Label: Has Version 
-
 A related resource that is a version, edition, or adaptation of the described resource.
 
 Recommended practice is to provide URI or other identifier of the related resource.
@@ -322,8 +298,6 @@ NOTE: This property is an inverse property of Is Version Of.
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/identifier
 
-Label: Identifier 
-
 An unambiguous reference to the resource within a given context.
 
 Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs.
@@ -332,8 +306,6 @@ Recommended practice is to identify the resource by means of a string conforming
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/isFormatOf
 
-Label: Is Format Of
-
 A pre-existing related resource that is substantially the same as the described resource, but in another format.
 
 NOTE: This property is an inverse property of Has Format.
@@ -341,8 +313,6 @@ NOTE: This property is an inverse property of Has Format.
 ### Is Part Of
 
 DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
-
-Label: Is Part Of
 
 A related resource in which the described resource is physically or logically included.
 
@@ -356,8 +326,6 @@ NOTE: This property is an inverse property of Has Part.
 
 Proposed DCMI Metadata Term:  http://purl.org/dc/terms/isReferencedBy
 
-Label: Is Referenced By 
-
 A related resource that references, cites, or otherwise points to the described resource.
 
 NOTE: This property is an inverse property of References.
@@ -366,18 +334,14 @@ NOTE: This property is an inverse property of References.
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/isVersionOf
 
-Label: Is Version Of 
-
 A related resource of which the described resource is a version, edition, or adaptation.
 
 NOTE: Changes in version imply substantive changes in content rather than differences in format.
 NOTE: This property is an inverse property of Has Version.
 
-### Issued 
+### Date Issued 
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/issued 
-
-Label: Date Issued 
 
 Date of formal issuance of the resource.
 
@@ -389,8 +353,6 @@ Subproperty of: Date http://purl.org/dc/terms/date
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/language
 
-Label: Language 
-
 A language of the resource.
 
 Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47] language tag.
@@ -399,15 +361,13 @@ Recommended practice is to use either a non-literal value representing a languag
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/license
 
-Label: License
-
 A legal document giving official permission to do something with the resource.
 
 Subproperty of: Rights http://purl.org/dc/terms/rights
 
 Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.
 
-### Modified
+### Date Modified
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/modified
 
@@ -417,11 +377,9 @@ Recommended practice is to describe the date, date/time, or period of time as re
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
-### Publication status 
+### Publication Status 
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/publicationStatus
-
-Label: Publication Status 
 
 The stage of the resource in the publishing workflow.
 
@@ -436,11 +394,9 @@ Recommended practice is to use a publication status value from the following lis
 
 NOTE: Publication status should be used when there are several versions of the same resource, and publication status can be used for telling them apart. Status information should be accompanied with an appropriate date specification whenever such date can be obtained from the resource itself or metadata linked to it. 
 
-### Presented at
+### Presented At
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/presentedAt
-
-Label: Presented At 
 
 The conference, workshop, shareholder meeting etc. where the resource was presented. 
 
@@ -452,8 +408,6 @@ Recommended practice is to identify formal meetings such as conferences with a U
 
 Proposed DCMI Metadata Term:  http://purl.org/dc/terms/References
 
-Label: References
-
 A related resource that is referenced, cited, or otherwise pointed to by the described resource.
 
 NOTE: This property is an inverse property of Is Referenced By.
@@ -461,8 +415,6 @@ NOTE: This property is an inverse property of Is Referenced By.
 ### Related Code  
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedCode
-
-Label: Related Code
 
 Code (software applications) referenced in the resource. 
 
@@ -474,8 +426,6 @@ Subproperty of: References         http://purl.org/dc/terms/references
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedDataset
 
-Label: Related Dataset
-
 Dataset or datasets referenced in the described resource. 
 
 Recommended practice is to identify a dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
@@ -486,8 +436,6 @@ Subproperty of: References http://purl.org/dc/terms/references
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/relation
 
-Label: Relation 
-
 A related resorce. 
 
 Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided.
@@ -496,19 +444,15 @@ Recommended practice is to identify the related resource by means of a URI. If t
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/rights
 
-Label: Rights 
-
 Information about rights held in and over the resource.
 
 Recommended practice is to refer to a rights statement with a URI. If this is not possible or feasible, a literal value (name, label, or short text) may be provided.
 
 NOTE: Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.
 
-### RightsHolder 
+### Rights Holder 
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/rightsHolder
-
-Label: Rights Holder 
 
 A person or organization owning or managing rights over the resource.
 
@@ -518,8 +462,6 @@ Recommended practice is to refer to the rights holder with a URI. If this is not
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/subject 
 
-Label: Subject 
-
 A topic of the resource.
 
 Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.
@@ -527,8 +469,6 @@ Recommended practice is to refer to the subject with a URI. If this is not possi
 ### Table Of Contents
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/tableOfContents
-
-Label: Table Of Contents
 
 A list of subunits of the resource.
 
@@ -538,15 +478,11 @@ Subproperty of: Description  http://purl.org/dc/terms/description
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/title
 
-Label: Title 
-
 A name given to the resource.
 
 ### Type 
 
 DCMI Metadata Term: http://purl.org/dc/terms/type
-
-Label: Type 
 
 Recommended practice in SRAP AP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8]. 
 
@@ -554,11 +490,9 @@ Recommended practice in SRAP AP is to use the COAR Controlled Vocabulary for Res
 
 SRAP elements are elements which are applicable primarily for scholarly resources such as academic dissertations. 
 
-### Date ahead of print
+### Date Ahead of Print
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateAheadOfPrint
-
-Label: Date Ahead Of Print
 
 Subproperty of: Date (http://purl.org/dc/terms/date)
 
@@ -566,21 +500,17 @@ Date when the final version of the resource was made available in the Web or in 
 
 NOTE Many scientific journals operate article-level publishing, whereby articles are processed for publication immediately following acceptance. Such articles are later compiled into the next journal issue to be published. Recommended practice is to use Date ahead of print to record the date when the article was published, and Date published to record the date when the journal issue was published.  
 
-### Date available as public draft
+### Date Available as Public Draft
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateAvailableAsPublicDraft
-
-Label: Date Available As Public Draft
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
 Date when an early draft of the resource (predating even preprint) has been made available in an open repository such as ArXiv.
 
-### Date received as manuscript
+### Date Received as Manuscript
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateReceivedAsManuscript
-
-Label: Date Received As Manuscript
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
@@ -588,11 +518,9 @@ Date when the resource is first received by the publisher.
 
 Recommended practice is to provide this data when it is indicated in the resource. 
 
-### Date retracted
+### Date Retracted
 
 Fabio Metadata Term: http://purl.org/spar/fabio/hasRetractionDate
-
-Label: Date Retracted 
 
 Date when the resource was retracted or withdrawn.
 
@@ -602,11 +530,9 @@ Recommended practice is to provide reason for retraction or withdrawal in Descri
 
 NOTE: Do not use Date lost or Date missing for retracted resources. 
 
-### Date submitted as preprint
+### Date Submitted as Preprint
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateSubmittedAsPreprint
-
-Label: Date Submitted As Preprint
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
@@ -614,11 +540,9 @@ Date when an author submits a preprint of an unpublished resource to a repositor
 
 Recommended practice is to provide this information when it is included in the resource, provided by the author or available in the repository application. 
 
-### Date submitted as postprint
+### Date Submitted as Postprint
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateSubmittedAsPostprint
-
-Label: Date Submitted As Postprint
 
 Subproperty of: Date http://purl.org/dc/terms/date
 
@@ -626,11 +550,9 @@ Date when an author submits a postprint of an unpublished resource to a reposito
 
 Recommended practice is to provide this information if it is included in the resource, provided by the author or available in the repository application. 
 
-### Date updated
+### Date Updated
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateUpdated
-
-Label: Date Updated
 
 Date(s) when the publication was republished with additional or revised content.
 
@@ -646,8 +568,6 @@ Recommended practice is to provide this date if it is specified in the publicati
 
 MARC relator: http://id.loc.gov/vocabulary/relators/abr
 
-Label: Abridger 
-
 MARC relator definition: A person, family, or organization contributing to a resource by shortening or condensing the original work but leaving the nature and content of the original work substantially unchanged
 
 Recommended practice is to identify the person, family or organization with a URI. If this is not possible or feasible, a literal value that identifies the abridger may be provided. It is also possible to give both the name and the URI.
@@ -656,8 +576,6 @@ The name of an organization should be provided in full and in hierarchical order
 
 ### Academic supervisor
 
-Label: Academic supervisor
-
 RDA definition: An agent who is responsible for overseeing academic activity of any kind that results in a resource, including theses, research, and projects.
 
 Recommended practice is to identify the person, family or organization with a URI. If this is not possible or feasible, a literal value that identifies the compiler may be provided. It is also possible to give both the name and the URI.
@@ -665,8 +583,6 @@ Recommended practice is to identify the person, family or organization with a UR
 ### Compiler 
 
 MARC relator: http://id.loc.gov/vocabulary/relators/com
-
-Label: Compiler 
 
 MARC relator definition: A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc 
 
@@ -677,8 +593,6 @@ The name of an organization should be provided in full and in hierarchical order
 ### Degree granting institution
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dgg
-
-Label: Degree Granting Institution
 
 MARC relator definition: An organization granting an academic degree. 
 
@@ -692,8 +606,6 @@ Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dgs
 
-Label: Degree Supervisor
-
 MARC relator definition: A person overseeing a higher level academic degree.
 
 Recommended practice is to identify the degree supervisor with a URI. If this is not possible or feasible, a literal value that identifies the degree supervisor may be provided. It is also possible to give both the name and the URI.
@@ -704,8 +616,6 @@ Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
 MARC relator: http://id.loc.gov/vocabulary/relators/dis 
 
-Label: Dissertant 
-
 MARC relator definition: A person who presents a thesis for a university or higher-level educational degree.
 
 Recommended practice is to identify the dissertant with a URI. If this is not possible or feasible, a literal value that identifies the dissertant may be provided. It is also possible to give both the name and the URI.
@@ -713,8 +623,6 @@ Recommended practice is to identify the dissertant with a URI. If this is not po
 ### Editor 
 
 MARC relator: https://id.loc.gov/vocabulary/relators/edt
-
-Label: Editor
 
 MARC relator definition: A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see creator.
 
@@ -726,8 +634,6 @@ The name of an organization should be provided in full and in hierarchical order
 
 MARC relator: http://id.loc.gov/vocabulary/relators/edt 
 
-Label: Editor of Compilation 
-
 MARC relator definition: A person, family, or organization contributing to a collective or aggregate work by selecting and putting together works, or parts of works, by one or more creators.
 
 Recommended practice is to identify the editor of compilation with a URI. If this is not possible or feasible, a literal value that identifies the editor of compilation may be provided. It is also possible to give both the name and the URI.
@@ -737,8 +643,6 @@ The name of an organization should be provided in full and in hierarchical order
 ### Funder 
 
 MARC relator: https://id.loc.gov/vocabulary/relators/fnd
-
-Label: Funder
 
 MARC relator definition: A person or organization that furnished financial support for the production of the resource. 
 
@@ -750,15 +654,11 @@ If a name of an organization is given, it should be provided in full and in hier
 
 MAARC relator: http://id.loc.gov/vocabulary/relators/hnr
 
-Label: Honoree 
-
 MARC relator definition: A person, family, or organization honored by a work or item (e.g., the honoree of a festschrift, a person to whom a copy is presented) 
 
 ### Host institution
 
 MARC relator: http://id.loc.gov/vocabulary/relators/his
-
-Label: Host Institution
 
 MARC relator definition: An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource. 
 
@@ -770,9 +670,7 @@ Subproperty of: Contributor               http://purl.org/dc/terms/contributor
 
 ### Opponent
 
-MARC relator: http://id.loc.gov/vocabulary/relators/opn 
-
-Label: Opponent 
+MARC relator: http://id.loc.gov/vocabulary/relators/opn
 
 A person or organization responsible for opposing a thesis or dissertation.
 
@@ -781,8 +679,6 @@ Recommended practice is to identify the opponent with a URI. If this is not poss
 ### Organizer 
 
 MARC relator: http://id.loc.gov/vocabulary/relators/orm 
-
-Label: Organizer 
 
 MARC relator definition: A person, family, or organization organizing the exhibit, event, conference, etc., which gave rise to a resource.
 
@@ -794,8 +690,6 @@ If a name of an organization is given, it should be provided in full and in hier
 
 MARC relator: http://id.loc.gov/vocabulary/relators/pra 
 
-Label: Praeses 
-
 A person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation
 
 Recommended practice is to identify the praeses with a URI. If this is not possible or feasible, a literal value that identifies the praeses may be provided. It is also possible to give both the name and the URI.
@@ -803,8 +697,6 @@ Recommended practice is to identify the praeses with a URI. If this is not possi
 ### Respondent
 
 MARC relator: http://id.loc.gov/vocabulary/relators/rsp
-
-Label: Respondent 
 
 A candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.
 
@@ -814,8 +706,6 @@ Recommended practice is to identify the respondent with a URI. If this is not po
 
 MARC relator: http://id.loc.gov/vocabulary/relators/rev
 
-Label: Reviewer
-
 MARC relator definition: A person or organization responsible for the review of a book, motion picture, performance, etc. 
 
 Recommended practice is to identify the funder with a URI. If this is not possible or feasible, a literal value that identifies the funder may be provided. It is also possible to give both the name and the URI.
@@ -824,8 +714,6 @@ If a name of an organization is given, it should be provided in full and in hier
 
 ### Reviser 
 
-Label: Reviser 
-
 A person or organization responsible for the revision of a book, article, etc. 
 
 Recommended practice is to identify the reviser with a URI. If this is not possible or feasible, a literal value that identifies the reviser may be provided. It is also possible to give both the name and the URI.
@@ -833,8 +721,6 @@ Recommended practice is to identify the reviser with a URI. If this is not possi
 ### Sponsor 
 
 MARC relator: http://id.loc.gov/vocabulary/relators/spn 
-
-Label: Sponsor 
 
 MARC relator definition: A person, family, or organization sponsoring some aspect of a resource, e.g., funding research, sponsoring an event 
 
@@ -846,8 +732,6 @@ If a name of an organization is given, it should be provided in full and in hier
 
 MARC relator: http://id.loc.gov/vocabulary/relators/ths
 
-Label: Thesis Advisor 
-
 A person under whose supervision a degree candidate develops and presents a thesis, mémoire, or text of a dissertation.
 
 Recommended practice is to identify the thesis advisor with a URI. If this is not possible or feasible, a literal value that identifies the thesis advisor may be provided. It is also possible to give both the name and the URI.
@@ -855,8 +739,6 @@ Recommended practice is to identify the thesis advisor with a URI. If this is no
 ### Translator
 
 MARC relator: http://id.loc.gov/vocabulary/relators/trl
-
-Label: Translator 
 
 A person or organization who renders a text from one language into another, or from an older form of a language into the modern form.
 

@@ -51,8 +51,7 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 A person who presents a thesis for a university or higher-level educational degree."
 ,Opponent,marcrel:opn ,xsd:anyURI,Person,,,A person or organization responsible for opposing a thesis or dissertation.
 ,Praeses ,marcrel:pra ,xsd:anyURI,Person,,,"A person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation."
-,Respondent,marcrel:rsp ,xsd:anyURI,Person,,,"
-A person or organization who makes an answer to the courts pursuant to an application for redress (usually in an equity proceeding) or a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation."
+,Respondent,marcrel:rsp ,xsd:anyURI,Person,,,"A person or organization who makes an answer to the courts pursuant to an application for redress (usually in an equity proceeding) or a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation."
 ,Thesis advisor,marcrel:ths ,xsd:anyURI,Person,,,"A person under whose supervision a degree candidate develops and presents a thesis, memoire, or text of a dissertation."
 ,Abridger ,marcrel:abr ,xsd:anyURI,Person Organization,,,"A person, family, or organization contributing to a resource by shortening or condensing the original work but leaving the nature and content of the original work substantially unchanged",,
 ,Compiler ,marcrel:com ,xsd:anyURI,Person Organization,,,"A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc.",,

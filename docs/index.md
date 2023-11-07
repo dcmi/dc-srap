@@ -1,4 +1,4 @@
 # DC-SRAP
 
-* [srap-profile](Current SRAP draft profile)
-* [srap.csv](SRAP as a DCTAP table (CSV))
+* [Current SRAP draft profile](srap-profile)
+* [SRAP as a DCTAP table (CSV)](srap.csv)

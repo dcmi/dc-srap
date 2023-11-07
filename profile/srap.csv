@@ -47,8 +47,7 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Degree committee member,marcrel:dgc ,xsd:anyURI,Person,,,"A person who is part of a committee that considers the merit of a thesis, dissertation, or other submission by an academic degree candidate."
 ,Degree granting institution,marcrel:dgg ,xsd:anyURI,Organization,,,Name and identifier of an organization 
 ,Degree supervisor ,marcrel:dgs ,xsd:anyURI,Person,,,An organization granting an academic degree.
-,Dissertant,marcrel:dis ,xsd:anyURI,Person,,,"
-A person who presents a thesis for a university or higher-level educational degree."
+,Dissertant,marcrel:dis ,xsd:anyURI,Person,,,"A person who presents a thesis for a university or higher-level educational degree."
 ,Opponent,marcrel:opn ,xsd:anyURI,Person,,,A person or organization responsible for opposing a thesis or dissertation.
 ,Praeses ,marcrel:pra ,xsd:anyURI,Person,,,"A person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation."
 ,Respondent,marcrel:rsp ,xsd:anyURI,Person,,,"A person or organization who makes an answer to the courts pursuant to an application for redress (usually in an equity proceeding) or a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation."

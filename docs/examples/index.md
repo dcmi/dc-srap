@@ -1,5 +1,6 @@
 # SRAP examples
 
 * article
-* doctoral thesis
+* Theses
+  * [Short thesis description](thesis1.md)
 * [Conference paper](conferencePaper.md)

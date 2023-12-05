@@ -52,9 +52,7 @@ The table has been moved to a separate [DCTAP table](srap.csv).
 
 ## Roles 
 
-Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use Library of Congress MARC Relator codes or some other controlled list to express roles. See below for examples of existing roles that may be used with thesis or with scientific articles. Lists are not mutually exclusive; for instance, a thesis may have a translator. 
-
-If there is a need to add a role, DCMI will send a request to register a new Relator code for the role to the Library of Congress.
+Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use the Library of Congress MARC Relator codes or some other controlled list to express roles such as the [RDA Unconstrained](https://www.rdaregistry.info/Elements/u/) properties. See below for examples of existing roles that may be used with thesis or with scientific articles. Lists are not mutually exclusive; for instance, a thesis may have a translator. 
 
 Using uncontrolled (local) contributor roles reduces semantic interoperability and should be avoided. 
 

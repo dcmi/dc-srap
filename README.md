@@ -5,7 +5,9 @@ Resources Application Profile (DC-SRAP).
 
 You can find [meeting notes](meetings/) of the Working Group.
 
-The original [draft](https://docs.google.com/document/d/1t8y_3fNrf1rATlYohB6LhPPgr7Ltt3e2/edit) of the SRAP AP is available in Google Docs; an [up to date version](https://github.com/dcmi/dc-srap/blob/main/profile/srap-profile.md) is available as a Markdown document.
+The current draft specification can be found at [https://dcmi.github.io/dc-srap/](https://dcmi.github.io/dc-srap/), which is automatically published from the source files under [docs](docs).
+
+The original [draft](https://docs.google.com/document/d/1t8y_3fNrf1rATlYohB6LhPPgr7Ltt3e2/edit) of the SRAP AP is available in Google Docs.
 
 Issue tracker is used for discussing individual elements and other aspects of the AP.
 

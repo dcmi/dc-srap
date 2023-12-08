@@ -13,18 +13,22 @@ Acta Universitatis Lappeenrantaensis 960
 ## SRAP metadata
 
 ```
+@prefix ex:      <http://example.org/>.
+@prefix dct:     <http://purl.org/dc/terms/>.
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/>.
+
 # The online thesis we are (mainly) describing
 ex:online_thesis
   dct:creator "Malysheva, Julia" ;
   dct:issued "2021-06-01" ;
-  dct:identifier urn:isbn:978-952-335-653-5 ; # electronic ISBN expressed using RFC3187
+  dct:identifier <urn:isbn:978-952-335-653-5> ; # electronic ISBN expressed using RFC3187
   dct:identifier <https://lutpub.lut.fi/handle/10024/162541> ; # repository local URI identifier
   dct:abstract "The level of automation of mechatronic machines, such as..."@en ; # cut for brevity
   dct:extent "79 pages" ; # number of pages, a dct:SizeOrDuration instance
   dct:language "en" ; # language expressed as IETF BCP 47 language tag
   dct:publisher "Lappeenranta-Lahti University of Technology LUT"@en ;
   dct:isPartOf ex:series ; # is part of the series it has been published in
-  xxx:numberInSeries "960" ;  # TODO number in series - how to represent this?
+  ex:numberInSeries "960" ;  # TODO number in series - how to represent this?
   dct:isVersionOf ex:printed_thesis ; # link to the printed thesis which has a different ISBN
   dct:rights "Kaikki oikeudet pidätetään."@fi, "All rights reserved."@en ;
   dct:subject "..." ;  # actual subjects omitted for brevity
@@ -40,9 +44,9 @@ ex:online_thesis
 
 # Printed version of the thesis, with a different ISBN
 ex:printed_thesis
-  dct:identifier urn:isbn:978-952-335-652-8 .  # ISBN of printed version
+  dct:identifier <urn:isbn:978-952-335-652-8> .  # ISBN of printed version
 
 # Series where the thesis was published in (reusable entity)
 ex:series dct:title "Acta Universitatis Lappeenrantaensis" ;
-  dct:identifier urn:issn:1456-4491 .
+  dct:identifier <urn:issn:1456-4491> .
 ```

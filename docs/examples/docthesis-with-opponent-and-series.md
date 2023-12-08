@@ -50,3 +50,10 @@ ex:printed_thesis
 ex:series dct:title "Acta Universitatis Lappeenrantaensis" ;
   dct:identifier <urn:issn:1456-4491> .
 ```
+
+## Visualization
+
+Created from above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
+
+![image](https://github.com/dcmi/dc-srap/assets/1132830/73b4ae39-0b2a-42e8-b2b8-6b888b697f1f)
+

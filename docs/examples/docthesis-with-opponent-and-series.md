@@ -29,7 +29,7 @@ ex:online_thesis
   dct:publisher "Lappeenranta-Lahti University of Technology LUT"@en ;
   dct:isPartOf ex:series ; # is part of the series it has been published in
   ex:numberInSeries "960" ;  # TODO number in series - how to represent this?
-  dct:isVersionOf ex:printed_thesis ; # link to the printed thesis which has a different ISBN
+  dct:relation ex:printed_thesis ; # link to the printed thesis which has a different ISBN
   dct:rights "Kaikki oikeudet pidätetään."@fi, "All rights reserved."@en ;
   dct:subject "..." ;  # actual subjects omitted for brevity
   dct:title "Faster than real-time simulation of fluid power-driven mechatronic machines"@en ;
@@ -53,7 +53,8 @@ ex:series dct:title "Acta Universitatis Lappeenrantaensis" ;
 
 ## Visualization
 
-Created from above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
+Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
 
-![image](https://github.com/dcmi/dc-srap/assets/1132830/73b4ae39-0b2a-42e8-b2b8-6b888b697f1f)
+![image](https://github.com/dcmi/dc-srap/assets/1132830/9549c6a2-e595-46f4-aa5f-054dee20402e)
+
 

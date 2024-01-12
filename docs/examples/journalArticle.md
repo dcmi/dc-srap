@@ -8,27 +8,41 @@ no. 8 (2020): 100618. Available at:  10.1016/j.cpcardiol.2020.100618
 
 ## SRAP
 This uses a two-part structure, with the article information in one structure and the journal information in another. In this way, the journal "record" is reusable.
+The journal ISSNs have been looked up from the [ISSN Portal](https://portal.issn.org), all other information comes from the citation above.
 
 ```
-A:
-dct:creator "Sevim Zaim"
-dct:creator "Jun Heng Chong"
-dct:creator "Vissagan Sankaranarayanan"
-dct:creator "Amer Harky"
-dct:title "COVID-19 and multiorgan response."
-dct:dateSubmitted "2019-02-02"
-dct:partOf _:B
-dct:type bibo:academicArticle
-bibo:volume "45"
-bibo:issue "8"
-dct:date "2020"
-bibo:pageStart "100618"
+@prefix ex:      <http://example.org/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+
+_:A
+a bibo:AcademicArticle ;
+dct:creator "Sevim Zaim" ;
+dct:creator "Jun Heng Chong" ;
+dct:creator "Vissagan Sankaranarayanan" ;
+dct:creator "Amer Harky" ;
+dct:title "COVID-19 and multiorgan response." ;
+dct:dateSubmitted "2019-02-02" ;
+dct:date "2020" ;
+dct:partOf _:B ;
+bibo:volume "45" ;
+bibo:issue "8" ;
+bibo:pageStart "100618" ;
+dct:identifier <https://doi.org/10.1016/j.cpcardiol.2020.100618> .
+
 
 _:B
-dct:type bibo:journal
-bibo:journal "Current problems in cardiology"
-dct:identifier kkkkkk
+a bibo:Journal ;
+dct:title "Current problems in cardiology" ;
+bibo:issn <urn:issn:0146-2806> ;
+bibo:eissn <urn:issn:1535-6280> .
 ```
+## Visualization
+
+Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
+
+![image](https://github.com/dcmi/dc-srap/assets/1132830/42cbd09b-bb3b-4633-9b4e-893cad7c166f)
+
 
 ## Flat version
 

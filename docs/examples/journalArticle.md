@@ -34,8 +34,8 @@ dct:identifier <https://doi.org/10.1016/j.cpcardiol.2020.100618> .
 _:B
 a bibo:Journal ;
 dct:title "Current problems in cardiology" ;
-bibo:issn <urn:issn:0146-2806> ;
-bibo:eissn <urn:issn:1535-6280> .
+bibo:issn "0146-2806" ;
+bibo:eissn "1535-6280" .
 ```
 ## Visualization
 

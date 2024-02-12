@@ -41,8 +41,7 @@ bibo:eissn "1535-6280" .
 
 Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
 
-![image](https://github.com/dcmi/dc-srap/assets/1132830/42cbd09b-bb3b-4633-9b4e-893cad7c166f)
-
+![image](https://github.com/dcmi/dc-srap/assets/1132830/55c99e29-7666-47a2-9d3f-fbadc44e2952)
 
 ## Flat version
 

@@ -23,7 +23,7 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,*Grant number,,xsd:string,,,,"An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created."
 ,Has Part,dct:hasPart,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
 ,Identifier,dct:identifier,xsd:anyURI xsd:string,,,,"URI, one for each identifier the resource has, provided separately"
-,Is Part Of,dct:isPartOf,xsd:anyURI xsd:string,,,,A related resource that this resource is part of.
+,Is Part Of,dct:isPartOf,xsd:anyURI xsd:string,Periodical,,,A related resource that this resource is part of.
 ,Is Referenced By,dct:isReferencedBy,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
 ,Is Version Of,dct:isVersionOf,xsd:anyURI xsd:string,,,,URI or other identifier of the related resource
 ,Issued,dct:issued,xsd:date,,,,Date according to ISO 8601-1
@@ -47,16 +47,16 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Degree committee member,marcrel:dgc ,xsd:anyURI,Person,,,"A person who is part of a committee that considers the merit of a thesis, dissertation, or other submission by an academic degree candidate."
 ,Degree granting institution,marcrel:dgg ,xsd:anyURI,Organization,,,Name and identifier of an organization 
 ,Degree supervisor ,marcrel:dgs ,xsd:anyURI,Person,,,An organization granting an academic degree.
-,Dissertant,marcrel:dis ,xsd:anyURI,Person,,,"A person who presents a thesis for a university or higher-level educational degree."
+,Dissertant,marcrel:dis ,xsd:anyURI,Person,,,A person who presents a thesis for a university or higher-level educational degree.
 ,Opponent,marcrel:opn ,xsd:anyURI,Person,,,A person or organization responsible for opposing a thesis or dissertation.
 ,Praeses ,marcrel:pra ,xsd:anyURI,Person,,,"A person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation."
-,Respondent,marcrel:rsp ,xsd:anyURI,Person,,,"A person or organization who makes an answer to the courts pursuant to an application for redress (usually in an equity proceeding) or a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation."
+,Respondent,marcrel:rsp ,xsd:anyURI,Person,,,A person or organization who makes an answer to the courts pursuant to an application for redress (usually in an equity proceeding) or a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.
 ,Thesis advisor,marcrel:ths ,xsd:anyURI,Person,,,"A person under whose supervision a degree candidate develops and presents a thesis, memoire, or text of a dissertation."
 ,Abridger ,marcrel:abr ,xsd:anyURI,Person Organization,,,"A person, family, or organization contributing to a resource by shortening or condensing the original work but leaving the nature and content of the original work substantially unchanged"
 ,Compiler ,marcrel:com ,xsd:anyURI,Person Organization,,,"A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc."
 ,Editor ,marcrel:edt ,xsd:anyURI,Person Organization,,,"A person, family, or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see author."
 ,Editor of compilation ,marcrel:edc ,xsd:anyURI,Person Organization,,,"A person, family, or organization contributing to a collective or aggregate work by selecting and putting together works, or parts of works, by one or more creators. For compilations of data, information, etc., that result in new works, see compiler."
-,Funder ,marcrel:fnd ,xsd:anyURI,Person Organization,,,"A person or organization that furnished financial support for the production of the work."
+,Funder ,marcrel:fnd ,xsd:anyURI,Person Organization,,,A person or organization that furnished financial support for the production of the work.
 ,Honoree ,marcrel:hnr ,xsd:anyURI,Person Organization,,,"A person, family, or organization honored by a work or item (e.g., the honoree of a festschrift, a person to whom a copy is presented)"
 ,Host institution ,marcrel:his ,xsd:anyURI,Organization,,,"An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource."
 ,Organizer ,marcrel:orm ,xsd:anyURI,Person Organization,,,"A person, family, or organization organizing the exhibit, event, conference, etc., which gave rise to a resource."
@@ -69,7 +69,8 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Start page,bibo:pageStart,xsd:string,,,,Starting page number within a continuous page range.
 ,End page,bibo:pageEnd,xsd:string,,,,Ending page number within a continuous page range.
 ,,,,,,,
-Periodical,Title,dct:title,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
+Periodical,Class,rdf:type,xsd:anyURI,,bibo:Periodical,,Class (always bibo:Periodical or one of its subclasses)
+,Title,dct:title,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
 ,ISSN,bibo:issn,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for the printed version of serial publications."
 ,E-ISSN,bibo:eissn,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for electronic versions of serial publications."
 ,,,,,,,

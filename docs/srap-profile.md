@@ -84,6 +84,10 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 * Sponsor
 * Translator
 
+## Volume, issue and page numbers
+
+A scholarly article may be published in a journal or other periodical that uses numbered volumes and issues as well as page numbers.  These should be represented using the BIBO properties `bibo:volume`, `bibo:issue`, `bibo:pageStart` and `bibo:pageEnd`. The relationship between the article and the journal should be represented using the `dct:isPartOf` relationship. See the [journal article example](examples/journalArticle.md) for more details.
+
 ## Generic elements 
 
 ### Access Rights  

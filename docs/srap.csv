@@ -69,7 +69,7 @@ Scholarly Resource,Abstract,dct:abstract,xsd:string,,,,Free text
 ,Start page,bibo:pageStart,xsd:string,,,,Starting page number within a continuous page range.
 ,End page,bibo:pageEnd,xsd:string,,,,Ending page number within a continuous page range.
 ,,,,,,,
-Periodical,Class,rdf:type,xsd:anyURI,,bibo:Periodical,,Class (always bibo:Periodical or one of its subclasses)
+Periodical,Class,rdf:type,xsd:anyURI,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
 ,ISSN,bibo:issn,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for the printed version of serial publications."
 ,E-ISSN,bibo:eissn,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for electronic versions of serial publications."

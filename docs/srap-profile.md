@@ -38,37 +38,25 @@ Opponent is a person responsible for opposing a thesis or dissertation.
 
 Figure 1. SRAP domain model (to be added).
 
+## DCTAP for SRAP
+
+SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used e.g. for basic data validation.
+
+The remainder of this document contains more detailed guidance and examples for how to apply SRAP in specific circumstances.
 
 ## Basic metadata
 
-### Language
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/language
-
-A language of the resource.
-
-Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47] language tag.
-
-### Title
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/title
-
-A name given to the resource.
+Resources described with SRAP can be described with basic metadata elements from Dublin Core Terms. This includes properties such as Title and Language. The most frequently used elements are listed in the TAP. This section suggests some additional guidance for applying basic metadata elements.
 
 ### Type
 
 DCMI Metadata Term: http://purl.org/dc/terms/type
 
-Recommended practice in SRAP AP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8].
-
-### Type 
-
-The Dublin Core DCMI Type Vocabulary[^7] contains the following terms: Collection, Dataset, Event, Image, Interactive resource, Moving Image, Physical object, Service, Software, Sound, Still image, Text. These types are generic and as such not ideal for scholarly resources. COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like bachelor, doctoral and master thesis, is more suitable for SRAP. 
-
-It is possible to use DCMI Type Vocabulary to provide generic description, and complement it with a precise COAR term.
-
+Recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
 
 ## Status and dates
+
+SRAP makes it possible to express the status of a scholarly in a publishing workflow in multiple ways. The Publication Status element indicates the current status, while many date fields can be used to express the date of important events in the lifecycle of the resource.
 
 ### Publication Status
 
@@ -230,6 +218,8 @@ Recommended practice is to provide this date if it is specified in the publicati
 
 ## Containment
 
+Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The details of the relationship of a resource and the collection can be expressed using metadata elements from Dublin Core Terms and BIBO.
+
 ### Volume, issue and page numbers
 
 A scholarly article may be published in a journal or other periodical that uses numbered volumes and issues as well as page numbers.  These should be represented using the BIBO properties `bibo:volume`, `bibo:issue`, `bibo:pageStart` and `bibo:pageEnd`. The relationship between the article and the journal should be represented using the `dct:isPartOf` relationship. See the [journal article example](examples/journalArticle.md) for more details.
@@ -289,6 +279,8 @@ EXAMPLE: Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K,
 
 ## Rights
 
+Many types of rights apply to scholarly resources. SRAP allows expressing the rights using metadata elements from Dublin Core Terms as well as a new, proposed element for indicating the Rights Holder.
+
 ### Access Rights  
 
 DCMI Metadata Term: http://purl.org/dc/terms/accessRights 
@@ -302,9 +294,9 @@ Version 1.0 of the vocabulary contains the following terms:
 * restricted access
 * metadata only access 
 
-NOTE: Current definition of this property in the DCMI Terms namespace is “Information about who can access the resource or an indication of its security status.”
+NOTE: The current definition of the property in the DCMI Terms namespace is "Information about who can access the resource or an indication of its security status."
 
-This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.  
+This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.
 
 ### License 
 
@@ -334,20 +326,13 @@ A person or organization owning or managing rights over the resource.
 
 Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided.
 
-### Access rights  
-
-Definition of this property in the DCMI Terms namespace is: “Information about who can access the resource or an indication of its security status.”
-
-This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, there is no recommendation to use a controlled vocabulary to describe access status. 
-
-In SRAP AP, the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/) should be used, because it is applicable to scholarly resources 
-
-
 ## Accessibility
+
+Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with an Accessibility Statement.
 
 ### Accessibility Statement
 
-DCMI Metadata Term: http://purl.org/dc/terms/accessibility
+Proposed DCMI Metadata Term: http://purl.org/dc/terms/accessibility
 
 Textual information describing the accessibility features of a resource, including technical details.
 
@@ -355,6 +340,8 @@ Recommended practice is to define the accessibility options, such as software re
 
 
 ## Academic context
+
+Scholarly resources are created in an academic context, for example a specific institution, faculty and department and/or a project funded by a specific grant. Also, authors and contributors can be affiliated with academic or other institutions. SRAP enables expressing the academic context of scholarly resources and the affiliation of related individuals.
 
 ### Affiliation
 
@@ -381,6 +368,8 @@ Subproperty of: Identifier
 
 ## Identifiers
 
+Scholarly resources are often referred to using identifiers from an identification system. 
+
 ### Identifier
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/identifier
@@ -392,6 +381,8 @@ Recommended practice is to identify the resource by means of a string conforming
 
 ## Related code and datasets
 
+Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources to related code and data sets.
+
 ### Related Code  
 
 Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedCode
@@ -400,7 +391,7 @@ Code (software applications) referenced in the resource.
 
 Recommended practice is to identify the code with a URI identifying either the code or a landing page through which the application or applications are accessed.  
 
-Subproperty of: References         http://purl.org/dc/terms/references
+Subproperty of: References http://purl.org/dc/terms/references
 
 ### Related Dataset  
 
@@ -446,152 +437,6 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 * Reviser
 * Sponsor
 * Translator
-
-## Examples of roles
-
-### Abridger 
-
-MARC relator: http://id.loc.gov/vocabulary/relators/abr
-
-MARC relator definition: A person, family, or organization contributing to a resource by shortening or condensing the original work but leaving the nature and content of the original work substantially unchanged
-
-The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-### Academic supervisor
-
-RDA definition: An agent who is responsible for overseeing academic activity of any kind that results in a resource, including theses, research, and projects.
-
-### Compiler 
-
-MARC relator: http://id.loc.gov/vocabulary/relators/com
-
-MARC relator definition: A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc 
-
-The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-### Degree granting institution
-
-MARC relator: http://id.loc.gov/vocabulary/relators/dgg
-
-MARC relator definition: An organization granting an academic degree. 
-
-The name of an institution should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-Subproperty of: Contributor               http://purl.org/dc/terms/contributor
-
-### Degree supervisor 
-
-MARC relator: http://id.loc.gov/vocabulary/relators/dgs
-
-MARC relator definition: A person overseeing a higher level academic degree.
-
-Subproperty of: Contributor               http://purl.org/dc/terms/contributor
-
-### Dissertant
-
-MARC relator: http://id.loc.gov/vocabulary/relators/dis 
-
-MARC relator definition: A person who presents a thesis for a university or higher-level educational degree.
-
-### Editor 
-
-MARC relator: https://id.loc.gov/vocabulary/relators/edt
-
-MARC relator definition: A person or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see creator.
-
-The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-### Editor of compilation 
-
-MARC relator: http://id.loc.gov/vocabulary/relators/edt 
-
-MARC relator definition: A person, family, or organization contributing to a collective or aggregate work by selecting and putting together works, or parts of works, by one or more creators.
-
-The name of an organization should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-### Funder 
-
-MARC relator: https://id.loc.gov/vocabulary/relators/fnd
-
-MARC relator definition: A person or organization that furnished financial support for the production of the resource. 
-
-If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.  
-
-### Honoree 
-
-MAARC relator: http://id.loc.gov/vocabulary/relators/hnr
-
-MARC relator definition: A person, family, or organization honored by a work or item (e.g., the honoree of a festschrift, a person to whom a copy is presented) 
-
-### Host institution
-
-MARC relator: http://id.loc.gov/vocabulary/relators/his
-
-MARC relator definition: An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource. 
-
-The name should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-Subproperty of: Contributor               http://purl.org/dc/terms/contributor
-
-### Opponent
-
-MARC relator: http://id.loc.gov/vocabulary/relators/opn
-
-A person or organization responsible for opposing a thesis or dissertation.
-
-### Organizer 
-
-MARC relator: http://id.loc.gov/vocabulary/relators/orm 
-
-MARC relator definition: A person, family, or organization organizing the exhibit, event, conference, etc., which gave rise to a resource.
-
-If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-### Praeses
-
-MARC relator: http://id.loc.gov/vocabulary/relators/pra 
-
-A person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation
-
-### Respondent
-
-MARC relator: http://id.loc.gov/vocabulary/relators/rsp
-
-A candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.
-
-### Reviewer 
-
-MARC relator: http://id.loc.gov/vocabulary/relators/rev
-
-MARC relator definition: A person or organization responsible for the review of a book, motion picture, performance, etc. 
-
-If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-### Reviser 
-
-A person or organization responsible for the revision of a book, article, etc. 
-
-### Sponsor 
-
-MARC relator: http://id.loc.gov/vocabulary/relators/spn 
-
-MARC relator definition: A person, family, or organization sponsoring some aspect of a resource, e.g., funding research, sponsoring an event 
-
-If a name of an organization is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit.
-
-### Thesis advisor
-
-MARC relator: http://id.loc.gov/vocabulary/relators/ths
-
-A person under whose supervision a degree candidate develops and presents a thesis, mémoire, or text of a dissertation.
-
-### Translator
-
-MARC relator: http://id.loc.gov/vocabulary/relators/trl
-
-A person or organization who renders a text from one language into another, or from an older form of a language into the modern form.
-
-
 
 ## Appendix 1. Legacy representations for SRAP data
 

@@ -48,9 +48,7 @@ The remainder of this document contains more detailed guidance and examples for 
 
 Resources described with SRAP can be described with basic metadata elements from Dublin Core Terms. This includes properties such as Title and Language. The most frequently used elements are listed in the TAP. This section suggests some additional guidance for applying basic metadata elements.
 
-### Type
-
-DCMI Metadata Term: http://purl.org/dc/terms/type
+### Type (dct:type)
 
 Recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
 
@@ -58,9 +56,7 @@ Recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resour
 
 SRAP makes it possible to express the status of a scholarly in a publishing workflow in multiple ways. The Publication Status element indicates the current status, while many date fields can be used to express the date of important events in the lifecycle of the resource.
 
-### Publication Status
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/publicationStatus
+### Publication Status (srap:publicationStatus)
 
 The stage of the resource in the publishing workflow.
 
@@ -75,43 +71,29 @@ Recommended practice is to use a publication status value from the following lis
 
 NOTE: Publication status should be used when there are several versions of the same resource, and publication status can be used for telling them apart. Status information should be accompanied with an appropriate date specification whenever such date can be obtained from the resource itself or metadata linked to it.
 
-### Date Issued
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/issued 
+### Date Issued (dct:issued)
 
 Date of formal issuance of the resource.
 
 Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date.
 
-Subproperty of: Date http://purl.org/dc/terms/date
-
-### Date Modified
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/modified
+### Date Modified (dct:modified)
 
 Date on which the resource was changed.
 
 Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date.
 
-Subproperty of: Date http://purl.org/dc/terms/date
-
-### Date Accepted
-
-DCMI Metadata Term: http://purl.org/dc/terms/dateAccepted
+### Date Accepted (dct:dateAccepted)
 
 Date of acceptance of the resource.
 
-Subproperty of: Date http://purl.org/dc/terms/date
-
 Recommended practice is to provide this date if it is specified in the resource. Examples of scholarly resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or a scientific article (accepted by a journal).
 
-### Date Lost
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateLost
+### Date Lost (srap:dateLost)
 
 Date when the resource was lost. 
 
-Subproperty of: Date http://purl.org/dc/terms/date
+Subproperty of: Date (dct:date)
 
 Recommended practice is to provide this date only if there is no reasonable doubt that the resource has been lost; that is, there is not a single (readable) copy of it left. Criteria for making the decision that the resource has been lost may be developed locally, but can include for instance digital documents that can no longer be rendered. A SRAP record with date lost should contain sufficient metadata to serve as a permanent tombstone of the resource. 
 
@@ -119,99 +101,79 @@ Date lost should be used when e.g. the only known copy of a digital or printed r
 
 Date lost should not be used when a publisher fails but its resources (e.g. serials) are still preserved in a legal deposit collection. Rights metadata should be updated to reflect changes in restrictions on access and use of such archived resources. For serials and other continuing publications, the most convenient solution is to provide this metadata in the host record, from which it may be copied to all component part (article) records.
 
-### Date Missing
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateMissing
+### Date Missing (srap:dateMissing)
 
 Date when the resource went missing. 
 
-Subproperty of: Date http://purl.org/dc/terms/date
+Subproperty of: Date (dct:date)
 
 Recommended practice is to provide this date only if there is no reasonable doubt that the resource is missing; that is, there may be one or more copies left but they cannot be found. Criteria for making the decision that the resource is missing may be developed locally. A SRAP record with date missing should have sufficient metadata to serve as a temporary tombstone of the resource. 
 
 Date missing may be used when e.g. a printed copy (item) of a resource has disappeared and its current location is unknown for the time being. 
 
-### Embargo Date Range
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/embargoDateRange
+### Embargo Date Range (srap:embargoDateRange)
 
 A period of time during which the resource is under embargo.  
 
-Subproperty of: Date http://purl.org/dc/terms/date 
+Subproperty of: Date (dct:date) 
 
 Recommended practice is to describe the date range as recommended for the property Date.
 
 NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met.
 
-### Date Ahead of Print
+### Date Ahead of Print (srap:dateAheadOfPrint)
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateAheadOfPrint
-
-Subproperty of: Date (http://purl.org/dc/terms/date)
+Subproperty of: Date (dct:date)
 
 Date when the final version of the resource was made available in the Web or in print format before publication in a journal issue.
 
 NOTE Many scientific journals operate article-level publishing, whereby articles are processed for publication immediately following acceptance. Such articles are later compiled into the next journal issue to be published. Recommended practice is to use Date ahead of print to record the date when the article was published, and Date published to record the date when the journal issue was published.  
 
-### Date Available as Public Draft
+### Date Available as Public Draft (srap:dateAvailableAsPublicDraft)
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateAvailableAsPublicDraft
-
-Subproperty of: Date http://purl.org/dc/terms/date
+Subproperty of: Date (dct:date)
 
 Date when an early draft of the resource (predating even preprint) has been made available in an open repository such as ArXiv.
 
-### Date Received as Manuscript
+### Date Received as Manuscript (srap:dateReceivedAsManuscript)
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateReceivedAsManuscript
-
-Subproperty of: Date http://purl.org/dc/terms/date
+Subproperty of: Date (dct:date)
 
 Date when the resource is first received by the publisher. 
 
 Recommended practice is to provide this data when it is indicated in the resource. 
 
-### Date Retracted
-
-Fabio Metadata Term: http://purl.org/spar/fabio/hasRetractionDate
+### Date Retracted (fabio:hasRetractionDate)
 
 Date when the resource was retracted or withdrawn.
 
-Subproperty of: Date http://purl.org/dc/terms/date
+Subproperty of: Date (dct:date)
 
 Recommended practice is to provide reason for retraction or withdrawal in Description element. 
 
 NOTE: Do not use Date lost or Date missing for retracted resources. 
 
-### Date Submitted as Preprint
+### Date Submitted as Preprint (srap:dateSubmittedAsPreprint)
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateSubmittedAsPreprint
-
-Subproperty of: Date http://purl.org/dc/terms/date
+Subproperty of: Date (dct:date)
 
 Date when an author submits a preprint of an unpublished resource to a repository.
 
 Recommended practice is to provide this information when it is included in the resource, provided by the author or available in the repository application. 
 
-### Date Submitted as Postprint
+### Date Submitted as Postprint (srap:dateSubmittedAsPostprint)
 
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateSubmittedAsPostprint
-
-Subproperty of: Date http://purl.org/dc/terms/date
+Subproperty of: Date (dct:date)
 
 Date when an author submits a postprint of an unpublished resource to a repository.
 
 Recommended practice is to provide this information if it is included in the resource, provided by the author or available in the repository application. 
 
-### Date Updated
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/dateUpdated
+### Date Updated (srap:dateUpdated)
 
 Date(s) when the publication was republished with additional or revised content.
 
-Subproperty of: Date http://purl.org/dc/terms/date
-
-Subproperty of: Modified http://purl.org/dc/terms/modified
+Subproperty of: Modified (dct:modified)
 
 Recommended practice is to provide this date if it is specified in the publication.
 
@@ -224,9 +186,7 @@ Many scholarly resources are published as parts of journals, conference proceedi
 
 A scholarly article may be published in a journal or other periodical that uses numbered volumes and issues as well as page numbers.  These should be represented using the BIBO properties `bibo:volume`, `bibo:issue`, `bibo:pageStart` and `bibo:pageEnd`. The relationship between the article and the journal should be represented using the `dct:isPartOf` relationship. See the [journal article example](examples/journalArticle.md) for more details.
 
-### Is Part Of
-
-DCMI Metadata Term: http://purl.org/dc/terms/isPartOf
+### Is Part Of (dct:isPartOf)
 
 A related resource in which the described resource is physically or logically included.
 
@@ -236,13 +196,9 @@ EXAMPLE: In SRAP, this property may be used to specify a scientific periodical i
 
 NOTE: This property is an inverse property of Has Part.
 
-### Has Part 
-
-Proposed DCMI Metadata Term:  	http://purl.org/dc/terms/hasPart
+### Has Part (dct:hasPart)
 
 A related resource that is included either physically or logically in the described resource.
-
-Subproperty of: Relation. 
 
 Recommended practice is to provide URI of the related resource.
 
@@ -252,9 +208,7 @@ NOTE: This property is an inverse property of Is Part Of.
 
 NOTE: If parts are not independently accessible with URI, Table of Contents should be used.  
 
-### Presented At
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/presentedAt
+### Presented At (srap:presentedAt)
 
 The conference, workshop, shareholder meeting etc. where the resource was presented. 
 
@@ -262,13 +216,9 @@ SRAP: Conference, workshop or other scientific event where the scholarly resourc
 
 Recommended practice is to identify formal meetings such as conferences with a URI. If this is not possible or feasible, a literal value that identifies the meeting may be provided. It is also possible to give both the name and the URI.
 
-### Bibliographic Citation 
-
-DCMI Metadata Term: http://purl.org/dc/terms/bibliographicCitation
+### Bibliographic Citation (dct:bibliographicCitation)
 
 A bibliographic reference for the resource.
-
-Subproperty of: Identifier http://purl.org/dc/terms/identifier
 
 Recommended practice is to include sufficient bibliographic detail to identify the described resource as unambiguously as possible.
 
@@ -281,9 +231,7 @@ EXAMPLE: Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K,
 
 Many types of rights apply to scholarly resources. SRAP allows expressing the rights using metadata elements from Dublin Core Terms as well as a new, proposed element for indicating the Rights Holder.
 
-### Access Rights  
-
-DCMI Metadata Term: http://purl.org/dc/terms/accessRights 
+### Access Rights (dct:accessRights)
 
 Recommended practice is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
 
@@ -298,19 +246,13 @@ NOTE: The current definition of the property in the DCMI Terms namespace is "Inf
 
 This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.
 
-### License 
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/license
+### License (dct:license)
 
 A legal document giving official permission to do something with the resource.
 
-Subproperty of: Rights http://purl.org/dc/terms/rights
-
 Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.
 
-### Rights 
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/rights
+### Rights (dct:rights)
 
 Information about rights held in and over the resource.
 
@@ -318,9 +260,7 @@ Recommended practice is to refer to a rights statement with a URI. If this is no
 
 NOTE: Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.
 
-### Rights Holder 
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/rightsHolder
+### Rights Holder (srap:rightsHolder)
 
 A person or organization owning or managing rights over the resource.
 
@@ -330,9 +270,7 @@ Recommended practice is to refer to the rights holder with a URI. If this is not
 
 Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with an Accessibility Statement.
 
-### Accessibility Statement
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/accessibility
+### Accessibility Statement (srap:accessibility)
 
 Textual information describing the accessibility features of a resource, including technical details.
 
@@ -343,9 +281,7 @@ Recommended practice is to define the accessibility options, such as software re
 
 Scholarly resources are created in an academic context, for example a specific institution, faculty and department and/or a project funded by a specific grant. Also, authors and contributors can be affiliated with academic or other institutions. SRAP enables expressing the academic context of scholarly resources and the affiliation of related individuals.
 
-### Affiliation
-
-Schema.org property: https://schema.org/affiliation 
+### Affiliation (schema:affiliation)
 
 An organization to which an agent was affiliated when the resource was created.
 
@@ -357,22 +293,18 @@ If a name is given, it should be provided in full and in hierarchical order, sta
 
 NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.  
 
-### Grant Number
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/grantNumber
+### Grant Number (srap:grantNumber)
 
 An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created. 
 
-Subproperty of: Identifier
+Subproperty of: Identifier (dct:identifier)
 
 
 ## Identifiers
 
 Scholarly resources are often referred to using identifiers from an identification system. 
 
-### Identifier
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/identifier
+### Identifier (dct:identifier)
 
 An unambiguous reference to the resource within a given context.
 
@@ -383,25 +315,21 @@ Recommended practice is to identify the resource by means of a string conforming
 
 Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources to related code and data sets.
 
-### Related Code  
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedCode
+### Related Code (srap:relatedCode)
 
 Code (software applications) referenced in the resource. 
 
 Recommended practice is to identify the code with a URI identifying either the code or a landing page through which the application or applications are accessed.  
 
-Subproperty of: References http://purl.org/dc/terms/references
+Subproperty of: References (dct:references)
 
-### Related Dataset  
-
-Proposed DCMI Metadata Term: http://purl.org/dc/terms/relatedDataset
+### Related Dataset (srap:relatedDataset)
 
 Dataset or datasets referenced in the described resource. 
 
 Recommended practice is to identify a dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
 
-Subproperty of: References http://purl.org/dc/terms/references
+Subproperty of: References (dct:references)
 
 
 ## Roles 

@@ -10,7 +10,7 @@ There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, a
 
 The SRAP application profile proposal is intended to be globally applicable. All suggested properties were “battle-proven”, in use. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
 
-Roles of contributors are based on Library of Congress Relator terms and their associated codes[^6] or other controlled contributor lists. Contributor roles presented below are examples of ones that can be used.  
+Roles of contributors are based on [Library of Congress Relator terms](https://www.loc.gov/marc/relators/relaterm.html) or other controlled contributor lists. Contributor roles presented below are examples of ones that can be used.
 
 Note 1: All new DCMI Metadata Terms URIs are just suggestions until this profile has been approved, and marked with asterisk (*). 
 
@@ -58,16 +58,7 @@ SRAP makes it possible to express the status of a scholarly in a publishing work
 
 ### Publication Status (srap:publicationStatus)
 
-The stage of the resource in the publishing workflow.
-
-Recommended practice is to use a publication status value from the following list, ordered according to the increasing level of maturity:
-
-* public draft
-* preprint
-* postprint
-* submitted manuscript
-* publication
-* updated publication
+The stage of the resource in the publishing workflow. Recommended practice is to use a publication status value from the [OpenAIRE Publication Version vocabulary](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html).
 
 NOTE: Publication status should be used when there are several versions of the same resource, and publication status can be used for telling them apart. Status information should be accompanied with an appropriate date specification whenever such date can be obtained from the resource itself or metadata linked to it.
 
@@ -125,7 +116,7 @@ NOTE Date available covers all resource types and news embargo, a request by a s
 
 Subproperty of: Date (dct:date)
 
-Date when the final version of the resource was made available in the Web or in print format before publication in a journal issue.
+Date when the final version of the resource was made available on the Web or in print format before publication in a journal issue.
 
 NOTE Many scientific journals operate article-level publishing, whereby articles are processed for publication immediately following acceptance. Such articles are later compiled into the next journal issue to be published. Recommended practice is to use Date ahead of print to record the date when the article was published, and Date published to record the date when the journal issue was published.  
 
@@ -260,7 +251,7 @@ Recommended practice is to refer to a rights statement with a URI. If this is no
 
 NOTE: Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.
 
-### Rights Holder (srap:rightsHolder)
+### Rights Holder (dct:rightsHolder)
 
 A person or organization owning or managing rights over the resource.
 
@@ -334,7 +325,7 @@ Subproperty of: References (dct:references)
 
 ## Roles 
 
-Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use the Library of Congress MARC Relator codes or some other controlled list to express roles such as the [RDA Unconstrained](https://www.rdaregistry.info/Elements/u/) properties. See below for examples of existing roles that may be used with thesis or with scientific articles. Lists are not mutually exclusive; for instance, a thesis may have a translator. 
+Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use the [Library of Congress MARC Relator codes](https://www.loc.gov/marc/relators/relaterm.html) or some other controlled list to express roles such as the [RDA Unconstrained](https://www.rdaregistry.info/Elements/u/) properties. See below for examples of existing roles that may be used with thesis or with scientific articles. Lists are not mutually exclusive; for instance, a thesis may have a translator.
 
 Using uncontrolled (local) contributor roles reduces semantic interoperability and should be avoided. 
 

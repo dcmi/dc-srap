@@ -80,28 +80,6 @@ Date of acceptance of the resource.
 
 Recommended practice is to provide this date if it is specified in the resource. Examples of scholarly resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or a scientific article (accepted by a journal).
 
-### Date Lost (srap:dateLost)
-
-Date when the resource was lost. 
-
-Subproperty of: Date (dct:date)
-
-Recommended practice is to provide this date only if there is no reasonable doubt that the resource has been lost; that is, there is not a single (readable) copy of it left. Criteria for making the decision that the resource has been lost may be developed locally, but can include for instance digital documents that can no longer be rendered. A SRAP record with date lost should contain sufficient metadata to serve as a permanent tombstone of the resource. 
-
-Date lost should be used when e.g. the only known copy of a digital or printed resource has been destroyed or otherwise rendered unusable. 
-
-Date lost should not be used when a publisher fails but its resources (e.g. serials) are still preserved in a legal deposit collection. Rights metadata should be updated to reflect changes in restrictions on access and use of such archived resources. For serials and other continuing publications, the most convenient solution is to provide this metadata in the host record, from which it may be copied to all component part (article) records.
-
-### Date Missing (srap:dateMissing)
-
-Date when the resource went missing. 
-
-Subproperty of: Date (dct:date)
-
-Recommended practice is to provide this date only if there is no reasonable doubt that the resource is missing; that is, there may be one or more copies left but they cannot be found. Criteria for making the decision that the resource is missing may be developed locally. A SRAP record with date missing should have sufficient metadata to serve as a temporary tombstone of the resource. 
-
-Date missing may be used when e.g. a printed copy (item) of a resource has disappeared and its current location is unknown for the time being. 
-
 ### Embargo Date Range (srap:embargoDateRange)
 
 A period of time during which the resource is under embargo.  
@@ -112,61 +90,13 @@ Recommended practice is to describe the date range as recommended for the proper
 
 NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met.
 
-### Date Ahead of Print (srap:dateAheadOfPrint)
-
-Subproperty of: Date (dct:date)
-
-Date when the final version of the resource was made available on the Web or in print format before publication in a journal issue.
-
-NOTE Many scientific journals operate article-level publishing, whereby articles are processed for publication immediately following acceptance. Such articles are later compiled into the next journal issue to be published. Recommended practice is to use Date ahead of print to record the date when the article was published, and Date published to record the date when the journal issue was published.  
-
-### Date Available as Public Draft (srap:dateAvailableAsPublicDraft)
-
-Subproperty of: Date (dct:date)
-
-Date when an early draft of the resource (predating even preprint) has been made available in an open repository such as ArXiv.
-
-### Date Received as Manuscript (srap:dateReceivedAsManuscript)
-
-Subproperty of: Date (dct:date)
-
-Date when the resource is first received by the publisher. 
-
-Recommended practice is to provide this data when it is indicated in the resource. 
-
-### Date Retracted (fabio:hasRetractionDate)
+### Date Retracted (srap:dateRetracted)
 
 Date when the resource was retracted or withdrawn.
 
 Subproperty of: Date (dct:date)
 
 Recommended practice is to provide reason for retraction or withdrawal in Description element. 
-
-NOTE: Do not use Date lost or Date missing for retracted resources. 
-
-### Date Submitted as Preprint (srap:dateSubmittedAsPreprint)
-
-Subproperty of: Date (dct:date)
-
-Date when an author submits a preprint of an unpublished resource to a repository.
-
-Recommended practice is to provide this information when it is included in the resource, provided by the author or available in the repository application. 
-
-### Date Submitted as Postprint (srap:dateSubmittedAsPostprint)
-
-Subproperty of: Date (dct:date)
-
-Date when an author submits a postprint of an unpublished resource to a repository.
-
-Recommended practice is to provide this information if it is included in the resource, provided by the author or available in the repository application. 
-
-### Date Updated (srap:dateUpdated)
-
-Date(s) when the publication was republished with additional or revised content.
-
-Subproperty of: Modified (dct:modified)
-
-Recommended practice is to provide this date if it is specified in the publication.
 
 
 ## Containment

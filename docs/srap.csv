@@ -10,12 +10,12 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,Format,dct:format,literal,,,,,"The file format, physical medium, or dimensions of the resource."
 ,,,,,,,,
 ,Publication Status,srap:publicationStatus,IRI,,,info:eu-repo/semantics/,IRIstem,"The stage of the resource in the publishing workflow, using the OpenAIRE Publication Version vocabulary."
-,Date published,dct:date,Literal,xsd:date,,,,Date associated with the resource. Use more specific dates if available.s
+,Date Published,dct:date,Literal,xsd:date,,,,Date associated with the resource. Use more specific dates if available.s
 ,Date Issued,dct:issued,literal,xsd:date,,,,Date of formal issuance of the resource.
 ,Date Modified,dct:modified,literal,xsd:date,,,,Date on which the resource was changed.
 ,Date Accepted,dct:dateAccepted,literal,xsd:date,,,,Date of acceptance of the resource.
 ,Embargo Date Range,srap:embargoDateRange,literal,xsd:date,,,,A period of time during which the resource is under embargo.
-,Date Retracted,fabio:hasRetractionDate,literal,xsd:date,,,,Date when the resource was retracted or withdrawn.
+,Date Retracted,srap:dateRetracted,literal,xsd:date,,,,Date when the resource was retracted or withdrawn.
 ,,,,,,,,
 ,Volume,bibo:volume,literal,xsd:string,,,,A volume number of the periodical where this article was published
 ,Issue,bibo:issue,literal,xsd:string,,,,An issue number of the periodical that this article was published in

@@ -81,7 +81,7 @@ Book,Class,rdf:type,IRI,,,bibo:Book,,
 ,Date,dct:date,Literal,xsd:string,,,,
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,foaf:Person,,
-,Affiliation,schema:affiliation,,,Organization,,,"An organization to which an agent was affiliated when the resource was created. Recommended practice is to identify the affiliation with a URI. If this is not possible or feasible, a literal value that identifies the affiliated organization may be provided. It is also possible to give both the name and the URI. If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time."
+,Affiliation,schema:affiliation,,,Organization,,,An organization to which an agent was affiliated when the resource was created.
 ,Name,foaf:Name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,,

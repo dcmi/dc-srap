@@ -52,15 +52,9 @@ Resources described with SRAP can be described with basic metadata elements from
 
 Recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
 
-## Status and dates
+## Dates
 
-SRAP makes it possible to express the status of a scholarly in a publishing workflow in multiple ways. The Publication Status element indicates the current status, while many date fields can be used to express the date of important events in the lifecycle of the resource.
-
-### Publication Status (srap:publicationStatus)
-
-The stage of the resource in the publishing workflow. Recommended practice is to use a publication status value from the [OpenAIRE Publication Version vocabulary](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html).
-
-NOTE: Publication status should be used when there are several versions of the same resource, and publication status can be used for telling them apart. Status information should be accompanied with an appropriate date specification whenever such date can be obtained from the resource itself or metadata linked to it.
+The many date fields in SRAP can be used to express the date of important events in the lifecycle of the resource.
 
 ### Date Issued (dct:issued)
 

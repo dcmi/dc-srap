@@ -9,7 +9,6 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,Title,dct:title,literal,,,,,A name given to the resource.
 ,Format,dct:format,literal,,,,,"The file format, physical medium, or dimensions of the resource."
 ,,,,,,,,
-,Publication Status,srap:publicationStatus,IRI,,,info:eu-repo/semantics/,IRIstem,"The stage of the resource in the publishing workflow, using the OpenAIRE Publication Version vocabulary."
 ,Date Published,dct:date,Literal,xsd:date,,,,Date associated with the resource. Use more specific dates if available.s
 ,Date Issued,dct:issued,literal,xsd:date,,,,Date of formal issuance of the resource.
 ,Date Modified,dct:modified,literal,xsd:date,,,,Date on which the resource was changed.

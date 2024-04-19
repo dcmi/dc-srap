@@ -1,8 +1,8 @@
 shapeID,propertyLabel,propertyID,valueNodeType,valueDatatype,valueShape,valueConstraint,valueConstraintType,note
 ,,,,,,,,
 Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIstem,"Resource type, using the COAR Resorce Types vocabulary."
-,Contributor,dct:contributor,IRI,,Person,,,An entity responsible for making contributions to the resource.
-,Creator,dct:creator,IRI,,Person,,,An entity responsible for making the resource.
+,Contributor,dct:contributor,IRI,,Person Organization,,,An entity responsible for making contributions to the resource.
+,Creator,dct:creator,IRI,,Person Organization,,,An entity responsible for making the resource.
 ,Language,dct:language,literal,xsd:string,,,,A language of the resource.
 ,Publisher,dct:publisher,IRI,,Organization,,,An entity responsible for making the resource available.
 ,Subject,dct:subject,IRI literal,,,,,The topic of the resource; a concept from a controlled vocabulary such as LCSH or MeSH
@@ -45,30 +45,6 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,Related code,srap:relatedCode,IRI,,,,,Code (software applications) referenced in the resource.
 ,Related dataset,srap:relatedDataset,IRI,,,,,Dataset or datasets referenced in the described resource.
 ,,,,,,,,
-,Academic supervisor,rdau:P61096,IRI BNODE,,Person,,,"Relates a resource to an agent who is responsible for overseeing academic activity of any kind that results in a resource, including theses, research, and projects."
-,Dedicatee ,marcrel:dte ,IRI BNODE,,Person Organization,,,"A person, family, or organization to whom a resource is dedicated. "
-,Degree committee member,marcrel:dgc ,IRI BNODE,,Person,,,"A person who is part of a committee that considers the merit of a thesis, dissertation, or other submission by an academic degree candidate."
-,Degree granting institution,marcrel:dgg ,IRI BNODE,,Organization,,,A organization granting an academic degree.
-,Degree supervisor ,marcrel:dgs ,IRI BNODE,,Person,,,A person overseeing a higher level academic degree.
-,Dissertant,marcrel:dis ,IRI BNODE,,Person,,,A person who presents a thesis for a university or higher-level educational degree.
-,Opponent,marcrel:opn ,IRI BNODE,,Person,,,A person or organization responsible for opposing a thesis or dissertation.
-,Praeses ,marcrel:pra ,IRI BNODE,,Person,,,"A person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation."
-,Respondent,marcrel:rsp ,IRI BNODE,,Person,,,A person or organization who makes an answer to the courts pursuant to an application for redress (usually in an equity proceeding) or a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.
-,Thesis advisor,marcrel:ths ,IRI BNODE,,Person,,,"A person under whose supervision a degree candidate develops and presents a thesis, memoire, or text of a dissertation."
-,,,,,,,,
-,Abridger ,marcrel:abr ,IRI BNODE,,Person Organization,,,"A person, family, or organization contributing to a resource by shortening or condensing the original work but leaving the nature and content of the original work substantially unchanged"
-,Compiler ,marcrel:com ,IRI BNODE,,Person Organization,,,"A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc."
-,Editor ,marcrel:edt ,IRI BNODE,,Person Organization,,,"A person, family, or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see author."
-,Editor of compilation ,marcrel:edc ,IRI BNODE,,Person Organization,,,"A person, family, or organization contributing to a collective or aggregate work by selecting and putting together works, or parts of works, by one or more creators. For compilations of data, information, etc., that result in new works, see compiler."
-,Funder ,marcrel:fnd ,IRI BNODE,,Person Organization,,,A person or organization that furnished financial support for the production of the work.
-,Honoree ,marcrel:hnr ,IRI BNODE,,Person Organization,,,"A person, family, or organization honored by a work or item (e.g., the honoree of a festschrift, a person to whom a copy is presented)"
-,Host institution ,marcrel:his ,IRI BNODE,,Organization,,,"An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource."
-,Organizer ,marcrel:orm ,IRI BNODE,,Person Organization,,,"A person, family, or organization organizing the exhibit, event, conference, etc., which gave rise to a resource."
-,Reviewer ,marcrel:rev ,IRI BNODE,,Person Organization,,,"A person or organization responsible for the review of a book, motion picture, performance, etc."
-,Reviser ,rdau:P60245,IRI BNODE,,Person,,,Relates an agent to a resource that includes a contribution by an agent of making changes to the content.
-,Sponsor ,marcrel:spn ,IRI BNODE,,Person Organization,,,"A person, family, or organization sponsoring some aspect of a resource, e.g., funding research, sponsoring an event."
-,Translator ,marcrel:trl ,IRI BNODE,,Person Organization,,,"A person or organization who renders a text from one language into another, or from an older form of a language into the modern form."
-,,,,,,,,
 Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
 ,ISSN,bibo:issn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for the printed version of serial publications."
@@ -80,10 +56,12 @@ Book,Class,rdf:type,IRI,,,bibo:Book,,
 ,Date,dct:date,Literal,xsd:string,,,,
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,foaf:Person,,
+,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
 ,Affiliation,schema:affiliation,,,Organization,,,An organization to which an agent was affiliated when the resource was created.
 ,Name,foaf:Name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,,
 Organization,Class,rdf:type,IRI,,,foaf:Organization,,
+,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,Name,foaf:name,literal,xsd:string,,,,Name of the organization

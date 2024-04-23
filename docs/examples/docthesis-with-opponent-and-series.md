@@ -70,4 +70,4 @@ ex:series dct:title "Acta Universitatis Lappeenrantaensis" ;
 
 Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
 
-![image](https://github.com/dcmi/dc-srap/assets/1132830/5c73e9ad-9b39-4c8e-8d16-fcedfbe5756b)
+![image](https://github.com/dcmi/dc-srap/assets/1132830/66a7ca92-92c7-4e5d-b62d-c5f138191e2c)

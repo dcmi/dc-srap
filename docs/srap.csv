@@ -71,12 +71,13 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,,,,,,,,
 Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
+,Publisher,dct:publisher,IRI BNODE,,Organization,,,
 ,ISSN,bibo:issn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for the printed version of serial publications."
 ,E-ISSN,bibo:eissn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for electronic versions of serial publications."
 ,,,,,,,,
 Book,Class,rdf:type,IRI,,,bibo:Book,,
-,Contributor,dct:contributor,,,Person Organization,,,
-,Publisher,dct:publisher,IRI literal,,,,,
+,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,
+,Publisher,dct:publisher,IRI BNODE,,Organization,,,
 ,Date,dct:date,Literal,xsd:string,,,,
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,foaf:Person,,

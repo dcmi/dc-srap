@@ -20,177 +20,94 @@ SRAP has a simple domain model which enumerates the key entities and describes i
 
 Note that the definitions of properties are more restrictive in the domain model than below, because in the Dublin Core context for instance affiliation should be interpreted more broadly. 
 
-Scholarly resource is a) a peer-reviewed (usually) document, written by an authority on the subject at hand, produced by a reputable association, or b) dissertation, thesis, mémoire, or any other document written in order to achieve an academic degree, or c) a research dataset. 
+Scholarly resource is a) often a peer-reviewed document, written by an authority on the subject at hand, produced by a reputable association, or b) a dissertation, thesis, mémoire, or other document written in order to achieve an academic degree, or c) a research dataset. 
 
-NOTE Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
-
-Creator is a person or group which produces a scholarly resource. 
-
-Affiliation is an organization to which the creator of the scholarly resource was affiliated when the resource was created. 
-
-Editor is a person or group who prepares a scholarly resource for publication that is not primarily their own, such as by clarifying text, adding introductory or other critical matter, or technically leading an editorial staff.
-
-Funder is a person or organization that furnished financial support for the production of the resource. 
-
-Degree supervisor is a person under whose supervision a degree candidate develops and presents a document required to achieve an academic degree.
-
-Opponent is a person responsible for opposing a thesis or dissertation. 
-
-Figure 1. SRAP domain model (to be added).
+NOTE: Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
 
 ## DCTAP for SRAP
 
-SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used e.g. for basic data validation.
+SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used e.g. for basic data validation. It includes details on value types, like "date" and "string", and notes on usage.
 
-The remainder of this document contains more detailed guidance and examples for how to apply SRAP in specific circumstances.
+The remainder of this document contains more detailed guidance and examples for how to apply SRAP in specific circumstances. 
 
-## Basic metadata
+The following term prefixes are used in this document and in the DCTAP document:
 
-Resources described with SRAP can be described with basic metadata elements from Dublin Core Terms. This includes properties such as Title and Language. The most frequently used elements are listed in the TAP. This section suggests some additional guidance for applying basic metadata elements.
+* dct: http://purl.org/dc/terms/ 
+* BIBO: https://dcmi.github.io/bibo/
+* [needs to be completed]
 
-### Type (dct:type)
+## Basic bibliographic description
 
-Recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
+The basic bibliographic description uses these Dublin Core elements:
 
-## Dates
+[type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)	|	[contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)	|	[language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) 	|	[publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)	|	[format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format)	|
 
-The many date fields in SRAP can be used to express the date of important events in the lifecycle of the resource.
+> NOTE: For `type` the recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
 
-### Date Issued (dct:issued)
+> NOTE: `publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `publisher` at this level. For contained works, the containing resource (periodical or monograph) is usually described with its publisher.
 
-Date of formal issuance of the resource.
+## Status and dates
 
-Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date.
+SRAP makes it possible to express the status of a scholarly in a publishing workflow in multiple ways. The Publication Status element indicates the current status, while date fields can be used to express the date of important events in the lifecycle of the resource. For publication status the recommended practice is to use a publication status value from the [OpenAIRE Publication Version vocabulary](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html)
 
-### Date Modified (dct:modified)
+It is expected that dates will be in one of these formats:
 
-Date on which the resource was changed.
+> `yyyy`	|	`mm/yyyy`	|	`dd/mm/yyyy`
 
-Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date.
+These date properties are from the Dublin Core Terms:
 
-### Date Accepted (dct:dateAccepted)
+[date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)	|	[date issued](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/issued)	|	[date modified](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified)	|	[date accepted](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/dateAccepted)
 
-Date of acceptance of the resource.
+These additional date properties are being defined for SRAP:
 
-Recommended practice is to provide this date if it is specified in the resource. Examples of scholarly resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or a scientific article (accepted by a journal).
+[publication status](srap:publicationStatus) 	|	[embargo date range](srap:embargoDateRange)	|	[date retracted](srap:dateRetracted)
 
-### Embargo Date Range (srap:embargoDateRange)
+## Additional Context
 
-A period of time during which the resource is under embargo.  
-
-Subproperty of: Date (dct:date) 
-
-Recommended practice is to describe the date range as recommended for the property Date.
-
-NOTE Date available covers all resource types and news embargo, a request by a source that the information or news provided by that source not be published until a certain date or certain conditions have been met.
-
-### Date Retracted (srap:dateRetracted)
-
-Date when the resource was retracted or withdrawn.
-
-Subproperty of: Date (dct:date)
-
-Recommended practice is to provide reason for retraction or withdrawal in Description element. 
-
-
-## Containment
-
-Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The details of the relationship of a resource and the collection can be expressed using metadata elements from Dublin Core Terms and BIBO.
-
-### Volume, issue and page numbers
-
-A scholarly article may be published in a journal or other periodical that uses numbered volumes and issues as well as page numbers.  These should be represented using the BIBO properties `bibo:volume`, `bibo:issue`, `bibo:pageStart` and `bibo:pageEnd`. The relationship between the article and the journal should be represented using the `dct:isPartOf` relationship. See the [journal article example](examples/journalArticle.md) for more details.
-
-### Is Part Of (dct:isPartOf)
-
-A related resource in which the described resource is physically or logically included.
-
-Recommended practice in SRAP is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system or a name may be provided. It is also possible to give both the name and the URI.
-
-EXAMPLE: In SRAP, this property may be used to specify a scientific periodical in which the described article has been published.
-
-NOTE: This property is an inverse property of Has Part.
-
-### Has Part (dct:hasPart)
-
-A related resource that is included either physically or logically in the described resource.
-
-Recommended practice is to provide URI of the related resource.
-
-EXAMPLE: In SRAP, this property may be used to specify presentations published in the conference proceedings described.
-
-NOTE: This property is an inverse property of Is Part Of.
-
-NOTE: If parts are not independently accessible with URI, Table of Contents should be used.  
-
-### Presented At (srap:presentedAt)
-
-The conference, workshop, shareholder meeting etc. where the resource was presented. 
-
-SRAP: Conference, workshop or other scientific event where the scholarly resource was presented. 
-
-Recommended practice is to identify formal meetings such as conferences with a URI. If this is not possible or feasible, a literal value that identifies the meeting may be provided. It is also possible to give both the name and the URI.
+### Presented at
+SRAP is defining a property, [`presented at`](srap:presentedAt) for the conference, workshop, shareholder meeting etc. where the resource was presented. This may be the conference name or, preferably, a URI that identifies the event.
 
 ### Bibliographic Citation (dct:bibliographicCitation)
 
-A bibliographic reference for the resource.
+When there is a preferred citation for the resource, it can be coded with the Dublin Core property for [bibliographic citation](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation).
 
-Recommended practice is to include sufficient bibliographic detail to identify the described resource as unambiguously as possible.
+### Related code and datasets
 
-NOTE: Authors may use this element to give an example of how the resource should be cited. It may be necessary to adjust these examples to meet the preference of the publisher or serial. Some elements of the citation (e.g. information of the host resource) may or may not be available elsewhere in the SRAP record.  
+Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources to [related code](srap:relatedCode) and [data sets](srap:relatedDataset).
 
-EXAMPLE: Klein M, Van de Sompel H, Sanderson R, Shankar H, Balakireva L, Zhou K, et al. (2014) Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot. PLoS ONE 9(12): e115253. https://doi.org/10.1371/journal.pone.0115253
+## Containing Work
+
+Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The relationship between the article and the journal or monograph containing it should be represented using the property [isPartOf](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf) to link the resource being described to its containing work. The inverse property, [hasPart](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasPart), is also valid but may have fewer applications in SRAP.
+
+### Periodical
+
+A scholarly article may be published in a journal or other periodical. The periodical will generally have a [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) and a [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher). For identification of the periodical, these standard numbers should be used:
+
+[ISSN](https://dcmi.github.io/bibo/#:issn)	|	[EISSN](https://dcmi.github.io/bibo/#:eissn)
+
+The periodical may also use numbered volumes and issues as well as page numbers. These should be represented using the following properties:
+
+ [volume](https://dcmi.github.io/bibo/#:volume)	|	 [issue](https://dcmi.github.io/bibo/#:issue)	|	[pageStart](https://dcmi.github.io/bibo/#:pageStart)	|	[pageEnd](https://dcmi.github.io/bibo/#:pageEnd) 
+
+### Monographic work
+This is used when the focus resource is a chapter or section in a monographic work. This includes conference proceedings. 
+
+[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)   |    [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)  |   [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)   |   [date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)
 
 
 ## Rights
 
 Many types of rights apply to scholarly resources. SRAP allows expressing the rights using metadata elements from Dublin Core Terms as well as a new, proposed element for indicating the Rights Holder.
 
-### Access Rights (dct:accessRights)
+[Access rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accessRights)    |   [License](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license)   |   [Rights](Recommended practice is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access] rights](http://vocabularies.coar-repositories.org/documentation/rghts/).)   | [Rights holder](Recommended practice is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access] rights](http://vocabularies.coar-repositories.org/documentation/rightsHolder/).)
 
-Recommended practice is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
-
-Version 1.0 of the vocabulary contains the following terms: 
-
-* open access
-* embargoed access
-* restricted access
-* metadata only access 
-
-NOTE: The current definition of the property in the DCMI Terms namespace is "Information about who can access the resource or an indication of its security status."
-
-This is not applicable to scholarly resources. Their access rights are usually not based on security status nor do rights metadata normally specify who can access a scholarly resource. Moreover, for the time being there is no recommendation to use a controlled vocabulary.
-
-### License (dct:license)
-
-A legal document giving official permission to do something with the resource.
-
-Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.
-
-### Rights (dct:rights)
-
-Information about rights held in and over the resource.
-
-Recommended practice is to refer to a rights statement with a URI. If this is not possible or feasible, a literal value (name, label, or short text) may be provided.
-
-NOTE: Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.
-
-### Rights Holder (dct:rightsHolder)
-
-A person or organization owning or managing rights over the resource.
-
-Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided.
+> NOTE:  Recommended practice for terms for access rights is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access] rights](http://vocabularies.coar-repositories.org/documentation/access_rights/). However, either of the rights fields can be either a text or a link to a document that describes the rights.
 
 ## Accessibility
 
-Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with an Accessibility Statement.
+Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with a statement that defines accessibility options.
 
-### Accessibility Statement (srap:accessibility)
-
-Textual information describing the accessibility features of a resource, including technical details.
-
-Recommended practice is to define the accessibility options, such as software requirements for using the document or technical features such as open or closed captioning. 
-
+[Accessibility Statement](srap:accessibility)
 
 ## Academic context
 
@@ -224,27 +141,6 @@ Scholarly resources are often referred to using identifiers from an identificati
 An unambiguous reference to the resource within a given context.
 
 Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs.
-
-
-## Related code and datasets
-
-Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources to related code and data sets.
-
-### Related Code (srap:relatedCode)
-
-Code (software applications) referenced in the resource. 
-
-Recommended practice is to identify the code with a URI identifying either the code or a landing page through which the application or applications are accessed.  
-
-Subproperty of: References (dct:references)
-
-### Related Dataset (srap:relatedDataset)
-
-Dataset or datasets referenced in the described resource. 
-
-Recommended practice is to identify a dataset with a URI identifying either the dataset or a landing page through which the dataset is accessed.  
-
-Subproperty of: References (dct:references)
 
 
 ## Roles 

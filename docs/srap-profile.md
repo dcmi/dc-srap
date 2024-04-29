@@ -17,12 +17,9 @@ Note 1: All new DCMI Metadata Terms URIs are just suggestions until this profile
 ## Domain model 
 
 SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
+<img src="https://github.com/dcmi/dc-srap/assets/1564129/2d88d6dd-79c2-4559-aadd-dbf3d9bb2d14" width="500">
 
-Note that the definitions of properties are more restrictive in the domain model than below, because in the Dublin Core context for instance affiliation should be interpreted more broadly. 
-
-Scholarly resource is a) often a peer-reviewed document, written by an authority on the subject at hand, produced by a reputable association, or b) a dissertation, thesis, mémoire, or other document written in order to achieve an academic degree, or c) a research dataset. 
-
-NOTE: Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
+> NOTE: Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
 
 ## DCTAP for SRAP
 
@@ -45,6 +42,21 @@ The basic bibliographic description uses these Dublin Core elements:
 > NOTE: For `type` the recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
 
 > NOTE: `publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `publisher` at this level. For contained works, the containing resource (periodical or monograph) is usually described with its publisher.
+
+### Person and Organization
+Creators and contributors can be persons or organizations, which can be described in a text string. Where there is more information that can be provided, SRAP has two structures call "shapes" for that information.
+
+**Person shape**
+
+Person shape has these properties for the description of a person:
+
+[name](http://xmlns.com/foaf/spec/#term_name) | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [affiliation](https://schema.org/affiliation)
+
+**Organization shape**
+
+Organizations can be described with:
+
+[name](http://xmlns.com/foaf/spec/#term_name) | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier)
 
 ## Status and dates
 
@@ -77,17 +89,23 @@ Scholarly resources may be based on, or otherwise associated with, software appl
 
 ## Containing Work
 
-Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The relationship between the article and the journal or monograph containing it should be represented using the property [isPartOf](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf) to link the resource being described to its containing work. The inverse property, [hasPart](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasPart), is also valid but may have fewer applications in SRAP.
+Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The relationship between the article and the journal or monograph containing it should be represented using the property [isPartOf](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf) to link the resource being described to its containing work. 
+
+The value of `isPartOf` should preferably be specific information about the periodical or monographic publication in which the resource is located. If it isn't possible to be specific, a simple text string can be used. If more detailed information is available the structures for Periodical and Monographic Work will be used.
 
 ### Periodical
 
-A scholarly article may be published in a journal or other periodical. The periodical will generally have a [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) and a [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher). For identification of the periodical, these standard numbers should be used:
+A scholarly article may be published in a journal or other periodical. The periodical will generally have
+
+[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) |  [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) 
+
+For identification of the periodical, these standard numbers should be used:
 
 [ISSN](https://dcmi.github.io/bibo/#:issn)	|	[EISSN](https://dcmi.github.io/bibo/#:eissn)
 
 The periodical may also use numbered volumes and issues as well as page numbers. These should be represented using the following properties:
 
- [volume](https://dcmi.github.io/bibo/#:volume)	|	 [issue](https://dcmi.github.io/bibo/#:issue)	|	[pageStart](https://dcmi.github.io/bibo/#:pageStart)	|	[pageEnd](https://dcmi.github.io/bibo/#:pageEnd) 
+[volume](https://dcmi.github.io/bibo/#:volume)	|	 [issue](https://dcmi.github.io/bibo/#:issue)	|	[pageStart](https://dcmi.github.io/bibo/#:pageStart)	|	[pageEnd](https://dcmi.github.io/bibo/#:pageEnd) 
 
 ### Monographic work
 This is used when the focus resource is a chapter or section in a monographic work. This includes conference proceedings. 

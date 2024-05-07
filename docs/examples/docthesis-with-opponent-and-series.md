@@ -14,14 +14,17 @@ Acta Universitatis Lappeenrantaensis 960
 
 ```
 @prefix ex:      <http://example.org/>.
+@prefix srap:    <http://example.org/srap/>.  # placeholder namespace for new properties
 @prefix dct:     <http://purl.org/dc/terms/>.
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
 @prefix marcrel: <http://id.loc.gov/vocabulary/relators/>.
 
 # The online thesis we are (mainly) describing
 ex:online_thesis
   dct:creator "Malysheva, Julia" ;
   dct:issued "2021-06-01" ;
-  dct:identifier <urn:isbn:978-952-335-653-5> ; # electronic ISBN expressed using RFC3187
+  bibo:isbn "978-952-335-653-5" ; # ISBN of electronic version (this one)
   dct:identifier <https://lutpub.lut.fi/handle/10024/162541> ; # repository local URI identifier
   dct:abstract "The level of automation of mechatronic machines, such as..."@en ; # cut for brevity
   dct:extent "79 pages" ; # number of pages, a dct:SizeOrDuration instance
@@ -33,28 +36,38 @@ ex:online_thesis
   dct:rights "Kaikki oikeudet pidätetään."@fi, "All rights reserved."@en ;
   dct:subject "..." ;  # actual subjects omitted for brevity
   dct:title "Faster than real-time simulation of fluid power-driven mechatronic machines"@en ;
-  marcrel:opn "Ellman, Asko" ; # official opponent at the doctoral defense, using MARC relator
+  dct:contributor [
+    foaf:name "Ellman, Asko" ;
+    srap:role marcrel:opn  # official opponent at the doctoral defense, using MARC relator
+  ] ;
   dct:type <http://purl.org/coar/resource_type/c_db06> ; # COAR resource type: doctoral thesis
   dct:contributor "Lappeenrannan-Lahden teknillinen yliopisto LUT"@fi, "Lappeenranta-Lahti University of Technology LUT"@en ;  # TODO should this be a resource? Typed as Organization?
   dct:contributor "School of Energy Systems"@en ;  # TODO should this be part of the above?
   dct:subject "School of Energy Systems, Mechanical Engineering" ; # TODO is this the correct field for degree program?
-  marcrel:rev "Ellman, Asko" ; # reviewer, using MARC relator
-  marcrel:rev "Pietola, Matti" ; # ditto
-  marcrel:dgs "Handroos, Heikki" . # degree supervisor, using MARC relator
+  dct:contributor [
+    foaf:name "Ellman, Asko" ;
+    srap:role marcrel:rev  # reviewer, using MARC relator
+  ] ;
+  dct:contributor [
+    foaf:name "Pietola, Matti" ;
+    srap:role marcrel:rev  # reviewer, using MARC relator
+  ] ;
+  dct:contributor [
+    foaf:name "Handroos, Heikki" ;
+    srap:role marcrel:dgs  # degree supervisor, using MARC relator
+  ] .
 
 # Printed version of the thesis, with a different ISBN
 ex:printed_thesis
-  dct:identifier <urn:isbn:978-952-335-652-8> .  # ISBN of printed version
+  bibo:isbn "978-952-335-652-8" .  # ISBN of printed version
 
 # Series where the thesis was published in (reusable entity)
 ex:series dct:title "Acta Universitatis Lappeenrantaensis" ;
-  dct:identifier <urn:issn:1456-4491> .
+  bibo:issn "1456-4491" .
 ```
 
 ## Visualization
 
 Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
 
-![image](https://github.com/dcmi/dc-srap/assets/1132830/9549c6a2-e595-46f4-aa5f-054dee20402e)
-
-
+![image](https://github.com/dcmi/dc-srap/assets/1132830/66a7ca92-92c7-4e5d-b62d-c5f138191e2c)

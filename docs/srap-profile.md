@@ -17,18 +17,14 @@ Note 1: All new DCMI Metadata Terms URIs are just suggestions until this profile
 ## Domain model 
 
 SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
-
-Note that the definitions of properties are more restrictive in the domain model than below, because in the Dublin Core context for instance affiliation should be interpreted more broadly. 
-
-Scholarly resource is a) often a peer-reviewed document, written by an authority on the subject at hand, produced by a reputable association, or b) a dissertation, thesis, mémoire, or other document written in order to achieve an academic degree, or c) a research dataset. 
+<img src="https://github.com/dcmi/dc-srap/assets/1564129/272a2cbb-b292-48c3-b766-ed4239b45cc1" width="500" />
+There is a basic bibliographic description for the scholarly work. Where appropriate, the SRAP can define metadata elements that represent a serial or monographic resource in which the scholarly work is contained. There are also related descriptions of persons and organizations that can provide additional detail.
 
 NOTE: Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
 
 ## DCTAP for SRAP
 
-SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used e.g. for basic data validation. It includes details on value types, like "date" and "string", and notes on usage.
-
-The remainder of this document contains more detailed guidance and examples for how to apply SRAP in specific circumstances. 
+SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage.
 
 The following term prefixes are used in this document and in the DCTAP document:
 
@@ -36,23 +32,23 @@ The following term prefixes are used in this document and in the DCTAP document:
 * BIBO: https://dcmi.github.io/bibo/
 * [needs to be completed]
 
-## Basic bibliographic description
+## Scholarly Work Description
 
 The basic bibliographic description uses these Dublin Core elements:
 
 [type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)	|	[contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)	|	[language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) 	|	[publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)	|	[format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format)	|
 
-> NOTE: For `type` the recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
+> NOTE: For `type` the recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows a precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
 
 > NOTE: `publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `publisher` at this level. For contained works, the containing resource (periodical or monograph) is usually described with its publisher.
 
-## Status and dates
+### Status and dates
 
 SRAP makes it possible to express the status of a scholarly in a publishing workflow in multiple ways. The Publication Status element indicates the current status, while date fields can be used to express the date of important events in the lifecycle of the resource. For publication status the recommended practice is to use a publication status value from the [OpenAIRE Publication Version vocabulary](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html)
 
 It is expected that dates will be in one of these formats:
 
-> `yyyy`	|	`mm/yyyy`	|	`dd/mm/yyyy`
+> `YYYY`	|	`YYYY-MM`	|	`YYYY-MM-DD`
 
 These date properties are from the Dublin Core Terms:
 
@@ -61,8 +57,6 @@ These date properties are from the Dublin Core Terms:
 These additional date properties are being defined for SRAP:
 
 [publication status](srap:publicationStatus) 	|	[embargo date range](srap:embargoDateRange)	|	[date retracted](srap:dateRetracted)
-
-## Additional Context
 
 ### Presented at
 SRAP is defining a property, [`presented at`](srap:presentedAt) for the conference, workshop, shareholder meeting etc. where the resource was presented. This may be the conference name or, preferably, a URI that identifies the event.

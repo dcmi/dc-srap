@@ -18,6 +18,7 @@ Note 1: All new DCMI Metadata Terms URIs are just suggestions until this profile
 
 SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
 <img src="https://github.com/dcmi/dc-srap/assets/1564129/272a2cbb-b292-48c3-b766-ed4239b45cc1" width="500" />
+
 There is a basic bibliographic description for the scholarly work. Where appropriate, the SRAP can define metadata elements that represent a serial or monographic resource in which the scholarly work is contained. There are also related descriptions of persons and organizations that can provide additional detail.
 
 NOTE: Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
@@ -56,7 +57,15 @@ These date properties are from the Dublin Core Terms:
 
 These additional date properties are being defined for SRAP:
 
-[publication status](srap:publicationStatus) 	|	[embargo date range](srap:embargoDateRange)	|	[date retracted](srap:dateRetracted)
+	[embargo date range](srap:embargoDateRange)	|	[date retracted](srap:dateRetracted)
+
+### Pages and issue information
+
+A journal article is published within a periodical. It is a general practice to identify and locate the article within a specific periodical publication by noting the journal volume and issue, if used, and the pages occupied by the article within that. These should be represented using the following properties:
+
+ [volume](https://dcmi.github.io/bibo/#:volume)	|	 [issue](https://dcmi.github.io/bibo/#:issue)	|	[pageStart](https://dcmi.github.io/bibo/#:pageStart)	|	[pageEnd](https://dcmi.github.io/bibo/#:pageEnd) 
+
+ The start and end pages are also used to locate a resource that is part of a monographic publication, such as a book of essays or a conference publication with articles.
 
 ### Presented at
 SRAP is defining a property, [`presented at`](srap:presentedAt) for the conference, workshop, shareholder meeting etc. where the resource was presented. This may be the conference name or, preferably, a URI that identifies the event.
@@ -69,9 +78,25 @@ When there is a preferred citation for the resource, it can be coded with the Du
 
 Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources to [related code](srap:relatedCode) and [data sets](srap:relatedDataset).
 
-## Containing Work
+### Containing works
 
-Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The relationship between the article and the journal or monograph containing it should be represented using the property [isPartOf](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf) to link the resource being described to its containing work. The inverse property, [hasPart](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasPart), is also valid but may have fewer applications in SRAP.
+Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The relationship between the article and the journal or monograph containing it should be represented using the property [isPartOf](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf) to link the resource being described to its containing work. 
+
+## Extended shapes
+
+The above properties represent a flat data model. Where it is desirable to make more than one statement about a resource, like a person or a journal, SRAP supports data structures that can carry these statements. These extended shapes also allow one to indicate whether a creator is a person or an organization, and whether the resource that is indicated using `isPartOf` is a journal or a monographic publication. Each of these can point to the follwoing extended shapes:
+
+dct:creator -> Person, Organization
+dct:contributor -> Person, Organization
+dct:isPartOf -> Periodical, Book
+
+### Person
+
+In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
+
+
+
+### Organization
 
 ### Periodical
 
@@ -79,9 +104,6 @@ A scholarly article may be published in a journal or other periodical. The perio
 
 [ISSN](https://dcmi.github.io/bibo/#:issn)	|	[EISSN](https://dcmi.github.io/bibo/#:eissn)
 
-The periodical may also use numbered volumes and issues as well as page numbers. These should be represented using the following properties:
-
- [volume](https://dcmi.github.io/bibo/#:volume)	|	 [issue](https://dcmi.github.io/bibo/#:issue)	|	[pageStart](https://dcmi.github.io/bibo/#:pageStart)	|	[pageEnd](https://dcmi.github.io/bibo/#:pageEnd) 
 
 ### Monographic work
 This is used when the focus resource is a chapter or section in a monographic work. This includes conference proceedings. 

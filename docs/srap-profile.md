@@ -74,12 +74,15 @@ SRAP is defining a property for the conference, workshop, shareholder meeting et
 
 ### Bibliographic Citation (dct:bibliographicCitation)
 
-When there is a preferred citation for the resource, it can be coded with the Dublin Core property for [bibliographic citation](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation).
+When there is a preferred citation for the resource, it can be coded with the Dublin Core property:
+
+[bibliographic citation](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation).
 
 ### Related code and datasets
 
 Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources with: 
-	[related code](http://example.com/srap/relatedCode)|	 [data sets](http://example.com/srap/relatedDataset)
+
+[related code](http://example.com/srap/relatedCode)	|	 [data sets](http://example.com/srap/relatedDataset)
 
 ### Descriptions
 
@@ -93,17 +96,18 @@ Many types of rights apply to scholarly resources. SRAP allows expressing the ri
 
 [Access rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accessRights)    |   [License](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license)   |   [Rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights)   | [Rights holder](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rightsHolder)
 
-> NOTE:  Recommended practice for terms for access rights is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access] rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
+> NOTE:  Recommended practice for terms for `access rights` is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
 
 ## Accessibility
 
 Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with a statement that defines accessibility options.
 
-[Accessibility Statement](srap:accessibility)
+[Accessibility Statement](http://example.com/srap/accessibility)
 
 ### Containing works
 
 Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The relationship between the article and the journal or monograph containing it should be represented using this Dublin Core Terms property  to link the resource being described to its containing work. 
+
 [isPartOf](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf)
 
 ## Extended shapes
@@ -111,7 +115,9 @@ Many scholarly resources are published as parts of journals, conference proceedi
 The above properties represent a flat data model. Where it is desirable to make more than one statement about a resource, like a person or a journal, SRAP supports data structures that can carry these statements. These extended shapes also allow one to indicate whether a creator is a person or an organization, and whether the resource that is indicated using `isPartOf` is a journal or a monographic publication. Each of these can point to the following extended shapes:
 
 dct:creator -> Person, Organization
+
 dct:contributor -> Person, Organization
+
 dct:isPartOf -> Periodical, Book
 
 ### Person

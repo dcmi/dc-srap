@@ -121,7 +121,7 @@ In scholarly publications there can be many named creators and contributors. Alt
 
 #### Class
 
-In RDF data, information about a person is contained within a graph with the class [`foaf:Person`](http://xmlns.com/foaf/spec/#term_Person).
+In RDF data, information about a person can be contained within a graph with the class [Person](http://xmlns.com/foaf/spec/#term_Person).
 
 #### Properties
 
@@ -131,13 +131,19 @@ In RDF data, information about a person is contained within a graph with the cla
 
 #### Class
 
-In RDF data, information about a person is contained within a graph with the class [`foaf:Organization`](http://xmlns.com/foaf/spec/#term_Organization).
+In RDF data, information about an organization can be contained within a graph with the class [Organization](http://xmlns.com/foaf/spec/#term_Organization).
 
 #### Properties
 
 [Name](http://xmlns.com/foaf/spec/#term_name) | [Identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [Role](http://example.com/srap/role)
 
 ### Periodical
+Journals and other periodical publications are further described with these properties.
+#### Class
+In RDF data, information about a periodical can be contained within a graph with one of these classes:
+	[Periodical](https://dcmi.github.io/bibo/#:Periodical) |  [Journal](https://dcmi.github.io/bibo/#:Journal)
+
+#### Properties
 
 A scholarly article may be published in a journal or other periodical. The periodical will generally have a [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) and a [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher). For identification of the periodical, these standard numbers should be used:
 
@@ -146,6 +152,12 @@ A scholarly article may be published in a journal or other periodical. The perio
 ### Monographic work
 This is used when the focus resource is a chapter or section in a monographic work. This includes conference proceedings. 
 
+#### Class
+In RDF data, information that this is a monographic work is designated with the class:
+	[Book](https://dcmi.github.io/bibo/#:Book) 
+
+This includes other monographic publications like technical reports and conference proceedings.
+#### Properties
 [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)   |    [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)  |   [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)   |   [date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)
 
 ## Appendix 1

@@ -8,20 +8,14 @@ The aim of the Scholarly Resources Application Profile (SRAP) proposal is to ena
 
 There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[^4]. This is not surprising since they share the same aim, support for description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
 
-The SRAP application profile proposal is intended to be globally applicable. All suggested properties were “battle-proven”, in use. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
-
-Roles of contributors are based on [Library of Congress Relator terms](https://www.loc.gov/marc/relators/relaterm.html) or other controlled contributor lists. Contributor roles presented below are examples of ones that can be used.
-
-Note 1: All new DCMI Metadata Terms URIs are just suggestions until this profile has been approved, and marked with asterisk (*). 
+The SRAP application profile proposal is intended to be globally applicable. Many suggested properties are already in use by related communities. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
 
 ## Domain model 
 
 SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
 <img src="https://github.com/dcmi/dc-srap/assets/1564129/272a2cbb-b292-48c3-b766-ed4239b45cc1" width="500" />
 
-There is a basic bibliographic description for the scholarly work. Where appropriate, the SRAP can define metadata elements that represent a serial or monographic resource in which the scholarly work is contained. There are also related descriptions of persons and organizations that can provide additional detail.
-
-NOTE: Metadata elements needed for description of research datasets are not included in this version of the SRAP profile. Research datasets require complex and domain specific metadata (see for instance DDI, https://ddialliance.org/, for metadata specification intended for social science datasets). A future version of SRAP may be extended to cover also some or all domains of research data. 
+There is a basic bibliographic description for the scholarly work. Where appropriate, with SRAP one can define metadata elements that represent a serial or monographic resource in which the scholarly work is contained. There are also related descriptions of persons and organizations that can provide additional detail.
 
 ## DCTAP for SRAP
 
@@ -33,9 +27,10 @@ The following term prefixes are used in this document and in the DCTAP document:
 * BIBO: https://dcmi.github.io/bibo/
 * [needs to be completed]
 
-## Scholarly Work Description
+# Scholarly Work Description
+## Basic Bibliographic Elements
 
-The basic bibliographic description uses these Dublin Core elements:
+These basic bibliographic description are commonly used to describe resources but are not limited to scholarly works.
 
 [type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)	|	[contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)	|	[language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) 	|	[publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)	|	[format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format)	|
 
@@ -67,22 +62,11 @@ A journal article is published within a periodical. It is a general practice to 
 
  The start and end pages are also used to locate a resource that is part of a monographic publication, such as a book of essays or a conference publication with articles.
 
-### Presented at
-SRAP is defining a property for the conference, workshop, shareholder meeting etc. where the resource was presented. This may be the conference name or, preferably, a URI that identifies the event.
-
-[presentedAt](http://example.com/srap/presentedAt)
-
-### Bibliographic Citation (dct:bibliographicCitation)
+### Bibliographic Citation
 
 When there is a preferred citation for the resource, it can be coded with the Dublin Core property:
 
 [bibliographic citation](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation).
-
-### Related code and datasets
-
-Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources with: 
-
-[related code](http://example.com/srap/relatedCode)	|	 [data sets](http://example.com/srap/relatedDataset)
 
 ### Descriptions
 
@@ -98,34 +82,28 @@ Many types of rights apply to scholarly resources. SRAP allows expressing the ri
 
 > NOTE:  Recommended practice for terms for `access rights` is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
 
-### Accessibility
+### Accessibility statement
 
 Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with a statement that defines accessibility options.
 
 [Accessibility Statement](http://example.com/srap/accessibility)
-### Academic context
+## Academic context
+
+### Related code and datasets
+
+Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources with: 
+
+[related code](http://example.com/srap/relatedCode)	|	 [data sets](http://example.com/srap/relatedDataset)
 
 Scholarly resources are created in an academic context, for example a specific institution, faculty and department and/or a project funded by a specific grant. Also, authors and contributors can be affiliated with academic or other institutions. SRAP enables expressing the academic context of scholarly resources and the affiliation of related individuals.
 
-### Affiliation (schema:affiliation)
-
-An organization to which an agent was affiliated when the resource was created.
-
-Domain includes: dcterms:Agent
-
-Recommended practice is to identify the affiliation with a URI. If this is not possible or feasible, a literal value that identifies the affiliated organization may be provided. It is also possible to give both the name and the URI.
-
-If a name is given, it should be provided in full and in hierarchical order, starting from the largest organizational unit. 
-
-NOTE This element should not be used to provide the current (at the time the metadata is created) affiliation of the agent, or all affiliations the agent has had over time.  
-
-### Grant Number (srap:grantNumber)
+### Grant Number
 
 An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created. 
 
-Subproperty of: Identifier (dct:identifier)
+[Grant number](http://example.com/srap/grantNumber)	
 
-## Extended shapes
+## Extended Description for Agents and Containing Resources
 
 The above properties represent a flat data model. Where it is desirable to make more than one statement about a resource, like a person or a journal, SRAP supports data structures that can carry these statements. These extended shapes also allow one to indicate whether a creator is a person or an organization, and whether the resource that is indicated using `isPartOf` is a journal or a monographic publication. Each of these can point to the following extended shapes:
 
@@ -135,18 +113,29 @@ dct:contributor -> Person, Organization
 
 dct:isPartOf -> Periodical, Book
 
+>NOTE: See Appendix 1 for a short list of roles. It is recommended that LC Relator entities be used for the `role` properties.
+
 ### Person
 
 In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
 
-### Identifier (dct:identifier)
+#### Class
 
-An unambiguous reference to the resource within a given context.
-### Role
+In RDF data, information about a person is contained within a graph with the class [`foaf:Person`](http://xmlns.com/foaf/spec/#term_Person).
 
-Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use the [Library of Congress MARC Relator codes](https://www.loc.gov/marc/relators/relaterm.html) or some other controlled list to express roles such as the [RDA Unconstrained](https://www.rdaregistry.info/Elements/u/) properties. See below for examples of existing roles that may be used with thesis or with scientific articles. Lists are not mutually exclusive; for instance, a thesis may have a translator.
+#### Properties
+
+[Name](http://xmlns.com/foaf/spec/#term_name) | [Identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [Affiliation](https://schema.org/affiliation) | [Role](http://example.com/srap/role)
 
 ### Organization
+
+#### Class
+
+In RDF data, information about a person is contained within a graph with the class [`foaf:Organization`](http://xmlns.com/foaf/spec/#term_Organization).
+
+#### Properties
+
+[Name](http://xmlns.com/foaf/spec/#term_name) | [Identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [Role](http://example.com/srap/role)
 
 ### Periodical
 

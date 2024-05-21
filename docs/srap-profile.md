@@ -98,53 +98,12 @@ Many types of rights apply to scholarly resources. SRAP allows expressing the ri
 
 > NOTE:  Recommended practice for terms for `access rights` is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
 
-## Accessibility
+### Accessibility
 
 Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with a statement that defines accessibility options.
 
 [Accessibility Statement](http://example.com/srap/accessibility)
-
-### Containing works
-
-Many scholarly resources are published as parts of journals, conference proceedings or other types of collective works. The relationship between the article and the journal or monograph containing it should be represented using this Dublin Core Terms property  to link the resource being described to its containing work. 
-
-[isPartOf](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf)
-
-## Extended shapes
-
-The above properties represent a flat data model. Where it is desirable to make more than one statement about a resource, like a person or a journal, SRAP supports data structures that can carry these statements. These extended shapes also allow one to indicate whether a creator is a person or an organization, and whether the resource that is indicated using `isPartOf` is a journal or a monographic publication. Each of these can point to the following extended shapes:
-
-dct:creator -> Person, Organization
-
-dct:contributor -> Person, Organization
-
-dct:isPartOf -> Periodical, Book
-
-### Person
-
-In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
-
-
-
-
-### Organization
-
-### Periodical
-
-A scholarly article may be published in a journal or other periodical. The periodical will generally have a [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) and a [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher). For identification of the periodical, these standard numbers should be used:
-
-[ISSN](https://dcmi.github.io/bibo/#:issn)	|	[EISSN](https://dcmi.github.io/bibo/#:eissn)
-
-
-### Monographic work
-This is used when the focus resource is a chapter or section in a monographic work. This includes conference proceedings. 
-
-[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)   |    [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)  |   [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)   |   [date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)
-
-
-
-
-## Academic context
+### Academic context
 
 Scholarly resources are created in an academic context, for example a specific institution, faculty and department and/or a project funded by a specific grant. Also, authors and contributors can be affiliated with academic or other institutions. SRAP enables expressing the academic context of scholarly resources and the affiliation of related individuals.
 
@@ -166,24 +125,41 @@ An alpha-numeric string identifying the contract, project or funding grant under
 
 Subproperty of: Identifier (dct:identifier)
 
+## Extended shapes
 
-## Identifiers
+The above properties represent a flat data model. Where it is desirable to make more than one statement about a resource, like a person or a journal, SRAP supports data structures that can carry these statements. These extended shapes also allow one to indicate whether a creator is a person or an organization, and whether the resource that is indicated using `isPartOf` is a journal or a monographic publication. Each of these can point to the following extended shapes:
 
-Scholarly resources are often referred to using identifiers from an identification system. 
+dct:creator -> Person, Organization
+
+dct:contributor -> Person, Organization
+
+dct:isPartOf -> Periodical, Book
+
+### Person
+
+In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
 
 ### Identifier (dct:identifier)
 
 An unambiguous reference to the resource within a given context.
-
-Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs.
-
-
-## Roles 
+### Role
 
 Creators and contributors of scholarly resources may have a wide variety of roles. SRAP does not provide a comprehensive role list; recommended practice is to use the [Library of Congress MARC Relator codes](https://www.loc.gov/marc/relators/relaterm.html) or some other controlled list to express roles such as the [RDA Unconstrained](https://www.rdaregistry.info/Elements/u/) properties. See below for examples of existing roles that may be used with thesis or with scientific articles. Lists are not mutually exclusive; for instance, a thesis may have a translator.
 
-Using uncontrolled (local) contributor roles reduces semantic interoperability and should be avoided. 
+### Organization
 
+### Periodical
+
+A scholarly article may be published in a journal or other periodical. The periodical will generally have a [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) and a [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher). For identification of the periodical, these standard numbers should be used:
+
+[ISSN](https://dcmi.github.io/bibo/#:issn)	|	[EISSN](https://dcmi.github.io/bibo/#:eissn)
+
+### Monographic work
+This is used when the focus resource is a chapter or section in a monographic work. This includes conference proceedings. 
+
+[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)   |    [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)  |   [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)   |   [date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)
+
+## Appendix 1
 ### Examples of roles for theses and dissertations
 
 * Academic supervisor
@@ -212,7 +188,7 @@ Using uncontrolled (local) contributor roles reduces semantic interoperability a
 * Sponsor
 * Translator
 
-## Appendix 1. Legacy representations for SRAP data
+## Appendix 2. Legacy representations for SRAP data
 
 SRAP itself is defined using DCTAP tables, which express the SRAP data model. The tables define several shapes, corresponding to different types of entities, as well as their properties (data elements such as title and publication date). The underlying assumption is that the metadata for each entity can be represented in a structured format such as RDF, JSON or XML and the different entities can be represented independently of each other. This is not always possible when dealing with legacy systems that only provide a flat representation of document metadata fields and values. This appendix provides guidance on how to apply SRAP in such a legacy setting.
 

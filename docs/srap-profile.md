@@ -19,13 +19,14 @@ There is a basic bibliographic description for the scholarly work. Where appropr
 
 ## DCTAP for SRAP
 
-SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage.
+SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage. Refer to the TAP for specific information on properties used, values, and recommended value lists to use.
 
 The following term prefixes are used in this document and in the DCTAP document:
 
 * dct: http://purl.org/dc/terms/ 
 * BIBO: https://dcmi.github.io/bibo/
-* [needs to be completed]
+* FOAF: http://xmlns.com/foaf/spec/
+* schema: https://schema.org
 
 # Scholarly Work Description
 ## Basic Bibliographic Elements
@@ -34,15 +35,31 @@ These basic bibliographic description are commonly used to describe resources bu
 
 [type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)	|	[contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)	|	[language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) 	|	[publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)	|	[format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format)	|
 
-> NOTE: For `type` the recommended practice in SRAP is to use the COAR Controlled Vocabulary for Resource Type Genres[^8], which allows a precise description of the type with terms like _doctoral thesis_, _master thesis_ and _bachelor thesis_ as well as _journal article_ and _research report_. 
-
 > NOTE: `publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `publisher` at this level. For contained works, the containing resource (periodical or monograph) is usually described with its publisher.
+> NOTE: `Creator` and `Contributor` may be simple strings. For more detailed description options, see below: Extended Description.
 
-### Status and dates
+### Descriptions
 
-SRAP makes it possible to express the status of a scholarly in a publishing workflow in multiple ways. The Publication Status element indicates the current status, while date fields can be used to express the date of important events in the lifecycle of the resource. For publication status the recommended practice is to use a publication status value from the [OpenAIRE Publication Version vocabulary](https://guidelines.openaire.eu/en/latest/literature/field_publicationversion.html)
+Further description can be coded in these properties:
 
-It is expected that dates will be in one of these formats:
+[Abstract](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/abstract)	|	[Table of contents](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/tableOfContents)	|	[Description](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description)
+
+### Rights
+
+Many types of rights apply to scholarly resources. SRAP allows expressing the rights using metadata elements from Dublin Core Terms as well as a new, proposed element for indicating the Rights Holder.
+
+[Access rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accessRights)    |   [License](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license)   |   [Rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights)   | [Rights holder](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rightsHolder)
+
+### Accessibility statement
+
+Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with a statement that defines accessibility options.
+
+[Accessibility Statement](http://example.com/srap/accessibility)
+
+## Academic context
+### Dates
+
+It is expected that dates will be in one of these standard formats:
 
 > `YYYY`	|	`YYYY-MM`	|	`YYYY-MM-DD`
 
@@ -53,6 +70,13 @@ These date properties are from the Dublin Core Terms:
 These additional date properties are being defined for SRAP:
 
 [embargo date range](http://example.com/srap/embargoDateRange)	|	[date retracted](http://example.com/srap/dateRetracted)
+
+### Part of
+Journal articles and chapters usually are contained within a larger publication. This is encoded with the following property:
+
+[Part of](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/partOf)
+
+> NOTE: To provide fuller information on the periodical or monograph containing the scholarly work, see below: Extended Description
 
 ### Pages and issue information
 
@@ -67,27 +91,6 @@ A journal article is published within a periodical. It is a general practice to 
 When there is a preferred citation for the resource, it can be coded with the Dublin Core property:
 
 [bibliographic citation](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation).
-
-### Descriptions
-
-Further description can be coded in these properties:
-
-[Abstract](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/abstract)	|	[Table of contents](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/tableOfContents)	|	[Description](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description)
-
-### Rights
-
-Many types of rights apply to scholarly resources. SRAP allows expressing the rights using metadata elements from Dublin Core Terms as well as a new, proposed element for indicating the Rights Holder.
-
-[Access rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accessRights)    |   [License](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license)   |   [Rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights)   | [Rights holder](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rightsHolder)
-
-> NOTE:  Recommended practice for terms for `access rights` is to use the COAR (Confederation of Open Access Repositories) [vocabulary of access rights](http://vocabularies.coar-repositories.org/documentation/access_rights/).
-
-### Accessibility statement
-
-Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with a statement that defines accessibility options.
-
-[Accessibility Statement](http://example.com/srap/accessibility)
-## Academic context
 
 ### Related code and datasets
 
@@ -113,7 +116,7 @@ dct:contributor -> Person, Organization
 
 dct:isPartOf -> Periodical, Book
 
->NOTE: See Appendix 1 for a short list of roles. It is recommended that LC Relator entities be used for the `role` properties.
+> NOTE: See Appendix 1 for a short list of common roles. It is recommended that LC Relator entities be used for the `role` properties.
 
 ### Person
 

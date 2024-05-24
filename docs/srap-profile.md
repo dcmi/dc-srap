@@ -1,8 +1,24 @@
 # Dublin Core Metadata Initiative Scholarly Resources Application Profile (SRAP) 
 
-*list of authors*
+**Authors:** <br/>
+Karen Coyle<br/>
+	Osma Suominen <br/> 
+ 	Juha hakala
 
-*draft date*
+May 24, 2024
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Domain Model](#domain-model)
+- [DCTAP for SRAP](#dctap-for-srap)
+- [Scholarly Work Description](#scholarly-work-description)
+- [Academic Context](#academic-context)
+- [Extended Description for Agents and Containing Resources](#extended-description-for-agents-and-containing-resources)
+- [Appendix 1. Roles](#appendix-1-roles)
+- [Appendix 2. Legacy representations for SRAP data](#appendix-2-legacy-representations-for-srap-data)
+
+## Introduction
 
 The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
@@ -163,7 +179,7 @@ This includes other monographic publications like technical reports and conferen
 #### Properties
 [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)   |    [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)  |   [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)   |   [date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)
 
-## Appendix 1
+## Appendix 1. Roles
 ### Examples of roles for theses and dissertations
 
 * Academic supervisor

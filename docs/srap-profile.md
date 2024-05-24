@@ -213,9 +213,22 @@ This includes other monographic publications like technical reports and conferen
 SRAP itself is defined using DCTAP tables, which express the SRAP data model. The tables define several shapes, corresponding to different types of entities, as well as their properties (data elements such as title and publication date). The underlying assumption is that the metadata for each entity can be represented in a structured format such as RDF, JSON or XML and the different entities can be represented independently of each other. This is not always possible when dealing with legacy systems that only provide a flat representation of document metadata fields and values. This appendix provides guidance on how to apply SRAP in such a legacy setting.
 
 ### Flat key-value representation of SRAP
-
-*To Be Written*
-
+Legacy systems should use properties defined in the SRAP, but in many cases will not be able to make use of the additional information that is provided by the shapes. An example:
+```
+rdf:type bibo:AcademicArticle ;
+dct:title "COVID-19 and multiorgan response" ;
+dct.creator "Sevim Zaim" ;
+dct.creator "Jun Heng Chong" ;
+dct.creator "Vissagan Sankaranarayanan" ;
+dct.creator "Amer Harky" ;
+dct:.issued "2020" ;
+dct:identifier <https://doi.org/10.1016/j.cpcardiol.2020.100618> ;
+bibo:volume "45" ;
+bibo:issue "8" ;
+bibo:pageStart "100618" ;
+dct:isPartOf "Current problems in cardiology" .
+```
+This example is less expressive than the capabiities when using a non-flat metadata model. In particular, the flat model cannot provide identifiers or roles for the creators; it cannot include the affiliation of the authors; it cannot specify whether the containing resource (the value of dct:isPartOf) is a journal or a monograph. 
 ### Identifiers along with names in XML
 
 DCMI’s "PIDs in DC" draft proposal[^5] allows using the XML `id` attribute to match identifiers with the agent names. However, we use attribute `pid` instead of `id`, since W3C xml:id proposal allows just one identifier per each element. In SRAP context, the same person or organization may have multiple unique identifiers.  For instance: 

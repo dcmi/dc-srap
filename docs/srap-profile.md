@@ -1,9 +1,12 @@
 # Dublin Core Metadata Initiative Scholarly Resources Application Profile (SRAP) 
 
 **Authors:** <br/>
-Karen Coyle<br/>
-	Osma Suominen <br/> 
- 	Juha hakala
+Karen Coyle, DCMI<br/>
+	Osma Suominen, National Library of Finland<br/> 
+ 	Juha hakala, National Library of Finland<br/>
+**Collaborators**<br />
+Jan Ashton, British Library<br/>
+Alasdair MacDonald, University of Edinburgh
 
 May 24, 2024
 

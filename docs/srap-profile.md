@@ -185,31 +185,33 @@ This includes other monographic publications like technical reports and conferen
 ## Appendix 1. Roles
 ### Examples of roles for theses and dissertations
 
+These are linked here to the Library of Congress relator properties>
+
 * Academic supervisor
-* Dedicatee
-* Degree committee member
-* Degree granting institution
-* Degree supervisor
-* Dissertant
-* Opponent
-* Praeses
-* Respondent
-* Thesis advisor
+* [Dedicatee](http://id.loc.gov/vocabulary/relators/dte)
+* [Degree committee member](http://id.loc.gov/vocabulary/relators/dgc)
+* [Degree granting institution](http://id.loc.gov/vocabulary/relators/dgg)
+* [Degree supervisor](http://id.loc.gov/vocabulary/relators/dgs)
+* [Dissertant](http://id.loc.gov/vocabulary/relators/dis)
+* [Opponent](http://id.loc.gov/vocabulary/relators/opn)
+* [Praeses](http://id.loc.gov/vocabulary/relators/pra)
+* [Respondent](http://id.loc.gov/vocabulary/relators/rsp)
+* [Thesis advisor](http://id.loc.gov/vocabulary/relators/ths)
 
 ### Examples of roles for journal articles
 
-* Abridger
-* Compiler
-* Editor
-* Editor of compilation
-* Funder
-* Honoree
-* Host institution
-* Organizer
-* Reviewer
+* [Abridger](https://id.loc.gov/vocabulary/relators/abr)
+* [Compiler](http://id.loc.gov/vocabulary/relators/com)
+* [Editor](http://id.loc.gov/vocabulary/relators/edt)
+* [Editor of compilation](http://id.loc.gov/vocabulary/relators/edc)
+* [Funder](http://id.loc.gov/vocabulary/relators/fnd)
+* [Honoree](http://id.loc.gov/vocabulary/relators/hnr)
+* [Host institution](http://id.loc.gov/vocabulary/relators/his)
+* [Organizer](http://id.loc.gov/vocabulary/relators/orm)
+* [Reviewer](http://id.loc.gov/vocabulary/relators/rev)
 * Reviser
-* Sponsor
-* Translator
+* [Sponsor](http://id.loc.gov/vocabulary/relators/spn)
+* [Translator](http://id.loc.gov/vocabulary/relators/trl)
 
 ## Appendix 2. Legacy representations for SRAP data
 

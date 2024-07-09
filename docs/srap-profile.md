@@ -43,7 +43,7 @@ SRAP is expressed in a table format as a [Dublin Core Tabular Application Profil
 The following term prefixes are used in this document and in the DCTAP document:
 
 * dct: http://purl.org/dc/terms/ 
-* BIBO: https://dcmi.github.io/bibo/
+* BIBO: http://purl.org/ontology/bibo/
 * FOAF: http://xmlns.com/foaf/spec/
 * schema: https://schema.org
 

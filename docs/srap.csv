@@ -36,7 +36,7 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,,,,,,,,
 ,Accessibility statement,srap:accessibilityStatement,literal,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
-,Grant number,srap:grantNumber,literal,xsd:string,,,,"An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created."
+,Grant,srap:grant,,,Grant,,,
 ,,,,,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
@@ -66,3 +66,7 @@ Organization,Class,rdf:type,IRI,,,foaf:Organization,,
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,Name,foaf:name,literal,xsd:string,,,,Name of the organization
+,,,,,,,,
+Grant,,,,,,,,
+,Grant name,foaf:name,,xsd:string,,,,
+,Grant identifier,dct:identifier,,xsd:string,,,,

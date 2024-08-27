@@ -52,7 +52,7 @@ Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo
 ,E-ISSN,bibo:eissn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for electronic versions of serial publications."
 ,,,,,,,,
 Book,Class,rdf:type,IRI,,,bibo:Book,,The class will always be bibo:Book.
-,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,A contributor to the book, either a person or a named group or organization.
+,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,"A contributor to the book, either a person or a named group or organization."
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book
 ,Date,dct:date,Literal,xsd:string,,,,Date of publication
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.

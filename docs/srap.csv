@@ -36,8 +36,8 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,,,,,,,,
 ,Accessibility statement,srap:accessibilityStatement,literal,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
-,Grant,schema:funding,,,Grant,,,The funder of the resource.
-,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier.
+,Grant,schema:funding,,,Grant,,,The funder of this resource.
+,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
 ,,,,,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
@@ -47,28 +47,28 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,,,,,,,,
 Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
-,Publisher,dct:publisher,IRI BNODE,,Organization,,,
+,Publisher,dct:publisher,IRI BNODE,,Organization,,,Name of the publisher
 ,ISSN,bibo:issn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for the printed version of serial publications."
 ,E-ISSN,bibo:eissn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for electronic versions of serial publications."
 ,,,,,,,,
-Book,Class,rdf:type,IRI,,,bibo:Book,,
-,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,
-,Publisher,dct:publisher,IRI BNODE,,Organization,,,
-,Date,dct:date,Literal,xsd:string,,,,
+Book,Class,rdf:type,IRI,,,bibo:Book,,The class will always be bibo:Book.
+,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,A contributor to the book, either a person or a named group or organization.
+,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book
+,Date,dct:date,Literal,xsd:string,,,,Date of publication
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
 ,,,,,,,,
-Person,Class,rdf:type,IRI,,,foaf:Person,,
+Person,Class,rdf:type,IRI,,,foaf:Person,,The class will always be foaf:Person.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
 ,Affiliation,schema:affiliation,,,Organization,,,An organization to which an agent was affiliated when the resource was created.
 ,Name,foaf:Name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,,
-Organization,Class,rdf:type,IRI,,,foaf:Organization,,
+Organization,Class,rdf:type,IRI,,,foaf:Organization,,The class will always be foaf:Organization.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,Name,foaf:name,literal,xsd:string,,,,Name of the organization
 ,,,,,,,,
-Grant,Class,rdf:type,IRI,,,schema:Grant,,
-,Funder,schema:funder,IRI literal,,,,,
-,Funder,schema:funder,,,Organization,,,
-,Grant identifier,schema:identifier,,xsd:string,,,,
+Grant,Class,rdf:type,IRI,,,schema:Grant,,The class will always be schema:Grant
+,Funder,schema:funder,IRI literal,,,,,The name of the funder; use the Organization shape if additional information is desired.
+,Funder,schema:funder,,,Organization,,,Information about the funder.
+,Grant identifier,schema:identifier,,xsd:string,,,,An identifier for the grant or other funding.

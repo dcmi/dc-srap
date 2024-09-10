@@ -36,7 +36,7 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,,,,,,,,
 ,Accessibility statement,srap:accessibilityStatement,literal,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
-,Grant,schema:funding,,,Grant,,,The funder of this resource.
+,Funding,schema:funding,,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
 ,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
 ,,,,,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"

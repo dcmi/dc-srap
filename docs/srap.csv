@@ -1,6 +1,6 @@
 shapeID,propertyLabel,propertyID,valueNodeType,valueDatatype,valueShape,valueConstraint,valueConstraintType,note
 ,,,,,,,,
-Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIstem,"Resource type, using the COAR Resorce Types vocabulary."
+SRAPResource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIstem,"Resource type, using the COAR Resorce Types vocabulary."
 ,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,An entity responsible for making contributions to the resource.
 ,Creator,dct:creator,IRI BNODE,,Person Organization,,,An entity responsible for making the resource.
 ,Language,dct:language,literal,xsd:string,,,,A language of the resource.
@@ -23,7 +23,8 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,Is Part Of,dct:isPartOf,IRI BNODE,,Periodical Book,,,A related resource in which the described resource is physically or logically included.
 ,Presented At,bibo:presentedAt,IRI literal,,,,,"Conference, workshop or other scientific event where the scholarly resource was presented."
 ,Bibliographic Citation,dct:bibliographicCitation,literal,xsd:string,,,,A bibliographic reference for the resource.
-,Relation,dct:relation,IRI literal,,,,,A related resorce.
+,Relation,dct:relation,IRI literal,,,,,A name or identifier of a related resource; use the SRAPResource shape if additional information is desired.
+,Relation,dct:relation,IRI BNODE,,SRAPResource,,,A SRAPResource description of a related resource.
 ,,,,,,,,
 ,Abstract,dct:abstract,literal,xsd:string,,,,A summary of the resource.
 ,Table of Contents,dct:tableOfContents,literal,xsd:string,,,,A list of subunits of the resource.
@@ -41,9 +42,6 @@ Scholarly Resource,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIst
 ,,,,,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
-,,,,,,,,
-,Related code,srap:relatedCode,IRI,,,,,Code (software applications) referenced in the resource.
-,Related dataset,srap:relatedDataset,IRI,,,,,Dataset or datasets referenced in the described resource.
 ,,,,,,,,
 Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately

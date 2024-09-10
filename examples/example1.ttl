@@ -15,12 +15,12 @@
 	dct:creator _:b2 ;
 	dct:creator _:b3 ;
 	dct:publisher _:b4 ;
-	dct:type <http://purl.org/coar/resource_type/c_2df8fbb1> ;
-	dct:type <https://purl.org/coar/resource_type/c_6501> ;
+	dct:type <http://purl.org/coar/resource_type/c_2df8fbb1> ;   # research article
+	dct:type <https://purl.org/coar/resource_type/c_6501> ;  # journal article
 	dct:date "2020-01-20" ;
 	schema:funding _:b5 ;
 	dct:identifier <https://spiral.imperial.ac.uk/handle/10044/1/76123> ;
-        dct:rights <https://purl.org/coar/access_right/c_abf2> ;
+        dct:rights <https://purl.org/coar/access_right/c_abf2> ;   # open access
 	dct:license <https://creativecommons.org/licenses/by-nc-nd/4.0> ;
 	dct:format <https://www.iana.org/assignments/media-types/application/pdf>
 .

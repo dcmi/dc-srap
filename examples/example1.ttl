@@ -20,6 +20,8 @@
 	dct:date "2020-01-20" ;
 	schema:funding _:b5 ;
 	dct:identifier <https://spiral.imperial.ac.uk/handle/10044/1/76123> ;
+        dct:rights <https://purl.org/coar/access_right/c_abf2> ;
+	dct:license <https://creativecommons.org/licenses/by-nc-nd/4.0> ;
 	dct:format <https://www.iana.org/assignments/media-types/application/pdf>
 .
 

@@ -1,10 +1,13 @@
 # Rioxx example 3
 
-This is based on [Example 3](https://www.rioxx.net/profiles/v3-0-final/#heading3) from the Rioxx 3.0 specification.
+This is based on [Example 3](https://www.rioxx.net/profiles/v3-0-final/#heading3) from the Rioxx 3.0 specification. This represents a preprint of an academic paper that was subsequently published in a journal. The paper also comes with an accompanying data set.
 
 ## Challenges
 
-* Person and Organization should be IRIs according to TAP, but here blank nodes are used instead
+* Rioxx structure for related links is tricky
+  * Linking to PDF files https://github.com/dcmi/dc-srap/issues/62
+* Indicating version https://github.com/dcmi/dc-srap/issues/61
+* `rioxxterms:record_public_release_date` has no equivalent in SRAP, but this is housekeeping metadata, so probably out of scope (similar to "date accessioned" in DSpace)
 
 ## SRAP metadata
 
@@ -55,7 +58,7 @@ ex:document
     foaf:name "Klein, Colin"
   ] ;
   dct:issued "2021-12" ;
-  # FIXME: SRAP has no record_public_release_date property
+  # SRAP has no record_public_release_date property
   # <rioxxterms:record_public_release_date>2020-06-11</rioxxterms:record_public_release_date>
   dct:type <https://purl.org/coar/resource_type/c_2df8fbb1> ;
   schema:funding [
@@ -76,9 +79,27 @@ ex:document
       dct:identifier <https://ror.org/035tnyy05>
     ]
   ] ;
-  dct:identifier <https://eprints.gla.ac.uk/217807/> .
+  # local repository identifier / URL of landing page
+  # <dc:identifier>https://eprints.gla.ac.uk/217807/</dc:identifier>
+  dct:identifier <https://eprints.gla.ac.uk/217807/> ;
+  # local repository persistent identifier
+  # <dc:relation rel="cite-as">https://oai.core.ac.uk/oai:eprints.gla.ac.uk:217807</dc:relation>
+  dct:identifier <https://oai.core.ac.uk/oai:eprints.gla.ac.uk:217807> ;
 
-  # TODO: dc:relation and ext:relation links
+  # external relations
+  dct:relation <https://doi.org/10.1007/s11229-020-02724-x> ;  # journal article, see below
+  dct:relation <https://doi.org/10.15129/589f7af3-26b3-4a93-b042-fbc8100fc977> .  # dataset, see below
+
+# more information about the external relations
+
+# the published journal article is the Version of Record
+<https://doi.org/10.1007/s11229-020-02724-x>
+  dct:type <https://purl.org/coar/resource_type/c_6501> ;  # journal article
+  srap:version <https://purl.org/coar/version/c_970fb48d4fbd8a85> .  # VoR
+
+# the dataset
+<https://doi.org/10.15129/589f7af3-26b3-4a93-b042-fbc8100fc977>
+  dct:type <https://purl.org/coar/resource_type/c_ddb1> .  # dataset
 
 ```
 
@@ -86,4 +107,6 @@ ex:document
 
 Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
 
-![image](https://github.com/user-attachments/assets/8acb756a-195f-44f0-a981-a91ffb980046)
+![image](https://github.com/user-attachments/assets/a91b8f50-5128-4c11-bb1e-f26cbbe2d40b)
+
+

@@ -86,6 +86,8 @@ ex:document
   # <dc:relation rel="cite-as">https://oai.core.ac.uk/oai:eprints.gla.ac.uk:217807</dc:relation>
   dct:identifier <https://oai.core.ac.uk/oai:eprints.gla.ac.uk:217807> ;
 
+  # TODO: link to PDF file
+
   # external relations
   dct:relation <https://doi.org/10.1007/s11229-020-02724-x> ;  # journal article, see below
   dct:relation <https://doi.org/10.15129/589f7af3-26b3-4a93-b042-fbc8100fc977> .  # dataset, see below

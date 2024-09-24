@@ -21,6 +21,7 @@ This is based on [Example 3](https://www.rioxx.net/profiles/v3-0-final/#heading3
 @prefix schema: <http://schema.org/>.
 
 ex:document
+  a srap:SRAPResource ;
   dct:description "YouTube has been implicated in..." ;
   dct:language "en" ;
   dct:publisher [
@@ -96,11 +97,13 @@ ex:document
 
 # the published journal article is the Version of Record
 <https://doi.org/10.1007/s11229-020-02724-x>
+  a srap:SRAPResource ;
   dct:type <https://purl.org/coar/resource_type/c_6501> ;  # journal article
   srap:version <https://purl.org/coar/version/c_970fb48d4fbd8a85> .  # VoR
 
 # the dataset
 <https://doi.org/10.15129/589f7af3-26b3-4a93-b042-fbc8100fc977>
+  a srap:SRAPResource ;
   dct:type <https://purl.org/coar/resource_type/c_ddb1> .  # dataset
 
 ```

@@ -55,6 +55,7 @@ Book,Class,rdf:type,IRI,,,bibo:Book,,The class will always be bibo:Book.
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book
 ,Date,dct:date,Literal,xsd:string,,,,Date of publication
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
+,URL,schema:url,IRI,,,,,URL where the resource or a part of it can be retrieved.
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,foaf:Person,,The class will always be foaf:Person.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."

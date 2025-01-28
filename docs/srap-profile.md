@@ -15,6 +15,77 @@ May 24, 2024
 - [Introduction](#introduction)
 - [Domain Model](#domain-model)
 - [DCTAP for SRAP](#dctap-for-srap)
+
+- Basic bibliographic elements
+  - dct:type
+  - dct:contributor
+  - dct:creator
+  - dct:language
+  - dct:publisher
+  - dct:subject
+  - dct:title
+  - dct:format
+  - dct:abstract
+  - dct:tableOfContents
+  - dct:description
+- Dates
+  - dct:date
+  - dct:issued
+  - dct:modified
+  - dct:dateAccepted
+  - srap:embargoDateRange
+  - srap:dateRetracted
+- Identifiers
+  - dct:identifier
+  - bibo:isbn
+  - schema:url
+  - Publication context
+  - bibo:volume
+  - bibo:issue
+  - bibo:pageStart
+  - bibo:pageEnd
+  - dct:isPartOf
+  - bibo:presentedAt
+  - dct:bibliographicCitation
+  - dct:relation
+  - srap:versionType
+- Periodical
+  - rdf:type
+  - dct:title
+  - dct:publisher
+  - bibo:issn
+  - bibo:eissn
+- Book
+  - rdf:type
+  - dct:contributor
+  - dct:publisher
+  - dct:date
+  - bibo:isbn
+- Rights
+  - dct:accessRights
+  - dct:license
+  - dct:rights
+  - dct:rightsHolder
+- Accessibility
+  - srap:accessibilityStatement
+- Project context and funding
+  - schema:funding
+  - srap:project
+- Grant
+  - rdf:type
+  - schema:funder
+  - schema:identifier dct:identifier
+- Person
+  - rdf:type
+  - srap:role
+  - schema:affiliation
+  - foaf:Name
+  - dct:identifier
+- Organization
+  - rdf:type
+  - srap:role
+  - dct:identifier
+  - foaf:name
 - [Scholarly Work Description](#scholarly-work-description)
 - [Academic Context](#academic-context)
 - [Extended Description for Agents and Containing Resources](#extended-description-for-agents-and-containing-resources)
@@ -47,6 +118,8 @@ The following term prefixes are used in this document and in the DCTAP document:
 * FOAF: http://xmlns.com/foaf/spec/
 * schema: https://schema.org
 
+(TODO: embed DCTAP table here; possibly move this entire section later in the document)
+
 # Scholarly Work Description
 ## Basic Bibliographic Elements
 
@@ -76,6 +149,8 @@ Accessibility is an important aspect of scholarly resources. SRAP proposes a new
 [Accessibility Statement](http://example.com/srap/accessibility)
 
 ## Academic context
+
+
 ### Dates
 
 It is expected that dates will be in one of these standard formats:

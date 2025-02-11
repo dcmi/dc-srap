@@ -2,13 +2,13 @@
 
 **Authors:** <br/>
 Karen Coyle, DCMI<br/>
-	Osma Suominen, National Library of Finland<br/> 
- 	Juha hakala, National Library of Finland<br/>
+Osma Suominen, National Library of Finland<br/> 
+ 	
 **Collaborators**<br />
 Jan Ashton, British Library<br/>
+Juha Hakala<br/>
 Alasdair MacDonald, University of Edinburgh
 
-May 24, 2024
 
 ## Table of Contents
 
@@ -299,11 +299,11 @@ Legacy systems should use properties defined in the SRAP, but in many cases will
 ```
 rdf:type bibo:AcademicArticle ;
 dct:title "COVID-19 and multiorgan response" ;
-dct.creator "Sevim Zaim" ;
-dct.creator "Jun Heng Chong" ;
-dct.creator "Vissagan Sankaranarayanan" ;
-dct.creator "Amer Harky" ;
-dct:.issued "2020" ;
+dct:creator "Sevim Zaim" ;
+dct:creator "Jun Heng Chong" ;
+dct:creator "Vissagan Sankaranarayanan" ;
+dct:creator "Amer Harky" ;
+dct:issued "2020" ;
 dct:identifier <https://doi.org/10.1016/j.cpcardiol.2020.100618> ;
 bibo:volume "45" ;
 bibo:issue "8" ;
@@ -311,15 +311,6 @@ bibo:pageStart "100618" ;
 dct:isPartOf "Current problems in cardiology" .
 ```
 This example is less expressive than the capabiities when using a non-flat metadata model. In particular, the flat model cannot provide identifiers or roles for the creators; it cannot include the affiliation of the authors; it cannot specify whether the containing resource (the value of dct:isPartOf) is a journal or a monograph. 
-### Identifiers along with names in XML
-
-DCMI’s "PIDs in DC" draft proposal[^5] allows using the XML `id` attribute to match identifiers with the agent names. However, we use attribute `pid` instead of `id`, since W3C xml:id proposal allows just one identifier per each element. In SRAP context, the same person or organization may have multiple unique identifiers.  For instance: 
-
-    <dcterms:affiliation pid="http://isni.org/isni/0000000404102071 0313471-7">University of Helsinki</dcterms:affiliation>    
-
-    <dcterms:editor pid=https://orcid.org/0000-0003-1067-5020 https://isni.org/isni/0000000416625064>Hakala, Juha</dcterms:editor>
-
-Using attribute `id` would produce xml:id errors which, although not fatal, would in this case be incorrect. 
 
 ________________
 

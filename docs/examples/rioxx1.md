@@ -145,8 +145,8 @@ _:b4 a foaf:Organization ;
 	srap:role <http://id.loc.gov/vocabulary/relators/pbl> .
 
 _:b5 a schema:Grant ;
-	schema:funder "Lawrence Livermore Laboratory" ;
-	schema:funder <https://ror.org/0439y7842> ;
+	schema:funder "Lawrence Livermore National Laboratory" ;
+	schema:funder <https://ror.org/041nk4h53> ;
 	schema:identifier "EP/P010288/1" .
 
 ```

@@ -51,11 +51,11 @@ There is a basic bibliographic description for the scholarly work. Where appropr
 
 SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage. Refer to the TAP for specific information on properties used, values, and recommended value lists to use.
 
-The following term prefixes are used in this document and in the DCTAP document:
+The following term prefixes are used in this document and in the TAP document:
 
 * dct: http://purl.org/dc/terms/ 
-* BIBO: http://purl.org/ontology/bibo/
-* FOAF: http://xmlns.com/foaf/spec/
+* bibo: http://purl.org/ontology/bibo/
+* foaf: http://xmlns.com/foaf/spec/
 * schema: https://schema.org
 
 (TODO: embed DCTAP table here; possibly move this entire section later in the document)
@@ -64,7 +64,7 @@ The following term prefixes are used in this document and in the DCTAP document:
 
 These basic bibliographic description elements SHOULD be used to describe all kinds of resources including scholarly resources: 
 
-`dct:type`, `dct:contributor`, `dct:creator`, `dct:language`, `dct:publisher`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
+> `dct:type`, `dct:contributor`, `dct:creator`, `dct:language`, `dct:publisher`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
 
 > NOTE: `publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `publisher` at this level. For contained works, the containing resource (periodical or monograph) is usually described with its publisher.
 
@@ -74,7 +74,7 @@ These basic bibliographic description elements SHOULD be used to describe all ki
 
 These date properties SHOULD be used to represent important dates in the life cycle of the resource:
 
-`dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:embargoDateRange`, `srap:dateRetracted`
+> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:embargoDateRange`, `srap:dateRetracted`
 
 It is expected that dates will be in one of these standard formats:
 
@@ -86,13 +86,13 @@ It is expected that dates will be in one of these standard formats:
 
 These properties SHOULD be used to express standard identifiers of a scholarly work:
 
-`dct:identifier`, `bibo:isbn`, `schema:url`
+> `dct:identifier`, `bibo:isbn`, `schema:url`
 
 ## Publication context and relationships
 
 Journal articles and chapters are usually contained within a larger publication. They may also be presented at conferences or other events. Scholarly resources may have relationships to other resources. This kind of contextual and relationship information is expressed using the following properties:
 
-`bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd`, `dct:isPartOf`, `bibo:presentedAt`, `dct:bibliographicCitation`, `dct:relation`, `srap:versionType`
+> `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd`, `dct:isPartOf`, `bibo:presentedAt`, `dct:bibliographicCitation`, `dct:relation`, `srap:versionType`
 
 
 
@@ -118,44 +118,41 @@ Scholarly resources are created in an academic context, for example a specific i
 
 ## Periodicals
 
-In SRAP, periodicals such as journals and series are seen as a special type (subclass) of a scholarly resouce. A periodical is often not the focus resource, but instead represents a container which the focus resource is part of (see discussion on `dct:isPartOf` above). Periodicals SHOULD be described with these properties:
+In SRAP, periodicals such as journals and series are seen as a special type (subclass) of a scholarly resouce. Thus, properties for describing resources in general can also be used to describe periodicals.
 
-`rdf:type`, `dct:title`, `dct:publisher`, `bibo:issn`, `bibo:eissn`
+A periodical is often not the focus resource, but instead represents a container which the focus resource is part of (see [Publication context and relationships](#publication-context-and-relationships)). Periodicals SHOULD be described using these properties:
 
-#### Class
-In RDF data, information about a periodical can be contained within a graph with one of these classes:
-	[Periodical](https://dcmi.github.io/bibo/#:Periodical) |  [Journal](https://dcmi.github.io/bibo/#:Journal)
+> `rdf:type`, `dct:title`, `dct:publisher`, `bibo:issn`, `bibo:eissn`
 
-A scholarly article may be published in a journal or other periodical. The periodical will generally have a [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) and a [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher). For identification of the periodical, these standard numbers should be used:
+In RDF data, information that a resource is a periodical work SHOULD be designated using a `rdf:type` statement with the class `bibo:Journal` (for journals) or `bibo:Periodical` (for other types of periodicals than journals) as the value.
 
-[ISSN](https://dcmi.github.io/bibo/#:issn)	|	[EISSN](https://dcmi.github.io/bibo/#:eissn)
+A periodical will typically have a title and publisher, which SHOULD be indicated using the `dct:title` and `dct:publisher` properties.
 
+For identification of the periodical, the properties `bibo:eissn` (for electronic International Standard Serial Numbers, i.e., e-ISSN) and `bibo:issn` (for other types of ISSNs) SHOULD be used.
 
 ## Books
 
-In SRAP, books are seen as a special type (subclass) of a scholarly resource. A book is often not the focus resource, but instead represents a container which the focus resource is part of, for example a chapter that is part of a book (see discussion on `dct:isPartOf` above). This includes conference proceedings. Books SHOULD be described with these properties:
+In SRAP, books are seen as a special type (subclass) of a scholarly resource. This includes other monographic publications like technical reports and conference proceedings. Properties for describing resources in general can also be used to describe books.
 
-`rdf:type`, `dct:contributor`, `dct:publisher`, `dct:date`, `bibo:isbn`
+A book is often not the focus resource, but instead represents a container which the focus resource is part of. For example the focus resource may be a chapter that is part of a book (see [Publication context and relationships](#publication-context-and-relationships)).  Books SHOULD be described using these properties:
 
+> `rdf:type`, `dct:contributor`, `dct:publisher`, `dct:date`, `bibo:isbn`
 
-In RDF data, information that this is a monographic work is designated with the class:
-	[Book](https://dcmi.github.io/bibo/#:Book) 
+In RDF data, information that a resource is a monographic work SHOULD be designated using a `rdf:type` statement with the class `bibo:Book` as the value.
 
-This includes other monographic publications like technical reports and conference proceedings.
-
-[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)   |    [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)  |   [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)   |   [date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)
+The `bibo:isbn` property SHOULD be used to represent the International Standard Book Number (ISBN) of a book.
 
 ## Rights
 
 Many types of rights apply to scholarly resources. These SHOULD be represented using the following properties:
 
-`dct:accessRights`, `dct:license`, `dct:rights`, `dct:rightsHolder`
+> `dct:accessRights`, `dct:license`, `dct:rights`, `dct:rightsHolder`
 
 ## Accessibility
 
 Accessibility is an important aspect of scholarly resources. The accessibility features, hazards, and deficiencies of a resource SHOULD be indicated using the property:
 
-`srap:accessibilityStatement`
+> `srap:accessibilityStatement`
 
 NOTE: This property corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html).
 
@@ -163,20 +160,17 @@ NOTE: This property corresponds to the MARC field [532 Accessibility Note](https
 
 Scholarly resources are commonly created in the context of a project and/or with specific funding. These aspects SHOULD be indicated using the properties:
 
-`schema:funding`, `srap:project`
+> `schema:funding`, `srap:project`
 
 ## Grants
 
 A grant represents a financial or otherwise quantifiable allocation of resources, for example when a funding agency provides financial support for a research activity that then results in the publication of one or more scholarly articles. A grant SHOULD be described using the following properties:
 
-`rdf:type`
-`schema:funder`
-`schema:identifier`
-`dct:identifier`
+> `rdf:type`, `schema:funder`, `schema:identifier`, `dct:identifier`
 
 ## Persons
 
-`rdf:type`, `srap:role`, `schema:affiliation`, `foaf:Name`, `dct:identifier`
+> `rdf:type`, `srap:role`, `schema:affiliation`, `foaf:Name`, `dct:identifier`
 
 In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
 
@@ -187,7 +181,7 @@ In RDF data, information about a person can be contained within a graph with the
 
 ## Organizations
 
-`rdf:type`, `srap:role`, `dct:identifier`, `foaf:name`
+> `rdf:type`, `srap:role`, `dct:identifier`, `foaf:name`
 
 In RDF data, information about an organization can be contained within a graph with the class [Organization](http://xmlns.com/foaf/spec/#term_Organization).
 
@@ -201,7 +195,7 @@ In RDF data, information about an organization can be contained within a graph w
 
 It is recommended that LC Relator entities be used for the `role` properties.
 
-These are linked here to the Library of Congress relator properties>
+These are linked here to the Library of Congress relator properties:
 
 * Academic supervisor
 * [Dedicatee](http://id.loc.gov/vocabulary/relators/dte)

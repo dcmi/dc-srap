@@ -16,75 +16,17 @@ Alasdair MacDonald, University of Edinburgh
 - [Domain Model](#domain-model)
 - [DCTAP for SRAP](#dctap-for-srap)
 - Basic bibliographic elements
-  - dct:type
-  - dct:contributor
-  - dct:creator
-  - dct:language
-  - dct:publisher
-  - dct:subject
-  - dct:title
-  - dct:format
-  - dct:abstract
-  - dct:tableOfContents
-  - dct:description
 - Dates
-  - dct:date
-  - dct:issued
-  - dct:modified
-  - dct:dateAccepted
-  - srap:embargoDateRange
-  - srap:dateRetracted
 - Identifiers
-  - dct:identifier
-  - bibo:isbn
-  - schema:url
-  - Publication context
-  - bibo:volume
-  - bibo:issue
-  - bibo:pageStart
-  - bibo:pageEnd
-  - dct:isPartOf
-  - bibo:presentedAt
-  - dct:bibliographicCitation
-  - dct:relation
-  - srap:versionType
-- Periodical
-  - rdf:type
-  - dct:title
-  - dct:publisher
-  - bibo:issn
-  - bibo:eissn
-- Book
-  - rdf:type
-  - dct:contributor
-  - dct:publisher
-  - dct:date
-  - bibo:isbn
+- Publication context and relationships
+- Periodicals
+- Books
 - Rights
-  - dct:accessRights
-  - dct:license
-  - dct:rights
-  - dct:rightsHolder
 - Accessibility
-  - srap:accessibilityStatement
 - Project context and funding
-  - schema:funding
-  - srap:project
 - Grant
-  - rdf:type
-  - schema:funder
-  - schema:identifier dct:identifier
-- Person
-  - rdf:type
-  - srap:role
-  - schema:affiliation
-  - foaf:Name
-  - dct:identifier
-- Organization
-  - rdf:type
-  - srap:role
-  - dct:identifier
-  - foaf:name
+- Persons
+- Organizations
 - [Scholarly Work Description](#scholarly-work-description)
 - [Academic Context](#academic-context)
 - [Extended Description for Agents and Containing Resources](#extended-description-for-agents-and-containing-resources)
@@ -123,34 +65,39 @@ The following term prefixes are used in this document and in the DCTAP document:
 
 ## Basic Bibliographic Elements
 
-These basic bibliographic description are commonly used to describe resources but are not limited to scholarly works.
+These basic bibliographic description elements SHOULD be used to describe all kinds of resources including scholarly resources: 
 
-[type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)	|	[contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)	|	[language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) 	|	[publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[date published](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date)	|	[subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher)	|	[title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title)	|	[format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format)	|
+`dct:type`, `dct:contributor`, `dct:creator`, `dct:language`, `dct:publisher`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
 
 > NOTE: `publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `publisher` at this level. For contained works, the containing resource (periodical or monograph) is usually described with its publisher.
+
 > NOTE: `Creator` and `Contributor` may be simple strings. For more detailed description options, see below: Extended Description.
 
-[Abstract](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/abstract)	|	[Table of contents](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/tableOfContents)	|	[Description](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description)
-
 ## Dates
+
+These date properties SHOULD be used to represent important dates in the life cycle of the resource:
+
+`dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:embargoDateRange`, `srap:dateRetracted`
 
 It is expected that dates will be in one of these standard formats:
 
 > `YYYY`	|	`YYYY-MM`	|	`YYYY-MM-DD`
 
-These date properties are from the Dublin Core Terms:
 
-[date issued](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/issued)	|	[date modified](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified)	|	[date accepted](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/dateAccepted)
-
-These additional date properties are being defined for SRAP:
-
-[embargo date range](http://example.com/srap/embargoDateRange)	|	[date retracted](http://example.com/srap/dateRetracted)
 
 ## Identifiers
 
-Journal articles and chapters usually are contained within a larger publication. This is encoded with the following property:
+These properties SHOULD be used to express standard identifiers of a scholarly work:
 
-[Part of](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/partOf)
+`dct:identifier`, `bibo:isbn`, `schema:url`
+
+## Publication context and relationships
+
+Journal articles and chapters are usually contained within a larger publication. They may also be presented at conferences or other events. Scholarly resources may have relationships to other resources. This kind of contextual and relationship information is expressed using the following properties:
+
+`bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd`, `dct:isPartOf`, `bibo:presentedAt`, `dct:bibliographicCitation`, `dct:relation`, `srap:versionType`
+
+
 
 > NOTE: To provide fuller information on the periodical or monograph containing the scholarly work, see below: Extended Description
 
@@ -172,9 +119,12 @@ Scholarly resources may be based on, or otherwise associated with, software appl
 
 Scholarly resources are created in an academic context, for example a specific institution, faculty and department and/or a project funded by a specific grant. Also, authors and contributors can be affiliated with academic or other institutions. SRAP enables expressing the academic context of scholarly resources and the affiliation of related individuals.
 
-## Periodical
+## Periodicals
 
-Journals and other periodical publications are further described with these properties.
+In SRAP, periodicals such as journals and series are seen as a special type (subclass) of a scholarly resouce. A periodical is often not the focus resource, but instead represents a container which the focus resource is part of (see discussion on `dct:isPartOf` above). Periodicals SHOULD be described with these properties:
+
+`rdf:type`, `dct:title`, `dct:publisher`, `bibo:issn`, `bibo:eissn`
+
 #### Class
 In RDF data, information about a periodical can be contained within a graph with one of these classes:
 	[Periodical](https://dcmi.github.io/bibo/#:Periodical) |  [Journal](https://dcmi.github.io/bibo/#:Journal)
@@ -184,9 +134,11 @@ A scholarly article may be published in a journal or other periodical. The perio
 [ISSN](https://dcmi.github.io/bibo/#:issn)	|	[EISSN](https://dcmi.github.io/bibo/#:eissn)
 
 
-## Book
+## Books
 
-This is used when the focus resource is a chapter or section in a monographic work. This includes conference proceedings. 
+In SRAP, books are seen as a special type (subclass) of a scholarly resource. A book is often not the focus resource, but instead represents a container which the focus resource is part of, for example a chapter that is part of a book (see discussion on `dct:isPartOf` above). This includes conference proceedings. Books SHOULD be described with these properties:
+
+`rdf:type`, `dct:contributor`, `dct:publisher`, `dct:date`, `bibo:isbn`
 
 
 In RDF data, information that this is a monographic work is designated with the class:
@@ -198,38 +150,51 @@ This includes other monographic publications like technical reports and conferen
 
 ## Rights
 
-Many types of rights apply to scholarly resources. SRAP allows expressing the rights using metadata elements from Dublin Core Terms as well as a new, proposed element for indicating the Rights Holder.
+Many types of rights apply to scholarly resources. These SHOULD be represented using the following properties:
 
-[Access rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/accessRights)    |   [License](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license)   |   [Rights](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights)   | [Rights holder](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rightsHolder)
+`dct:accessRights`, `dct:license`, `dct:rights`, `dct:rightsHolder`
 
 ## Accessibility
 
-Accessibility is an important aspect of scholarly resources. SRAP proposes a new element for indicating the accessibility of a resource with a statement that defines accessibility options.
+Accessibility is an important aspect of scholarly resources. The accessibility features, hazards, and deficiencies of a resource SHOULD be indicated using the property:
 
-[Accessibility Statement](http://example.com/srap/accessibility)
+`srap:accessibilityStatement`
+
+NOTE: This property corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html).
 
 ## Project context and funding
 
-## Grant
+Scholarly resources are commonly created in the context of a project and/or with specific funding. These aspects SHOULD be indicated using the properties:
 
-An alpha-numeric string identifying the contract, project or funding grant under which the scholarly resource was created. 
+`schema:funding`, `srap:project`
 
-[Grant number](http://example.com/srap/grantNumber)	
+## Grants
 
-## Person
+A grant represents a financial or otherwise quantifiable allocation of resources, for example when a funding agency provides financial support for a research activity that then results in the publication of one or more scholarly articles. A grant SHOULD be described using the following properties:
+
+`rdf:type`
+`schema:funder`
+`schema:identifier`
+`dct:identifier`
+
+## Persons
+
+`rdf:type`, `srap:role`, `schema:affiliation`, `foaf:Name`, `dct:identifier`
 
 In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
+
 
 In RDF data, information about a person can be contained within a graph with the class [Person](http://xmlns.com/foaf/spec/#term_Person).
 
 [Name](http://xmlns.com/foaf/spec/#term_name) | [Identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [Affiliation](https://schema.org/affiliation) | [Role](http://example.com/srap/role)
 
-## Organization
+## Organizations
+
+`rdf:type`, `srap:role`, `dct:identifier`, `foaf:name`
 
 In RDF data, information about an organization can be contained within a graph with the class [Organization](http://xmlns.com/foaf/spec/#term_Organization).
 
 [Name](http://xmlns.com/foaf/spec/#term_name) | [Identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [Role](http://example.com/srap/role)
-
 
 
 

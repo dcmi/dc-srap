@@ -130,6 +130,18 @@ A periodical will typically have a title and publisher, which SHOULD be indicate
 
 For identification of the periodical, the properties `bibo:eissn` (for electronic International Standard Serial Numbers, i.e., e-ISSN) and `bibo:issn` (for other types of ISSNs) SHOULD be used.
 
+### Example periodical
+
+This example represents the Current Problems in Cardiology journal:
+
+```
+ex:curr_probl_cardiol
+    a bibo:Journal ;
+    dct:title "Current problems in cardiology" ;
+    bibo:issn "0146-2806" ;
+    bibo:eissn "1535-6280" .
+```
+
 ## Books
 
 In SRAP, books are seen as a special type (subclass) of a scholarly resource. This includes other monographic publications like technical reports and conference proceedings. Properties for describing resources in general can also be used to describe books.
@@ -166,7 +178,25 @@ Scholarly resources are commonly created in the context of a project and/or with
 
 A grant represents a financial or otherwise quantifiable allocation of resources, for example when a funding agency provides financial support for a research activity that then results in the publication of one or more scholarly articles. A grant SHOULD be described using the following properties:
 
-> `rdf:type`, `schema:funder`, `schema:identifier`, `dct:identifier`
+> `rdf:type`, `srap:funder`, `dct:identifier`
+
+In RDF data, information that a resource is a grant SHOULD be designated using a `rdf:type` statement with the class `srap:Grant` as the value.
+
+The funder of the grant (for example the funding agency) SHOULD be indicated using the property `srap:funder`, which may also be repeated. The value can be either a literal value (the name of the funder) or a resource that represents an Organization. It can be an IRI from a registry such as [ISNI](https://isni.org/) or [Research Organization Registry](https://ror.org/) (ROR).
+
+The grant number or other identifier or the grant SHOULD be indicated using the property `dct:identifier`. The value is a literal value, for example a plain number.
+
+### Example grant
+
+This example represents a grant awarded by the Lawrence Livermore Laboratory. The funder is indicated using both a literal value and an IRI from ROR.
+
+```
+ex:lll_grant
+   a srap:Grant ;
+	  srap:funder "Lawrence Livermore National Laboratory" ;
+	  srap:funder <https://ror.org/041nk4h53> ;
+	  dct:identifier "EP/P010288/1" .
+```
 
 ## Persons
 

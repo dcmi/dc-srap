@@ -15,21 +15,18 @@ Alasdair MacDonald, University of Edinburgh
 - [Introduction](#introduction)
 - [Domain Model](#domain-model)
 - [DCTAP for SRAP](#dctap-for-srap)
-- Basic bibliographic elements
-- Dates
-- Identifiers
-- Publication context and relationships
-- Periodicals
-- Books
-- Rights
-- Accessibility
-- Project context and funding
-- Grant
-- Persons
-- Organizations
-- [Scholarly Work Description](#scholarly-work-description)
-- [Academic Context](#academic-context)
-- [Extended Description for Agents and Containing Resources](#extended-description-for-agents-and-containing-resources)
+- [Basic bibliographic elements](#basic-bibliographic-elements)
+- [Dates](#dates)
+- [Identifiers](#identifiers)
+- [Publication context and relationships](#publication-context-and-relationships)
+- [Periodicals](#periodicals)
+- [Books](#books)
+- [Rights](#rights)
+- [Accessibility](#accessibility)
+- [Project context and funding](#project-context-and-funding)
+- [Grants](#grants)
+- [Persons](#persons)
+- [Organizations](#organizations)
 - [Appendix 1. Roles](#appendix-1-roles)
 - [Appendix 2. Legacy representations for SRAP data](#appendix-2-legacy-representations-for-srap-data)
 

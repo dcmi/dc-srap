@@ -57,6 +57,7 @@ The following term prefixes are used in this document and in the TAP document:
 * bibo: http://purl.org/ontology/bibo/
 * foaf: http://xmlns.com/foaf/spec/
 * schema: https://schema.org
+* edtf: http://id.loc.gov/datatypes/edtf/
 
 (TODO: embed DCTAP table here; possibly move this entire section later in the document)
 
@@ -76,11 +77,21 @@ These date properties SHOULD be used to represent important dates in the life cy
 
 > `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:embargoDateRange`, `srap:dateRetracted`
 
-It is expected that dates will be in one of these standard formats:
+The `dct:date` property is generic and SHOULD NOT be used when more specific dates are available. The `dct:issued`, `dct:modified`, `dct:dateAccepted` and `srap:dateRetracted` properties SHOULD be used to indicate, respectively, the dates when the resource was issued, modified, accepted for publication and retracted.
 
-> `YYYY`	|	`YYYY-MM`	|	`YYYY-MM-DD`
+It is expected that the above mentioned dates will be in one of the standard ISO 8601 formats:
 
+> `YYYY` | `YYYY-MM` | `YYYY-MM-DD`
 
+If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date range under which the embargo is in place. The date range MUST be expressed using the [Extended Date/Time Format](https://www.loc.gov/standards/datetime/) (EDTF); more specifically, as an EDTF Level 1 Extended Interval, which permits open-ended intervals. 
+
+### Embargo example
+
+This example represents the embargo period for an article that is under embargo from an unspecified start date until December 31st, 2024:
+
+```
+ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
+```
 
 ## Identifiers
 
@@ -94,9 +105,6 @@ Journal articles and chapters are usually contained within a larger publication.
 
 > `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd`, `dct:isPartOf`, `bibo:presentedAt`, `dct:bibliographicCitation`, `dct:relation`, `srap:versionType`
 
-
-
-> NOTE: To provide fuller information on the periodical or monograph containing the scholarly work, see below: Extended Description
 
 A journal article is published within a periodical. It is a general practice to identify and locate the article within a specific periodical publication by noting the journal volume and issue, if used, and the pages occupied by the article within that. These should be represented using the following properties:
 

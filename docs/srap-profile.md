@@ -65,11 +65,17 @@ The following term prefixes are used in this document and in the TAP document:
 
 These basic bibliographic description elements SHOULD be used to describe all kinds of resources including scholarly resources: 
 
-> `dct:type`, `dct:contributor`, `dct:creator`, `dct:language`, `dct:publisher`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
+> `dct:type`, `dct:language`, `dct:contributor`, `dct:creator`, `dct:publisher`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
 
-> NOTE: `publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `publisher` at this level. For contained works, the containing resource (periodical or monograph) is usually described with its publisher.
+The type or genre of a scholarly resource, when known, SHOULD be indicated using the `dct:type` property whose value SHOULD be be an IRI from the [COAR Resource Type vocabulary](https://vocabularies.coar-repositories.org/resource_types/). Example values from the vocabulary include [journal article](http://purl.org/coar/resource_type/c_6501), [book part](http://purl.org/coar/resource_type/c_3248) and [master thesis](http://purl.org/coar/resource_type/c_bdcc).
 
-> NOTE: `Creator` and `Contributor` may be simple strings. For more detailed description options, see below: Extended Description.
+The language of the resource, when known, SHOULD be indicated using the `dct:language` property. The language SHOULD be an IETF BCP 47 language tag. When the resource includes content in multiple languages, the `dct:language` property MAY be repeated in order to indicate all the languages.
+
+The contributor, creator and publisher of the resource SHOULD be indicated using the `dct:contributor`, `dct:creator` and `dct:publisher` properties, respectively. These properties SHOULD be used with IRI or blank node resources that represent Person or Organization entities (see [Persons](#persons) and [Organizations](#organizations)). However, when only a name is known, simple literal strings MAY be used as values for these properties.
+
+> NOTE: `dct:publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `dct:publisher` at this level. For contained works, the containing resource (periodical or monograph) SHOULD be described with its publisher.
+
+TBW: title, format, abstract, tableOfContents, description
 
 ## Dates
 
@@ -77,9 +83,9 @@ These date properties SHOULD be used to represent important dates in the life cy
 
 > `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:embargoDateRange`, `srap:dateRetracted`
 
-The `dct:date` property is generic and SHOULD NOT be used when more specific dates are available. The `dct:issued`, `dct:modified`, `dct:dateAccepted` and `srap:dateRetracted` properties SHOULD be used to indicate, respectively, the dates when the resource was issued, modified, accepted for publication and retracted.
+The `dct:date` property is generic and SHOULD NOT be used when more specific dates are known. The `dct:issued`, `dct:modified`, `dct:dateAccepted` and `srap:dateRetracted` properties SHOULD be used to indicate, respectively, the dates when the resource was issued, modified, accepted for publication and retracted.
 
-It is expected that the above mentioned dates will be in one of the standard ISO 8601 formats:
+The above mentioned dates SHOULD be in one of these standard ISO 8601 formats:
 
 > `YYYY` | `YYYY-MM` | `YYYY-MM-DD`
 
@@ -99,30 +105,19 @@ These properties SHOULD be used to express standard identifiers of a scholarly w
 
 > `dct:identifier`, `bibo:isbn`, `schema:url`
 
+TBW: more detailed guidance
+
 ## Publication context and relationships
 
 Journal articles and chapters are usually contained within a larger publication. They may also be presented at conferences or other events. Scholarly resources may have relationships to other resources. This kind of contextual and relationship information is expressed using the following properties:
 
 > `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd`, `dct:isPartOf`, `bibo:presentedAt`, `dct:bibliographicCitation`, `dct:relation`, `srap:versionType`
 
+TBW: more detailed guidance (some bits from below could be used?)
 
-A journal article is published within a periodical. It is a general practice to identify and locate the article within a specific periodical publication by noting the journal volume and issue, if used, and the pages occupied by the article within that. These should be represented using the following properties:
-
- [volume](https://dcmi.github.io/bibo/#:volume)	|	 [issue](https://dcmi.github.io/bibo/#:issue)	|	[pageStart](https://dcmi.github.io/bibo/#:pageStart)	|	[pageEnd](https://dcmi.github.io/bibo/#:pageEnd) 
-
- The start and end pages are also used to locate a resource that is part of a monographic publication, such as a book of essays or a conference publication with articles.
-
-
-When there is a preferred citation for the resource, it can be coded with the Dublin Core property:
-
-[bibliographic citation](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation).
-
-
-Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources with: 
-
-[related code](http://example.com/srap/relatedCode)	|	 [data sets](http://example.com/srap/relatedDataset)
-
-Scholarly resources are created in an academic context, for example a specific institution, faculty and department and/or a project funded by a specific grant. Also, authors and contributors can be affiliated with academic or other institutions. SRAP enables expressing the academic context of scholarly resources and the affiliation of related individuals.
+> The start and end pages are also used to locate a resource that is part of a monographic publication, such as a book of essays or a conference publication with articles.
+> When there is a preferred citation for the resource, it can be coded with the `dct:bibliographicCitation` property.
+> Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources with ...
 
 ## Periodicals
 
@@ -168,6 +163,8 @@ Many types of rights apply to scholarly resources. These SHOULD be represented u
 
 > `dct:accessRights`, `dct:license`, `dct:rights`, `dct:rightsHolder`
 
+TBW: more detailed guidance
+
 ## Accessibility
 
 Accessibility is an important aspect of scholarly resources. The accessibility features, hazards, and deficiencies of a resource SHOULD be indicated using the property:
@@ -181,6 +178,8 @@ NOTE: This property corresponds to the MARC field [532 Accessibility Note](https
 Scholarly resources are commonly created in the context of a project and/or with specific funding. These aspects SHOULD be indicated using the properties:
 
 > `schema:funding`, `srap:project`
+
+TBW: more detailed guidance
 
 ## Grants
 
@@ -208,25 +207,20 @@ ex:lll_grant
 
 ## Persons
 
-> `rdf:type`, `srap:role`, `schema:affiliation`, `foaf:Name`, `dct:identifier`
+> `rdf:type`, `srap:role`, `schema:affiliation`, `foaf:name`, `dct:identifier`
 
-In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
+TBW: more detailed guidance (bit from below could be used?)
 
-
-In RDF data, information about a person can be contained within a graph with the class [Person](http://xmlns.com/foaf/spec/#term_Person).
-
-[Name](http://xmlns.com/foaf/spec/#term_name) | [Identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [Affiliation](https://schema.org/affiliation) | [Role](http://example.com/srap/role)
+> In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
+> In RDF data, information about a person can be contained within a graph with the class [Person](http://xmlns.com/foaf/spec/#term_Person).
 
 ## Organizations
 
 > `rdf:type`, `srap:role`, `dct:identifier`, `foaf:name`
 
-In RDF data, information about an organization can be contained within a graph with the class [Organization](http://xmlns.com/foaf/spec/#term_Organization).
+TBW: more detailed guidance (bit from below could be used?)
 
-[Name](http://xmlns.com/foaf/spec/#term_name) | [Identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) | [Role](http://example.com/srap/role)
-
-
-
+> In RDF data, information about an organization can be contained within a graph with the class [Organization](http://xmlns.com/foaf/spec/#term_Organization).
 
 ## Appendix 1. Roles
 ### Examples of roles for theses and dissertations

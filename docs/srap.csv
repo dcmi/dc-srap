@@ -39,12 +39,12 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,,,,,,,,
 ,Accessibility statement,srap:accessibilityStatement,literal,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
-,Funding,schema:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
+,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
 ,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
 ,,,,,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
-,URL,schema:url,IRI,,,,,"URL where the electronic resource (e.g., a file) or a part of it can be retrieved."
+,URL,srap:url,IRI,,,,,"URL where the electronic resource (e.g., a file) or a part of it can be retrieved."
 ,,,,,,,,
 Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
@@ -58,18 +58,18 @@ Book,Class,rdf:type,IRI,,,bibo:Book,,The class will always be bibo:Book.
 ,Date,dct:date,Literal,xsd:string,,,,Date of publication
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
 ,,,,,,,,
-Person,Class,rdf:type,IRI,,,foaf:Person,,The class will always be foaf:Person.
+Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
-,Affiliation,schema:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
-,Name,foaf:Name,literal,xsd:string,,,,Name of person
+,Affiliation,srap:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
+,Name,srap:name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,,
-Organization,Class,rdf:type,IRI,,,foaf:Organization,,The class will always be foaf:Organization.
+Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
-,Name,foaf:name,literal,xsd:string,,,,Name of the organization
+,Name,srap:name,literal,xsd:string,,,,Name of the organization
 ,,,,,,,,
-Grant,Class,rdf:type,IRI,,,schema:Grant,,The class will always be schema:Grant
-,Funder,schema:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.
-,Funder,schema:funder,IRI BNODE,,Organization,,,Information about the funder.
-,Grant identifier,schema:identifier dct:identifier,literal,xsd:string,,,,An identifier for the grant or other funding.
+Grant,Class,rdf:type,IRI,,,srap:Grant,,The class will always be srap:Grant
+,Funder,srap:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.
+,Funder,srap:funder,IRI BNODE,,Organization,,,Information about the funder.
+,Grant identifier,dct:identifier,literal,xsd:string,,,,An identifier for the grant or other funding.

@@ -81,7 +81,7 @@ TBW: title, format, abstract, tableOfContents, description
 
 These date properties SHOULD be used to represent important dates in the life cycle of the resource:
 
-> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:embargoDateRange`, `srap:dateRetracted`
+> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:dateRetracted`, `srap:embargoDateRange`
 
 The `dct:date` property is generic and SHOULD NOT be used when more specific dates are known. The `dct:issued`, `dct:modified`, `dct:dateAccepted` and `srap:dateRetracted` properties SHOULD be used to indicate, respectively, the dates when the resource was issued, modified, accepted for publication and retracted.
 
@@ -172,6 +172,8 @@ Accessibility is an important aspect of scholarly resources. The accessibility f
 > `srap:accessibilityStatement`
 
 NOTE: This property corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html).
+
+TBW: more detailed guidance
 
 ## Project context and funding
 

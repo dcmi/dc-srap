@@ -88,7 +88,7 @@ The above mentioned dates SHOULD be in one of these standard ISO 8601 formats:
 
 > `YYYY` | `YYYY-MM` | `YYYY-MM-DD`
 
-If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date range under which the embargo is in place. The date range MUST be expressed using the [Extended Date/Time Format](https://www.loc.gov/standards/datetime/) (EDTF); more specifically, as an EDTF Level 1 Extended Interval, which permits open-ended intervals. 
+If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date range under which the embargo is in place. The date range MUST be expressed using the [Extended Date/Time Format](https://www.loc.gov/standards/datetime/) (EDTF); more specifically, as an EDTF Level 1 Extended Interval, which permits open-ended intervals. In RDF data, the data type `edtf:EDTF` SHOULD be used to indicate that the value conforms to EDTF.
 
 ### Embargo example
 

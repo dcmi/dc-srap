@@ -55,9 +55,8 @@ The following term prefixes are used in this document and in the TAP document:
 
 * dct: http://purl.org/dc/terms/ 
 * bibo: http://purl.org/ontology/bibo/
-* foaf: http://xmlns.com/foaf/spec/
-* schema: https://schema.org
 * edtf: http://id.loc.gov/datatypes/edtf/
+* srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
 
 (TODO: embed DCTAP table here; possibly move this entire section later in the document)
 
@@ -103,7 +102,7 @@ ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
 
 These properties SHOULD be used to express standard identifiers of a scholarly work:
 
-> `dct:identifier`, `bibo:isbn`, `schema:url`
+> `dct:identifier`, `bibo:isbn`, `srap:url`
 
 TBW: more detailed guidance
 
@@ -179,7 +178,7 @@ TBW: more detailed guidance
 
 Scholarly resources are commonly created in the context of a project and/or with specific funding. These aspects SHOULD be indicated using the properties:
 
-> `schema:funding`, `srap:project`
+> `srap:funding`, `srap:project`
 
 TBW: more detailed guidance
 
@@ -209,7 +208,7 @@ ex:lll_grant
 
 ## Persons
 
-> `rdf:type`, `srap:role`, `schema:affiliation`, `foaf:name`, `dct:identifier`
+> `rdf:type`, `srap:role`, `srap:affiliation`, `srap:name`, `dct:identifier`
 
 TBW: more detailed guidance (bit from below could be used?)
 
@@ -218,7 +217,7 @@ TBW: more detailed guidance (bit from below could be used?)
 
 ## Organizations
 
-> `rdf:type`, `srap:role`, `dct:identifier`, `foaf:name`
+> `rdf:type`, `srap:role`, `dct:identifier`, `srap:name`
 
 TBW: more detailed guidance (bit from below could be used?)
 

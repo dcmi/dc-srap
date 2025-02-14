@@ -53,9 +53,10 @@ SRAP is expressed in a table format as a [Dublin Core Tabular Application Profil
 
 The following term prefixes are used in this document and in the TAP document:
 
-* dct: http://purl.org/dc/terms/ 
-* bibo: http://purl.org/ontology/bibo/
-* edtf: http://id.loc.gov/datatypes/edtf/
+* dct: `http://purl.org/dc/terms/`
+* bibo: `http://purl.org/ontology/bibo/`
+* edtf: `http://id.loc.gov/datatypes/edtf/`
+* ex: `http://example.com/` (placeholder namespace for example resources)
 * srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
 
 (TODO: embed DCTAP table here; possibly move this entire section later in the document)

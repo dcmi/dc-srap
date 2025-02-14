@@ -2,9 +2,9 @@ shapeID,propertyLabel,propertyID,valueNodeType,valueDatatype,valueShape,valueCon
 ,,,,,,,,
 SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be srap:SRAPResource.
 ,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIstem,"Resource type, using the COAR Resorce Types vocabulary."
+,Language,dct:language,literal,xsd:string,,,,A language of the resource.
 ,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,An entity responsible for making contributions to the resource.
 ,Creator,dct:creator,IRI BNODE,,Person Organization,,,An entity responsible for making the resource.
-,Language,dct:language,literal,xsd:string,,,,A language of the resource.
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,An entity responsible for making the resource available.
 ,Subject,dct:subject,IRI literal,,,,,The topic of the resource; a concept from a controlled vocabulary such as LCSH or MeSH
 ,Title,dct:title,literal,,,,,A name given to the resource.

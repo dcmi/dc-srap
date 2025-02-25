@@ -45,6 +45,8 @@ The terms MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMM
 SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
 <img src="https://github.com/dcmi/dc-srap/assets/1564129/272a2cbb-b292-48c3-b766-ed4239b45cc1" width="500" />
 
+TODO: Add Grant shape to diagram
+
 There is a basic bibliographic description for the scholarly work. Where appropriate, with SRAP one can define metadata elements that represent a serial or monographic resource in which the scholarly work is contained. There are also related descriptions of persons and organizations that can provide additional detail.
 
 ## DCTAP for SRAP

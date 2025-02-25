@@ -224,6 +224,13 @@ TBW: more detailed guidance (bit from below could be used?)
 
 > In RDF data, information about an organization can be contained within a graph with the class [Organization](http://xmlns.com/foaf/spec/#term_Organization).
 
+## Extending SRAP
+
+SRAP is designed to be open and extensible...
+
+For describing the accessibility of a scholarly resource, you can use the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/)
+
+
 ## Appendix 1. Roles
 ### Examples of roles for theses and dissertations
 

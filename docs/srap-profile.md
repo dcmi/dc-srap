@@ -61,6 +61,8 @@ The following term prefixes are used in this document and in the TAP document:
 * ex: `http://example.com/` (placeholder namespace for example resources)
 * srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
 
+PropertyID assignment in the DCTAP has been limited to DC Terms and BIBO properties. Where appropriate properties were not found in those vocabularies the prefix "srap:" is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
+
 (TODO: embed DCTAP table here; possibly move this entire section later in the document)
 
 ## Basic Bibliographic Elements
@@ -77,7 +79,11 @@ The contributor, creator and publisher of the resource SHOULD be indicated using
 
 > NOTE: `dct:publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `dct:publisher` at this level. For contained works, the containing resource (periodical or monograph) SHOULD be described with its publisher.
 
-TBW: title, format, abstract, tableOfContents, description
+The title or name of the resource, which is usually available on the resource itself, SHOULD be recorded in `dct:title`.
+
+The physical format of the resource SHOULD be indicated in `dct:format`. It is recommended that a standard list, such as the Internet Media Types ([MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)) be used.
+
+Additional information about the content of the resource MAY be recorded. The `dct:abstract` is a resource summary and is often found in the content of the resource itself. The `dct:tableOfContents` is a listing of the significant sections within the resource. The `dct:description` would be a general general description of the resource. This can be an account of the contents of the resource or any other description or context that may aid in searching or selection of the resource.
 
 ## Dates
 
@@ -105,9 +111,18 @@ ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
 
 These properties SHOULD be used to express standard identifiers of a scholarly work:
 
-> `dct:identifier`, `bibo:isbn`, `srap:url`
+> `dct:identifier`, `bibo:isbn`, `srap:url`, `bibo:isbn`, `bibo:issn`, `bibo:eissn`
 
-TBW: more detailed guidance
+`dct:identifier` is a non-specific property for identifiers and may be used in the `SRAPResource` shape, the `Person` shape, the `Organization` shape or the `Grant` shape. The specific identifiers, and their shapes, are:
+
+|property|shape|notes|
+|----|----|----|
+|srap:url|SRAPResource shape|The URL of the download location|
+|bibo:isbn|SRAPResource shape|ISBN when the scholarly resource itself is a book|
+| |Book shape|ISBN when the scholarly resource is a part of a book|
+|bibo:issn|Periodical shape|The ISSN of the print journal |
+|bibo:eissn|Periodical shape |The ISSN of the electronic journal |
+
 
 ## Publication context and relationships
 

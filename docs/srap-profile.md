@@ -61,7 +61,7 @@ The following term prefixes are used in this document and in the TAP document:
 * ex: `http://example.com/` (placeholder namespace for example resources)
 * srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
 
-PropertyID assignment in the DCTAP has been limited to DC Terms and BIBO properties. Where appropriate properties were not found in those vocabularies the prefix "srap:" is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
+NOTE: The selection of properties used in SRAP has been limited to DC Terms and BIBO properties. Where appropriate properties were not found in those vocabularies the prefix `srap:` is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
 
 (TODO: embed DCTAP table here; possibly move this entire section later in the document)
 

@@ -43,7 +43,8 @@ The terms MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMM
 ## Domain model 
 
 SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
-<img src="https://github.com/dcmi/dc-srap/assets/1564129/272a2cbb-b292-48c3-b766-ed4239b45cc1" width="500" />
+
+<img src="https://github.com/user-attachments/assets/9abb9952-7e65-4913-8a29-bf1a74d99ace" width="600" />
 
 TODO: Add Grant shape to diagram
 

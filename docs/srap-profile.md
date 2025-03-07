@@ -27,6 +27,7 @@ Alasdair MacDonald, University of Edinburgh
 - [Grants](#grants)
 - [Persons](#persons)
 - [Organizations](#organizations)
+- [Extending SRAP](#extending-srap)
 - [Appendix 1. Roles](#appendix-1-roles)
 - [Appendix 2. Legacy representations for SRAP data](#appendix-2-legacy-representations-for-srap-data)
 
@@ -189,7 +190,7 @@ Accessibility is an important aspect of scholarly resources. The accessibility f
 
 > `srap:accessibilityStatement`
 
-NOTE: This property corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html).
+NOTE: This property approximately corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html) but is more free form. For information on how to express more detailed accessibility information, see the section [Extending SRAP](#extending-srap).
 
 TBW: more detailed guidance
 
@@ -244,10 +245,9 @@ TBW: more detailed guidance (bit from below could be used?)
 
 ## Extending SRAP
 
-SRAP is designed to be open and extensible...
+SRAP is designed to be open and extensible. It is possible to use properties other than those recommended in SRAP, including properties from other namespaces such as [Schema.org](https://schema.org/).
 
-For describing the accessibility of a scholarly resource, you can use the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/)
-
+For describing the accessibility of a scholarly resource in a structured form, you can use the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/).
 
 ## Appendix 1. Roles
 ### Examples of roles for theses and dissertations

@@ -60,6 +60,7 @@ Book,Class,rdf:type,IRI,,,bibo:Book,,The class will always be bibo:Book.
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
+,Role,srap:role,literal,xsd:string,,,,"The role of the person in the context of the publication, expressed using a string literal."
 ,Affiliation,srap:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
 ,Name,srap:name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"

@@ -66,6 +66,7 @@ Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
 ,,,,,,,,
 Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
+,Role,srap:role,literal,xsd:string,,,,"The role of the organization in the context of the publication, expressed using a string literal."
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,Name,srap:name,literal,xsd:string,,,,Name of the organization
 ,,,,,,,,

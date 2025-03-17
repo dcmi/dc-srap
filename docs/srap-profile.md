@@ -115,7 +115,9 @@ These properties SHOULD be used to express standard identifiers of a scholarly w
 
 > `dct:identifier`, `bibo:isbn`, `srap:url`, `bibo:isbn`, `bibo:issn`, `bibo:eissn`
 
-`dct:identifier` is a non-specific property for identifiers and may be used in the `SRAPResource` shape, the `Person` shape, the `Organization` shape or the `Grant` shape. The specific identifiers, and their shapes, are:
+`dct:identifier` is a non-specific property for identifiers and may be used in the `SRAPResource` shape, the `Person` shape, the `Organization` shape or the `Grant` shape. Use full URIs as values of `dct:identifier` for those identifiers that have them, such as the DOI and the ORCID. 
+
+The specific identifiers, and their shapes, are:
 
 |property|shape|notes|
 |----|----|----|

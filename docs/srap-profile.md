@@ -202,7 +202,7 @@ Scholarly resources are commonly created in the context of a project and/or with
 
 > `srap:funding`, `srap:project`
 
-The `srap:funding` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Grant shape.
+The `srap:funding` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Grant shape (see [Grants](#grants)).
 
 The `srap:project` property MAY be used to indicate the project(s) in which the resource was created. Its value should be an IRI identifying the project, for example a [Research Activity Identifier](https://raid.org/) (RAiD). The specifics of how to describe projects is outside the scope of SRAP.
 

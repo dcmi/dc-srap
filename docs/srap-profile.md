@@ -77,8 +77,6 @@ The language of the resource, when known, SHOULD be indicated using the `dct:lan
 
 The contributor, creator and publisher of the resource SHOULD be indicated using the `dct:contributor`, `dct:creator` and `dct:publisher` properties, respectively. These properties SHOULD be used with IRI or blank node resources that represent Person or Organization entities (see [Persons](#persons) and [Organizations](#organizations)). However, when only a name is known, simple literal strings MAY be used as values for these properties.
 
-In the case of theses, reports and other publications created within an academic organization that are not formally published by that organization, the `dct:contributor` property SHOULD be used to indicate the organization where the work was created.
-
 > NOTE: `dct:publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `dct:publisher` at this level. For contained works, the containing resource (periodical or monograph) SHOULD be described with its publisher.
 
 The title or name of the resource, which is usually available on the resource itself, SHOULD be recorded in `dct:title`.

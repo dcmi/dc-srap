@@ -184,7 +184,9 @@ Many types of rights apply to scholarly resources. These SHOULD be represented u
 
 > `dct:accessRights`, `dct:license`, `dct:rights`, `dct:rightsHolder`
 
-TBW: more detailed guidance
+The `dct:accessRights` property MAY be used to provide a statement about who can access the resource or an indication of its security status (for example public or private). The `dct:license` property MAY be used to provide a statement about the license under which the resource is available. Both of these are subproperties of the more general `dct:rights` property, which MAY be used to provide a statement about rights held in and over the resource in the case where more specific information is not available. All these properties can be given either a literal value or an IRI identifying a document, for example a [Rights Statement](https://rightsstatements.org/) or a Creative Commons license document.
+
+The `dct:rightsHolder` property MAY be used to indicate a person or organization owning or managing rights over the resource. Its value can be either a literal value or an IRI identifying the rights holder.
 
 ## Accessibility
 

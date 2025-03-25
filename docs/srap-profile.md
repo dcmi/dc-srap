@@ -198,7 +198,7 @@ NOTE: This property approximately corresponds to the MARC field [532 Accessibili
 
 ## Scholarly context and funding
 
-Research leading to the creation of scholarly resources will normally be undertaken at specific schools, institutes, departments, research groups and other organizations or organizational units within, or associated with, academic institutions. These organisations SHOULD be indicated using the property:
+Activities leading to the creation of scholarly resources will normally be undertaken at specific schools, institutes, departments, research groups and other organizations or organizational units within, or associated with, academic institutions. These organisations SHOULD be indicated using the property:
 
 `srap:scholarlyUnit`
 

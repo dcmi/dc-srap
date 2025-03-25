@@ -35,7 +35,8 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Access Rights,dct:accessRights,IRI,,,http://purl.org/coar/access_right/,IRIstem,"Access status of the resource, using the COAR Access Rights vocabulary."
 ,License,dct:license,IRI literal,,,,,A legal document giving official permission to do something with the resource.
 ,Rights,dct:rights,IRI literal,,,,,Information about rights held in and over the resource.
-,Rights Holder,dct:rightsHolder,IRI literal,,,,,A person or organization owning or managing rights over the resource.
+,Rights Holder,dct:rightsHolder,literal,,,,,A person or organization owning or managing rights over the resource.
+,Rights Holder,dct:rightsHolder,IRI BNODE,,Person Organization,,,A person or organization owning or managing rights over the resource.
 ,,,,,,,,
 ,Accessibility statement,srap:accessibilityStatement,literal,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,

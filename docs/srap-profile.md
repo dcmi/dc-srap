@@ -23,7 +23,7 @@ Alasdair MacDonald, University of Edinburgh
 - [Books](#books)
 - [Rights](#rights)
 - [Accessibility](#accessibility)
-- [Project context and funding](#project-context-and-funding)
+- [Scholarly context and funding](#scholarly-context-and-funding)
 - [Grants](#grants)
 - [Persons](#persons)
 - [Organizations](#organizations)
@@ -196,7 +196,13 @@ Accessibility is an important aspect of scholarly resources. The accessibility f
 
 NOTE: This property approximately corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html) but is more free form. For information on how to express more detailed accessibility information, see the section [Extending SRAP](#extending-srap).
 
-## Project context and funding
+## Scholarly context and funding
+
+Research leading to the creation of scholarly resources will normally be undertaken at specific schools, institutes, departments, research groups and other organizations or organizational units within, or associated with, academic institutions. These organisations SHOULD be indicated using the property:
+
+`srap:scholarlyUnit`
+
+The value of the `srap:scholarlyUnit` property SHOULD be an Organization shape. The property is distinct from organizations with which an individual person has an affiliation or the role of an academic institution in awarding a qualification.
 
 Scholarly resources are commonly created in the context of a project and/or with specific funding. These aspects SHOULD be indicated using the properties:
 

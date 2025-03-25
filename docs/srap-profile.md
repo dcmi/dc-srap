@@ -194,8 +194,6 @@ Accessibility is an important aspect of scholarly resources. The accessibility f
 
 NOTE: This property approximately corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html) but is more free form. For information on how to express more detailed accessibility information, see the section [Extending SRAP](#extending-srap).
 
-TBW: more detailed guidance
-
 ## Project context and funding
 
 Scholarly resources are commonly created in the context of a project and/or with specific funding. These aspects SHOULD be indicated using the properties:

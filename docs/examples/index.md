@@ -6,3 +6,5 @@
 * [Conference paper](conference-paper.md)
 * [Journal article](journal-article.md)
 * [Preprint with dataset](preprint-with-dataset.md)
+* [Book](book.md)
+* [Book chapter](book-chapter.md)

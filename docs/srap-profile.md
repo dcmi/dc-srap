@@ -14,28 +14,32 @@ Alasdair MacDonald, University of Edinburgh
 
 - [Introduction](#introduction)
 - [Domain Model](#domain-model)
-- [DCTAP for SRAP](#dctap-for-srap)
-- [Basic bibliographic elements](#basic-bibliographic-elements)
-- [Dates](#dates)
-- [Identifiers](#identifiers)
-- [Publication context and relationships](#publication-context-and-relationships)
-- [Periodicals](#periodicals)
-- [Books](#books)
-- [Rights](#rights)
-- [Accessibility](#accessibility)
-- [Scholarly context and funding](#scholarly-context-and-funding)
-- [Grants](#grants)
-- [Persons](#persons)
-- [Organizations](#organizations)
+- [DCTAP for SRAP](#dctap)
+- [Scholarly Resource Shape](#scholarly-resource-shape)
+ - [Primary bibliographic elements](#primary-bibliographic-elements)
+ - [Description properties](#description-properties)
+ - [Linking properties](#linking-properties)
+ - [Date and version properties](#date-and-version-properties)
+ - [Identifiers](#identifiers)
+ - [Enumeration](#enumeration)
+ - [Rights](#rights)
+ - [Accessibility](#accessibility)
+ - [Scholarly unit](#scholarly-unit)
+ - [Project and funding](#project-and-funding)
+- [Person shape](#person-shape)
+- [Organization shape](#organization-shape)
+- [Periodical shape](#periodical-shape)
+- [Book shape](#book-shape)
+- [Grant shape](#grant-shape)
 - [Extending SRAP](#extending-srap)
 - [Appendix 1. Roles](#appendix-1-roles)
 - [Appendix 2. Legacy representations for SRAP data](#appendix-2-legacy-representations-for-srap-data)
 
 ## Introduction
 
-The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms. The proposal is based on a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
+The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms, supplemented with some terms from other vocabularies maintained by the Dublin Core Metadata Initiative. This proposal is informed by a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
-There is significant overlap between SRAP, UKOLN SWAP, the Finnish guidelines, and the British Library’s ETHOS specification[^4]. This is not surprising since they share the same aim, support for description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
+There is significant overlap between SRAP, the RIOXX application profile[^4], the Finnish guidelines, and the British Library’s ETHOS specification[^5]. This is not surprising since they share the same aim, support for description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
 
 The SRAP application profile proposal is intended to be globally applicable. Many suggested properties are already in use by related communities. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
 
@@ -43,174 +47,292 @@ The terms MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMM
 
 ## Domain model 
 
-SRAP has a simple domain model which enumerates the key entities and describes in generic terms how they are related. 
+SRAP's domain model includes these entities and how they are related. 
 
 <img src="https://github.com/user-attachments/assets/9abb9952-7e65-4913-8a29-bf1a74d99ace" width="600" />
 
-There is a basic bibliographic description for the scholarly work. Where appropriate, with SRAP one can define metadata elements that represent a serial or monographic resource in which the scholarly work is contained. There are also related descriptions of persons and organizations that can provide additional detail.
+The model can be used for stand-alone documents, like books, theses, technical reports, and for documents that are contained within larger publications, such as journal articles and book chapters. There is a required bibliographic description of the scholarly work. Where appropriate, one can encode metadata elements that represent a serial or monographic resource in which the scholarly work is contained. Persons, organizations, and grants are also resources that may be needed to describe the scholarly work.
 
-## DCTAP for SRAP
+## DCTAP 
 
-SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the main elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage. Refer to the TAP for specific information on properties used, values, and recommended value lists to use.
+SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the above elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage. Refer to the TAP for specific information on properties used, values, and recommended value lists to use.
+
+In the DCTAP, each of the entities of the domain model are represented as "shapes". Each shape has associated properties and the rules that govern the creation and use of the property.
 
 The following term prefixes are used in this document and in the TAP document:
 
 * dct: `http://purl.org/dc/terms/`
 * bibo: `http://purl.org/ontology/bibo/`
-* edtf: `http://id.loc.gov/datatypes/edtf/`
-* ex: `http://example.com/` (placeholder namespace for example resources)
 * srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
+* ex: `http://example.com/` (placeholder namespace for example resources)
 
 NOTE: The selection of properties used in SRAP has been limited to DC Terms and BIBO properties. Where appropriate properties were not found in those vocabularies the prefix `srap:` is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
 
-(TODO: embed DCTAP table here; possibly move this entire section later in the document)
+## Scholarly resource shape
+The Scholarly resource shape is the describes the focus resource. This resource may be a stand-alone document, such as a thesis, a technical report, or a book. It may be instead a resource that is located within another resource, such as a book chapter within a book, or a journal article within a journal.
 
-## Basic Bibliographic Elements
+### Primary Bibliographic Elements
 
-These basic bibliographic description elements SHOULD be used to describe all kinds of resources including scholarly resources: 
+The basic bibliographic elements are available to be used to describe stand-alone and contained works, with two exceptions: the use of `dct:publisher` and `dct:partOf`. These will be explained below. 
+
+These basic bibliographic description elements SHOULD be used to describe the scholarly resource: 
 
 > `dct:type`, `dct:language`, `dct:contributor`, `dct:creator`, `dct:publisher`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
 
+**dct:type**
+
 The type or genre of a scholarly resource, when known, SHOULD be indicated using the `dct:type` property whose value SHOULD be be an IRI from the [COAR Resource Type vocabulary](https://vocabularies.coar-repositories.org/resource_types/). Example values from the vocabulary include [journal article](http://purl.org/coar/resource_type/c_6501), [book part](http://purl.org/coar/resource_type/c_3248) and [master thesis](http://purl.org/coar/resource_type/c_bdcc).
+
+**dct:language**
 
 The language of the resource, when known, SHOULD be indicated using the `dct:language` property. The language SHOULD be an IETF BCP 47 language tag. When the resource includes content in multiple languages, the `dct:language` property MAY be repeated in order to indicate all the languages.
 
-The contributor, creator and publisher of the resource SHOULD be indicated using the `dct:contributor`, `dct:creator` and `dct:publisher` properties, respectively. These properties SHOULD be used with IRI or blank node resources that represent Person or Organization entities (see [Persons](#persons) and [Organizations](#organizations)). However, when only a name is known, simple literal strings MAY be used as values for these properties.
+**dct:creator**
+
+A repeatable property for the person or organization that is primarily responsible for the creation of the resource. The value of this property SHOULD be a [`Person shape`](#person-shape) or an [`Organization shape`](#organization-shape). 
+
+**dct:contributor**
+
+A repeatable property for the person or organization that has secondary or non-specific responsibility for the creation of the resource. The value of this property SHOULD be a [`Person shape`](#person-shape) or an [`Organization shape`](#organization-shape). 
+
+**dct:publisher**
+
+A property for the person or organization that is responsible for the publication of the resource. The value of this property SHOULD be an [`Organization shape`](#organization-shape). 
 
 > NOTE: `dct:publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `dct:publisher` at this level. For contained works, the containing resource (periodical or monograph) SHOULD be described with its publisher.
 
+**dct:title**
 The title or name of the resource, which is usually available on the resource itself, SHOULD be recorded in `dct:title`.
+
+**dct:format**
 
 The physical format of the resource SHOULD be indicated in `dct:format`. It is recommended that a standard list, such as the Internet Media Types ([MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)) be used.
 
-Additional information about the content of the resource MAY be recorded. The `dct:abstract` is a resource summary and is often found in the content of the resource itself. The `dct:tableOfContents` is a listing of the significant sections within the resource. The `dct:description` would be a general general description of the resource. This can be an account of the contents of the resource or any other description or context that may aid in searching or selection of the resource.
+### Description properties
+These description properties MAY be used to provide additional information about the scholarly work.
 
-## Dates
+**dct:abstract**
+
+The `dct:abstract` is a resource summary and is often found in the content of the resource itself. It MAY be included in the SRAP metadata.
+
+**dct:tableOfContents**
+
+The `dct:tableOfContents` is a listing of the significant sections within the resource. It MAY be included for standand-alone resources that have relevant section headings.
+
+**dct:description**
+
+The `dct:description` MAY be used for any general description of the resource. This can be an account of the contents of the resource or any other description or context that may aid in searching or selection of the resource.
+
+**bibo:presentedAt**
+
+`bibo:presentedAt` MAY be used to record information about the conference or meeting where the scholarly work was presented.
+
+**dct:bibliographicCitation**
+
+`dct:bibliographicCitation` MAY be used to provide a preferred citation for the scholarly work.
+
+### Linking properties
+
+**dct:relation**
+
+Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources with `dct:relation`. Preferably the related resource will have an identifier that can be used to make this link.
+
+**dct:isPartOf**
+
+Journal articles and book chapters may be contained within a larger publication that is either published serially or as a monograph. `dct:isPartOf` will have as its value the periodical shape or book shape for the containing publication. 
+
+### Date and version properties
 
 These date properties SHOULD be used to represent important dates in the life cycle of the resource:
 
-> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:dateRetracted`, `srap:embargoDateRange`
+> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:dateRetracted`, `srap:embargoDateRange`, `srap:versionType`
 
-The `dct:date` property is generic and SHOULD NOT be used when more specific dates are known. The `dct:issued`, `dct:modified`, `dct:dateAccepted` and `srap:dateRetracted` properties SHOULD be used to indicate, respectively, the dates when the resource was issued, modified, accepted for publication and retracted.
-
-The above mentioned dates SHOULD be in one of these standard ISO 8601 formats:
+All available and relevant dates SHOULD be used. The dates SHOULD be in one of these standard ISO 8601 formats:
 
 > `YYYY` | `YYYY-MM` | `YYYY-MM-DD`
 
+**dct:date**
+
+The `dct:date` property is generic and SHOULD NOT be used when more specific dates are known. 
+
+**dct:issued**
+
+`dct:issued`, SHOULD be used to indicate when the resource was issued.
+
+**dct:modified**
+
+`dct:modified` SHOULD be used to record when the resource was modified or updated.
+
+**dct:dateAccepted**
+
+`dct:dateAccepted` SHOULD be used for the date that the resource was accepted for publication.
+
+**srap:dateRetracted**
+
+`srap:dateRetracted` properties SHOULD be used to record the date on which the resource was retracted from publication.
+
+**srap:versionType**
+
+srap:versionType MAY be used to encode the version of a work. It is recommended to use the [COAR vocabulary](http://purl.org/coar/version/) for terms denoting the version in the lifecycle of a scholarly work. 
+
+**srap:embargoDateRange**
+
 If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date range under which the embargo is in place. The date range MUST be expressed using the [Extended Date/Time Format](https://www.loc.gov/standards/datetime/) (EDTF); more specifically, as an EDTF Level 1 Extended Interval, which permits open-ended intervals. In RDF data, the data type `edtf:EDTF` SHOULD be used to indicate that the value conforms to EDTF.
 
-### Embargo example
+> **Embargo example**
 
-This example represents the embargo period for an article that is under embargo from an unspecified start date until December 31st, 2024:
+> This example represents the embargo period for an article that is under embargo from an unspecified start date until December 31st, 2024:
 
-```
-ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
-```
+> ```
+> ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
+> ```
 
-## Identifiers
+### Identifiers
 
 These properties SHOULD be used to express standard identifiers of a scholarly work:
 
-> `dct:identifier`, `bibo:isbn`, `srap:url`, `bibo:isbn`, `bibo:issn`, `bibo:eissn`
+> `dct:identifier`, `bibo:isbn`, `srap:url`
 
-`dct:identifier` is a non-specific property for identifiers and may be used in the `SRAPResource` shape, the `Person` shape, the `Organization` shape or the `Grant` shape. Use full URIs as values of `dct:identifier` for those identifiers that have them, such as the DOI and the ORCID. 
+**dct:identifier**
 
-The specific identifiers, and their shapes, are:
+`dct:identifier` is a non-specific property for identifiers and MAY be used in the `SRAPResource` shape. It is also available in the `Person` shape, the `Organization` shape and the `Grant` shape. Use full URIs as values of `dct:identifier` for those identifiers that have them, such as the DOI and the ORCID. 
 
-|property|shape|notes|
-|----|----|----|
-|srap:url|SRAPResource shape|The URL of the download location|
-|bibo:isbn|SRAPResource shape|ISBN when the scholarly resource itself is a book|
-| |Book shape|ISBN when the scholarly resource is a part of a book|
-|bibo:issn|Periodical shape|The ISSN of the print journal |
-|bibo:eissn|Periodical shape |The ISSN of the electronic journal |
+**bibo:isbn**
 
+When the focus resource is a monograph that has been assigned an ISBN, the `bibo:isbn` property SHOULD be used for that identifier. 
 
-## Publication context and relationships
+**srap:url**
 
-Journal articles and chapters are usually contained within a larger publication. They may also be presented at conferences or other events. Scholarly resources may have relationships to other resources. This kind of contextual and relationship information is expressed using the following properties:
+This property SHOULD be used to provide the online download location for the resource.
+
+### Enumeration
+
+The scholarly work shape includes properties that define and locate the work in the context of monograph or periodical in which the focus work is contained.  These are:
+> `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd` 
+
+These properties SHOULD be used to locate the scholarly work within a containing publication, which is described in a Periodical shape or a Book shape. They are assumed to be literals. 
+
+**bibo:volume**
+
+If available, the designated volume in which the scholarly work is published. This SHOULD be used for scholarly works that have been published in a journal.
+
+**bibo:issue**
+
+The periodical issue in which the scholarly work was published.
+
+**bibo:pageStart**
+
+The page number where the scholarly work begins in the periodical or book in which it is published.
+
+**bibo:pageEnd**
 
 > `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd`, `dct:isPartOf`, `bibo:presentedAt`, `dct:bibliographicCitation`, `dct:relation`, `srap:versionType`
 
-TBW: more detailed guidance (some bits from below could be used?)
-
-> The start and end pages are also used to locate a resource that is part of a monographic publication, such as a book of essays or a conference publication with articles.
-> When there is a preferred citation for the resource, it can be coded with the `dct:bibliographicCitation` property.
-> Scholarly resources may be based on, or otherwise associated with, software applications and/or data sets that are also stored or deposited. For example, an article may be based on software experiments and the underlying data sets may be published separately. SRAP enables linking the resources with ...
-
-## Periodicals
-
-In SRAP, periodicals such as journals and series are seen as a special type (subclass) of a scholarly resouce. Thus, properties for describing resources in general can also be used to describe periodicals.
-
-A periodical is often not the focus resource, but instead represents a container which the focus resource is part of (see [Publication context and relationships](#publication-context-and-relationships)). Periodicals SHOULD be described using these properties:
-
-> `rdf:type`, `dct:title`, `dct:publisher`, `bibo:issn`, `bibo:eissn`
-
-In RDF data, information that a resource is a periodical work SHOULD be designated using a `rdf:type` statement with the class `bibo:Journal` (for journals) or `bibo:Periodical` (for other types of periodicals than journals) as the value.
-
-A periodical will typically have a title and publisher, which SHOULD be indicated using the `dct:title` and `dct:publisher` properties.
-
-For identification of the periodical, the properties `bibo:eissn` (for electronic International Standard Serial Numbers, i.e., e-ISSN) and `bibo:issn` (for other types of ISSNs) SHOULD be used.
-
-### Example periodical
-
-This example represents the Current Problems in Cardiology journal:
-
-```
-ex:curr_probl_cardiol
-    a bibo:Journal ;
-    dct:title "Current problems in cardiology" ;
-    bibo:issn "0146-2806" ;
-    bibo:eissn "1535-6280" .
-```
-
-## Books
-
-In SRAP, books are seen as a special type (subclass) of a scholarly resource. This includes other monographic publications like technical reports and conference proceedings. Properties for describing resources in general can also be used to describe books.
-
-A book is often not the focus resource, but instead represents a container which the focus resource is part of. For example the focus resource may be a chapter that is part of a book (see [Publication context and relationships](#publication-context-and-relationships)).  Books SHOULD be described using these properties:
-
-> `rdf:type`, `dct:contributor`, `dct:publisher`, `dct:date`, `bibo:isbn`
-
-In RDF data, information that a resource is a monographic work SHOULD be designated using a `rdf:type` statement with the class `bibo:Book` as the value.
-
-The `bibo:isbn` property SHOULD be used to represent the International Standard Book Number (ISBN) of a book.
-
-## Rights
+### Rights
 
 Many types of rights apply to scholarly resources. These SHOULD be represented using the following properties:
 
 > `dct:accessRights`, `dct:license`, `dct:rights`, `dct:rightsHolder`
 
-The `dct:accessRights` property MAY be used to provide a statement about who can access the resource or an indication of its security status (for example public or private). The `dct:license` property MAY be used to provide a statement about the license under which the resource is available. Both of these are subproperties of the more general `dct:rights` property, which MAY be used to provide a statement about rights held in and over the resource in the case where more specific information is not available. All these properties can be given either a literal value or an IRI identifying a document, for example a [Rights Statement](https://rightsstatements.org/) or a Creative Commons license document.
+All these properties can be given either a literal value or an IRI identifying a document, for example a [Rights Statement](https://rightsstatements.org/) or a Creative Commons license document.
+
+**dct:accessRights**
+
+The `dct:accessRights` property MAY be used to provide a statement about who can access the resource or an indication of its security status (for example public or private). 
+
+**dct:license**
+
+The `dct:license` property MAY be used to provide a statement about the license under which the resource is available. 
+
+**dct:rights**
+
+`dct:rights` is the super property to the two above, meaning that it is more general and MAY be used when a more specific rights type is not available. 
+
+**dct:rightsHolder**
 
 The `dct:rightsHolder` property MAY be used to indicate a person or organization owning or managing rights over the resource. Its value can be either a literal value or an IRI or Bnode describing the rights holder using a Person or Organization shape.
 
-## Accessibility
+### Accessibility
 
 Accessibility is an important aspect of scholarly resources. The accessibility features, hazards, and deficiencies of a resource SHOULD be indicated using the property:
 
 > `srap:accessibilityStatement`
 
-NOTE: This property approximately corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html) but is more free form. For information on how to express more detailed accessibility information, see the section [Extending SRAP](#extending-srap).
+**srap:accessibilityStatement**
 
-## Scholarly context and funding
+This property approximately corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html) but is more free form. For information on how to express more detailed accessibility information, see the section [Extending SRAP](#extending-srap).
+
+### Scholarly unit
 
 Activities leading to the creation of scholarly resources will normally be undertaken at specific schools, institutes, departments, research groups and other organizations or organizational units within, or associated with, academic institutions. These organisations SHOULD be indicated using the property:
 
-`srap:scholarlyUnit`
+>`srap:scholarlyUnit`
+
+**srap:scholarlyUnit**
 
 The value of the `srap:scholarlyUnit` property SHOULD be an Organization shape. The property is distinct from organizations with which an individual person has an affiliation or the role of an academic institution in awarding a qualification.
 
-Scholarly resources are commonly created in the context of a project and/or with specific funding. These aspects SHOULD be indicated using the properties:
+### Project and funding
 
-> `srap:funding`, `srap:project`
+> `srap:project`, `srap:funding`
 
-The `srap:funding` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Grant shape (see [Grants](#grants)).
+**srap:project**
 
 The `srap:project` property MAY be used to indicate the project(s) in which the resource was created. Its value should be an IRI identifying the project, for example a [Research Activity Identifier](https://raid.org/) (RAiD). The specifics of how to describe projects is outside the scope of SRAP.
 
-## Grants
+**srap:funding**
+
+The `srap:funding` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Grant shape (see [Grant shape](#grant-shape)).
+
+## Person shape
+
+> `rdf:type`, `srap:role`, `srap:affiliation`, `srap:name`, `dct:identifier`
+
+In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason, metadata often make use of identifiers, such as the ORCID for individual persons. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded. (See Appendix 1)
+
+**rdf:type**
+
+`rdf:type` SHOULD be included with the value `srap:Person`. 
+
+**srap:role**
+
+`srap:role` SHOULD indicate the role that the person played in relation to the scholarly work. Preferably the role should be a URI taken from the [Library of Congress relators](http://id.loc.gov/vocabulary/relators/) list, but it may also be a simple string.
+
+**srap:affiliation**
+
+Primarily for authors and co-authors, this is the affiliation of the person at the time the work was accepted or published.
+
+**srap:name**
+
+The name of the person; usually a form intended for display.
+
+**dct:identifier**
+
+A unique identifier for the person. Some examples of common identifiers are ORCIDs, VIAF URIs, and Wikidata identifiers.
+
+## Organization shape
+
+> `rdf:type`, `srap:role`, `dct:identifier`, `srap:name`
+
+Information about organizations MAY be included in SRAP metadata in various contexts: for the publisher of the book or periodical, for the rights holder, for the creator, and others. In each case the organization shape MAY be used as the value of those properties. 
+
+**rdf:type**
+
+When used in RDF data the organization shape SHOULD have an `rdf:type` property with the designation as a class "Organization".
+
+**srap:role**
+
+`srap:role` SHOULD indicate the role that the organization played in relation to the scholarly work. Preferably the role should be a URI taken from the [Library of Congress relators](http://id.loc.gov/vocabulary/relators/) list, but it may also be a simple string.
+
+**srap:name**
+
+The name of the organization; usually a form intended for display.
+
+**dct:identifier**
+
+A unique identifier for the organization. Some examples of common identifiers are VIAF URIs, and Wikidata identifiers.
+
+## Grant shape
 
 A grant represents a financial or otherwise quantifiable allocation of resources, for example when a funding agency provides financial support for a research activity that then results in the publication of one or more scholarly articles. A grant SHOULD be described using the following properties:
 
@@ -222,7 +344,7 @@ The funder of the grant (for example the funding agency) SHOULD be indicated usi
 
 The grant number or other identifier or the grant SHOULD be indicated using the property `dct:identifier`. The value is a literal value, for example a plain number.
 
-### Example grant
+**Example grant shape**
 
 This example represents a grant awarded by the Lawrence Livermore Laboratory. The funder is indicated using both a literal value and an IRI from ROR.
 
@@ -234,22 +356,45 @@ ex:lll_grant
 	  dct:identifier "EP/P010288/1" .
 ```
 
-## Persons
 
-> `rdf:type`, `srap:role`, `srap:affiliation`, `srap:name`, `dct:identifier`
+## Periodical shape
 
-TBW: more detailed guidance (bit from below could be used?)
+In SRAP represents a container of which the focus resource is part. Periodicals SHOULD be described using these properties:
 
-> In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason individual persons often make use of identifiers, such as the ORCID. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded.
-> In RDF data, information about a person can be contained within a graph with the class [Person](http://xmlns.com/foaf/spec/#term_Person).
+> `rdf:type`, `dct:title`, `dct:publisher`, `bibo:issn`, `bibo:eissn`
 
-## Organizations
+The periodical shape describes only the periodical publication; the specific information on on the volume and issue number are registered with the description of the individual scholarly work.
 
-> `rdf:type`, `srap:role`, `dct:identifier`, `srap:name`
+In RDF data, information that a resource is a periodical work SHOULD be included in the periodical shape using a `rdf:type` statement with the class `bibo:Journal` (for journals) or `bibo:Periodical` (for other types of periodicals than journals) as the value.
 
-TBW: more detailed guidance (bit from below could be used?)
+A periodical will typically have a title and publisher, which SHOULD be indicated using the `dct:title` and `dct:publisher` properties.
 
-> In RDF data, information about an organization can be contained within a graph with the class [Organization](http://xmlns.com/foaf/spec/#term_Organization).
+For identification of the periodical, the properties `bibo:eissn` (for electronic International Standard Serial Numbers, i.e., e-ISSN) and `bibo:issn` (for other types of ISSNs) SHOULD be used.
+
+**Example periodical**
+
+This example represents the Current Problems in Cardiology journal:
+
+```
+ex:curr_probl_cardiol
+    a bibo:Journal ;
+    dct:title "Current problems in cardiology" ;
+    bibo:issn "0146-2806" ;
+    bibo:eissn "1535-6280" .
+```
+
+## Book shape
+
+The book shape can describe books and monographic publications like technical reports and conference proceedings. 
+
+A book is often not the focus resource, but instead represents a container which the focus resource is part of. For example the focus resource may be a chapter that is part of a book.  Books SHOULD be described using these properties:
+
+> `rdf:type`, `dct:contributor`, `dct:publisher`, `dct:date`, `bibo:isbn`
+
+In RDF data, information that a resource is a monographic work SHOULD be designated using a `rdf:type` statement with the class `bibo:Book` as the value.
+
+The `bibo:isbn` property SHOULD be used to represent the International Standard Book Number (ISBN) of a book.
+
 
 ## Extending SRAP
 
@@ -320,7 +465,9 @@ ________________
 
 [^3]: https://www.kiwi.fi/display/Julkaisuarkistopalvelut/Metadatasuositus+julkaisuarkistojen+tekstiaineistolle
 
-[^4]: http://ethostoolkit.cranfield.ac.uk/tiki-index.php?page=The+EThOS+UKETD_DC+application+profile
+[^4]: https://rioxx.net/profiles/
+
+[^5]: http://ethostoolkit.cranfield.ac.uk/tiki-index.php?page=The+EThOS+UKETD_DC+application+profile
 
 [^5]: https://github.com/dcmi/pids_in_dc 
 

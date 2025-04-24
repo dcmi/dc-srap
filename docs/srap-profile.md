@@ -227,11 +227,11 @@ The periodical issue in which the scholarly work was published.
 
 **bibo:pageStart**
 
-The page number where the scholarly work begins in the periodical or book in which it is published.
+The page number where the scholarly work begins in the periodical or book in which it is published. 
 
 **bibo:pageEnd**
 
-> `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd`, `dct:isPartOf`, `bibo:presentedAt`, `dct:bibliographicCitation`, `dct:relation`, `srap:versionType`
+The page number where the scholarly work end in the periodical or book in which it is published.
 
 ### Rights
 
@@ -398,16 +398,25 @@ For identification of the periodical, the properties `bibo:eissn` (for electroni
 
 ## Book shape
 
-The book shape can describe books and monographic publications like technical reports and conference proceedings. 
-
-A book is often not the focus resource, but instead represents a container which the focus resource is part of. For example the focus resource may be a chapter that is part of a book.  Books SHOULD be described using these properties:
+The book shape can describe books and other monographic resources that contain the scholarly work. This shape is only used when the work described in the Scholarly Resource shape is a unit, such as a chapter, of a book. Scholarly resources that are themselves monographs are described in the Scholarly Resource Shape. Books that are containers for scholarly works SHOULD be described using these properties:
 
 > `rdf:type`, `dct:contributor`, `dct:publisher`, `dct:date`, `bibo:isbn`
 
-In RDF data, information that a resource is a monographic work SHOULD be designated using a `rdf:type` statement with the class `bibo:Book` as the value.
+**rdf:type**
+
+In RDF data, information that the shape represents a monographic work SHOULD be designated using a `rdf:type` statement with the class `bibo:Book` as the value.
+
+**bibo:isbn**
 
 The `bibo:isbn` property SHOULD be used to represent the International Standard Book Number (ISBN) of a book.
 
+**dct:publisher**
+
+The publisher of the book or monograph.
+
+**dct:date**
+
+The publication date of the book or monograph.
 
 ## Extending SRAP
 

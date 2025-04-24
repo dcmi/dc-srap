@@ -102,11 +102,16 @@ A property for the person or organization that is responsible for the publicatio
 > NOTE: `dct:publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `dct:publisher` at this level. For contained works, the containing resource (periodical or monograph) SHOULD be described with its publisher.
 
 **dct:title**
+
 The title or name of the resource, which is usually available on the resource itself, SHOULD be recorded in `dct:title`.
 
 **dct:format**
 
 The physical format of the resource SHOULD be indicated in `dct:format`. It is recommended that a standard list, such as the Internet Media Types ([MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)) be used.
+
+**dct:subject**
+
+`dct:subject` MAY be used to add keywords, subject terms, or identifiers of terms from subject vocabulary lists.
 
 ### Description properties
 These description properties MAY be used to provide additional information about the scholarly work.
@@ -359,29 +364,37 @@ ex:lll_grant
 
 ## Periodical shape
 
-In SRAP represents a container of which the focus resource is part. Periodicals SHOULD be described using these properties:
+The periodical shape represents a container of which the focus resource (usually a published journal article) is part. The periodical shape describes only the periodical publication itself; the specific information on on the volume and issue number of the scholarly work are provided scholarly work shape. Periodicals SHOULD be described using these properties:
 
 > `rdf:type`, `dct:title`, `dct:publisher`, `bibo:issn`, `bibo:eissn`
 
-The periodical shape describes only the periodical publication; the specific information on on the volume and issue number are registered with the description of the individual scholarly work.
+**rdf:type**
 
 In RDF data, information that a resource is a periodical work SHOULD be included in the periodical shape using a `rdf:type` statement with the class `bibo:Journal` (for journals) or `bibo:Periodical` (for other types of periodicals than journals) as the value.
 
-A periodical will typically have a title and publisher, which SHOULD be indicated using the `dct:title` and `dct:publisher` properties.
+**dct:title**
+
+The title of the periodical. 
+
+**dct:publisher**
+
+The publisher of the periodical.
+
+**bibo:issn, bibo:eissn**
 
 For identification of the periodical, the properties `bibo:eissn` (for electronic International Standard Serial Numbers, i.e., e-ISSN) and `bibo:issn` (for other types of ISSNs) SHOULD be used.
 
-**Example periodical**
+> **Example periodical**
 
-This example represents the Current Problems in Cardiology journal:
+> This example represents the Current Problems in Cardiology journal:
 
-```
-ex:curr_probl_cardiol
-    a bibo:Journal ;
-    dct:title "Current problems in cardiology" ;
-    bibo:issn "0146-2806" ;
-    bibo:eissn "1535-6280" .
-```
+> ```
+> ex:curr_probl_cardiol
+>     a bibo:Journal ;
+>     dct:title "Current problems in cardiology" ;
+>     bibo:issn "0146-2806" ;
+>     bibo:eissn "1535-6280" .
+> ```
 
 ## Book shape
 

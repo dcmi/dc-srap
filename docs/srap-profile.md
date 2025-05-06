@@ -89,15 +89,15 @@ The language of the resource, when known, SHOULD be indicated using the `dct:lan
 
 **dct:creator**
 
-A repeatable property for the person or organization that is primarily responsible for the creation of the resource. The value of this property SHOULD be a [`Person shape`](#person-shape) or an [`Organization shape`](#organization-shape). 
+A repeatable property for the person or organization that is primarily responsible for the creation of the resource. It is RECOMMENDED that the value of this property is a [`Person shape`](#person-shape) or an [`Organization shape`](#organization-shape). Alternatively, the value MAY be the name of the creator as a literal value.
 
 **dct:contributor**
 
-A repeatable property for the person or organization that has secondary or non-specific responsibility for the creation of the resource. The value of this property SHOULD be a [`Person shape`](#person-shape) or an [`Organization shape`](#organization-shape). 
+A repeatable property for the person or organization that has secondary or non-specific responsibility for the creation of the resource. It is RECOMMENDED that the value of this property is a [`Person shape`](#person-shape) or an [`Organization shape`](#organization-shape). Alternatively, the value MAY be the name of the contributor as a literal value.
 
 **dct:publisher**
 
-A property for the person or organization that is responsible for the publication of the resource. The value of this property SHOULD be an [`Organization shape`](#organization-shape). 
+A property for the person or organization that is responsible for the publication of the resource. It is RECOMMENDED that the value of this property is an [`Organization shape`](#organization-shape). Alternatively, the value MAY be the name of the publisher as a literal value.
 
 > NOTE: `dct:publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `dct:publisher` at this level. For contained works, the containing resource (periodical or monograph) SHOULD be described with its publisher.
 

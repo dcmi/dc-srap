@@ -45,7 +45,7 @@ Original Dublin Core XML:
 
 <dct:subject>Digital humanities centers</dct:subject> 
 
-<dct:subject>Values</dct:subject> 
+<dct:subject>Values</dct:subject>
 
 <dct:subject>Libraries</dct:subject> 
 
@@ -53,3 +53,27 @@ Original Dublin Core XML:
 
 <dct:title>Centering our Values: A Framework for Digital Humanities in the Library</dct:title> 
 ```
+
+# SRAP Turtle
+
+```
+@prefix ex:      <http://example.org/>.
+@prefix srap:    <http://example.org/srap/>.  # placeholder namespace for new properties
+@prefix dct:     <http://purl.org/dc/terms/>.
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+
+ex:bookChapter
+  dct:type <http://purl.org/coar/resource_type/c_3248> ; # COAR resource type: book part
+  dct:language "en" ; # language expressed as IETF BCP 47 language tag
+  dct:contributor "Hartsell-Gundy, Arianne" ;
+  dct:contributor "Braunstein, Laura" ;
+  dct:contributor "Golomb, Liorah" ;
+  dct:creator "Lach, Pamella" ;
+  dct:publisher [
+    a srap:Organization ;
+    srap:name "Association of College and Research Libraries"
+  ] ;
+  dct:title "Centering our Values: A Framework for Digital Humanities in the Library" ;
+  dct:issued "2024" ;
+```
+

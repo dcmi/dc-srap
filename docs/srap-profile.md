@@ -438,7 +438,6 @@ It is recommended that LC Relator entities be used for the `role` properties.
 
 These are linked here to the Library of Congress relator properties:
 
-* Academic supervisor
 * [Dedicatee](http://id.loc.gov/vocabulary/relators/dte)
 * [Degree committee member](http://id.loc.gov/vocabulary/relators/dgc)
 * [Degree granting institution](http://id.loc.gov/vocabulary/relators/dgg)
@@ -460,7 +459,6 @@ These are linked here to the Library of Congress relator properties:
 * [Host institution](http://id.loc.gov/vocabulary/relators/his)
 * [Organizer](http://id.loc.gov/vocabulary/relators/orm)
 * [Reviewer](http://id.loc.gov/vocabulary/relators/rev)
-* Reviser
 * [Sponsor](http://id.loc.gov/vocabulary/relators/spn)
 * [Translator](http://id.loc.gov/vocabulary/relators/trl)
 

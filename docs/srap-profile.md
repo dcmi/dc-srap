@@ -130,7 +130,7 @@ The `dct:description` MAY be used for any general description of the resource. T
 
 **bibo:presentedAt**
 
-`bibo:presentedAt` MAY be used to record information about the conference or meeting where the scholarly work was presented.
+`bibo:presentedAt` MAY be used to record information about the conference or meeting where the scholarly work was presented. The value can be the name of the event or an IRI identifying the event. Describing the event itself is outside the scope of SRAP.
 
 **dct:bibliographicCitation**
 

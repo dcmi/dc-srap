@@ -24,7 +24,6 @@ Alasdair MacDonald, University of Edinburgh
   - [Enumeration](#enumeration)
   - [Rights](#rights)
   - [Accessibility](#accessibility)
-  - [Scholarly unit](#scholarly-unit)
   - [Project and funding](#project-and-funding)
 - [Person shape](#person-shape)
 - [Organization shape](#organization-shape)
@@ -32,6 +31,7 @@ Alasdair MacDonald, University of Edinburgh
 - [Book shape](#book-shape)
 - [Grant shape](#grant-shape)
 - [Extending SRAP](#extending-srap)
+- [Examples of SRAP usage](#examples-of-srap-usage)
 - [Appendix 1. Roles](#appendix-1-roles)
 - [Appendix 2. Legacy representations for SRAP data](#appendix-2-legacy-representations-for-srap-data)
 
@@ -417,6 +417,19 @@ The publication date of the book or monograph.
 SRAP is designed to be open and extensible. It is possible to use properties other than those recommended in SRAP, including properties from other namespaces such as [Schema.org](https://schema.org/).
 
 For describing the accessibility of a scholarly resource in a structured form, you can use the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/).
+
+## Examples of SRAP usage
+
+These examples illustrate full documents described using SRAP properties.
+
+* Theses
+  * [Simple doctoral thesis](examples/thesis-simple.md)
+  * [Doctoral thesis with opponent and series](examples/thesis-detailed.md)
+* [Conference paper](examples/conference-paper.md)
+* [Journal article](examples/journal-article.md)
+* [Preprint with dataset](examples/preprint-with-dataset.md)
+* [Book](examples/book.md)
+* [Book chapter](examples/book-chapter.md)
 
 ## Appendix 1. Roles
 ### Examples of roles for theses and dissertations

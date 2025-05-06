@@ -200,7 +200,7 @@ These properties SHOULD be used to express standard identifiers of a scholarly w
 
 **dct:identifier**
 
-`dct:identifier` is a non-specific property for identifiers and MAY be used in the `SRAPResource` shape. It is also available in the `Person` shape, the `Organization` shape and the `Grant` shape. Use full URIs as values of `dct:identifier` for those identifiers that have them, such as the DOI and the ORCID. 
+`dct:identifier` is a non-specific property for identifiers and MAY be used in the `SRAPResource` shape. It is also available in the `Person` shape, the `Organization` shape and the `Grant` shape. Full IRIs SHOULD be used as values of `dct:identifier` for those identifiers that have them, such as the DOI and the ORCID. 
 
 **bibo:isbn**
 

@@ -10,24 +10,23 @@ International Workshop on Refactoring IEEE Computer Society Association for Comp
 
 ## paper 
 ```
-_:A 
-dct:creator "Eman AlOmar"
-dct:creator "Mohamed Wiem Mkaouer"
-dct:creator "Ali Ouni"
-dct:title "Can refactoring be self-affirmed? an exploratory study on how developers document their refactoring activities in commit messages." 
-dct:date "2019"
-ex:pages "51-58"
-dct:partOf _:B
-dct:type coar:c_5794
-```
+ex:A
+a srap:SRAPResource ;
+dct:type coar:c_5794 ;
+dct:creator "Eman AlOmar" ;
+dct:creator "Mohamed Wiem Mkaouer" ;
+dct:creator "Ali Ouni" ;
+dct:title "Can refactoring be self-affirmed? an exploratory study on how developers document their refactoring activities in commit messages." ;
+dct:issued "2019" ;
+bibo:pageStart "51" ;
+bibo:pageEnd "58" ;
+dct:partOf ex:B .
 
-## conference publication 
-```
-_:B
-dct:title "International Workshop on Refactoring IEEE Computer Society Association for Computing Machinery and International Conference on Software Engineering. 2019"
-dct:alternative "2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)"
-dct:publisher " Los Alamitos CA: IEEE Computer Society Conference Publishing Services"
-dct:identifier https://dl.acm.org/citation.cfm?id=3340633
-dct:type bibo:conferencePublication
-dct:type coar:c_f744
+ex:B
+dct:title "International Workshop on Refactoring IEEE Computer Society Association for Computing Machinery and International Conference on Software Engineering. 2019" ;
+dct:alternative "2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)" ;
+dct:publisher "Los Alamitos CA: IEEE Computer Society Conference Publishing Services" ;
+dct:identifier <https://dl.acm.org/citation.cfm?id=3340633> ;
+dct:type bibo:conferencePublication ;
+dct:type coar:c_f744 .
 ```

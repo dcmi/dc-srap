@@ -20,13 +20,13 @@ dct:title "Can refactoring be self-affirmed? an exploratory study on how develop
 dct:issued "2019" ;
 bibo:pageStart "51" ;
 bibo:pageEnd "58" ;
+bibo:presentedAt "International Workshop on Refactoring IEEE Computer Society Association for Computing Machinery and International Conference on Software Engineering. 2019" ;
 dct:partOf ex:B .
 
 ex:B
-dct:title "International Workshop on Refactoring IEEE Computer Society Association for Computing Machinery and International Conference on Software Engineering. 2019" ;
-dct:alternative "2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)" ;
+a bibo:Proceedings ;
+dct:title "Proceedings of the 2019 IEEE/ACM 3rd International Workshop on Refactoring" ;
 dct:publisher "Los Alamitos CA: IEEE Computer Society Conference Publishing Services" ;
-dct:identifier <https://dl.acm.org/citation.cfm?id=3340633> ;
-dct:type bibo:conferencePublication ;
+dct:identifier <https://doi.org/10.1109/IWoR47447.2019> ;
 dct:type coar:c_f744 .
 ```

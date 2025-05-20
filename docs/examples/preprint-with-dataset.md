@@ -1,13 +1,6 @@
-# Rioxx example 3
+# SRAP example: Preprint with dataset
 
-This is based on [Example 3](https://www.rioxx.net/profiles/v3-0-final/#heading3) from the Rioxx 3.0 specification. This represents a preprint of an academic paper that was subsequently published in a journal. The paper also comes with an accompanying data set.
-
-## Challenges
-
-* Rioxx structure for related links is tricky
-  * Linking to PDF files https://github.com/dcmi/dc-srap/issues/62
-* Indicating version https://github.com/dcmi/dc-srap/issues/61
-* `rioxxterms:record_public_release_date` has no equivalent in SRAP, but this is housekeeping metadata, so probably out of scope (similar to "date accessioned" in DSpace)
+This example shows how to represent a preprint article. It is based on [Example 3](https://www.rioxx.net/profiles/v3-0-final/#heading3) from the Rioxx 3.0 specification. This academic paper that was subsequently published in a journal. The paper also comes with an accompanying data set.
 
 ## SRAP metadata
 
@@ -107,11 +100,3 @@ ex:document
   dct:type <https://purl.org/coar/resource_type/c_ddb1> .  # dataset
 
 ```
-
-## Visualization
-
-Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
-
-![image](https://github.com/user-attachments/assets/a91b8f50-5128-4c11-bb1e-f26cbbe2d40b)
-
-

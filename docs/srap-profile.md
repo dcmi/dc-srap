@@ -342,6 +342,10 @@ The name of the person; usually a form intended for display.
 
 A unique identifier for the person. Some examples of common identifiers are ORCIDs, VIAF URIs, and Wikidata identifiers.
 
+**Example person**
+
+TODO
+
 ## Organization shape
 
 > `rdf:type`, `srap:role`, `dct:identifier`, `srap:name`
@@ -363,6 +367,10 @@ The name of the organization; usually a form intended for display.
 **dct:identifier**
 
 A unique identifier for the organization. Some examples of common identifiers are VIAF URIs, and Wikidata identifiers.
+
+**Example organization**
+
+TODO
 
 ## Grant shape
 
@@ -411,17 +419,17 @@ The publisher of the periodical.
 
 For identification of the periodical, the properties `bibo:eissn` (for electronic International Standard Serial Numbers, i.e., e-ISSN) and `bibo:issn` (for other types of ISSNs) SHOULD be used.
 
-> **Example periodical**
+**Example periodical**
 
-> This example represents the Current Problems in Cardiology journal:
+This example represents the Current Problems in Cardiology journal:
 
-> ```
-> ex:curr_probl_cardiol
->     a bibo:Journal ;
->     dct:title "Current problems in cardiology" ;
->     bibo:issn "0146-2806" ;
->     bibo:eissn "1535-6280" .
-> ```
+```
+ex:curr_probl_cardiol
+    a bibo:Journal ;
+    dct:title "Current problems in cardiology" ;
+    bibo:issn "0146-2806" ;
+    bibo:eissn "1535-6280" .
+```
 
 ## Book shape
 

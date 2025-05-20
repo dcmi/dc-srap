@@ -63,6 +63,7 @@ The following term prefixes are used in this document and in the TAP document:
 
 * dct: `http://purl.org/dc/terms/`
 * bibo: `http://purl.org/ontology/bibo/`
+* edtf: `http://id.loc.gov/datatypes/EDTFScheme/`
 * srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
 * ex: `http://example.com/` (placeholder namespace for example resources)
 
@@ -184,13 +185,13 @@ srap:versionType MAY be used to encode the version of a work. It is recommended 
 
 If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date range under which the embargo is in place. The date range MUST be expressed using the [Extended Date/Time Format](https://www.loc.gov/standards/datetime/) (EDTF); more specifically, as an EDTF Level 1 Extended Interval, which permits open-ended intervals. In RDF data, the data type `edtf:EDTF` SHOULD be used to indicate that the value conforms to EDTF.
 
-> **Embargo example**
+**Embargo date range example**
 
-> This example represents the embargo period for an article that is under embargo from an unspecified start date until December 31st, 2024:
+This example represents the embargo period for an article that is under embargo from an unspecified start date until December 31st, 2024:
 
-> ```
-> ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
-> ```
+```
+ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
+```
 
 ### Identifiers
 
@@ -215,7 +216,7 @@ This property SHOULD be used to provide the online download location for the res
 The scholarly work shape includes properties that define and locate the work in the context of monograph or periodical in which the focus work is contained.  These are:
 > `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd` 
 
-These properties SHOULD be used to locate the scholarly work within a containing publication, which is described in a Periodical shape or a Book shape. They are assumed to be literals. 
+These properties SHOULD be used to locate the scholarly work within a containing publication, which is described in a Periodical shape or a Book shape. They are assumed to be literals and SHOULD include just the number itself. 
 
 **bibo:volume**
 

@@ -1,4 +1,4 @@
-# Thesis
+# SRAP example: Simple thesis
 
 **Bibtex view:**
 ```

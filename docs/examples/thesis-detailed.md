@@ -1,12 +1,13 @@
-# Doctoral thesis with opponent, published in a series
+# SRAP example: Doctoral thesis with opponent, published in a series
 
+This example shows how to represent the following doctoral thesis:
+
+```
 Faster than real-time simulation of fluid power-driven mechatronic machines
-
 Malysheva, Julia (2021-06-01)
-
 Lappeenranta-Lahti University of Technology LUT
-
 Acta Universitatis Lappeenrantaensis 960
+```
 
 [Original metadata](https://lutpub.lut.fi/handle/10024/162541?show=full) is available in the LUTPub DSpace repository. The SRAP metadata below is a literal translation into DCT and SRAP, preserving the order of fields as much as possible. Note that the number within the series (960) is not represented in the DSpace metadata in this case, but can be found in the [PDF publication](https://lutpub.lut.fi/bitstream/handle/10024/162541/Julia%20Malysheva%20A4.pdf?sequence=1&isAllowed=y).
 
@@ -65,9 +66,3 @@ ex:printed_thesis
 ex:series dct:title "Acta Universitatis Lappeenrantaensis" ;
   bibo:issn "1456-4491" .
 ```
-
-## Visualization
-
-Created from the above Turtle data using [RDF Sketch](https://sketch.zazuko.com/)
-
-![image](https://github.com/dcmi/dc-srap/assets/1132830/66a7ca92-92c7-4e5d-b62d-c5f138191e2c)

@@ -1,3 +1,5 @@
+# SRAP example: Journal article
+
 ## The citation:
 
 ```

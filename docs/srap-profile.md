@@ -144,7 +144,7 @@ Scholarly resources may be based on, or otherwise associated with, software appl
 
 **dct:isPartOf**
 
-Journal articles and book chapters may be contained within a larger publication that is either published serially or as a monograph. `dct:isPartOf` will have as its value the periodical shape or book shape for the containing publication. 
+Journal articles and book chapters may be contained within a larger publication that is either published serially or as a monograph. `dct:isPartOf` will have as its value the `Periodical` shape or `Book` shape for the containing publication. 
 
 ### Date and version properties
 

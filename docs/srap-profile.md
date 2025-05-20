@@ -85,7 +85,7 @@ The type or genre of a scholarly resource, when known, SHOULD be indicated using
 
 **dct:language**
 
-The language of the resource, when known, SHOULD be indicated using the `dct:language` property. The language SHOULD be an IETF BCP 47 language tag. When the resource includes content in multiple languages, the `dct:language` property MAY be repeated in order to indicate all the languages.
+The language of the resource, when known, SHOULD be indicated using the `dct:language` property. The language SHOULD be an IETF BCP 47 language tag, e.g. `en-GB` or `fr`. When the resource includes content in multiple languages, the `dct:language` property MAY be repeated in order to indicate all the languages.
 
 **dct:creator**
 

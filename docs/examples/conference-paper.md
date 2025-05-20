@@ -1,4 +1,4 @@
-# Conference Paper Example
+# SRAP example: Conference Paper
 
 **Paper citation, from G-scholar**
 

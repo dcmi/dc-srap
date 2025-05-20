@@ -1,4 +1,9 @@
-# Book Chapter
+# SRAP example: Book chapter
+
+This example shows how to represent a book chapter in SRAP. It is based on this citation:
+
+> Lach, P. (2024). Centering our Values: A Framework for Digital Humanities in the Library. In *Digital Humanities in the Library: Challenges and Opportunities for Subject Specialists*, Revised Second Edition (pp. 43–68). Association of College and Research Libraries. https://doi.org/10.17613/t8eh-p365
+
 
 Original Dublin Core XML:
 

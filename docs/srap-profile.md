@@ -268,6 +268,14 @@ Accessibility is an important aspect of scholarly resources. The accessibility f
 
 This property approximately corresponds to the MARC field [532 Accessibility Note](https://www.loc.gov/marc/bibliographic/bd532.html) but is more free form. For information on how to express more detailed accessibility information, see the section [Extending SRAP](#extending-srap).
 
+**Example accessibility statements**
+
+```
+srap:accessibilityStatement "Subtitles for the deaf and hard of hearing (SDH) in English"@en .
+
+srap:accessibilityStatement "WCAG level AAA"@en .
+```
+
 ### Project and funding
 
 > `srap:project`, `srap:funding`, `srap:scholarlyUnit`

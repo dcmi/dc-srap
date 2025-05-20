@@ -292,6 +292,30 @@ The `srap:funding` property MAY be used to indicate the funding source(s) that s
 
 The value of the `srap:scholarlyUnit` property SHOULD be an Organization shape. The property is distinct from organizations with which an individual person has an affiliation or the role of an academic institution in awarding a qualification.
 
+**Examples of project, funding and scholarly unit**
+
+```
+  # Example project
+  srap:project <https://raid.org/10.26259/ae4fde43> ;
+
+  # Example funding statement
+  srap:funding [
+    a srap:Grant ;
+    dct:identifier "DP190101507" ;
+    srap:funder [
+      a srap:Organization ;
+      srap:name "Australian Research Council" ;
+      dct:identifier <https://ror.org/05mmh0f86>
+    ]
+  ] ;
+
+  # Example scholarly unit
+  srap:scholarlyUnit [
+    a srap:Organization ;
+    srap:name "University of Edinburgh. Centre for Cognitive and Neural Systems"
+  ] ;
+```
+
 ## Person shape
 
 > `rdf:type`, `srap:role`, `srap:affiliation`, `srap:name`, `dct:identifier`

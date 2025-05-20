@@ -3,37 +3,42 @@ shapeID,propertyLabel,propertyID,valueNodeType,valueDatatype,valueShape,valueCon
 SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be srap:SRAPResource.
 ,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIstem,"Resource type, using the COAR Resorce Types vocabulary."
 ,Language,dct:language,literal,xsd:string,,,,A language of the resource.
-,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,An entity responsible for making contributions to the resource.
-,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
 ,Creator,dct:creator,IRI BNODE,,Person Organization,,,An entity responsible for making the resource.
 ,Creator,dct:creator,literal,,,,,The name of an entity responsible for making the resource.
+,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,An entity responsible for making contributions to the resource.
+,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,An entity responsible for making the resource available.
 ,Publisher,dct:publisher,literal,,,,,The name of an entity responsible for making the resource available.
-,Subject,dct:subject,IRI literal,,,,,The topic of the resource; a concept from a controlled vocabulary such as LCSH or MeSH
 ,Title,dct:title,literal,,,,,A name given to the resource.
 ,Format,dct:format,literal,,,,,"The file format, physical medium, or dimensions of the resource."
-,Version Type,srap:versionType,IRI,,,http://purl.org/coar/version/,IRIstem,"Version type, using the COAR Version Types vocabulary."
+,Subject,dct:subject,IRI literal,,,,,The topic of the resource; a concept from a controlled vocabulary such as LCSH or MeSH
 ,,,,,,,,
-,Date Published,dct:date,Literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date associated with the resource. Use more specific dates if available.s
+,Abstract,dct:abstract,literal,xsd:string,,,,A summary of the resource.
+,Table of Contents,dct:tableOfContents,literal,xsd:string,,,,A list of subunits of the resource.
+,Description,dct:description,literal,xsd:string,,,,An account of the resource.
+,Presented At,bibo:presentedAt,IRI literal,,,,,"Conference, workshop or other scientific event where the scholarly resource was presented."
+,Bibliographic Citation,dct:bibliographicCitation,literal,xsd:string,,,,A bibliographic reference for the resource.
+,,,,,,,,
+,Relation,dct:relation,IRI literal,,,,,A name or identifier of a related resource; use the SRAPResource shape if additional information is desired.
+,Relation,dct:relation,IRI BNODE,,SRAPResource,,,A SRAPResource description of a related resource.
+,Is Part Of,dct:isPartOf,IRI BNODE,,Periodical Book,,,A related resource in which the described resource is physically or logically included.
+,,,,,,,,
+,Date,dct:date,Literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date associated with the resource. Use more specific dates if available.s
 ,Date Issued,dct:issued,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date of formal issuance of the resource.
 ,Date Modified,dct:modified,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date on which the resource was changed.
 ,Date Accepted,dct:dateAccepted,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date of acceptance of the resource.
 ,Date Retracted,srap:dateRetracted,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date when the resource was retracted or withdrawn.
+,Version Type,srap:versionType,IRI,,,http://purl.org/coar/version/,IRIstem,"Version type, using the COAR Version Types vocabulary."
 ,Embargo Date Range,srap:embargoDateRange,literal,edtf:EDTF,,,,A period of time during which the resource is under embargo.
+,,,,,,,,
+,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
+,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
+,URL,srap:url,IRI,,,,,"URL where the electronic resource (e.g., a file) or a part of it can be retrieved."
 ,,,,,,,,
 ,Volume,bibo:volume,literal,xsd:string,,,,A volume number of the periodical where this article was published
 ,Issue,bibo:issue,literal,xsd:string,,,,An issue number of the periodical that this article was published in
 ,Start page,bibo:pageStart,literal,xsd:string,,,,Starting page number within a continuous page range.
 ,End page,bibo:pageEnd,literal,xsd:string,,,,Ending page number within a continuous page range.
-,Is Part Of,dct:isPartOf,IRI BNODE,,Periodical Book,,,A related resource in which the described resource is physically or logically included.
-,Presented At,bibo:presentedAt,IRI literal,,,,,"Conference, workshop or other scientific event where the scholarly resource was presented."
-,Bibliographic Citation,dct:bibliographicCitation,literal,xsd:string,,,,A bibliographic reference for the resource.
-,Relation,dct:relation,IRI literal,,,,,A name or identifier of a related resource; use the SRAPResource shape if additional information is desired.
-,Relation,dct:relation,IRI BNODE,,SRAPResource,,,A SRAPResource description of a related resource.
-,,,,,,,,
-,Abstract,dct:abstract,literal,xsd:string,,,,A summary of the resource.
-,Table of Contents,dct:tableOfContents,literal,xsd:string,,,,A list of subunits of the resource.
-,Description,dct:description,literal,xsd:string,,,,An account of the resource.
 ,,,,,,,,
 ,Access Rights,dct:accessRights,IRI,,,http://purl.org/coar/access_right/,IRIstem,"Access status of the resource, using the COAR Access Rights vocabulary."
 ,License,dct:license,IRI literal,,,,,A legal document giving official permission to do something with the resource.
@@ -43,13 +48,27 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,,,,,,,,
 ,Accessibility statement,srap:accessibilityStatement,literal,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
-,Scholarly Unit,srap:scholarlyUnit,IRI BNODE,,Organization,,,Organization or organizational unit where the scholarly activity was conducted.
-,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
 ,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
+,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
+,Scholarly Unit,srap:scholarlyUnit,IRI BNODE,,Organization,,,Organization or organizational unit where the scholarly activity was conducted.
 ,,,,,,,,
-,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
-,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
-,URL,srap:url,IRI,,,,,"URL where the electronic resource (e.g., a file) or a part of it can be retrieved."
+Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
+,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
+,Role,srap:role,literal,xsd:string,,,,"The role of the person in the context of the publication, expressed using a string literal."
+,Affiliation,srap:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
+,Name,srap:name,literal,xsd:string,,,,Name of person
+,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
+,,,,,,,,
+Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
+,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
+,Role,srap:role,literal,xsd:string,,,,"The role of the organization in the context of the publication, expressed using a string literal."
+,Name,srap:name,literal,xsd:string,,,,Name of the organization
+,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
+,,,,,,,,
+Grant,Class,rdf:type,IRI,,,srap:Grant,,The class will always be srap:Grant
+,Funder,srap:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.
+,Funder,srap:funder,IRI BNODE,,Organization,,,Information about the funder.
+,Grant identifier,dct:identifier,literal,xsd:string,,,,An identifier for the grant or other funding.
 ,,,,,,,,
 Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
@@ -62,21 +81,3 @@ Book,Class,rdf:type,IRI,,,bibo:Book bibo:Proceedings,,The class will always be b
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book
 ,Date,dct:date,Literal,xsd:string,,,,Date of publication
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
-,,,,,,,,
-Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
-,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
-,Role,srap:role,literal,xsd:string,,,,"The role of the person in the context of the publication, expressed using a string literal."
-,Affiliation,srap:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
-,Name,srap:name,literal,xsd:string,,,,Name of person
-,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
-,,,,,,,,
-Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
-,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
-,Role,srap:role,literal,xsd:string,,,,"The role of the organization in the context of the publication, expressed using a string literal."
-,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
-,Name,srap:name,literal,xsd:string,,,,Name of the organization
-,,,,,,,,
-Grant,Class,rdf:type,IRI,,,srap:Grant,,The class will always be srap:Grant
-,Funder,srap:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.
-,Funder,srap:funder,IRI BNODE,,Organization,,,Information about the funder.
-,Grant identifier,dct:identifier,literal,xsd:string,,,,An identifier for the grant or other funding.

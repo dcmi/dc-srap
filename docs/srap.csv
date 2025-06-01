@@ -78,6 +78,7 @@ Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo
 ,,,,,,,,
 Book,Class,rdf:type,IRI,,,bibo:Book bibo:Proceedings,,The class will always be bibo:Book or one of its subclasses.
 ,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,"A contributor to the book, either a person or a named group or organization."
+,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book
 ,Date,dct:date,Literal,xsd:string,,,,Date of publication
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.

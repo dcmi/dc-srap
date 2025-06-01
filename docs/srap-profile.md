@@ -441,9 +441,9 @@ The book shape can describe books and other monographic resources that contain t
 
 In RDF data, information that the shape represents a monographic work SHOULD be designated using a `rdf:type` statement with the class `bibo:Book` as the value.
 
-**bibo:isbn**
+**dct:contributor**
 
-The `bibo:isbn` property SHOULD be used to represent the International Standard Book Number (ISBN) of a book.
+An agent, such as an editor or an association, with responsibility over the content of the book. The contributor MAY be described with a Person or Organization shape, or MAY be a string value.
 
 **dct:publisher**
 
@@ -452,6 +452,10 @@ The publisher of the book or monograph.
 **dct:date**
 
 The publication date of the book or monograph.
+
+**bibo:isbn**
+
+The `bibo:isbn` property SHOULD be used to represent the International Standard Book Number (ISBN) of a book.
 
 ## Extending SRAP
 

@@ -211,7 +211,8 @@ When the focus resource is a monograph that has been assigned an ISBN, the `bibo
 
 **srap:url**
 
-This property SHOULD be used to provide the online download location for the resource.
+This property SHOULD be used to provide the URL where the electronic resource (e.g., a file) or a part of it can be retrieved using a web browser. It can either be the document itself (e.g. a PDF file) or a landing page.
+
 
 ### Enumeration
 

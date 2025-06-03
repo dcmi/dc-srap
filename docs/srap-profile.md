@@ -53,6 +53,8 @@ SRAP's domain model includes these entities and how they are related.
 
 The model can be used for stand-alone documents, like books, theses, technical reports, and for documents that are contained within larger publications, such as journal articles and book chapters. There is a required bibliographic description of the scholarly work. Where appropriate, one can encode metadata elements that represent a serial or monographic resource in which the scholarly work is contained. Persons, organizations, and grants are also resources that may be needed to describe the scholarly work.
 
+SRAP intentionally doesn't make strong statements about the cardinality of elements. Implementers of SRAP are advised to define their own cardinality rules for data validation. It's clear that most SRAP elements can take multiple values; however, the date and enumeration properties SHOULD NOT be repeated.
+
 ## DCTAP 
 
 SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the above elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage. Refer to the TAP for specific information on properties used, values, and recommended value lists to use.

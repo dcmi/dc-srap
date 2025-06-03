@@ -46,7 +46,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Rights Holder,dct:rightsHolder,literal,,,,,A person or organization owning or managing rights over the resource.
 ,Rights Holder,dct:rightsHolder,IRI BNODE,,Person Organization,,,A person or organization owning or managing rights over the resource.
 ,,,,,,,,
-,Accessibility statement,srap:accessibilityStatement,literal,xsd:string,,,,"Textual information describing the accessibility features of a resource, including technical details."
+,Accessibility statement,srap:accessibilityStatement,IRI literal,,,,,"Information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
 ,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
 ,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.

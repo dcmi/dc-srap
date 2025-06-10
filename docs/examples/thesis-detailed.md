@@ -31,7 +31,7 @@ ex:online_thesis
   dct:language "en" ; # language expressed as IETF BCP 47 language tag
   dct:publisher "Lappeenranta-Lahti University of Technology LUT"@en ;
   dct:isPartOf ex:series ; # is part of the series it has been published in
-  bibo:number "960" ;  # TODO number in series - how to represent this?
+  bibo:number "960" ;  # number in series
   dct:relation ex:printed_thesis ; # link to the printed thesis which has a different ISBN
   dct:rights "Kaikki oikeudet pidätetään."@fi, "All rights reserved."@en ;
   dct:subject "..." ;  # actual subjects omitted for brevity

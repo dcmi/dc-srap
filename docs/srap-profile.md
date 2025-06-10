@@ -217,7 +217,7 @@ This property SHOULD be used to provide the URL where the electronic resource (e
 ### Enumeration
 
 The scholarly work shape includes properties that define and locate the work in the context of monograph or periodical in which the focus work is contained.  These are:
-> `bibo:volume`, `bibo:issue`, `bibo:pageStart`, `bibo:pageEnd` 
+> `bibo:volume`, `bibo:issue`, `bibo:number`, `bibo:pageStart`, `bibo:pageEnd`
 
 These properties SHOULD be used to locate the scholarly work within a containing publication, which is described in a Periodical shape or a Book shape. They are assumed to be literals and SHOULD include just the number itself. 
 
@@ -228,6 +228,10 @@ If available, the designated volume in which the scholarly work is published. Th
 **bibo:issue**
 
 The periodical issue in which the scholarly work was published.
+
+**bibo:number**
+
+A generic item or document number, for example the number of a publication within a series.
 
 **bibo:pageStart**
 

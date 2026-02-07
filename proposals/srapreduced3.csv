@@ -1,0 +1,63 @@
+,propertyLabel,propertyID,valueNodeType,valueDatatype,valueShape,valueConstraint,valueConstraintType,note
+,,,,,,,,
+SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be srap:SRAPResource.
+,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIstem,"Resource type, using the COAR Resorce Types vocabulary."
+,Language,dct:language,literal,xsd:string,,,,A language of the resource.
+,Creator,dct:creator,IRI BNODE,,Person Organization,,,An entity responsible for making the resource.
+,Creator,dct:creator,literal,,,,,The name of an entity responsible for making the resource.
+,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,An entity responsible for making contributions to the resource.
+,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
+,Publisher,dct:publisher,IRI BNODE,,Organization,,,An entity responsible for making the resource available.
+,Publisher,dct:publisher,literal,,,,,The name of an entity responsible for making the resource available.
+,Relation,dct:relation,IRI literal,,,,,A name or identifier of a related resource; use the SRAPResource shape if additional information is desired.
+,Relation,dct:relation,IRI BNODE,,SRAPResource,,,A SRAPResource description of a related resource.
+,Rights Holder,dct:rightsHolder,literal,,,,,A person or organization owning or managing rights over the resource.
+,Rights Holder,dct:rightsHolder,IRI BNODE,,Person Organization,,,A person or organization owning or managing rights over the resource.
+,,,,,,,,
+,Accessibility statement,srap:accessibilityStatement,IRI literal,,,,,"Information describing the accessibility features of a resource, including technical details."
+,,,,,,,,
+,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
+,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
+,Scholarly Unit,srap:scholarlyUnit,IRI BNODE,,Organization,,,Organization or organizational unit where the scholarly activity was conducted.
+,,,,,,,,
+,,,,,,,,
+Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
+,Name,srap:name,literal,xsd:string,,,,Name of person
+,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
+,Contribution type,srap:personContribution,,,srap:Pcontribution,,,
+,,,,,,,,
+Pcontribution,Class,rdf:type,,,,srap:Contribution,,
+,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
+,Affiliation ,srap:affilitation,,,AffiliationOrg,,,
+,Resource,srap:contributionResource,,,SRAPResource,,,
+,,,,,,,,
+Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
+,Name,srap:name,literal,xsd:string,,,,Name of the organization
+,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
+,Contribution type,srap:organizationContribution,,,srap:Ocontribution,,,
+,,,,,,,,
+Ocontribution,Class,rdf:type,,,,srap:Contribution,,
+,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
+,Resource,srap:contributionResource,,,SRAPResource,,,
+,,,,,,,,
+AffiliationOrg,Class,rdf:type,,,,srap:Organization,,
+,Name,srap:name,literal,xsd:string,,,,
+,Identifier,dct:identifier,IRI literal,,,,,
+,,,,,,,,
+Grant,Class,rdf:type,IRI,,,srap:Grant,,The class will always be srap:Grant
+,Funder,srap:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.
+,Funder,srap:funder,IRI BNODE,,Organization,,,Information about the funder.
+,Grant identifier,dct:identifier,literal,xsd:string,,,,An identifier for the grant or other funding.
+,,,,,,,,
+Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
+,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
+,Publisher,dct:publisher,IRI BNODE,,Organization,,,Name of the publisher
+,ISSN,bibo:issn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for the printed version of serial publications."
+,E-ISSN,bibo:eissn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for electronic versions of serial publications."
+,,,,,,,,
+Book,Class,rdf:type,IRI,,,bibo:Book bibo:Proceedings,,The class will always be bibo:Book or one of its subclasses.
+,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,"A contributor to the book, either a person or a named group or organization."
+,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
+,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book
+,Date,dct:date,Literal,xsd:string,,,,Date of publication
+,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.

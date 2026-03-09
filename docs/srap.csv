@@ -37,6 +37,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,,,,,,,,
 ,Volume,bibo:volume,literal,xsd:string,,,,A volume number of the periodical where this article was published
 ,Issue,bibo:issue,literal,xsd:string,,,,An issue number of the periodical that this article was published in
+,Number,bibo:number,literal,xsd:string,,,,An item or document number
 ,Start page,bibo:pageStart,literal,xsd:string,,,,Starting page number within a continuous page range.
 ,End page,bibo:pageEnd,literal,xsd:string,,,,Ending page number within a continuous page range.
 ,,,,,,,,

@@ -1,0 +1,50 @@
+shapeID,propertyLabel,propertyID,valueNodeType,valueDatatype,valueShape,valueConstraint,valueConstraintType,note
+SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be srap:SRAPResource.
+,Type,dct:type,IRI,,,http://purl.org/coar/resource_type/,IRIstem,"Resource type, using the COAR Resorce Types vocabulary."
+,Language,dct:language,literal,xsd:string,,,,A language of the resource.
+,Creator,dct:creator,literal,,,,,The name of an entity responsible for making the resource.
+,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
+,Publisher,dct:publisher,literal,,,,,The name of an entity responsible for making the resource available.
+,Title,dct:title,literal,,,,,A name given to the resource.
+,Format,dct:format,literal,,,,,"The file format, physical medium, or dimensions of the resource."
+,Subject,dct:subject,IRI literal,,,,,The topic of the resource; a concept from a controlled vocabulary such as LCSH or MeSH
+,,,,,,,,
+,Abstract,dct:abstract,literal,xsd:string,,,,A summary of the resource.
+,Table of Contents,dct:tableOfContents,literal,xsd:string,,,,A list of subunits of the resource.
+,Description,dct:description,literal,xsd:string,,,,An account of the resource.
+,Presented At,bibo:presentedAt,IRI literal,,,,,"Conference, workshop or other scientific event where the scholarly resource was presented."
+,Bibliographic Citation,dct:bibliographicCitation,literal,xsd:string,,,,A bibliographic reference for the resource.
+,,,,,,,,
+,Relation,dct:relation,IRI literal,,,,,A name or identifier of a related resource; use the SRAPResource shape if additional information is desired.
+,,,,,,,,
+,Relation,dct:relation,literal,,,,,A SRAPResource description of a related resource.
+,Is Part Of,dct:isPartOf,literal,,,,,A related resource in which the described resource is physically or logically included.
+,,,,,,,,
+,,,,,,,,
+,Date,dct:date,Literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date associated with the resource. Use more specific dates if available.s
+,Date Issued,dct:issued,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date of formal issuance of the resource.
+,Date Modified,dct:modified,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date on which the resource was changed.
+,Date Accepted,dct:dateAccepted,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date of acceptance of the resource.
+,Date Retracted,srap:dateRetracted,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date when the resource was retracted or withdrawn.
+,Version Type,srap:versionType,IRI,,,http://purl.org/coar/version/,IRIstem,"Version type, using the COAR Version Types vocabulary."
+,Embargo Date Range,srap:embargoDateRange,literal,edtf:EDTF,,,,A period of time during which the resource is under embargo.
+,,,,,,,,
+,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
+,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
+,URL,srap:url,IRI,,,,,"URL where the electronic resource (e.g., a file) or a part of it can be retrieved."
+,,,,,,,,
+,Volume,bibo:volume,literal,xsd:string,,,,A volume number of the periodical where this article was published
+,Issue,bibo:issue,literal,xsd:string,,,,An issue number of the periodical that this article was published in
+,Start page,bibo:pageStart,literal,xsd:string,,,,Starting page number within a continuous page range.
+,End page,bibo:pageEnd,literal,xsd:string,,,,Ending page number within a continuous page range.
+,,,,,,,,
+,Access Rights,dct:accessRights,IRI,,,http://purl.org/coar/access_right/,IRIstem,"Access status of the resource, using the COAR Access Rights vocabulary."
+,License,dct:license,IRI literal,,,,,A legal document giving official permission to do something with the resource.
+,Rights,dct:rights,IRI literal,,,,,Information about rights held in and over the resource.
+,Rights Holder,dct:rightsHolder,literal,,,,,A person or organization owning or managing rights over the resource.
+,,,,,,,,
+,Accessibility statement,srap:accessibilityStatement,IRI literal,,,,,"Information describing the accessibility features of a resource, including technical details."
+,,,,,,,,
+,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
+,Funding,srap:funding,literal,,,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
+,Scholarly Unit,srap:scholarlyUnit,literal,,,,,Organization or organizational unit where the scholarly activity was conducted.

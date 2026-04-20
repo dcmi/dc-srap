@@ -24,7 +24,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
 ,Name,srap:name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
-,Contribution type,srap:personContribution,,,srap:Pcontribution,,,
+,Contribution type,srap:personContribution,,,Pcontribution,,,
 ,,,,,,,,
 Pcontribution,Class,rdf:type,,,,srap:Contribution,,
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
@@ -34,7 +34,7 @@ Pcontribution,Class,rdf:type,,,,srap:Contribution,,
 Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
 ,Name,srap:name,literal,xsd:string,,,,Name of the organization
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
-,Contribution type,srap:organizationContribution,,,srap:Ocontribution,,,
+,Contribution type,srap:organizationContribution,,,Ocontribution,,,
 ,,,,,,,,
 Ocontribution,Class,rdf:type,,,,srap:Contribution,,
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."

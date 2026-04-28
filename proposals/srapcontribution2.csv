@@ -29,7 +29,7 @@ AgentShape,Agent type,rdf:type,IRI,,,bf:Person ; bf:Organization ;,,
 RoleShape,Class,rdf:type,IRI,,,bf:Role,,The class will always be srap:Organization.
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,,,,,,,,
-Affiliation,Class,rdf:type,,,,madsrdf:Affiliation,,
+AffiliationShape,Class,rdf:type,,,,madsrdf:Affiliation,,
 ,Name,foaf:name,literal,xsd:string,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,
 ,,,,,,,,

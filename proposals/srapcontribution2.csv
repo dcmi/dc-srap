@@ -20,7 +20,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 Contribution,Class,rdf:type,IRI,,,bf:Contribution,,
 ,Agent,bf:agent,,,AgentShape,,,
 ,Role,bf:role,,,RoleShape,,,
-,Affiliation ,,,,AffiliationShape,,,
+,Affiliation,bibo:affiliation,,,AffiliationShape,,,
 ,,,,,,,,
 AgentShape,Agent type,rdf:type,IRI,,,bf:Person ; bf:Organization ;,,
 ,Agent id,dct:identifier,IRI,,,,,

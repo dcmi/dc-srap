@@ -7,6 +7,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Creator,dct:creator,literal,,,,,The name of an entity responsible for making the resource.
 ,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,An entity responsible for making contributions to the resource.
 ,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
+,Contribution,bibo:contribution,IRI BNODE,,Contribution,,,A detailed description of the contribution
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,An entity responsible for making the resource available.
 ,Publisher,dct:publisher,literal,,,,,The name of an entity responsible for making the resource available.
 ,Title,dct:title,literal,,,,,A name given to the resource.
@@ -23,7 +24,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Relation,dct:relation,IRI BNODE,,SRAPResource,,,A SRAPResource description of a related resource.
 ,Is Part Of,dct:isPartOf,IRI BNODE,,Periodical Book,,,A related resource in which the described resource is physically or logically included.
 ,,,,,,,,
-,Date,dct:date,Literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date associated with the resource. Use more specific dates if available.s
+,Date,dct:date,Literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date associated with the resource. Use more specific dates if available.
 ,Date Issued,dct:issued,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date of formal issuance of the resource.
 ,Date Modified,dct:modified,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date on which the resource was changed.
 ,Date Accepted,dct:dateAccepted,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date of acceptance of the resource.
@@ -52,16 +53,18 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
 ,Scholarly Unit,srap:scholarlyUnit,IRI BNODE,,Organization,,,Organization or organizational unit where the scholarly activity was conducted.
 ,,,,,,,,
+Contribution,Class,rdf:type,IRI,,,bibo:Contribution,,The class will always be bibo:Contribution
+,Agent,bibo:agent,IRI BNODE,,Person Organization,,,An entity responsible for making contributions to the resource.
+,Agent,bibo:agent,literal,,,,,The name of an entity responsible for making contributions to the resource.
+,Role,bibo:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
+,Role,bibo:role,literal,xsd:string,,,,"The role of the person in the context of the publication, expressed using a string literal."
+,Affiliation,bibo:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
+,,,,,,,,
 Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
-,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
-,Role,srap:role,literal,xsd:string,,,,"The role of the person in the context of the publication, expressed using a string literal."
-,Affiliation,srap:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
 ,Name,srap:name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,,
 Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
-,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
-,Role,srap:role,literal,xsd:string,,,,"The role of the organization in the context of the publication, expressed using a string literal."
 ,Name,srap:name,literal,xsd:string,,,,Name of the organization
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,,,,,,,,
@@ -79,6 +82,7 @@ Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo
 Book,Class,rdf:type,IRI,,,bibo:Book bibo:Proceedings,,The class will always be bibo:Book or one of its subclasses.
 ,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,"A contributor to the book, either a person or a named group or organization."
 ,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
+,Contribution,bibo:contribution,IRI BNODE,,Contribution,,,A detailed description of the contribution
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book
 ,Date,dct:date,Literal,xsd:string,,,,Date of publication
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.

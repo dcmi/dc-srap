@@ -153,7 +153,7 @@ Journal articles and book chapters may be contained within a larger publication 
 
 These date properties SHOULD be used to represent important dates in the life cycle of the resource:
 
-> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:dateRetracted`, `srap:embargoDateRange`, `bibo:status`
+> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `bibo:dateRetracted`, `srap:embargoDateRange`, `bibo:status`
 
 All available and relevant dates SHOULD be used. The dates SHOULD be in one of these standard ISO 8601 formats:
 
@@ -175,9 +175,9 @@ The `dct:date` property is generic and SHOULD NOT be used when more specific dat
 
 `dct:dateAccepted` SHOULD be used for the date that the resource was accepted for publication.
 
-**srap:dateRetracted**
+**bibo:dateRetracted**
 
-`srap:dateRetracted` properties SHOULD be used to record the date on which the resource was retracted from publication.
+`bibo:dateRetracted` SHOULD be used to record the date on which the resource was retracted from publication.
 
 **bibo:status**
 

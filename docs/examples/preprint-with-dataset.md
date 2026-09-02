@@ -90,7 +90,7 @@ ex:document
 <https://doi.org/10.1007/s11229-020-02724-x>
   a bibo:AcademicArticle ;
   dct:type <https://purl.org/coar/resource_type/c_6501> ;  # journal article
-  srap:version <https://purl.org/coar/version/c_970fb48d4fbd8a85> .  # VoR
+  bibo:status <https://purl.org/coar/version/c_970fb48d4fbd8a85> .  # VoR
 
 # the dataset
 <https://doi.org/10.15129/589f7af3-26b3-4a93-b042-fbc8100fc977>

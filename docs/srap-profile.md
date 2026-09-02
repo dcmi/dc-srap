@@ -199,7 +199,7 @@ ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
 
 These properties SHOULD be used to express standard identifiers of a scholarly work:
 
-> `dct:identifier`, `bibo:isbn`, `srap:url`
+> `dct:identifier`, `bibo:isbn`, `bibo:accessLink`
 
 **dct:identifier**
 
@@ -209,7 +209,7 @@ These properties SHOULD be used to express standard identifiers of a scholarly w
 
 When the focus resource is a monograph that has been assigned an ISBN, the `bibo:isbn` property SHOULD be used for that identifier. 
 
-**srap:url**
+**bibo:accessLink**
 
 This property SHOULD be used to provide the URL where the electronic resource (e.g., a file) or a part of it can be retrieved using a web browser. It can either be the document itself (e.g. a PDF file) or a landing page.
 

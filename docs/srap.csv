@@ -33,7 +33,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,,,,,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.
-,URL,srap:url,IRI,,,,,"URL where the electronic resource (e.g., a file) or a part of it can be retrieved."
+,Access Link,bibo:accessLink,literal,,,,,"URL where the electronic resource (e.g., a file) or a part of it can be retrieved."
 ,,,,,,,,
 ,Volume,bibo:volume,literal,xsd:string,,,,A volume number of the periodical where this article was published
 ,Issue,bibo:issue,literal,xsd:string,,,,An issue number of the periodical that this article was published in

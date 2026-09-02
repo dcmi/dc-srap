@@ -73,7 +73,7 @@ ex:document
   ] ;
   # local repository identifier / URL of landing page
   # <dc:identifier>https://eprints.gla.ac.uk/217807/</dc:identifier>
-  srap:url <https://eprints.gla.ac.uk/217807/> ;
+  bibo:accessLink "https://eprints.gla.ac.uk/217807/" ;
   # local repository persistent identifier
   # <dc:relation rel="cite-as">https://oai.core.ac.uk/oai:eprints.gla.ac.uk:217807</dc:relation>
   dct:identifier <https://oai.core.ac.uk/oai:eprints.gla.ac.uk:217807> ;

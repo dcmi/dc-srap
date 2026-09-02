@@ -9,6 +9,7 @@ This example shows how to represent a Master's thesis using SRAP. It is based on
 ```
 @prefix ex:      <http://example.org/>.
 @prefix srap:    <http://example.org/srap/>.  # placeholder namespace for new properties
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix dct:     <http://purl.org/dc/terms/>.
 
 ex:simpleThesis
@@ -27,6 +28,6 @@ ex:simpleThesis
   dct:subject "Amyloid beta-protein precursor" ; # LCSH preferred form for subject
   dct:format "application/pdf" ;
   dct:identifier	<https://hdl.handle.net/1842/39891> ; # IRI for the thesis
-  srap:url "https://era.ed.ac.uk/bitstream/handle/1842/39891/RamsayMF_1999_redux.pdf" ; # URL for download of PDF document
+  bibo:accessLink "https://era.ed.ac.uk/bitstream/handle/1842/39891/RamsayMF_1999_redux.pdf" ; # URL for download of PDF document
   dct:type coar:c_bdcc . # COAR resource type for master's thesis
 ```

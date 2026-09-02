@@ -153,7 +153,7 @@ Journal articles and book chapters may be contained within a larger publication 
 
 These date properties SHOULD be used to represent important dates in the life cycle of the resource:
 
-> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:dateRetracted`, `srap:embargoDateRange`, `srap:versionType`
+> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `srap:dateRetracted`, `srap:embargoDateRange`, `bibo:status`
 
 All available and relevant dates SHOULD be used. The dates SHOULD be in one of these standard ISO 8601 formats:
 
@@ -179,9 +179,9 @@ The `dct:date` property is generic and SHOULD NOT be used when more specific dat
 
 `srap:dateRetracted` properties SHOULD be used to record the date on which the resource was retracted from publication.
 
-**srap:versionType**
+**bibo:status**
 
-srap:versionType MAY be used to encode the version of a work. It is recommended to use the [COAR vocabulary](http://purl.org/coar/version/) for terms denoting the version in the lifecycle of a scholarly work. 
+`bibo:status` MAY be used to encode the version of a work. It is recommended to use the [COAR vocabulary](http://purl.org/coar/version/) for terms denoting the version in the lifecycle of a scholarly work. 
 
 **srap:embargoDateRange**
 

@@ -10,6 +10,7 @@ This example shows how to represent a book chapter in SRAP. It is based on this 
 @prefix ex:      <http://example.org/>.
 @prefix srap:    <http://example.org/srap/>.  # placeholder namespace for new properties
 @prefix dct:     <http://purl.org/dc/terms/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 
 # The chapter within a book
@@ -21,8 +22,8 @@ ex:bookChapter
   dct:contributor "Braunstein, Laura" ;
   dct:contributor "Golomb, Liorah" ;
   dct:publisher [
-    a srap:Organization ;
-    srap:name "Association of College and Research Libraries"
+    a foaf:Organization ;
+    foaf:name "Association of College and Research Libraries"
   ] ;
   dct:title "Centering our Values: A Framework for Digital Humanities in the Library" ;
   dct:format "application/pdf" ;

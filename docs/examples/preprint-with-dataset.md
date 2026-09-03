@@ -8,6 +8,7 @@ This example shows how to represent a preprint article. It is based on [Example 
 @prefix ex:      <http://example.org/>.
 @prefix srap:    <http://example.org/srap/>.  # placeholder namespace for new properties
 @prefix dct:     <http://purl.org/dc/terms/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix marcrel: <http://id.loc.gov/vocabulary/relators/>.
 
@@ -16,8 +17,8 @@ ex:document
   dct:description "YouTube has been implicated in..." ;
   dct:language "en" ;
   dct:publisher [
-    a srap:Organization ;
-    srap:name "Springer" ;
+    a foaf:Organization ;
+    foaf:name "Springer" ;
     dct:identifier <https://isni.org/isni/0000000460111909>
   ] ;
   # Rioxx example uses dc:source to indicate the ISNI of the containing publication series; SRAP uses isPartOf
@@ -28,26 +29,26 @@ ex:document
   dct:title "Technologically scaffolded atypical cognition: the case of YouTube’s recommender system" ;
   dct:dateAccepted "2020-05-27" ;
   dct:creator [
-    a srap:Person ;
-    srap:name "Alfano, Mark" ;
+    a foaf:Person ;
+    foaf:name "Alfano, Mark" ;
     dct:identifier <https://viaf.org/viaf/8232163464412905680007>
   ] ;
   dct:creator [
-    a srap:Person ;
-    srap:name "Fard, Amir Ebrahimi"
+    a foaf:Person ;
+    foaf:name "Fard, Amir Ebrahimi"
   ] ;
   dct:creator [
-    a srap:Person ;
-    srap:name "Carter, J. Adam" ;
+    a foaf:Person ;
+    foaf:name "Carter, J. Adam" ;
     dct:identifier <http://orcid.org/0000-0002-1222-8331>, <https://isni.org/isni/0000000452130579>
   ] ;
   dct:creator [
-    a srap:Person ;
-    srap:name "Clutton, Peter"
+    a foaf:Person ;
+    foaf:name "Clutton, Peter"
   ] ;
   dct:creator [
-    a srap:Person ;
-    srap:name "Klein, Colin"
+    a foaf:Person ;
+    foaf:name "Klein, Colin"
   ] ;
   dct:issued "2021-12" ;
   # SRAP has no record_public_release_date property
@@ -57,8 +58,8 @@ ex:document
     a srap:Grant ;
     dct:identifier "DP190101507" ;
     srap:funder [
-      a srap:Organization ;
-      srap:name "Australian Research Council" ;
+      a foaf:Organization ;
+      foaf:name "Australian Research Council" ;
       dct:identifier <https://ror.org/05mmh0f86>
     ]
   ] ;
@@ -66,8 +67,8 @@ ex:document
     a srap:Grant ;
     dct:identifier "61387" ;
     srap:funder [
-      a srap:Organization ;
-      srap:name "John Templeton Foundation" ;
+      a foaf:Organization ;
+      foaf:name "John Templeton Foundation" ;
       dct:identifier <https://ror.org/035tnyy05>
     ]
   ] ;

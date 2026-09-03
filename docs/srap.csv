@@ -52,17 +52,17 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
 ,Scholarly Unit,srap:scholarlyUnit,IRI BNODE,,Organization,,,Organization or organizational unit where the scholarly activity was conducted.
 ,,,,,,,,
-Person,Class,rdf:type,IRI,,,srap:Person,,The class will always be srap:Person.
+Person,Class,rdf:type,IRI,,,foaf:Person,,The class will always be foaf:Person.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
 ,Role,srap:role,literal,xsd:string,,,,"The role of the person in the context of the publication, expressed using a string literal."
 ,Affiliation,srap:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
-,Name,srap:name,literal,xsd:string,,,,Name of person
+,Name,foaf:name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,,
-Organization,Class,rdf:type,IRI,,,srap:Organization,,The class will always be srap:Organization.
+Organization,Class,rdf:type,IRI,,,foaf:Organization,,The class will always be foaf:Organization.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
 ,Role,srap:role,literal,xsd:string,,,,"The role of the organization in the context of the publication, expressed using a string literal."
-,Name,srap:name,literal,xsd:string,,,,Name of the organization
+,Name,foaf:name,literal,xsd:string,,,,Name of the organization
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,,,,,,,,
 Grant,Class,rdf:type,IRI,,,srap:Grant,,The class will always be srap:Grant

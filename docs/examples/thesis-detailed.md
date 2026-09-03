@@ -17,6 +17,7 @@ Acta Universitatis Lappeenrantaensis 960
 @prefix ex:      <http://example.org/>.
 @prefix srap:    <http://example.org/srap/>.  # placeholder namespace for new properties
 @prefix dct:     <http://purl.org/dc/terms/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix marcrel: <http://id.loc.gov/vocabulary/relators/>.
 
@@ -37,7 +38,7 @@ ex:online_thesis
   dct:subject "..." ;  # actual subjects omitted for brevity
   dct:title "Faster than real-time simulation of fluid power-driven mechatronic machines"@en ;
   dct:contributor [
-    srap:name "Ellman, Asko" ;
+    foaf:name "Ellman, Asko" ;
     srap:role marcrel:opn  # official opponent at the doctoral defense, using MARC relator
   ] ;
   dct:type <http://purl.org/coar/resource_type/c_db06> ; # COAR resource type: doctoral thesis
@@ -45,15 +46,15 @@ ex:online_thesis
   dct:contributor "School of Energy Systems"@en ;  # TODO should this be part of the above?
   dct:subject "School of Energy Systems, Mechanical Engineering" ; # TODO is this the correct field for degree program?
   dct:contributor [
-    srap:name "Ellman, Asko" ;
+    foaf:name "Ellman, Asko" ;
     srap:role marcrel:rev  # reviewer, using MARC relator
   ] ;
   dct:contributor [
-    srap:name "Pietola, Matti" ;
+    foaf:name "Pietola, Matti" ;
     srap:role marcrel:rev  # reviewer, using MARC relator
   ] ;
   dct:contributor [
-    srap:name "Handroos, Heikki" ;
+    foaf:name "Handroos, Heikki" ;
     srap:role marcrel:dgs  # degree supervisor, using MARC relator
   ] .
 

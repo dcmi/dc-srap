@@ -8,7 +8,6 @@ This example shows how to represent a Master's thesis using SRAP. It is based on
 
 ```
 @prefix ex:      <http://example.org/>.
-@prefix srap:    <http://example.org/srap/>.  # placeholder namespace for new properties
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix dct:     <http://purl.org/dc/terms/>.
 
@@ -23,7 +22,7 @@ ex:simpleThesis
   dct:dateAccepted "1999" ;
   dct:issued "2023-02-23" ;
   dct:publisher "University of Edinburgh" ;
-  srap:scholarlyUnit "Edinburgh Medical School" ;
+  bibo:organizationUnit "Edinburgh Medical School" ;
   dct:subject "Alzheimer's disease" ; # LCSH preferred form for subject
   dct:subject "Amyloid beta-protein precursor" ; # LCSH preferred form for subject
   dct:format "application/pdf" ;

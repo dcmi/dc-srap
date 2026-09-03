@@ -292,9 +292,9 @@ The `srap:project` property MAY be used to indicate the project(s) in which the 
 
 The `srap:funding` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Grant shape (see [Grant shape](#grant-shape)).
 
-**srap:scholarlyUnit**
+**bibo:organizationUnit**
 
-The value of the `srap:scholarlyUnit` property SHOULD be an Organization shape. The property is distinct from organizations with which an individual person has an affiliation or the role of an academic institution in awarding a qualification.
+The value of the `bibo:organizationUnit` property SHOULD be an Organization shape that indicates the institutional or organizational context for the work. The property is distinct from organizations with which an individual person has an affiliation or the role of an academic institution in awarding a qualification.
 
 **Examples of project, funding and scholarly unit**
 

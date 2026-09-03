@@ -66,10 +66,11 @@ The following term prefixes are used in this document and in the TAP document:
 * dct: `http://purl.org/dc/terms/`
 * bibo: `http://purl.org/ontology/bibo/`
 * edtf: `http://id.loc.gov/datatypes/EDTFScheme/`
+* foaf: `http://xmlns.com/foaf/0.1/`
 * srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
 * ex: `http://example.com/` (placeholder namespace for example resources)
 
-NOTE: The selection of properties used in SRAP has been limited to DC Terms and BIBO properties. Where appropriate properties were not found in those vocabularies the prefix `srap:` is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
+NOTE: The selection of properties used in SRAP has been limited to DC Terms, BIBO and FOAF properties. Where appropriate properties were not found in those vocabularies the prefix `srap:` is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
 
 ## Scholarly resource shape
 The Scholarly resource shape is the describes the focus resource. This resource may be a stand-alone document, such as a thesis, a technical report, or a book. It may be instead a resource that is located within another resource, such as a book chapter within a book, or a journal article within a journal.
@@ -321,13 +322,13 @@ The value of the `srap:scholarlyUnit` property SHOULD be an Organization shape. 
 
 ## Person shape
 
-> `rdf:type`, `srap:role`, `srap:affiliation`, `srap:name`, `dct:identifier`
+> `rdf:type`, `srap:role`, `srap:affiliation`, `foaf:name`, `dct:identifier`
 
 In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason, metadata often make use of identifiers, such as the ORCID for individual persons. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded. (See Appendix 1)
 
 **rdf:type**
 
-`rdf:type` SHOULD be included with the value `srap:Person`. 
+`rdf:type` SHOULD be included with the value `foaf:Person`. 
 
 **srap:role**
 
@@ -337,7 +338,7 @@ In scholarly publications there can be many named creators and contributors. Alt
 
 Primarily for authors and co-authors, this is the affiliation of the person at the time the work was accepted or published.
 
-**srap:name**
+**foaf:name**
 
 The name of the person; usually a form intended for display.
 
@@ -351,19 +352,19 @@ TODO
 
 ## Organization shape
 
-> `rdf:type`, `srap:role`, `dct:identifier`, `srap:name`
+> `rdf:type`, `srap:role`, `dct:identifier`, `foaf:name`
 
 Information about organizations MAY be included in SRAP metadata in various contexts: for the publisher of the book or periodical, for the rights holder, for the creator, and others. In each case the organization shape MAY be used as the value of those properties. 
 
 **rdf:type**
 
-When used in RDF data the organization shape SHOULD have an `rdf:type` property with the designation as a class "Organization".
+When used in RDF data the organization shape SHOULD have an `rdf:type` property with the value `foaf:Organization`. 
 
 **srap:role**
 
 `srap:role` SHOULD indicate the role that the organization played in relation to the scholarly work. Preferably the role should be a URI taken from the [Library of Congress relators](http://id.loc.gov/vocabulary/relators/) list, but it may also be a simple string.
 
-**srap:name**
+**foaf:name**
 
 The name of the organization; usually a form intended for display.
 

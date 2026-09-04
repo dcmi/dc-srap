@@ -49,7 +49,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Accessibility statement,srap:accessibilityStatement,IRI literal,,,,,"Information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
 ,Project,bibo:project,IRI,,,,,A RAiD handle or other identifier for the project.
-,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
+,Funding Source,bibo:fundingSource,IRI BNODE,,Funding,,,A source of funding that has supported the activities related to the resource.
 ,Organization Unit,bibo:organizationUnit,IRI BNODE,,Organization,,,Organizational context where the scholarly activity was conducted.
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,foaf:Person,,The class will always be foaf:Person.
@@ -65,10 +65,10 @@ Organization,Class,rdf:type,IRI,,,foaf:Organization,,The class will always be fo
 ,Name,foaf:name,literal,xsd:string,,,,Name of the organization
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
 ,,,,,,,,
-Grant,Class,rdf:type,IRI,,,srap:Grant,,The class will always be srap:Grant
-,Funder,srap:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.
-,Funder,srap:funder,IRI BNODE,,Organization,,,Information about the funder.
-,Grant identifier,dct:identifier,literal,xsd:string,,,,An identifier for the grant or other funding.
+Funding,Class,rdf:type,IRI,,,bibo:Funding,,The class will always be bibo:Funding.
+,Funder,bibo:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.
+,Funder,bibo:funder,IRI BNODE,,Organization,,,Information about the funder.
+,Funding identifier,dct:identifier,literal,xsd:string,,,,An identifier for the grant or other funding.
 ,,,,,,,,
 Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo:Periodical or one of its subclasses)
 ,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately

@@ -48,7 +48,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,,,,,,,,
 ,Accessibility statement,srap:accessibilityStatement,IRI literal,,,,,"Information describing the accessibility features of a resource, including technical details."
 ,,,,,,,,
-,Project identifier,srap:project,IRI,,,,,A RAiD handle or other identifier for the project.
+,Project,bibo:project,IRI,,,,,A RAiD handle or other identifier for the project.
 ,Funding,srap:funding,IRI BNODE,,Grant,,,A grant that directly or indirectly provides funding or sponsorship for the resource.
 ,Organization Unit,bibo:organizationUnit,IRI BNODE,,Organization,,,Organizational context where the scholarly activity was conducted.
 ,,,,,,,,

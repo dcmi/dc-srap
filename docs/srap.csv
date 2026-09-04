@@ -29,7 +29,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Date Accepted,dct:dateAccepted,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date of acceptance of the resource.
 ,Date Retracted,bibo:dateRetracted,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date when the resource was retracted or withdrawn.
 ,Publication Status,bibo:status,IRI,,,http://purl.org/coar/version/,IRIstem,"Publication status, using the COAR Version Types vocabulary."
-,Embargo Date Range,srap:embargoDateRange,literal,edtf:EDTF,,,,A period of time during which the resource is under embargo.
+,Embargoed Before,bibo:embargoedBefore,literal,xsd:gYear xsd:gYearMonth xsd:date,,,,Date or date/time when the resource is available after an embargo period.
 ,,,,,,,,
 ,Identifier,dct:identifier,IRI literal,,,,,"URI, one for each identifier the resource has, provided separately"
 ,ISBN,bibo:isbn,literal,xsd:string,,,,The International Standard Book Number of the resource.

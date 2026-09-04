@@ -154,7 +154,7 @@ Journal articles and book chapters may be contained within a larger publication 
 
 These date properties SHOULD be used to represent important dates in the life cycle of the resource:
 
-> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `bibo:dateRetracted`, `srap:embargoDateRange`, `bibo:status`
+> `dct:date`, `dct:issued`, `dct:modified`, `dct:dateAccepted`, `bibo:dateRetracted`, `bibo:embargoedBefore`, `bibo:status`
 
 All available and relevant dates SHOULD be used. The dates SHOULD be in one of these standard ISO 8601 formats:
 
@@ -184,17 +184,9 @@ The `dct:date` property is generic and SHOULD NOT be used when more specific dat
 
 `bibo:status` MAY be used to encode the version of a work. It is recommended to use the [COAR vocabulary](http://purl.org/coar/version/) for terms denoting the version in the lifecycle of a scholarly work. 
 
-**srap:embargoDateRange**
+**bibo:embargoedBefore**
 
-If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date range under which the embargo is in place. The date range MUST be expressed using the [Extended Date/Time Format](https://www.loc.gov/standards/datetime/) (EDTF); more specifically, as an EDTF Level 1 Extended Interval, which permits open-ended intervals. In RDF data, the data type `edtf:EDTF` SHOULD be used to indicate that the value conforms to EDTF.
-
-**Embargo date range example**
-
-This example represents the embargo period for an article that is under embargo from an unspecified start date until December 31st, 2024:
-
-```
-ex:article srap:embargoDateRange "../2024-12-31"^^edtf:EDTF .
-```
+If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date when the resource is available after an embargo period.
 
 ### Identifiers
 

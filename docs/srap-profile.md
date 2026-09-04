@@ -282,11 +282,11 @@ srap:accessibilityStatement "WCAG level AAA"@en .
 
 ### Project and funding
 
-> `srap:project`, `srap:funding`, `srap:scholarlyUnit`
+> `bibo:project`, `srap:funding`, `bibo:organizationUnit`
 
-**srap:project**
+**bibo:project**
 
-The `srap:project` property MAY be used to indicate the project(s) in which the resource was created. Its value should be an IRI identifying the project, for example a [Research Activity Identifier](https://raid.org/) (RAiD). The specifics of how to describe projects is outside the scope of SRAP.
+The `bibo:project` property MAY be used to indicate the project(s) under whose umbrella or auspices the resource was created, conducted, or supported. Its value SHOULD be an IRI identifying the project, for example a [Research Activity Identifier](https://raid.org/) (RAiD). The specifics of how to describe projects is outside the scope of SRAP.
 
 **srap:funding**
 

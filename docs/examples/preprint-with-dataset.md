@@ -54,19 +54,19 @@ ex:document
   # SRAP has no record_public_release_date property
   # <rioxxterms:record_public_release_date>2020-06-11</rioxxterms:record_public_release_date>
   dct:type <https://purl.org/coar/resource_type/c_2df8fbb1> ;
-  srap:funding [
-    a srap:Grant ;
+  bibo:fundingSource [
+    a bibo:Funding ;
     dct:identifier "DP190101507" ;
-    srap:funder [
+    bibo:funder [
       a foaf:Organization ;
       foaf:name "Australian Research Council" ;
       dct:identifier <https://ror.org/05mmh0f86>
     ]
   ] ;
-  srap:funding [
-    a srap:Grant ;
+  bibo:fundingSource [
+    a bibo:Funding ;
     dct:identifier "61387" ;
-    srap:funder [
+    bibo:funder [
       a foaf:Organization ;
       foaf:name "John Templeton Foundation" ;
       dct:identifier <https://ror.org/035tnyy05>

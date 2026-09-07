@@ -274,41 +274,41 @@ srap:accessibilityStatement "WCAG level AAA"@en .
 
 ### Project and funding
 
-> `bibo:project`, `srap:funding`, `bibo:organizationUnit`
+> `bibo:project`, `bibo:funding`, `bibo:organizationUnit`
 
 **bibo:project**
 
 The `bibo:project` property MAY be used to indicate the project(s) under whose umbrella or auspices the resource was created, conducted, or supported. Its value SHOULD be an IRI identifying the project, for example a [Research Activity Identifier](https://raid.org/) (RAiD). The specifics of how to describe projects is outside the scope of SRAP.
 
-**srap:funding**
+**bibo:fundingSource**
 
-The `srap:funding` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Grant shape (see [Grant shape](#grant-shape)).
+The `srap:fundingSource` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Funding shape (see [Funding shape](#funding-shape)).
 
 **bibo:organizationUnit**
 
 The value of the `bibo:organizationUnit` property SHOULD be an Organization shape that indicates the institutional or organizational context for the work. The property is distinct from organizations with which an individual person has an affiliation or the role of an academic institution in awarding a qualification.
 
-**Examples of project, funding and scholarly unit**
+**Examples of project, funding source and organization unit**
 
 ```
   # Example project
-  srap:project <https://raid.org/10.26259/ae4fde43> ;
+  bibo:project <https://raid.org/10.26259/ae4fde43> ;
 
   # Example funding statement
-  srap:funding [
-    a srap:Grant ;
+  bibo:fundingSource [
+    a bibo:Funding ;
     dct:identifier "DP190101507" ;
-    srap:funder [
-      a srap:Organization ;
-      srap:name "Australian Research Council" ;
+    bibo:funder [
+      a foaf:Organization ;
+      foaf:name "Australian Research Council" ;
       dct:identifier <https://ror.org/05mmh0f86>
     ]
   ] ;
 
-  # Example scholarly unit
-  srap:scholarlyUnit [
-    a srap:Organization ;
-    srap:name "University of Edinburgh. Centre for Cognitive and Neural Systems"
+  # Example organization unit
+  bibo:organizationUnit [
+    a foaf:Organization ;
+    foaf:name "University of Edinburgh. Centre for Cognitive and Neural Systems"
   ] ;
 ```
 
@@ -368,27 +368,27 @@ A unique identifier for the organization. Some examples of common identifiers ar
 
 TODO
 
-## Grant shape
+## Funding shape
 
-A grant represents a financial or otherwise quantifiable allocation of resources, for example when a funding agency provides financial support for a research activity that then results in the publication of one or more scholarly articles. A grant SHOULD be described using the following properties:
+A Funding shape represents a financial or otherwise quantifiable allocation of resources, for example a grant that a funding agency provides to financially support a research activity that then results in the publication of one or more scholarly articles. Funding SHOULD be described using the following properties:
 
-> `rdf:type`, `srap:funder`, `dct:identifier`
+> `rdf:type`, `bibo:funder`, `dct:identifier`
 
-In RDF data, information that a resource is a grant SHOULD be designated using a `rdf:type` statement with the class `srap:Grant` as the value.
+In RDF data, information that a resource is a funding SHOULD be designated using a `rdf:type` statement with the class `bibo:Funding` as the value.
 
-The funder of the grant (for example the funding agency) SHOULD be indicated using the property `srap:funder`, which may also be repeated. The value can be either a literal value (the name of the funder) or a resource that represents an Organization. It can be an IRI from a registry such as [ISNI](https://isni.org/) or [Research Organization Registry](https://ror.org/) (ROR).
+The funder of the grant (for example the funding agency) SHOULD be indicated using the property `bibo:funder`, which may also be repeated. The value can be either a literal value (the name of the funder) or a resource that represents an Organization. It can be an IRI from a registry such as [ISNI](https://isni.org/) or [Research Organization Registry](https://ror.org/) (ROR).
 
-The grant number or other identifier or the grant SHOULD be indicated using the property `dct:identifier`. The value is a literal value, for example a plain number.
+The grant number or other identifier or the funding SHOULD be indicated using the property `dct:identifier`. The value is a literal value, for example a plain number.
 
-**Example grant shape**
+**Example funding shape**
 
 This example represents a grant awarded by the Lawrence Livermore Laboratory. The funder is indicated using both a literal value and an IRI from ROR.
 
 ```
 ex:lll_grant
-   a srap:Grant ;
-	  srap:funder "Lawrence Livermore National Laboratory" ;
-	  srap:funder <https://ror.org/041nk4h53> ;
+   a bibo:Funding ;
+	  bibo:funder "Lawrence Livermore National Laboratory" ;
+	  bibo:funder <https://ror.org/041nk4h53> ;
 	  dct:identifier "EP/P010288/1" .
 ```
 

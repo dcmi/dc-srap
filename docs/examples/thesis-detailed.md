@@ -37,25 +37,33 @@ ex:online_thesis
   dct:rights "Kaikki oikeudet pidätetään."@fi, "All rights reserved."@en ;
   dct:subject "..." ;  # actual subjects omitted for brevity
   dct:title "Faster than real-time simulation of fluid power-driven mechatronic machines"@en ;
-  dct:contributor [
-    foaf:name "Ellman, Asko" ;
-    srap:role marcrel:opn  # official opponent at the doctoral defense, using MARC relator
+  dct:contributor "Ellman, Asko" ;
+  bibo:hasContributor [
+    a bibo:ContributionContext ;
+    bibo:contributingAgent "Ellman, Asko" ;
+    bibo:contributorRole marcrel:opn  # official opponent at the doctoral defense, using MARC relator
   ] ;
   dct:type <http://purl.org/coar/resource_type/c_db06> ; # COAR resource type: doctoral thesis
   dct:contributor "Lappeenrannan-Lahden teknillinen yliopisto LUT"@fi, "Lappeenranta-Lahti University of Technology LUT"@en ;  # TODO should this be a resource? Typed as Organization?
   dct:contributor "School of Energy Systems"@en ;  # TODO should this be part of the above?
   dct:subject "School of Energy Systems, Mechanical Engineering" ; # TODO is this the correct field for degree program?
-  dct:contributor [
-    foaf:name "Ellman, Asko" ;
-    srap:role marcrel:rev  # reviewer, using MARC relator
+  dct:contributor "Ellman, Asko" ;
+  bibo:hasContribution [
+    a bibo:ContributionContext ;
+    bibo:contributingAgent "Ellman, Asko" ;
+    bibo:contributorRole marcrel:rev  # reviewer, using MARC relator
   ] ;
-  dct:contributor [
-    foaf:name "Pietola, Matti" ;
-    srap:role marcrel:rev  # reviewer, using MARC relator
+  dct:contributor "Pietola, Matti" ;
+  bibo:hasContribution [
+    a bibo:ContributionContext ;
+    bibo:contributingAgent "Pietola, Matti" ;
+    bibo:contributorRole marcrel:rev  # reviewer, using MARC relator
   ] ;
-  dct:contributor [
-    foaf:name "Handroos, Heikki" ;
-    srap:role marcrel:dgs  # degree supervisor, using MARC relator
+  dct:contributor "Handroos, Heikki" ;
+  bibo:hasContribution [
+    a bibo:ContributionContext ;
+    bibo:contributingAgent "Handroos, Heikki" ;
+    bibo:contributorRole marcrel:dgs  # degree supervisor, using MARC relator
   ] .
 
 # Printed version of the thesis, with a different ISBN

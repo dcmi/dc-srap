@@ -9,6 +9,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,An entity responsible for making the resource available.
 ,Publisher,dct:publisher,literal,,,,,The name of an entity responsible for making the resource available.
+,Contribution,bibo:hasContribution,IRI BNODE,,ContributionContext,A resource that provides detailed information about the contribution such as contributor roles and/or affiliations.
 ,Title,dct:title,literal,,,,,A name given to the resource.
 ,Format,dct:format,literal,,,,,"The file format, physical medium, or dimensions of the resource."
 ,Subject,dct:subject,IRI literal,,,,,The topic of the resource; a concept from a controlled vocabulary such as LCSH or MeSH
@@ -53,17 +54,18 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Organization Unit,bibo:organizationUnit,IRI BNODE,,Organization,,,Organizational context where the scholarly activity was conducted.
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,foaf:Person,,The class will always be foaf:Person.
-,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."
-,Role,srap:role,literal,xsd:string,,,,"The role of the person in the context of the publication, expressed using a string literal."
-,Affiliation,srap:affiliation,IRI BNODE,,Organization,,,An organization to which an agent was affiliated when the resource was created.
 ,Name,foaf:name,literal,xsd:string,,,,Name of person
 ,Identifier,dct:identifier,IRI literal,,,,,"Identifier for the person, such as ORCID"
 ,,,,,,,,
 Organization,Class,rdf:type,IRI,,,foaf:Organization,,The class will always be foaf:Organization.
-,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the organization in the context of the publication, expressed using MARC relators."
-,Role,srap:role,literal,xsd:string,,,,"The role of the organization in the context of the publication, expressed using a string literal."
 ,Name,foaf:name,literal,xsd:string,,,,Name of the organization
 ,Identifier,dct:identifier,IRI literal,,,,,Identifier for the organization
+,,,,,,,,
+ContributionContext,Class,rdf:type,IRI,,,bibo:ContributionContext,,The class will always be bibo:ContributionContext.
+,Contributing Agent,bibo:contributingAgent,IRI BNODE,,Person Organization,,,The agent who made a contribution to the resource.
+,Contributor Role,bibo:contributorRole,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the agent in the context of the publication, expressed using MARC relators."
+,Contributor Role,bibo:contributorRole,literal,xsd:string,,,,"The role of the agent in the context of the publication, expressed using a string literal."
+,Contributor Affiliation,bibo:contributorAffiliation,IRI BNODE,,Organization,,,An institutional or group affiliation of the agent.
 ,,,,,,,,
 Funding,Class,rdf:type,IRI,,,bibo:Funding,,The class will always be bibo:Funding.
 ,Funder,bibo:funder,IRI literal,,,,,The name or identifier of the funder; use the Organization shape if additional information is desired.

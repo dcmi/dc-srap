@@ -50,7 +50,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,,,,,,,,
 ,Project,bibo:project,IRI,,,,,A RAiD handle or other identifier for the project.
 ,Funding Source,bibo:fundingSource,IRI BNODE,,Funding,,,A source of funding that has supported the activities related to the resource.
-,Organization Unit,bibo:organizationUnit,IRI BNODE,,Organization,,,Organizational context where the scholarly activity was conducted.
+,Organization Unit,bibo:organizationUnit,IRI BNODE,,Organization,,,An institutional or organizational context for the work.
 ,,,,,,,,
 Person,Class,rdf:type,IRI,,,foaf:Person,,The class will always be foaf:Person.
 ,Role,srap:role,IRI,,,http://id.loc.gov/vocabulary/relators/,IRIstem,"The role of the person in the context of the publication, expressed using MARC relators."

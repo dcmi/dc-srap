@@ -77,6 +77,7 @@ Periodical,Class,rdf:type,IRI,,,bibo:Periodical bibo:Journal,,Class (always bibo
 ,E-ISSN,bibo:eissn,literal,xsd:string,,,,"The International Standard Serial Number, ISSN, an identifier for electronic versions of serial publications."
 ,,,,,,,,
 Book,Class,rdf:type,IRI,,,bibo:Book bibo:Proceedings,,The class will always be bibo:Book or one of its subclasses.
+,Title,dct:title,literal,xsd:string,,,,A name given to the resource. Titles in different languages provided separately
 ,Contributor,dct:contributor,IRI BNODE,,Person Organization,,,"A contributor to the book, either a person or a named group or organization."
 ,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,The publisher of the book

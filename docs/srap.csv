@@ -9,7 +9,7 @@ SRAPResource,Class,rdf:type,IRI,,,srap:SRAPResource,,The class will always be sr
 ,Contributor,dct:contributor,literal,,,,,The name of an entity responsible for making contributions to the resource.
 ,Publisher,dct:publisher,IRI BNODE,,Organization,,,An entity responsible for making the resource available.
 ,Publisher,dct:publisher,literal,,,,,The name of an entity responsible for making the resource available.
-,Contribution,bibo:hasContribution,IRI BNODE,,ContributionContext,A resource that provides detailed information about the contribution such as contributor roles and/or affiliations.
+,Contribution,bibo:hasContribution,IRI BNODE,,ContributionContext,,,A resource that provides detailed information about the contribution such as contributor roles and/or affiliations.
 ,Title,dct:title,literal,,,,,A name given to the resource.
 ,Format,dct:format,literal,,,,,"The file format, physical medium, or dimensions of the resource."
 ,Subject,dct:subject,IRI literal,,,,,The topic of the resource; a concept from a controlled vocabulary such as LCSH or MeSH

@@ -50,7 +50,35 @@ The terms MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMM
 
 SRAP's domain model includes these entities and how they are related. 
 
-<img src="https://github.com/user-attachments/assets/9abb9952-7e65-4913-8a29-bf1a74d99ace" width="600" />
+```mermaid
+graph LR
+
+SR["`**ScholarlyResource**<br/>The focus resource or work`"]
+
+subgraph containment
+direction TB
+CP["`**Periodical**<br/>Periodical in which the scholarly work is published`"]
+CB["`**Book**<br/>Book or other monograph in which the scholarly work is published`"]
+end
+
+FUN["`**Funding**<br/>A person or organization that supports an activity, project or entity through a financial or material contribution.`"]
+CC["`**ContributionContext**<br/>The nature and context of an agent's intellectual contribution to a resource.`"]
+PER["`**Person**`"]
+ORG["`**Organization**`"]
+
+SR -. dct:isPartOf .-> CP
+SR -. dct:isPartOf .-> CB
+
+SR -. bibo:hasContribution .-> CC
+CC -. bibo:contributingAgent .-> PER
+CC -. bibo:contributorAffiliation .-> ORG
+
+SR -. dct:creator,dct:contributor .-> PER
+SR -. dct:publisher .-> ORG
+
+SR -. bibo:fundingSource .-> FUN
+FUN -. bibo:funder .-> ORG
+```
 
 The model can be used for stand-alone documents, like books, theses, technical reports, and for documents that are contained within larger publications, such as journal articles and book chapters. There is a required bibliographic description of the scholarly work. Where appropriate, one can encode metadata elements that represent a serial or monographic resource in which the scholarly work is contained. Persons, organizations, and grants are also resources that may be needed to describe the scholarly work.
 

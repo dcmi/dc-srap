@@ -66,7 +66,6 @@ The following term prefixes are used in this document and in the TAP document:
 
 * dct: `http://purl.org/dc/terms/`
 * bibo: `http://purl.org/ontology/bibo/`
-* edtf: `http://id.loc.gov/datatypes/EDTFScheme/`
 * foaf: `http://xmlns.com/foaf/0.1/`
 * srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
 * ex: `http://example.com/` (placeholder namespace for example resources)
@@ -191,7 +190,7 @@ The `dct:date` property is generic and SHOULD NOT be used when more specific dat
 
 **bibo:embargoedBefore**
 
-If a resource has been placed under an embargo, during which its content is not available to the general public, the `srap:embargoDateRange` property SHOULD be used to indicate the date when the resource is available after an embargo period.
+If a resource has been placed under an embargo, during which its content is not available to the general public, the `bibo:embargoedBefore` property SHOULD be used to indicate the date when the resource is available after an embargo period.
 
 ### Identifiers
 
@@ -287,7 +286,7 @@ The `bibo:project` property MAY be used to indicate the project(s) under whose u
 
 **bibo:fundingSource**
 
-The `srap:fundingSource` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Funding shape (see [Funding shape](#funding-shape)).
+The `bibo:fundingSource` property MAY be used to indicate the funding source(s) that supported the creation of the resource. Its value SHOULD be a Funding shape (see [Funding shape](#funding-shape)).
 
 **bibo:organizationUnit**
 

@@ -337,7 +337,14 @@ A unique identifier for the person. Some examples of common identifiers are ORCI
 
 **Example person**
 
-TODO
+This example represents a person called Jane Doe who has an ORCID identifier.
+
+```turtle
+ex:jane_doe
+  a foaf:Person ;
+  foaf:name "Jane Doe" ;
+  dct:identifier "https://orcid.org/0000-0002-1584-4316" .
+```
 
 ## Organization shape
 
@@ -359,7 +366,16 @@ A unique identifier for the organization. Some examples of common identifiers ar
 
 **Example organization**
 
-TODO
+This example shows the W3C organization, which has ISNI, VIAF and Wikidata identifiers.
+
+```turtle
+ex:w3c
+  a foaf:Organization ;
+  foaf:name "World Wide Web Consortium" ;
+  dct:identifier "https://isni.org/isni/0000000081907712",
+    "http://viaf.org/viaf/122285539",
+    "http://www.wikidata.org/entity/Q37033" .
+```
 
 ## ContributionContext shape
 

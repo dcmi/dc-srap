@@ -27,6 +27,7 @@ Alasdair MacDonald, University of Edinburgh
   - [Project and funding](#project-and-funding)
 - [Person shape](#person-shape)
 - [Organization shape](#organization-shape)
+- [ContributionContext shape](#contributioncontext-shape)
 - [Periodical shape](#periodical-shape)
 - [Book shape](#book-shape)
 - [Grant shape](#grant-shape)
@@ -81,7 +82,7 @@ The basic bibliographic elements are available to be used to describe stand-alon
 
 These basic bibliographic description elements SHOULD be used to describe the scholarly resource: 
 
-> `dct:type`, `dct:language`, `dct:contributor`, `dct:creator`, `dct:publisher`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
+> `dct:type`, `dct:language`, `dct:contributor`, `dct:creator`, `dct:publisher`, `bibo:hasContribution`, `dct:subject`, `dct:title`, `dct:format`, `dct:abstract`, `dct:tableOfContents`, `dct:description`
 
 **dct:type**
 
@@ -104,6 +105,10 @@ A repeatable property for the person or organization that has secondary or non-s
 A property for the person or organization that is responsible for the publication of the resource. It is RECOMMENDED that the value of this property is an [`Organization shape`](#organization-shape). Alternatively, the value MAY be the name of the publisher as a literal value.
 
 > NOTE: `dct:publisher` here is used when the resource being described is not contained in a larger resource. For example, a technical report would be described with `dct:publisher` at this level. For contained works, the containing resource (periodical or monograph) SHOULD be described with its publisher.
+
+**bibo:hasContribution**
+
+The `bibo:hasContribution` property MAY be used to link the main resource to one or more ContributionContext resources that provide detailed information about the contribution context such as contributor roles and/or affiliations. See the [ContributionContext shape](#contributioncontext-shape) for more details.
 
 **dct:title**
 
@@ -314,21 +319,13 @@ The value of the `bibo:organizationUnit` property SHOULD be an Organization shap
 
 ## Person shape
 
-> `rdf:type`, `srap:role`, `srap:affiliation`, `foaf:name`, `dct:identifier`
+> `rdf:type`, `foaf:name`, `dct:identifier`
 
-In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason, metadata often make use of identifiers, such as the ORCID for individual persons. Another common identifying element is the affiliation of the person at the time the work was accepted. If relevant, the specific role played by the Person can be coded. (See Appendix 1)
+In scholarly publications there can be many named creators and contributors. Although the names themselves are useful for display and identification, they are not unambigous. For this reason, metadata often make use of identifiers, such as the ORCID for individual persons.
 
 **rdf:type**
 
 `rdf:type` SHOULD be included with the value `foaf:Person`. 
-
-**srap:role**
-
-`srap:role` SHOULD indicate the role that the person played in relation to the scholarly work. Preferably the role should be a URI taken from the [Library of Congress relators](http://id.loc.gov/vocabulary/relators/) list, but it may also be a simple string.
-
-**srap:affiliation**
-
-Primarily for authors and co-authors, this is the affiliation of the person at the time the work was accepted or published.
 
 **foaf:name**
 
@@ -344,17 +341,13 @@ TODO
 
 ## Organization shape
 
-> `rdf:type`, `srap:role`, `dct:identifier`, `foaf:name`
+> `rdf:type`, `dct:identifier`, `foaf:name`
 
 Information about organizations MAY be included in SRAP metadata in various contexts: for the publisher of the book or periodical, for the rights holder, for the creator, and others. In each case the organization shape MAY be used as the value of those properties. 
 
 **rdf:type**
 
 When used in RDF data the organization shape SHOULD have an `rdf:type` property with the value `foaf:Organization`. 
-
-**srap:role**
-
-`srap:role` SHOULD indicate the role that the organization played in relation to the scholarly work. Preferably the role should be a URI taken from the [Library of Congress relators](http://id.loc.gov/vocabulary/relators/) list, but it may also be a simple string.
 
 **foaf:name**
 
@@ -365,6 +358,28 @@ The name of the organization; usually a form intended for display.
 A unique identifier for the organization. Some examples of common identifiers are VIAF URIs, and Wikidata identifiers.
 
 **Example organization**
+
+TODO
+
+## ContributionContext shape
+
+When describing contributors to a work such as authors and co-authors, it can be useful to state extra information information about the context of that contribution that is specific to the circumstances of that work. Such contextual information can be expressed using the ContributionContext shape. The specific role that the contributor played in relation to the scholarly work can be indicated. Another common identifying element is the affiliation of the person at the time the work was accepted. This information can be expressed using the following propreties:
+
+> `bibo:contributingAgent`, `bibo:contributorRole`, `bibo:contributorAffiliation`
+
+**bibo:contributingAgent**
+
+`bibo:contributingAgent` MUST be used to indicate the agent (Person or Organization) who made a contribution to the resource.
+
+**bibo:contributorRole**
+
+`bibo:contributorRole` SHOULD indicate the role that the person or organization played in relation to the scholarly work. The role SHOULD be a URI taken from the [Library of Congress relators](http://id.loc.gov/vocabulary/relators/) list, but it may also be a simple string.
+
+**bibo:contributorAffiliation**
+
+Primarily for authors and co-authors, this property MAY be used to express the affiliation of the person at the time the work was accepted or published. The value SHOULD be an Organization shape.
+
+**Example ContributionContext**
 
 TODO
 

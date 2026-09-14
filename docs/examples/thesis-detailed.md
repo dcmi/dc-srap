@@ -37,7 +37,6 @@ ex:online_thesis
   dct:rights "Kaikki oikeudet pidätetään."@fi, "All rights reserved."@en ;
   dct:subject "..." ;  # actual subjects omitted for brevity
   dct:title "Faster than real-time simulation of fluid power-driven mechatronic machines"@en ;
-  dct:contributor "Ellman, Asko" ;
   bibo:hasContributor [
     a bibo:ContributionContext ;
     bibo:contributingAgent "Ellman, Asko" ;
@@ -47,19 +46,16 @@ ex:online_thesis
   dct:contributor "Lappeenrannan-Lahden teknillinen yliopisto LUT"@fi, "Lappeenranta-Lahti University of Technology LUT"@en ;  # TODO should this be a resource? Typed as Organization?
   dct:contributor "School of Energy Systems"@en ;  # TODO should this be part of the above?
   dct:subject "School of Energy Systems, Mechanical Engineering" ; # TODO is this the correct field for degree program?
-  dct:contributor "Ellman, Asko" ;
   bibo:hasContribution [
     a bibo:ContributionContext ;
     bibo:contributingAgent "Ellman, Asko" ;
     bibo:contributorRole marcrel:rev  # reviewer, using MARC relator
   ] ;
-  dct:contributor "Pietola, Matti" ;
   bibo:hasContribution [
     a bibo:ContributionContext ;
     bibo:contributingAgent "Pietola, Matti" ;
     bibo:contributorRole marcrel:rev  # reviewer, using MARC relator
   ] ;
-  dct:contributor "Handroos, Heikki" ;
   bibo:hasContribution [
     a bibo:ContributionContext ;
     bibo:contributingAgent "Handroos, Heikki" ;

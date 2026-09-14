@@ -54,6 +54,9 @@ SRAP's domain model includes these entities and how they are related.
 graph LR
 
 SR["`**ScholarlyResource**<br/>The focus resource or work`"]
+style SR fill:#fbdfd1
+
+classDef default fill:#f2f3f5,stroke:#3e454e
 
 subgraph containment
 direction TB

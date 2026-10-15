@@ -38,11 +38,11 @@ Alasdair MacDonald, University of Edinburgh
 
 ## Introduction
 
-The aim of the Scholarly Resources Application Profile (SRAP) proposal is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, with Dublin Core Metadata Terms, supplemented with some terms from other vocabularies maintained by the Dublin Core Metadata Initiative. This proposal is informed by a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
+The aim of the Scholarly Resources Application Profile (SRAP) is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, using Dublin Core Metadata Terms, and supplemented with terms from other vocabularies maintained by the Dublin Core Metadata Initiative. This proposal is informed by a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
-There is significant overlap between SRAP, the RIOXX application profile[^4], the Finnish guidelines, and the British Library’s ETHOS specification[^5]. This is not surprising since they share the same aim, support for description of scholarly resources. There are probably many local application profiles developed by universities and other institutions of higher education for the same purpose. Adding SRAP properties to the DCMI Metadata Terms will reduce duplicate effort in application profile development and maintenance in the future, and improve semantic interoperability between Dublin Core -based metadata produced by institutions of higher education. 
+There is significant overlap between SRAP, the RIOXX application profile[^4], the Finnish guidelines, and the British Library’s ETHOS specification[^5]. This is not surprising since they share the same aim, which is support for description of scholarly resources. There are most likely many local application profiles developed by universities and other institutions of higher education for this same purpose. It is our goal that the SRAP profile will reduce duplicate effort in application profile development and maintenance in the future and improve semantic interoperability between Dublin Core-based metadata produced by institutions of higher education. 
 
-The SRAP application profile proposal is intended to be globally applicable. Many suggested properties are already in use by related communities. There are new properties for e.g. creator and contributor roles, but these have been adopted from MARC 21. SRAP draft contains also recommendations for SRAP-related semantic refinements to some existing Dublin Core Terms properties, in order to make them more suitable for use in the description of scholarly resources.  
+The SRAP application profile proposal is intended to be globally applicable. Many suggested properties are already in use by related communities. There are new properties, such as roles for creators and contributors. In the interest of facilitating the use of stable vocabularies these make use of the MARC 21 relators[fn]. 
 
 The terms MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL used in the table below should be interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
@@ -83,7 +83,9 @@ SR -. bibo:fundingSource .-> FUN
 FUN -. bibo:funder .-> ORG
 ```
 
-The model can be used for stand-alone documents, like books, theses, technical reports, and for documents that are contained within larger publications, such as journal articles and book chapters. There is a required bibliographic description of the scholarly work. Where appropriate, one can encode metadata elements that represent a serial or monographic resource in which the scholarly work is contained. Persons, organizations, and grants are also resources that may be needed to describe the scholarly work.
+The model can be used for stand-alone documents, like books, theses, technical reports, and for documents that are contained within larger publications, such as journal articles and book chapters. The SRAP includes properties for a primary bibliographic description of the scholarly work. Where appropriate, one can encode metadata elements that represent a serial or monographic resource in which the scholarly work is contained. Persons, organizations, and grants are also resources that may be needed to describe the scholarly work.
+
+SRAP should be seen as a high level model where 
 
 SRAP intentionally doesn't make strong statements about the cardinality of elements. Implementers of SRAP are advised to define their own cardinality rules for data validation. It's clear that most SRAP elements can take multiple values; however, the date and enumeration properties SHOULD NOT be repeated.
 
@@ -98,8 +100,6 @@ The following term prefixes are used in this document and in the TAP document:
 * dct: `http://purl.org/dc/terms/`
 * bibo: `http://purl.org/ontology/bibo/`
 * foaf: `http://xmlns.com/foaf/0.1/`
-* srap: placeholder namespace for new elements proposed for BIBO and/or DCTerms
-* ex: `http://example.com/` (placeholder namespace for example resources)
 
 NOTE: The selection of properties used in SRAP has been limited to DC Terms, BIBO and FOAF properties. Where appropriate properties were not found in those vocabularies the prefix `srap:` is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
 

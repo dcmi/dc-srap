@@ -15,6 +15,7 @@ Alasdair MacDonald, University of Edinburgh
 - [Introduction](#introduction)
 - [Domain Model](#domain-model)
 - [DCTAP for SRAP](#dctap)
+- [Namespaces](#namespaces)
 - [Scholarly Resource Shape](#scholarly-resource-shape)
   - [Primary bibliographic elements](#primary-bibliographic-elements)
   - [Description properties](#description-properties)
@@ -38,7 +39,7 @@ Alasdair MacDonald, University of Edinburgh
 
 ## Introduction
 
-The aim of the Scholarly Resources Application Profile (SRAP) is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, using Dublin Core Metadata Terms, and supplemented with terms from other vocabularies maintained by the Dublin Core Metadata Initiative. This proposal is informed by a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
+The purpose of the Scholarly Resources Application Profile (SRAP) is to enable the description of scholarly resources, such as doctoral dissertations or scientific articles, using primarily Dublin Core Metadata Terms. These terms are supplemented with terms from other vocabularies that are maintained by the Dublin Core Metadata Initiative. This proposal is informed by a) Scholarly Works Application Profile (SWAP[^1][^2]), which was developed by UKOLN with JISC funding in 2006, and b) Finnish metadata guidelines for text documents in institutional repositories[^3] (available only in Finnish). 
 
 There is significant overlap between SRAP, the RIOXX application profile[^4], the Finnish guidelines, and the British Library’s ETHOS specification[^5]. This is not surprising since they share the same aim, which is support for description of scholarly resources. There are most likely many local application profiles developed by universities and other institutions of higher education for this same purpose. It is our goal that the SRAP profile will reduce duplicate effort in application profile development and maintenance in the future and improve semantic interoperability between Dublin Core-based metadata produced by institutions of higher education. 
 
@@ -82,26 +83,30 @@ SR -. dct:publisher .-> ORG
 SR -. bibo:fundingSource .-> FUN
 FUN -. bibo:funder .-> ORG
 ```
-
 The model can be used for stand-alone documents, like books, theses, technical reports, and for documents that are contained within larger publications, such as journal articles and book chapters. The SRAP includes properties for a primary bibliographic description of the scholarly work. Where appropriate, one can encode metadata elements that represent a serial or monographic resource in which the scholarly work is contained. Persons, organizations, and grants are also resources that may be needed to describe the scholarly work.
-
-SRAP should be seen as a high level model where 
-
-SRAP intentionally doesn't make strong statements about the cardinality of elements. Implementers of SRAP are advised to define their own cardinality rules for data validation. It's clear that most SRAP elements can take multiple values; however, the date and enumeration properties SHOULD NOT be repeated.
 
 ## DCTAP 
 
-SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the above elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP includes details on value types of the properties, like "date" and "string", and has notes on usage. Refer to the TAP for specific information on properties used, values, and recommended value lists to use.
+SRAP is expressed in a table format as a [Dublin Core Tabular Application Profile](https://www.dublincore.org/specifications/dctap/) (TAP). The TAP expresses the elements of SRAP in a structured, machine actionable format that can be used for data creation and for basic data validation. The TAP designates the value types of the properties, such as whether a property is expected to have a URI as its value or if it can be a simple string. It also includes notes on usage for most terms. Refer to the TAP for specific information on properties used, values, and value lists recommended by SRAP.
 
-In the DCTAP, each of the entities of the domain model are represented as "shapes". Each shape has associated properties and the rules that govern the creation and use of the property.
+SRAP should be seen as a high level model that is available to be modified to meet local needs. For example, SRAP does not define the cardinality of elements; implementers of SRAP are advised to define their own rules that designate which properties are mandatory (or not) and which are repeatable (or not). The DCTAP has columns "mandatory" and "repeatable" for this purpose. One can also define value lists for specific properties, and can even add properties that are needed. The core of SRAP will remain to facilitate interoperability.
 
-The following term prefixes are used in this document and in the TAP document:
+In the DCTAP, each of the entities of the domain model are represented as "shapes". Each shape has associated properties and the TAP defines properties that can take specific shapes as values. For example, the property `dct:publisher` can have the `organization` shape as its value.
+```
+dct:title "Gutenberg galaxy" .
+dct:publisher [
+	#organization shape
+	foaf:name "Routledge & Kegan" ;
+	dct:identifier "978-0-7100" .
+```
+## Namespaces
+The following namespaces and their prefixes are used in this document and in the TAP document:
 
 * dct: `http://purl.org/dc/terms/`
 * bibo: `http://purl.org/ontology/bibo/`
 * foaf: `http://xmlns.com/foaf/0.1/`
 
-NOTE: The selection of properties used in SRAP has been limited to DC Terms, BIBO and FOAF properties. Where appropriate properties were not found in those vocabularies the prefix `srap:` is used. These latter properties will be discussed with the DCMI Usage Board to find or create the needed properties.
+The selection of properties used in SRAP has been limited to terms from DC Terms, BIBO and FOAF as these vocabularies are under DCMI management. 
 
 ## Scholarly resource shape
 The Scholarly resource shape is the describes the focus resource. This resource may be a stand-alone document, such as a thesis, a technical report, or a book. It may be instead a resource that is located within another resource, such as a book chapter within a book, or a journal article within a journal.

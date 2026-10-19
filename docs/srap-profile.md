@@ -31,7 +31,7 @@ Alasdair MacDonald, University of Edinburgh
 - [ContributionContext shape](#contributioncontext-shape)
 - [Periodical shape](#periodical-shape)
 - [Book shape](#book-shape)
-- [Grant shape](#grant-shape)
+- [Funding shape](#funding-shape)
 - [Extending SRAP](#extending-srap)
 - [Examples of SRAP usage](#examples-of-srap-usage)
 - [Appendix 1. Roles](#appendix-1-roles)
@@ -59,7 +59,7 @@ style SR fill:#fbdfd1
 
 classDef default fill:#f2f3f5,stroke:#3e454e
 
-subgraph containment
+subgraph units;
 direction TB
 CP["`**Periodical**<br/>Periodical in which the scholarly work is published`"]
 CB["`**Book**<br/>Book or other monograph in which the scholarly work is published`"]
@@ -70,14 +70,16 @@ CC["`**ContributionContext**<br/>The nature and context of an agent's intellectu
 PER["`**Person**`"]
 ORG["`**Organization**`"]
 
-SR -. dct:isPartOf .-> CP
-SR -. dct:isPartOf .-> CB
+SR -. dct:isPartOf .-> units
+SR -. dct:isPartOf .-> units
 
 SR -. bibo:hasContribution .-> CC
 CC -. bibo:contributingAgent .-> PER
+CC -. bibo:contributingAgent .-> ORG
 CC -. bibo:contributorAffiliation .-> ORG
 
 SR -. dct:creator,dct:contributor .-> PER
+SR -. dct:creator,dct:contributor .-> ORG
 SR -. dct:publisher .-> ORG
 
 SR -. bibo:fundingSource .-> FUN

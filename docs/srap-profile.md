@@ -99,7 +99,7 @@ dct:title "Gutenberg galaxy" .
 dct:publisher [
 	#organization shape
 	foaf:name "Routledge & Kegan" ;
-	dct:identifier "978-0-7100" .
+	dct:identifier "978-0-7100" ] .
 ```
 ## Namespaces
 The following namespaces and their prefixes are used in this document and in the TAP document:
@@ -108,7 +108,7 @@ The following namespaces and their prefixes are used in this document and in the
 * bibo: `http://purl.org/ontology/bibo/`
 * foaf: `http://xmlns.com/foaf/0.1/`
 
-The selection of properties used in SRAP has been limited to terms from DC Terms, BIBO and FOAF as these vocabularies are under DCMI management. 
+The selection of properties used in SRAP has been limited to terms from DC Terms, BIBO and FOAF. Note that this document also uses the common prefix "ex:" for fabricated URIs in examples.
 
 ## Scholarly resource shape
 The Scholarly resource shape is the describes the focus resource. This resource may be a stand-alone document, such as a thesis, a technical report, or a book. It may be instead a resource that is located within another resource, such as a book chapter within a book, or a journal article within a journal.

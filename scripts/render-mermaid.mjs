@@ -26,6 +26,7 @@ import {
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import process from 'node:process';
+import { fileURLToPath } from 'node:url';
 
 const docsDir = path.resolve(process.argv[2] ?? 'docs');
 
@@ -59,9 +60,22 @@ for (const file of walk(docsDir)) {
     const mmdPath = path.join(tmp, `diagram-${n}.mmd`);
     writeFileSync(mmdPath, code);
     const svgPath = path.join(path.dirname(file), svgName);
-    execFileSync('mmdc', ['-i', mmdPath, '-o', svgPath, '-b', 'transparent'], {
-      stdio: 'inherit',
-    });
+    // -p: the bundled Chromium cannot create its user-namespace sandbox on
+    // GitHub Actions ubuntu runners; pass --no-sandbox via a launch config.
+    execFileSync(
+      'mmdc',
+      [
+        '-i',
+        mmdPath,
+        '-o',
+        svgPath,
+        '-b',
+        'transparent',
+        '-p',
+        path.join(path.dirname(fileURLToPath(import.meta.url)), 'puppeteer-config.json'),
+      ],
+      { stdio: 'inherit' },
+    );
     console.log(`${path.relative(process.cwd(), file)}: mermaid block ${n} -> ${svgName}`);
     return `![${base} diagram ${n}](${svgName})`;
   });

@@ -41,10 +41,6 @@ jobs:
         run: npm install -g @mermaid-js/mermaid-cli
 
       - name: Render mermaid diagrams to SVG
-        env:
-          # The bundled Chromium cannot create its user-namespace sandbox on
-          # GitHub Actions ubuntu runners; --no-sandbox is the standard fix.
-          PUPPETEER_ARGS: --no-sandbox
         run: node scripts/render-mermaid.mjs docs
 
       - name: Setup Ruby

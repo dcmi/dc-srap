@@ -1,0 +1,70 @@
+# Builds the docs/ site for GitHub Pages:
+# 1. renders every ```mermaid fenced block in docs/**/*.md to a static SVG
+#    with @mermaid-js/mermaid-cli (see scripts/render-mermaid.mjs)
+# 2. builds the processed docs/ with Jekyll + jekyll-optional-front-matter
+#    (same conversion behaviour GitHub Pages applies when deploying from a
+#    branch)
+# 3. deploys the resulting site/ to GitHub Pages.
+#
+# One-time setup: after this workflow has run once, go to
+# Settings -> Pages and change "Build and deployment" source from
+# "Deploy from a branch" to "GitHub Actions".
+name: Deploy docs site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install mermaid-cli
+        run: npm install -g @mermaid-js/mermaid-cli
+
+      - name: Render mermaid diagrams to SVG
+        run: node scripts/render-mermaid.mjs docs
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build -s docs -d site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

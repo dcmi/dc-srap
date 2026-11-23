@@ -1,0 +1,8 @@
+# Jekyll configuration for the docs/ site.
+#
+# jekyll-optional-front-matter is required so that .md files without a YAML
+# front-matter block (e.g. srap-profile.md) are converted to HTML pages
+# instead of being copied through verbatim. This mirrors the behaviour
+# GitHub Pages applies when building from a branch.
+plugins:
+  - jekyll-optional-front-matter
